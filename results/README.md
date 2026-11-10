@@ -14,6 +14,8 @@ Check exact downloaded bytes against [SHA256SUMS.txt](https://github.com/BenNotB
 
 The [clean-checkout record](../docs/reproduction-check.md) links the executed commands and [new verification receipts](reproduction/). It covers all three editions, a fresh technical voice synthesis, and deliberately altered videos that the checks rejected.
 
+This is a match-specific rebuild, not an automatic new-video commentary workflow. The moments, player names, shot terms, title, and lines were edited for this match. Separate CLI teaching exporters exist but have not yet been rechecked in the new reproduction environment. See the [TikTok-style workflow status](../docs/tiktok-style-workflow.md).
+
 | Folder or file | What it is |
 |---|---|
 | [`technical-commentary-v2/`](technical-commentary-v2/) | Latest vertical reel: Han Yue vs Wang Zhiyi (China Open 2025 women's final), 26.6 s, Chinese technical commentary with a Kokoro voice. `planned-schedule.json` is the script and timing; `verification.json` is the check of the finished file. |

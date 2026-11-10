@@ -36,7 +36,11 @@ An earlier prototype, [`coach/whole_clip_review.py`](../coach/whole_clip_review.
 
 ## Short reels (studio)
 
-The vertical TikTok-style reels in [`results/`](../results/) were made with the studio tools in [`studio/`](../studio/): TrackNetV3 for the shuttle, a local neural voice (Kokoro for the technical commentary reel), and a script written for each reel from the detected positions and frame review. Each script lists the claims it makes and how each was checked. These reels are records. They cannot be re-made from a fresh clone yet; see [reproducibility](reproducibility.md).
+The vertical TikTok-style reels in [`results/`](../results/) use selected source spans, shipped pose estimates, a local neural voice, and scripts edited from model evidence and frame review. All three advertised editions can be rebuilt from a clean checkout with [`scripts/render_reels.py`](../scripts/render_reels.py). [The clean-checkout record](reproduction-check.md) covers regenerated media and fresh technical voice synthesis. Exact historical videos remain separate from regenerated equivalents.
+
+That command does not learn a style, choose new-match highlights, identify players by name, classify shots, or write new commentary. The title, names, shot terms, and timings are fixed inputs for this match. The [workflow status](tiktok-style-workflow.md) separates those missing steps from the working renderer and checks.
+
+The separate `coach.short_review` and `coach.editorial_short` CLIs run fresh Fast analysis for teaching shorts. Their selection rules and fixed teaching language differ from the approved commentary reel. Their commands are in the [coach guide](../coach/README.md#vertical-technique-short-experimental), not an app export route. They have not yet been rechecked in the new reproduction environment.
 
 ## Limits
 

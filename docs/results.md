@@ -93,6 +93,8 @@ Source: [`results/technical-commentary-v2/verification.json`](../results/technic
 
 [Watch the exact historical MP4s](../results/) or [regenerate all three editions](reproducibility.md#rebuild-the-short-reels). New renders decode source frames and replay shipped pose estimates. The default voice takes are frozen inputs, not fresh speech synthesis.
 
+The [TikTok-style workflow](tiktok-style-workflow.md) is not automatic for a new video. Moment choices, shot names, title, and player-named lines were edited for this match. The separate teaching-short CLIs do not generate that commentary format, and their any-clip runs have not yet been rechecked in the new reproduction environment.
+
 ## Fresh clone
 
 Source: [fresh-clone-check.md](fresh-clone-check.md). The initial `e27fb934` revision's run had 729 tests, 0 failures, and 8 skips, and made a narrated review of clip 04. This is separate from the new reproduction tests.

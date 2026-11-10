@@ -61,6 +61,8 @@ Clip 04 is a 30-second collage of four points, not a whole match. The complete e
 
 ### Vertical technique short (experimental)
 
+This is a three-point technique lesson, not the approved player-named commentary reel. Its hook is fixed to `这一跨，学三个关键`. The following any-clip CLI has not yet been rechecked in the new reproduction environment. For the proved, match-specific commentary rebuild and its missing new-video steps, see [TikTok-style workflow status](../docs/tiktok-style-workflow.md).
+
 With the same local voice installed, run:
 
 ```powershell
@@ -105,6 +107,8 @@ Other source footage must supply `--attribution-json FILE` with nonempty
 this sample's authorship automatically.
 
 ### Editorial short (experimental)
+
+This teaching format is separate from the match-specific commentary renderer. It does not generate a new title, professional shot calls, or the approved commentary style. The following any-clip CLI has not yet been rechecked in the new reproduction environment.
 
 For a coach-led breakdown with separate legs, core, tactics and arms beats,
 run:

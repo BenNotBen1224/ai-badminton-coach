@@ -25,7 +25,8 @@ Match video is the best way to see what you actually do on court. But nobody scr
 | 🐢 **Slow motion** | Click a finding | Jumps to the moment, slows down, and stops on the key frame |
 | 🎬 **Narrated review** | One command | The full clip as an MP4, with three moments slowed, frozen and zoomed, and a local Chinese voice. Experimental |
 | 💬 **Ask the coach** | Buttons or your own question | "How do I fix it?", exercise cards with drawn GIFs, a 1–4 week plan. Not reliable on pain questions yet |
-| 🏸 **Shuttle and short reels** | Studio tools, not the app | TrackNetV3 shuttle path and vertical TikTok-style reels. [Watch the results](results/) or [rebuild all three reels](docs/reproducibility.md#rebuild-the-short-reels) |
+| 🏸 **Shuttle and commentary reels** | Studio tools, not the app | TrackNetV3 shuttle path and match-specific TikTok-style reels. [Watch the results](results/) or [rebuild all three reels](docs/reproducibility.md#rebuild-the-short-reels) |
+| 📱 **Vertical teaching shorts** | Separate CLI commands | `coach.short_review` and `coach.editorial_short` analyze a supplied clip for technique lessons. They do not generate the approved commentary style. [Commands and limits](coach/README.md#vertical-technique-short-experimental) |
 
 ## Use it
 
@@ -57,6 +58,14 @@ It writes `review.mp4`, a readable `analysis.html`, and the evidence behind ever
 **Want to check the numbers yourself?** Start with [docs/reproducibility.md](docs/reproducibility.md). It says what re-runs from a clean clone, what needs downloads first, and what is a record only.
 
 **Watch a finished example.** [Latest Chinese technical commentary](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/technical-commentary-v2.mp4) · [Earlier editorial cut](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/editorial-base-v3.mp4) · [Earlier coaching cut](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/coaching-editorial-v4.mp4). These are the exact historical videos. The [reproduction guide](docs/reproducibility.md) rebuilds equivalent media from source frames, shipped pose estimates, and a small frozen-narration bundle. It also re-scores the shipped full tactics predictions and AI-made labels without running inference.
+
+## TikTok-style commentary workflow
+
+**The approved example can be rebuilt. Making the same style from a new video is not automated.** The repo ships the chosen spans, title, player-named shot calls, on-screen number tags, voice inputs, captions, skeletons, 9:16 renderer, and media checks for Han Yue versus Wang Zhiyi. Picking those moments, reviewing shot names, and writing those lines were editorial work. A style learner and a new-match commentary generator are not shipped.
+
+<img src="docs/images/tiktok-workflow.svg" alt="Style learning is missing. Moments, shot names, and writing are manual. Rendering and verification are proved for the reference match." width="100%">
+
+The separate `coach.short_review` and `coach.editorial_short` commands make teaching breakdowns with fresh pose analysis, not this commentary format. Their any-clip runs have not yet been rechecked in the new reproduction environment. See [what exists and what is missing](docs/tiktok-style-workflow.md).
 
 ## How it works
 
@@ -112,6 +121,8 @@ Each step and how we'll know it's done: [docs/roadmap.md](docs/roadmap.md).
 coach/                 the app
   app/                 local web app (python -m coach.app)
   complete_review.py   narrated review video (python -m coach.complete_review)
+  short_review.py      vertical three-point teaching short (CLI-only)
+  editorial_short.py   vertical chapter-based teaching short (CLI-only)
   tactics.py           hit table: who, when, where it landed (experimental)
   README.md            full app guide and its limits
 fast/                  player detection + body points, the speed and accuracy checks

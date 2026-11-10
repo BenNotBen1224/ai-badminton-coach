@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="570" viewBox="0 0 1280 570" role="img" aria-labelledby="title description">
+<title id="title">TikTok-style workflow status</title>
+<desc id="description">Learn style is not shipped. Pick moments, name shots, and write title and lines are manual for this match. Render with voice and verify are proved for this match only.</desc>
+<rect width="1280" height="570" rx="20" fill="#0b0f14"/>
+<g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<text x="64" y="62" font-size="30" fill="#f2f5f8" font-weight="700">TikTok-style reels: what exists today</text>
+<text x="64" y="94" font-size="16" fill="#9aa7b4">The approved match can be rebuilt. A new-video commentary workflow is not shipped.</text>
+<g fill="#141c25" stroke-width="1.5">
+<rect x="64" y="132" width="368" height="156" rx="14" stroke="#ff5fa2"/>
+<rect x="456" y="132" width="368" height="156" rx="14" stroke="#ffd166"/>
+<rect x="848" y="132" width="368" height="156" rx="14" stroke="#ffd166"/>
+<rect x="64" y="330" width="368" height="156" rx="14" stroke="#ffd166"/>
+<rect x="456" y="330" width="368" height="156" rx="14" stroke="#4cc9f0"/>
+<rect x="848" y="330" width="368" height="156" rx="14" stroke="#4cc9f0"/>
+</g>
+<g fill="#f2f5f8" font-size="22" font-weight="600">
+<text x="88" y="173">1. Learn style</text>
+<text x="480" y="173">2. Pick moments</text>
+<text x="872" y="173">3. Name shots</text>
+<text x="88" y="371">4. Write title and lines</text>
+<text x="480" y="371">5. Render with voice</text>
+<text x="872" y="371">6. Verify</text>
+</g>
+<g font-size="16" font-weight="600">
+<text x="88" y="212" fill="#ff5fa2">NOT SHIPPED</text>
+<text x="480" y="212" fill="#ffd166">HAND-SELECTED</text>
+<text x="872" y="212" fill="#ffd166">FRAME REVIEW</text>
+<text x="88" y="410" fill="#ffd166">HAND-WRITTEN</text>
+<text x="480" y="410" fill="#4cc9f0">REBUILD PROVED</text>
+<text x="872" y="410" fill="#4cc9f0">MEDIA CHECKS PROVED</text>
+</g>
+<g font-size="15" fill="#9aa7b4">
+<text x="88" y="245">One approved example, no learner</text>
+<text x="480" y="245">Three spans from this match</text>
+<text x="872" y="245">Not a reliable shot classifier</text>
+<text x="88" y="443">Names, captions, tags in fixed JSON</text>
+<text x="480" y="443">This match only; voice, text, skeleton</text>
+<text x="872" y="443">Frames, captions, voice; not truth</text>
+</g>
+<g stroke="#5c6773" fill="none" stroke-width="2">
+<path d="M434 208h18m-6-5 6 5-6 5"/>
+<path d="M826 208h18m-6-5 6 5-6 5"/>
+<path d="M1032 290v19H248v17" stroke-dasharray="5 5"/>
+<path d="M434 406h18m-6-5 6 5-6 5"/>
+<path d="M826 406h18m-6-5 6 5-6 5"/>
+</g>
+<text x="64" y="533" font-size="15" fill="#9aa7b4">Separate technique-teaching CLIs exist. They do not generate this match-commentary style for a new clip.</text>
+</g>
+</svg>
