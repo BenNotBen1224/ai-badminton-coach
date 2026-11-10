@@ -1,6 +1,16 @@
-# Records
+# Watch and reproduce the results
 
-Records of finished renders and runs. **No video files are stored here**: each record holds the hashes, scripts, timings and checks of a video that was made, so you can see exactly what it contained and how it was checked.
+The [watch gallery](index.html) plays the three published MP4s. Download this HTML file and open it in a browser, or serve the repo with `python -m http.server`. GitHub's file viewer shows HTML source rather than running it.
+
+| Watch or download | Exact historical video |
+|---|---|
+| [Latest technical commentary](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/technical-commentary-v2.mp4) | 798 frames, 26.6 s, 1080×1920 |
+| [Editorial base](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/editorial-base-v3.mp4) | 798 frames, 26.6 s, 1080×1920 |
+| [Earlier coaching cut](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/coaching-editorial-v4.mp4) | 940 frames, 31.333333 s, 1080×1920 |
+
+Check exact downloaded bytes against [SHA256SUMS.txt](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/SHA256SUMS.txt) and [result-videos.json](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/result-videos.json). No video files are stored in git.
+
+[Rebuild all three reels and re-score tactics](../docs/reproducibility.md) from a clean checkout. New encodes are equivalents, not exact-byte copies. The separate v0.1.1 narration bundle contains original base/technical voice takes and regenerated coaching takes, not a base MP4.
 
 | Folder or file | What it is |
 |---|---|
@@ -12,4 +22,6 @@ Records of finished renders and runs. **No video files are stored here**: each r
 
 Local folder paths inside these records were replaced with `<workspace>` or `<home>`. Where that changed a file, `MANIFEST.json` also keeps the hash from before the change, which is the hash other records refer to.
 
-These reels cannot be re-made from a fresh clone yet: they need the source match video and lab tools that are not in this repo. See [docs/reproducibility.md](../docs/reproducibility.md).
+Footage is by Badminton Sphere, [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Wang_Zhiyi_triumph_in_all-Chinese_China_Open_finals_I_China_Open_2025.webm), listed as [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The reels excerpt and reformat it, add pose overlays and AI narration, and sometimes slow or freeze the picture. No endorsement is implied. Upstream broadcast rights have not been independently cleared.
+
+Timing and metres are model estimates. Shot names in the latest commentary came from frame review, not the tactics engine. No human voice-quality approval is claimed. Tactics recall still fails the 80% target, and its labels are AI-made.

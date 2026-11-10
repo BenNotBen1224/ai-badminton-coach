@@ -1,0 +1,17 @@
+{
+  "development": [
+    "R1",
+    "R2"
+  ],
+  "evaluation": [
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "source_sha256": "f1aaa4419393e0ba0c03d9eb97290c3067fd93fd0e6dac806b1f763d3a376c11",
+  "baseline_versions": [
+    "tactics-engine-20261104",
+    "tactics-engine-20261105-v2"
+  ],
+  "limitation": "Aggregate scores on all five rallies have already been observed. The remaining three are not a pristine blind generalization sample, although their exact labels remain unavailable to the engine author."
+}

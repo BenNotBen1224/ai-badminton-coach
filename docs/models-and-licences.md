@@ -46,3 +46,13 @@ Exact versions are in [`requirements.txt`](../requirements.txt).
 ## Match footage
 
 None is stored here. Sources, licences and how to get each clip: [`sample-videos/README.md`](../sample-videos/README.md).
+
+## Reproduction inputs and result videos
+
+The full China Open source is ["Wang Zhiyi triumph in all-Chinese China Open finals I China Open 2025"](https://commons.wikimedia.org/wiki/File:Wang_Zhiyi_triumph_in_all-Chinese_China_Open_finals_I_China_Open_2025.webm), by **Badminton Sphere**, via Wikimedia Commons. Commons lists it as [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), permitting sharing and remixing with attribution. The release reels excerpt, reformat, slow or freeze parts of it and add model pose overlays, captions, and AI narration. No endorsement is implied. **Upstream broadcast rights have not been independently cleared.**
+
+The source video's SHA256 is `2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52`. `scripts/get_footage.py --no-cut` fetches it anonymously and checks that hash.
+
+The separate `reel-inputs-v1.zip` release bundle contains only 19 generated speech WAVs. Kokoro v1.1 generated the base and technical takes; MeloTTS generated the earlier coaching equivalents. See [`inputs-manifest.json`](../studio/reels/inputs-manifest.json) for each take's text, origin, and hash. These inputs are AI narration, not recordings of the players or a human coach.
+
+The project's code licence does not grant rights to the source footage, models, font, or upstream broadcast. Each retains its own terms. No raw source-video corpus, model archive, or Microsoft font is uploaded in the reproduction bundle.

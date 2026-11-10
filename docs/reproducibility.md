@@ -6,7 +6,73 @@ What you can re-run from a clean clone, what needs downloads or clips you add by
 |---|---|---|
 | 🟢 Re-runs | Tests, the app, the narrated review, speed and accuracy on clips 04, 05 and 08 | `get_models.py`, `prepare_cache.py`, `get_footage.py`, ffmpeg |
 | 🟡 Needs your own copy | Speed and accuracy on clips 01–03; the 8 skipped tests | Clips or files that are not shipped (below) |
-| ⚪ Record only | The short reels, the tactics scores, the milestone-1 replay, the fast-preview time | Lab files and labels that are not in this repo |
+| 🟢 Re-scores frozen predictions | All tactics V3 variants, all five rallies, both splits | Full labels, predictions, and partition are shipped. No models or video needed |
+| 🟢 Rebuilds media from frozen inputs | All three advertised short reels | Public source match, narration release bundle, ffmpeg, Chinese font |
+| ⚪ Record only | The milestone-1 replay, the fast-preview time | Earlier run folders or original clip 03 |
+
+## Re-score the tactics predictions
+
+This command uses only Python's standard library. It does **not** run detection or pose inference.
+
+```powershell
+python studio\tactics\score_v3.py --out outputs\tactics-rescore --check-reference
+```
+
+`summary.json` must equal every historical metric in `studio/tactics/v3_eval.json` before the command succeeds. It also records the actual input hashes. The `as_emitted` result is 32 matches, 91 predictions within labelled windows, and 96 labels. Precision is 32/91, recall is 32/96, and zone agreement is 7/10. The 80% recall goal still fails.
+
+The complete 336-row hit table, AI-authored labels, and development/evaluation partition are in `studio/tactics/inputs/`. Only local paths were scrubbed. The original and published hashes are in [`recovered-inputs.json`](../studio/reels/recovered-inputs.json). `v3_hits_sha256` names the historical unsanitized file; `input_sha256.hits` names the shipped bytes.
+
+To score changed inputs, pass `--hits`, `--labels`, or `--partition` and omit `--check-reference`. The tests change both predictions and labels and require the scores to change. Missing inputs fail. These labels are not human ground truth, and the evaluation split was not blind. Matching uses the same hitter within 0.25 seconds, one-to-one, inside the labelled windows only. No claim of whole-match accuracy follows.
+
+## Rebuild the short reels
+
+Use Python 3.12 and ffmpeg/ffprobe on `PATH` or in `tools\`. This path needs no detector weights and does not import an old base MP4. The default Chinese font is Microsoft YaHei on Windows. You can supply `--font` with another Chinese TrueType or OpenType font; the layout may differ. Only Windows has been exercised.
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-reels.txt
+.\.venv\Scripts\python.exe scripts\get_footage.py --no-cut
+.\.venv\Scripts\python.exe scripts\get_reel_inputs.py
+.\.venv\Scripts\python.exe scripts\with_lock.py "render reels" -- .\.venv\Scripts\python.exe scripts\render_reels.py --edition technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\technical
+.\.venv\Scripts\python.exe scripts\with_lock.py "render reels" -- .\.venv\Scripts\python.exe scripts\render_reels.py --edition base --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\base
+.\.venv\Scripts\python.exe scripts\with_lock.py "render reels" -- .\.venv\Scripts\python.exe scripts\render_reels.py --edition coaching --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\coaching
+```
+
+The narration bundle is `reel-inputs-v1.zip` in release **v0.1.1**, separate from the historical MP4s in **v0.1.0**. Its URL, byte count, archive hash, individual WAV hashes, spoken text, and slots are in [`inputs-manifest.json`](../studio/reels/inputs-manifest.json). Before v0.1.1 is published, a release coordinator can use the staged archive with `get_reel_inputs.py --archive PATH_TO_ARCHIVE --out work\reel-inputs`. The script verifies the same hashes and exact member list in either case. No lab folder is needed.
+
+Each output folder contains `reel.mp4`, `mix.wav`, a frame map, preview pictures, `expected-frames.npz`, `render-inputs.json`, and `verification.json`. The renderer decodes every new output frame, checks geometry and duration, checks visible captions against a no-caption control, and checks every voice slot against the encoded mix. The technical edition also compares every card frame with wrong-card controls. Failures raise an error; an existing output folder is never overwritten.
+
+To recheck an output independently without encoding it again:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\render_reels.py --edition technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\technical --verify-only
+.\.venv\Scripts\python.exe -m pytest tests\test_reproduction.py studio\tactics\test_eval_strict.py -q
+```
+
+The base and technical editions retain 798 frames at 30 fps, 1080 by 1920, lasting 26.6 seconds. Their source spans are 57.8–64.8, 126.6–134.0, and 272.8–285.0 seconds. Game 1 has Wang/red near and Han/white far. In the last span, game 2 has Han/white near and Wang/red far. Skeletons use the shipped frame-bound pose cache. The older coaching edition retains its 940-frame schedule, about 31.333333 seconds, and recuts source clip 04 at 20 seconds from the full match.
+
+**Frozen narration is not new speech synthesis.** The bundle preserves the original technical and base WAV takes. The older coaching renderer discarded its temporary raw WAVs, so this bundle contains newly synthesized MeloTTS equivalents from the original caption text. They are marked as such. It contains no final MP4 or mixed court/voice track.
+
+To synthesize speech again instead of using those takes, download the voice models and use a new output directory:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\get_models.py kokoro melo
+.\.venv\Scripts\python.exe scripts\with_lock.py "new speech" -- .\.venv\Scripts\python.exe scripts\render_reels.py --edition technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\technical-new-speech --voice-mode synthesize --models models
+```
+
+Kokoro uses speaker 60 at speed 1.0; the coaching edition uses MeloTTS at speed 1.08. New speech must fit the unchanged slots or the command fails. Native TTS warnings remain visible. No human listening or voice-quality approval is implied.
+
+**Regenerated equivalents are not exact-byte reference videos.** Source decoding, recutting clip 04, fonts, speech synthesis, and encoders can change bytes. The exact historical MP4 hashes stay attached to their original release. Rebuilding does not claim an identical MP4, rerun pose inference, validate the shot names, or improve tactics recall.
+
+For fresh inference rather than replaying pose estimates, install the full `requirements.txt`, fetch models, and prepare the model cache as in the README. A new complete review uses `python -m coach.complete_review VIDEO OUT`. A new full-match tactics run uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m coach.tactics footage\china-open-2025-ws-final.webm outputs\tactics-new --segments sample-videos\china-open-segments.json --states sample-videos\china-open-score-states.json --ffmpeg tools\ffmpeg.exe --pose-python .venv\Scripts\python.exe
+```
+
+That is new inference, not a way to recreate the frozen V3 table byte for byte. It was not rerun as part of this package, and its scores can differ. The shuttle path has its own `studio\shuttle\run_tracknet.py` command after `get_models.py tracknet`; the shipped ball CSVs and `studio/beat-facts.json` preserve the commentary's model evidence.
+
+Footage attribution and the distinction between code rights and media rights are in [models and licences](models-and-licences.md#reproduction-inputs-and-result-videos).
 
 ## Set up
 
@@ -74,8 +140,6 @@ It writes `my-check\acceptance.json` with the same keys the [results](results.md
 
 ## Records only
 
-- **Short reels** ([`results/`](../results/)). They were rendered in the lab from the full match video with tools and scripts that are not all here. Each record keeps the video's hash and the checks of the finished file, so you can confirm a copy is the same video.
-- **Tactics scores** ([`studio/tactics/v3_eval.json`](../studio/tactics/v3_eval.json)). Scoring needs the labels and the engine's full hit table, which are not shipped. [`results/tactics-v3-hits-summary.json`](../results/tactics-v3-hits-summary.json) has the counts and the hit table's hash.
 - **Milestone-1 replay** ([milestone-1-pose-overlay](milestone-1-pose-overlay.md)). It needs run folders and comparison videos (about 45 MB) that are not published.
 - **Fast preview, 3.59 s** ([`turbo/SPEED.md`](../turbo/SPEED.md)). Measured on the original clip 03.
 

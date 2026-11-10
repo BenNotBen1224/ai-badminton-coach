@@ -25,7 +25,7 @@ Match video is the best way to see what you actually do on court. But nobody scr
 | 🐢 **Slow motion** | Click a finding | Jumps to the moment, slows down, and stops on the key frame |
 | 🎬 **Narrated review** | One command | The full clip as an MP4, with three moments slowed, frozen and zoomed, and a local Chinese voice. Experimental |
 | 💬 **Ask the coach** | Buttons or your own question | "How do I fix it?", exercise cards with drawn GIFs, a 1–4 week plan. Not reliable on pain questions yet |
-| 🏸 **Shuttle and short reels** | Studio tools, not the app | TrackNetV3 shuttle path and vertical TikTok-style reels. Kept as records; see [results/](results/) |
+| 🏸 **Shuttle and short reels** | Studio tools, not the app | TrackNetV3 shuttle path and vertical TikTok-style reels. [Watch the results](results/) or [rebuild all three reels](docs/reproducibility.md#rebuild-the-short-reels) |
 
 ## Use it
 
@@ -55,6 +55,8 @@ It writes `review.mp4`, a readable `analysis.html`, and the evidence behind ever
 **Proved from a fresh clone.** The steps above were run on a clean clone of this repo: **729 tests ran with 0 failures** (8 skipped), and the review command turned sample clip 04 into a **74-second narrated review** with every source frame kept. The record is in [docs/fresh-clone-check.md](docs/fresh-clone-check.md).
 
 **Want to check the numbers yourself?** Start with [docs/reproducibility.md](docs/reproducibility.md). It says what re-runs from a clean clone, what needs downloads first, and what is a record only.
+
+**Watch a finished example.** [Latest Chinese technical commentary](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/technical-commentary-v2.mp4) · [Earlier editorial cut](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/editorial-base-v3.mp4) · [Earlier coaching cut](https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/coaching-editorial-v4.mp4). These are the exact historical videos. The [reproduction guide](docs/reproducibility.md) rebuilds equivalent media from source frames, shipped pose estimates, and a small frozen-narration bundle. It also re-scores the shipped full tactics predictions and AI-made labels without running inference.
 
 ## How it works
 
@@ -123,7 +125,7 @@ studio/                tools behind the short reels
 train/                 how the body-point models were fine-tuned
 comparison/            other pose models tried and compared
 badminton_coach/       milestone 1: skeleton overlay on a video
-results/               records of rendered reels (no video files)
+results/               watch gallery, video links, hashes, render and evaluation records
 sample-videos/         where the sample clips go, and their sources
 scripts/               get_models, get_footage, run_tests, verify_manifest
 tests/                 tests for the shared core
@@ -132,7 +134,7 @@ docs/                  product docs
 
 ## Data and models
 
-This repo has **no video files and no downloaded model weights**. It ships the two small fine-tuned body-point models, the code, and the run records. `scripts/get_models.py` and `scripts/get_footage.py` fetch the rest and check each file's hash. Sources and licences: [docs/models-and-licences.md](docs/models-and-licences.md).
+This repo has **no video files and no downloaded model weights in git**. It ships the two small fine-tuned body-point models, code, full tactics evaluation inputs, editorial timelines, and pose estimates. Videos are [release downloads](results/). `scripts/get_models.py`, `scripts/get_footage.py`, and `scripts/get_reel_inputs.py` fetch the remaining inputs and check their hashes. Sources and licences: [docs/models-and-licences.md](docs/models-and-licences.md).
 
 ## License
 

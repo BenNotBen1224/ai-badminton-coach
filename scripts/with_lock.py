@@ -5,6 +5,7 @@ Takes the lock by exclusive create, retries every 30 s for up to 30 minutes, and
 only if it still holds our own text. It never touches another owner's lock. The exit code is the command's.
 """
 import os
+import argparse
 import subprocess
 import sys
 import time
@@ -29,6 +30,13 @@ def acquire(text):
 
 
 def main():
+    global LOCK
+    if len(sys.argv) > 1 and sys.argv[1] == "--lock":
+        parser = argparse.ArgumentParser(add_help=False)
+        parser.add_argument("--lock", type=Path, required=True)
+        args = parser.parse_args(sys.argv[1:3])
+        LOCK = args.lock
+        sys.argv = [sys.argv[0], *sys.argv[3:]]
     if "--" not in sys.argv[2:]:
         sys.exit(__doc__)
     cut = sys.argv.index("--")

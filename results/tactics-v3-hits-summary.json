@@ -1,5 +1,5 @@
 {
- "what": "Counts from the hit table the tactics engine (V3) wrote for the China Open 2025 women's singles final. The full table is not shipped: it is 2.2 MB and holds local paths.",
+ "what": "Counts from the hit table the tactics engine (V3) wrote for the China Open 2025 women's singles final. The full 336-row table is now shipped with local paths scrubbed in studio/tactics/inputs/hits.json.",
  "source_file": "badminton-coach/outputs/tactics-engine-20261106-v3/hits.json (lab workspace)",
  "source_sha256": "4ff91a6fb316560314950f119f7fad57ff955d81f6f5756c13995a883942f23d",
  "same_file_scored_in": "studio/tactics/v3_eval.json (v3_hits_sha256)",

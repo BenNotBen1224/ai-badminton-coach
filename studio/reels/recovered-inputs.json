@@ -1,0 +1,180 @@
+{
+  "note": "Historical inputs. Paths are source-relative, never download locations.",
+  "files": [
+    {
+      "origin": "obj2/work/TACTICS/labels/labels.json",
+      "path": "studio/tactics/inputs/labels.json",
+      "original_sha256": "f1aaa4419393e0ba0c03d9eb97290c3067fd93fd0e6dac806b1f763d3a376c11",
+      "sha256": "d2f09e716d95ce8895075e494e1bfe4bc8f74ce37976fb0caad92fb0846e071e",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/TACTICS/development/partition.json",
+      "path": "studio/tactics/inputs/partition.json",
+      "original_sha256": "31957c1dba7abf36bc395f9e37b16535cea4f2a35c5257957dc389eaf07c290e",
+      "sha256": "136f37e37c6eb3ee2966d767f4a92457fd6795ede22200d6758e092c06a783c5",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "badminton-coach/outputs/tactics-engine-20261106-v3/hits.json",
+      "path": "studio/tactics/inputs/hits.json",
+      "original_sha256": "4ff91a6fb316560314950f119f7fad57ff955d81f6f5756c13995a883942f23d",
+      "sha256": "fdf241d937991efda9aac602195cc9f79edcc6fefb469ac8f382d15a211227b3",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "badminton-coach/outputs/tactics-original-editorial-20261105/tiktok-viral-v3/render/planned-schedule.json",
+      "path": "studio/reels/base-plan.json",
+      "original_sha256": "a7ca6846c49bc811d6491694084ab1c295b187ad50b4d51ad9da4f7401468365",
+      "sha256": "2b7e2583b454c93ad7d67bee523de960358ec35f5908a69f5b722a2697b2a883",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "badminton-coach/outputs/tactics-original-editorial-20261105/tiktok-viral-v3/render/frame-map.json",
+      "path": "studio/reels/base-frame-map.json",
+      "original_sha256": "194c117a35eed77e8ac064c4ae5444312debe5b18f0b4907f62f60d807483a8f",
+      "sha256": "edb5ad0873d3eaf30fddd48baa56323040be028cb1ae9e4d821f2f92ce55eee2",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "badminton-coach/outputs/tiktok-coaching-editorial-20261103-v4/schedule.json",
+      "path": "studio/reels/coaching-plan.json",
+      "original_sha256": "5d3a9c64e21113259a68941bea3bc04cb6daffb509e4651c6baa0f76e88e9ead",
+      "sha256": "d1897a487f5cde518980f9d28ffbcdd4c4ff14cb69bc7b8d814119558afc4595",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "badminton-coach/outputs/tiktok-coaching-editorial-20261103-v4/frame-map.json",
+      "path": "studio/reels/coaching-frame-map.json",
+      "original_sha256": "6a884bde2f38666bc43dfb50fbd013837a7de06ebb60e7a216f9b4d550afed02",
+      "sha256": "1f8774ad4c888fde45875c9f68b754958fe42c7d1e80d41163fb124518553ab2",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/script.json",
+      "path": "studio/reels/technical-script.json",
+      "original_sha256": "02aed44f66f8141953d444d36fd74577301fa90da8a6fe8352d98c09aa0584a9",
+      "sha256": "cdbb9af2e95b57db022076d1c1c1f582e2bb86ed24d0493f8a1ca5adafa6c911",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/render_technical.py",
+      "path": "studio/reels/historical/chinese-technical-commentary-v2-20261109/render_technical.py",
+      "original_sha256": "b4d534c1f49bcf3fc3af86f33dec7112b98ce85add9ec4566deb9b9afa419c6a",
+      "sha256": "26ce92b581e192042b61326e3bbfbd07729476caad77fec4a149f6adf226730c",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-20261109/render_technical.py",
+      "path": "studio/reels/historical/chinese-technical-commentary-20261109/render_technical.py",
+      "original_sha256": "6d67931298eb6233155fe4b6d773c7b7a030d328c2be87b41f0d4f4914956d0c",
+      "sha256": "a03ace2bb8c14f0656e05f5528e3d67aee56ad43603a00be37509a220c7e1453",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-commentary-20261109/render_commentary.py",
+      "path": "studio/reels/historical/chinese-commentary-20261109/render_commentary.py",
+      "original_sha256": "c1c09c7a77dc44cc4184bdec9a77aafcd9d9f7c85d6c864ce86c2507a11d4863",
+      "sha256": "5cb48936ec71b5f395fa97783b5a38ac4e4126f0e7095b26210b93a355d28f8d",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/english-cut-20261109/probe_voices.py",
+      "path": "studio/reels/historical/english-cut-20261109/probe_voices.py",
+      "original_sha256": "56b270f48c54db74ffb871e92fbbee59800caa76c8a182777be15d99c4a7aa44",
+      "sha256": "4088eea7068af428e4df5806d5ee7d6cd237d61371aa50afb23ec766af71aa33",
+      "change": "home/workspace path scrub only; all rows retained"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/space-1.wav",
+      "bundle_path": "voices/technical/space-1.wav",
+      "original_sha256": "8d874c826bfd122a5db42a6bb07600cc67359a6b26ca95fd440927ba834700cb",
+      "sha256": "8d874c826bfd122a5db42a6bb07600cc67359a6b26ca95fd440927ba834700cb",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/space-2.wav",
+      "bundle_path": "voices/technical/space-2.wav",
+      "original_sha256": "2501f541b30fc646e9f2e3cf8a17b1425e84d2fa7488bf53b6e494caf6faf2a9",
+      "sha256": "2501f541b30fc646e9f2e3cf8a17b1425e84d2fa7488bf53b6e494caf6faf2a9",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/space-3.wav",
+      "bundle_path": "voices/technical/space-3.wav",
+      "original_sha256": "f4ce4265f5981eaac7678cbec84237213d6f69722c6101e73ec61defd2e80814",
+      "sha256": "f4ce4265f5981eaac7678cbec84237213d6f69722c6101e73ec61defd2e80814",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/time-1.wav",
+      "bundle_path": "voices/technical/time-1.wav",
+      "original_sha256": "3d109dc7f76e6fd0d3240f11f915ef24526780885be6a38222429075d8f46907",
+      "sha256": "3d109dc7f76e6fd0d3240f11f915ef24526780885be6a38222429075d8f46907",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/time-2.wav",
+      "bundle_path": "voices/technical/time-2.wav",
+      "original_sha256": "3c9fec416427a76921c298e90db7d6c99c15f408e7e028f3263750248a816fa2",
+      "sha256": "3c9fec416427a76921c298e90db7d6c99c15f408e7e028f3263750248a816fa2",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/time-3.wav",
+      "bundle_path": "voices/technical/time-3.wav",
+      "original_sha256": "eef05f259ec88420fb8ee001a42d22343e5f8affa4daa8b72a1f7a6fc35a7c5b",
+      "sha256": "eef05f259ec88420fb8ee001a42d22343e5f8affa4daa8b72a1f7a6fc35a7c5b",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/options-1.wav",
+      "bundle_path": "voices/technical/options-1.wav",
+      "original_sha256": "578d50155ef2c10a6e876dd2e34759dfbdc54e7211fba83ee9b471de131d3d71",
+      "sha256": "578d50155ef2c10a6e876dd2e34759dfbdc54e7211fba83ee9b471de131d3d71",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/options-2.wav",
+      "bundle_path": "voices/technical/options-2.wav",
+      "original_sha256": "126f1e74b32b45a77dba1a9de5819c4910f0bbef433fc3be65e7c653732f9712",
+      "sha256": "126f1e74b32b45a77dba1a9de5819c4910f0bbef433fc3be65e7c653732f9712",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/options-3.wav",
+      "bundle_path": "voices/technical/options-3.wav",
+      "original_sha256": "0b2a9f48a58c65ec5490f090df40b580dbf4f9a1df0909b0316eb88aa2f7430c",
+      "sha256": "0b2a9f48a58c65ec5490f090df40b580dbf4f9a1df0909b0316eb88aa2f7430c",
+      "change": "none"
+    },
+    {
+      "origin": "obj2/work/GUANGYING/chinese-technical-commentary-v2-20261109/narration/options-4.wav",
+      "bundle_path": "voices/technical/options-4.wav",
+      "original_sha256": "b18c95bf7c961c644ba77aab0c42c512180f075754c9f37fead3434a3128f4d1",
+      "sha256": "b18c95bf7c961c644ba77aab0c42c512180f075754c9f37fead3434a3128f4d1",
+      "change": "none"
+    },
+    {
+      "origin": "badminton-coach/outputs/tactics-original-editorial-20261105/tiktok-viral-v3/render/voice/space.wav",
+      "bundle_path": "voices/base/space.wav",
+      "original_sha256": "22cdd36ec91f11ce7a0ebaf8aef17be3182f8f58d85ba2384558764cab68da0f",
+      "sha256": "22cdd36ec91f11ce7a0ebaf8aef17be3182f8f58d85ba2384558764cab68da0f",
+      "change": "none"
+    },
+    {
+      "origin": "badminton-coach/outputs/tactics-original-editorial-20261105/tiktok-viral-v3/render/voice/time.wav",
+      "bundle_path": "voices/base/time.wav",
+      "original_sha256": "0a4ee70790b147c9afb6f715007e6aa810c67134ecf3ba8ada277fa575b7b011",
+      "sha256": "0a4ee70790b147c9afb6f715007e6aa810c67134ecf3ba8ada277fa575b7b011",
+      "change": "none"
+    },
+    {
+      "origin": "badminton-coach/outputs/tactics-original-editorial-20261105/tiktok-viral-v3/render/voice/options.wav",
+      "bundle_path": "voices/base/options.wav",
+      "original_sha256": "314f6bae6acc6b8da900498c8c3bcf5a2c96d40da40d78c7490b9fd1fd643d89",
+      "sha256": "314f6bae6acc6b8da900498c8c3bcf5a2c96d40da40d78c7490b9fd1fd643d89",
+      "change": "none"
+    }
+  ]
+}

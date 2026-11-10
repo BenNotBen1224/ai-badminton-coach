@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Badminton Coach - published results</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #07161d; color: #f3f6f7; }
+    body { margin: 0; }
+    main { max-width: 1080px; margin: auto; padding: 32px 24px; }
+    h1 { margin: 0; font-size: clamp(26px, 4vw, 42px); }
+    .sub, .note { color: #b0c1ca; }
+    .layout { display: grid; grid-template-columns: minmax(240px, 390px) 1fr; gap: 32px; align-items: start; margin-top: 24px; }
+    video { display: block; width: 100%; max-height: 78vh; background: #000; border-radius: 12px; }
+    a { color: #b1e877; text-underline-offset: 3px; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+    h2 { font-size: 19px; margin: 0 0 12px; }
+    button { display: block; width: 100%; margin: 12px 0; padding: 16px; text-align: left; border: 1px solid #2c444d; border-radius: 10px; background: #0c202a; color: inherit; cursor: pointer; font: inherit; }
+    button[aria-pressed="true"] { border-color: #b1e877; background: #163225; }
+    button:focus-visible { outline: 3px solid #b1e877; outline-offset: 3px; }
+    button small { display: block; margin-top: 6px; color: #b0c1ca; }
+    .note { font-size: 13px; line-height: 1.65; }
+    #playback-status { min-height: 1.4em; }
+    @media (max-width: 720px) { .layout { grid-template-columns: 1fr; } video { max-width: 390px; margin: auto; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>AI Badminton Coach</h1>
+  <p class="sub">Match footage, model evidence, Chinese commentary.</p>
+  <nav aria-label="Project links">
+    <a href="https://github.com/BenNotBen1224/ai-badminton-coach">Source code</a>
+    <a href="https://github.com/BenNotBen1224/ai-badminton-coach/blob/main/docs/reproducibility.md">Reproduction guide</a>
+    <a href="https://github.com/BenNotBen1224/ai-badminton-coach/releases/tag/v0.1.0">Download videos and checksums</a>
+  </nav>
+  <div class="layout">
+    <section aria-label="Selected result video">
+      <video id="video" controls playsinline preload="metadata"
+        src="https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/technical-commentary-v2.mp4"></video>
+      <p id="playback-status" class="note" role="status" aria-live="polite"></p>
+    </section>
+    <section>
+      <h2>Watch the published results</h2>
+      <button type="button" aria-pressed="true" data-file="technical-commentary-v2.mp4">
+        Latest: Chinese technical commentary
+        <small>26.6 seconds - user-selected wording - model data on screen</small>
+      </button>
+      <button type="button" aria-pressed="false" data-file="editorial-base-v3.mp4">
+        Earlier: vertical editorial cut
+        <small>26.6 seconds - source footage and skeleton overlays</small>
+      </button>
+      <button type="button" aria-pressed="false" data-file="coaching-editorial-v4.mp4">
+        Earlier: coaching cut
+        <small>31.3 seconds - technical review with model evidence</small>
+      </button>
+      <p class="note">These players are Han Yue and Wang Zhiyi. The first video is the latest selected cut; the other two are historical results.</p>
+      <p class="note">Research preview: shot names in the latest reel were assigned during frame review. Flight times and distances are model estimates. AI narration has not had a human listening or naturalness review.</p>
+      <p class="note">Footage: Badminton Sphere,
+        <a href="https://commons.wikimedia.org/wiki/File:Wang_Zhiyi_triumph_in_all-Chinese_China_Open_finals_I_China_Open_2025.webm">via Wikimedia Commons</a>,
+        listed as <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        Excerpted, reformatted and supplemented with overlays and AI narration.
+        No endorsement is implied. Upstream broadcast rights have not been independently cleared.</p>
+    </section>
+  </div>
+</main>
+<script>
+  const video = document.getElementById('video');
+  const status = document.getElementById('playback-status');
+  const buttons = Array.from(document.querySelectorAll('button[data-file]'));
+  const base = 'https://github.com/BenNotBen1224/ai-badminton-coach/releases/download/v0.1.0/';
+  video.addEventListener('error', () => {
+    status.textContent = 'The video could not load here. Use the download link above to open it locally.';
+  });
+  video.addEventListener('loadedmetadata', () => {
+    status.textContent = `${video.duration.toFixed(1)} seconds | ${video.videoWidth} x ${video.videoHeight} | streamed from GitHub`;
+  });
+  buttons.forEach(button => button.addEventListener('click', () => {
+    video.pause();
+    status.textContent = 'Loading selected video...';
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    video.src = base + button.dataset.file;
+    video.load();
+  }));
+</script>
+</body>
+</html>

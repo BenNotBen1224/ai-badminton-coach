@@ -70,6 +70,8 @@ Split by the agreed development and evaluation rallies:
 
 Across the whole match the engine wrote 336 hits. It named a shot on **6** (4 serves, 1 drive/push, 1 smash) and gave a landing zone on **32**. For 297 of the others it lacked evidence of the contact or the next contact.
 
+The full table, full labels, and split are now shipped in [`studio/tactics/inputs/`](../studio/tactics/inputs/). Run `python studio\tactics\score_v3.py --out outputs\tactics-rescore --check-reference` to recompute every recorded variant and split. This re-scores frozen predictions; it is not new inference.
+
 ## Shuttle
 
 Source: [`studio/shuttle/recorded/shots-time.json`](../studio/shuttle/recorded/shots-time.json). TrackNetV3 found the shuttle in 233 of 282 frames of one 9.4-second stretch (125.6–135.0 s of the women's final). It has **not** been checked against labelled shuttle positions, and the app does not use it.
@@ -87,7 +89,9 @@ Source: [`results/technical-commentary-v2/verification.json`](../results/technic
 - Each of the 10 voice lines in the final file matches the planned mix (correlation 0.99999).
 - A speech-to-text pass found 0 dropped sounds. It is a rough check: it still garbles player names.
 - `human_listening: false` and `naturalness_verified: false`. **Nobody has listened to it.**
-- Numbers on screen are model estimates. Shot names in the reels came from a person reviewing frames, not from the engine.
+- Numbers on screen are model estimates. Shot names in the reels came from frame review, not from the engine.
+
+[Watch the exact historical MP4s](../results/) or [regenerate all three editions](reproducibility.md#rebuild-the-short-reels). New renders decode source frames and replay shipped pose estimates. The default voice takes are frozen inputs, not fresh speech synthesis.
 
 ## Fresh clone
 

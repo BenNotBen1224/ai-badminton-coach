@@ -1,0 +1,31 @@
+{
+  "assets": [
+    {
+      "file": "technical-commentary-v2.mp4",
+      "bytes": 5696211,
+      "sha256": "ccb3b548932009cf26198b112c4858fcec8769d4f7acde5209ba4d8839fc0b49",
+      "duration_s": 26.6,
+      "frames": 798,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "editorial-base-v3.mp4",
+      "bytes": 6541716,
+      "sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+      "duration_s": 26.6,
+      "frames": 798,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "coaching-editorial-v4.mp4",
+      "bytes": 6275528,
+      "sha256": "0278010ade99490ba754ffb447cac66499d848ef1fe3fcc064de4dfd4b24d2a2",
+      "duration_s": 31.333333,
+      "frames": 940,
+      "width": 1080,
+      "height": 1920
+    }
+  ]
+}
