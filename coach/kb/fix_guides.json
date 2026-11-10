@@ -1,0 +1,258 @@
+{
+  "technique.stay_lower": {
+    "name": "staying low",
+    "topics": {"stay lower": 5, "stay low": 5, "staying low": 5, "staying lower": 5, "sit lower": 5, "get lower": 5, "be lower": 4.5, "hips high": 5, "hips too high": 5, "high hips": 5, "hip height": 5, "hips": 3, "hip": 2.5, "lower": 3, "low": 2, "centre of mass": 4, "center of mass": 4, "crouch": 3, "crouching": 3, "get down": 3, "too upright": 3, "too tall": 3, "standing tall": 3, "stand tall": 3, "ready position": 2, "ready stance": 2, "stance": 1, "sitting high": 4},
+    "why": "A lower ready position keeps your legs bent and loaded, so your first push can come sooner. Standing tall means you have to bend before you can move, and that small delay adds up over a rally.",
+    "cues": [
+      "Bend your knees and sit your hips back a little, as if a chair is behind you.",
+      "Keep your weight on the balls of your feet with light heels.",
+      "Keep your chest up and your racket in front of you.",
+      "Sink a little lower just as the opponent is about to hit."
+    ],
+    "feel": "Your thighs feel lightly busy and your feet feel ready to push, not heavy or stuck.",
+    "reasons": ["tired legs late in a rally", "watching the shuttle and forgetting the legs", "feet set too close together to sit low comfortably"],
+    "progression": "Start by holding a low ready position for short spells, then hold it through whole rallies, then add quick pushes off from it.",
+    "fix_tags": ["lower_stance", "endurance"],
+    "simple": "Bend your knees a bit more while you wait, so you can move sooner."
+  },
+  "technique.knee_bend": {
+    "name": "knee bend",
+    "topics": {"knee bend": 5, "bend my knees": 5, "bend your knees": 5, "bending my knees": 5, "knee angle": 5, "straight knees": 5, "straight legs": 4, "bent knees": 4, "knees": 3, "knee": 2.5},
+    "why": "Bent knees let you push off the floor quickly in any direction. Straight knees slow your first move, because they have to bend before you can push.",
+    "cues": [
+      "Soften your knees so they point the same way as your toes.",
+      "Let your knees bend as your hips go down, rather than leaning forward.",
+      "Keep the bend while you wait for the opponent's shot.",
+      "Push the floor away through the whole foot when you move."
+    ],
+    "feel": "A light, springy feeling in your legs, as if you could jump at any moment.",
+    "reasons": ["standing up between shots to rest", "leaning forward with the upper body instead of bending the legs"],
+    "progression": "Practise holding bent knees in a still ready position, then while shadowing slowly, then at full speed.",
+    "fix_tags": ["lower_stance"],
+    "simple": "Bend your knees a bit more while you wait."
+  },
+  "technique.lunge_depth": {
+    "name": "lunge depth",
+    "topics": {"lunge depth": 5, "shallow lunge": 5, "shallow lunges": 5, "deeper lunge": 5, "deeper lunges": 5, "lunge deeper": 5, "deep lunge": 4.5, "lunges": 2.5, "lunge": 2.5, "lunging": 2.5, "net lunge": 4, "net lunges": 4, "reach the net": 3, "deeper": 1.5, "deep": 1},
+    "why": "A deeper, controlled lunge lets you reach net and corner shots earlier and in balance. A shallow lunge often means stretching with the arm instead, so the shot is late and weak.",
+    "cues": [
+      "Take a long last step with the racket-side leg.",
+      "Land heel first and let the front knee bend in line with the foot.",
+      "Keep your chest up and your back leg long.",
+      "Reach with the racket as the front foot lands."
+    ],
+    "feel": "A stable, deep position you could hold still for a moment, with most of your weight on the front leg.",
+    "reasons": ["not enough hip flexibility yet", "stopping short and reaching with the arm", "a last step that is too small"],
+    "progression": "Start with slow lunges to a mark, then lunges with a reach, then lunges with a quick push back to the middle.",
+    "fix_tags": ["lunge_depth", "hip_mobility"],
+    "simple": "Take a longer, lower last step to reach the net."
+  },
+  "technique.stance_width": {
+    "name": "stance width",
+    "topics": {"stance width": 5, "feet apart": 5, "feet too close": 5, "feet too wide": 5, "wide stance": 5, "narrow stance": 5, "feet wider": 4.5, "width": 3, "wide": 2, "narrow": 2, "stance": 1, "feet": 1, "too close together": 5, "close together": 4.5, "feet together": 4.5, "feet close": 4.5, "feet too narrow": 5},
+    "why": "Feet a little wider than your shoulders give you a stable base to push from in any direction. Too narrow and you lose balance; too wide and your first step gets slow.",
+    "cues": [
+      "Set your feet a little wider than your shoulders.",
+      "Keep your weight even between both feet.",
+      "Point your toes slightly out and keep your knees over them.",
+      "Check the width again each time you get back to your base."
+    ],
+    "feel": "Balanced, so a small push from either side would not tip you over.",
+    "reasons": ["habit from everyday standing", "feet drifting together when tired"],
+    "progression": "Check your width in a mirror, then hold it while shadowing, then hold it in rallies.",
+    "fix_tags": ["balance", "lower_stance"],
+    "simple": "Stand with your feet a bit wider than your shoulders."
+  },
+  "technique.trunk_lean": {
+    "name": "upper body lean",
+    "topics": {"trunk lean": 5, "leaning": 4, "lean": 4, "lean too much": 5, "upper body": 4, "trunk": 3, "torso": 3, "posture": 2.5, "bent over": 4, "hunched": 4, "tilt": 3, "tilting": 3, "upright": 2},
+    "why": "An upright upper body keeps your balance over your feet, so you can push off and recover quickly. Leaning far forward or to the side pulls you off balance and slows the next move.",
+    "cues": [
+      "Keep your chest up and your head over your hips.",
+      "Bend at the knees and hips rather than the waist.",
+      "Reach with the arm and the legs, not by tipping the body.",
+      "Firm up your middle a little as you hit."
+    ],
+    "feel": "Tall through the upper body even when your legs are low.",
+    "reasons": ["reaching for shots you are late to", "a tired middle late in rallies"],
+    "progression": "Practise slow reaches while keeping the upper body upright, then shadow footwork, then rallies.",
+    "fix_tags": ["core_stability", "balance"],
+    "simple": "Keep your upper body more upright when you reach and hit."
+  },
+  "contact.reach_height": {
+    "name": "contact height",
+    "topics": {"contact height": 5, "contact point": 5, "hitting point": 5, "hit higher": 5, "hit it higher": 5, "hitting higher": 5, "reach height": 5, "reach higher": 4.5, "higher": 2.5, "overhead": 3, "overheads": 3, "smash": 2.5, "smashes": 2.5, "clear": 1.5, "clears": 1.5, "reach": 1.5, "contact": 2.5, "high shots": 3, "hitting low": 4},
+    "why": "Hitting the shuttle higher and earlier gives you steeper shots and more time. A low contact point lets the shuttle drop, so your shots are flatter and the opponent gets more time.",
+    "cues": [
+      "Get behind the shuttle early so you can hit it above and in front of you.",
+      "Reach up with the racket arm as you hit, not after.",
+      "Turn side-on before the shot, then turn through it.",
+      "Add a small jump on high shots when you are early."
+    ],
+    "feel": "Hitting up and over the shuttle, not under it.",
+    "reasons": ["arriving late under the shuttle", "letting the shuttle drop before swinging", "a bent arm at the hit"],
+    "progression": "Start by hitting from a still position with a high reach, then add the footwork back, then add a jump on clears and smashes when you are early.",
+    "fix_tags": ["contact_height", "jump_power", "shoulder_health"],
+    "simple": "Try to hit the shuttle higher, earlier and more in front of you."
+  },
+  "contact.arm_extension": {
+    "name": "arm extension",
+    "topics": {"arm extension": 5, "bent arm": 5, "arm bent": 5, "straight arm": 5, "straighten my arm": 5, "straighten": 3.5, "elbow angle": 5, "elbow": 3.5, "arm": 2.5, "extend": 3, "extension": 3, "hitting arm": 4},
+    "why": "A long hitting arm at the hit gives you a higher contact point and more racket speed. A bent arm makes the hit lower and shorter.",
+    "cues": [
+      "Reach up to the shuttle with your hitting arm.",
+      "Let the elbow lead, then straighten the arm into the hit.",
+      "Hit at the top of your reach, slightly in front.",
+      "Keep your grip relaxed until just before the hit."
+    ],
+    "feel": "Long and tall at the hit, as if you are reaching for a high shelf.",
+    "reasons": ["arriving late, so the shuttle is too close", "swinging with the forearm only", "a tight grip"],
+    "progression": "Start with slow shadow swings to full reach, then hit fed shuttles, then rally.",
+    "fix_tags": ["arm_extension", "shoulder_health", "contact_height"],
+    "simple": "Straighten your hitting arm more as you hit."
+  },
+  "contact.hand_speed": {
+    "name": "racket-hand speed",
+    "topics": {"hand speed": 5, "racket speed": 5, "racquet speed": 5, "swing speed": 5, "arm speed": 5, "arm motion": 5, "racket hand": 4, "faster swing": 4.5, "swing faster": 4.5, "hand": 3, "swing": 2.5, "swings": 2.5, "power": 1.5, "wrist": 1.5},
+    "why": "A fast racket hand sends the shuttle faster with less effort. Steady speed from swing to swing usually means a relaxed swing you can repeat.",
+    "cues": [
+      "Keep your grip relaxed until just before the hit.",
+      "Start the swing from your legs and trunk, then the arm.",
+      "Turn your chest towards the net as you hit.",
+      "Let the racket follow through freely."
+    ],
+    "feel": "A whip-like swing that feels easy, not forced.",
+    "reasons": ["a tight grip all the way through", "swinging with the arm only", "being late and rushing the swing"],
+    "progression": "Practise slow shadow swings with the full body turn, then speed them up, then hit fed shuttles.",
+    "fix_tags": ["core_rotation", "shoulder_health"],
+    "simple": "Relax your grip and turn your body to swing faster."
+  },
+  "footwork.split_step": {
+    "name": "the split step",
+    "topics": {"split step": 6, "split steps": 6, "split-step": 6, "splitstep": 6, "split stepping": 6, "split": 3.5, "hop": 3, "hops": 2.5, "hopping": 3, "little jump": 3, "small jump": 3, "bounce": 2.5, "ready hop": 5},
+    "why": "A small hop timed with the opponent's hit leaves you on springy legs, so you can push off in any direction just after they hit. Without it you start from still feet, which is slower.",
+    "cues": [
+      "Start a small, low hop just before the opponent hits.",
+      "Land on the balls of your feet with bent knees and push off just after they hit.",
+      "Keep it low; a high jump makes you late.",
+      "You do not need to be back at the centre first; split from wherever you are."
+    ],
+    "feel": "Light and bouncy, like a sprinter ready on the line.",
+    "reasons": ["waiting flat-footed to see the shot", "hopping too early or too high", "rushing back to the middle instead of getting ready"],
+    "progression": "Start with small hops on a clap or call, then hop as a partner swings, then hop in rallies. Some shots leave no time for a clear hop, and that is fine.",
+    "fix_tags": ["split_step", "first_step", "ankle_calf"],
+    "simple": "Start a small, low hop just before the opponent hits, then push off just after."
+  },
+  "footwork.recovery": {
+    "name": "getting back to base",
+    "topics": {"recovery": 3.5, "recover": 3.5, "recovering": 3.5, "recovered": 3.5, "recovers": 3.5, "get back": 3.5, "getting back": 3.5, "back to base": 5, "return to base": 5, "back to the middle": 5, "back to centre": 5, "back to center": 5, "back to the centre": 5, "back to the center": 5, "return": 2, "way back": 3.5, "push back": 3.5},
+    "why": "Getting back towards your base after your own shot gives you more time for the next one. A slow return leaves gaps the opponent can use.",
+    "cues": [
+      "Push back out of the lunge with your front leg.",
+      "Take quick, small steps back towards the middle.",
+      "Get ready again as the opponent hits, even if you are not all the way back.",
+      "Keep your racket up as you move back."
+    ],
+    "feel": "Hit, push, and you are already moving back.",
+    "reasons": ["watching your own shot", "a deep lunge with no push back", "tired legs"],
+    "progression": "Start with lunge and push-back drills, then shadow footwork to the corners and back, then rallies.",
+    "fix_tags": ["base_recovery", "lunge_recovery"],
+    "simple": "After you hit, move back towards the middle quickly."
+  },
+  "footwork.first_step": {
+    "name": "the first step",
+    "topics": {"first step": 6, "first move": 5, "first movement": 5, "reaction": 3.5, "reaction time": 5, "react": 3.5, "reacting": 3.5, "slow start": 4, "start moving": 3.5, "push off": 3.5, "explosive": 2.5, "off the mark": 3.5},
+    "why": "A quick first move after the opponent hits wins time on every shot. A slow start means you reach the shuttle later, often low and rushed.",
+    "cues": [
+      "Land your split step on bent knees, ready to push.",
+      "Push off hard with the leg away from the shuttle.",
+      "Turn your hips towards the shuttle as you push.",
+      "Keep the first step short and fast, then lengthen."
+    ],
+    "feel": "Like a sprint start: a sharp push, not a lean.",
+    "reasons": ["waiting to be sure of the shot", "starting from straight legs", "no split step before it"],
+    "progression": "Start with reaction starts to a call or a pointed hand, then to a partner's swing, then in rallies.",
+    "fix_tags": ["first_step", "split_step", "lateral_movement"],
+    "simple": "Push off quickly just after the opponent hits."
+  },
+  "footwork.step_pattern": {
+    "name": "step pattern",
+    "topics": {"step pattern": 6, "footwork pattern": 5, "too many steps": 5, "small steps": 5, "tiny steps": 5, "steps": 2, "stepping": 3, "shuffle": 3.5, "shuffling": 3.5, "chasse": 3.5, "stutter": 3.5},
+    "why": "Fewer, well-sized steps get you to the shuttle in balance. Many small steps, or a lunge from too far away, both make you late or off balance.",
+    "cues": [
+      "Use a few larger steps to cover the distance, then lunge.",
+      "Start the lunge once you are close enough to reach.",
+      "Keep the last step long and controlled.",
+      "Practise the same pattern to each corner."
+    ],
+    "feel": "Smooth and in rhythm, with no stutter before the lunge.",
+    "reasons": ["being unsure where to go, so you shuffle", "lunging too early from far away"],
+    "progression": "Walk through the pattern to each corner, then shadow it at speed, then use it in rallies.",
+    "fix_tags": ["lateral_movement", "lunge_depth"],
+    "simple": "Use fewer, bigger steps before you lunge."
+  },
+  "footwork.coverage": {
+    "name": "court coverage",
+    "topics": {"coverage": 5, "court coverage": 6, "cover the court": 6, "covering the court": 6, "cover": 3, "corners": 3, "corner": 2.5, "move around the court": 4, "movement around the court": 4, "unused corners": 5, "space": 1.5, "area": 1.5},
+    "why": "Where you moved shows which parts of your half you reached during play. It is only a description: some rallies never need a corner, so a quiet area is not a mistake by itself.",
+    "cues": [
+      "Practise moving to all six corners, not only the ones you like.",
+      "Move back towards your base after each shot.",
+      "Start moving early so far corners stay within reach.",
+      "Notice which areas you avoid in practice games."
+    ],
+    "feel": "Every corner feels within reach from your base.",
+    "reasons": ["the rally never went there", "favouring your forehand side", "starting late"],
+    "progression": "Start with slow shadow footwork to every corner, then faster, then with a partner calling corners.",
+    "fix_tags": ["lateral_movement", "base_recovery", "endurance"],
+    "simple": "This shows where you moved; it is not right or wrong by itself."
+  },
+  "tactics.base_discipline": {
+    "name": "distance from base",
+    "topics": {"base position": 5, "base discipline": 6, "far from base": 5.5, "away from base": 5.5, "distance from base": 5.5, "base": 3, "where i stand": 3.5, "where to stand": 3.5, "where should i stand": 3.5, "centre": 1.5, "center": 1.5, "middle": 1.5, "position": 1.5, "positioning": 3, "closer to the middle": 5, "closer to the centre": 5, "closer to the center": 5, "stay in the middle": 5, "stay in the centre": 5, "stay in the center": 5, "stay central": 5, "near the middle": 4},
+    "why": "Being near a good spot as the opponent hits leaves you the shortest way to most replies. This is a position description only; the right spot changes with the shot you just played, so being away from the middle is not always a mistake.",
+    "cues": [
+      "After your shot, move towards the spot that covers their likely replies.",
+      "After a high clear, base a little further back; after a net shot, a little forward.",
+      "Split step wherever you are as they hit; do not rush to the exact middle first.",
+      "Keep your racket up while you move."
+    ],
+    "feel": "Ready and balanced as they hit, even if you are not at the exact middle.",
+    "reasons": ["watching your shot instead of moving", "a long lunge with a slow push back", "guessing where the reply will go"],
+    "progression": "Start with shadow footwork that ends near base, then pair drills, then games where you notice where you are as they hit.",
+    "fix_tags": ["base_recovery", "first_step"],
+    "simple": "Try to be near a good spot as they hit; the best spot depends on the shot."
+  },
+  "tactics.tempo": {
+    "name": "rally tempo",
+    "topics": {"tempo": 6, "rhythm": 5, "pace": 4, "speed of play": 5, "time between shots": 5, "time between swings": 5, "rushing": 3.5, "rush": 3, "slow down": 2.5, "speed up": 2.5},
+    "why": "Tempo is the rhythm of the rally, read here as the time between swings. Faster is not always better; changing the pace on purpose can matter more than raw speed.",
+    "cues": [
+      "Notice when you rush, and settle your feet between shots.",
+      "Use a high clear to slow down a rally you are losing.",
+      "Take the shuttle earlier to speed up a rally you are winning.",
+      "Keep your feet moving between shots, even in slow rallies."
+    ],
+    "feel": "In control of the rhythm, not chased by it.",
+    "reasons": ["rushing when under pressure", "waiting flat-footed in slow rallies"],
+    "progression": "Play rallies where you change the pace on purpose, then games with a pace goal.",
+    "fix_tags": ["endurance", "first_step"],
+    "simple": "This is the speed of the back-and-forth; try changing it on purpose."
+  },
+  "tactics.initiative": {
+    "name": "taking the initiative",
+    "topics": {"initiative": 6, "take the initiative": 6, "attack": 3.5, "attacking": 3.5, "aggressive": 3.5, "more aggressive": 4, "front court": 3.5, "net play": 3.5, "control the rally": 4, "take control": 3.5, "defensive": 3, "defend": 2.5, "pressure": 3, "rear court": 3, "back court": 3, "nearer the net": 4, "on the back foot": 5, "back foot": 4, "on the front foot": 5, "front foot": 4, "on the defensive": 4.5},
+    "why": "Here initiative means how much rally time you spend nearer the net than your opponent. It is a position share only; without the shuttle it does not prove who was attacking.",
+    "cues": [
+      "After a good attacking shot, follow it in a step or two.",
+      "Take the shuttle early and high when you can.",
+      "Use drops and net shots to move the opponent forward and back.",
+      "Stay ready to move back if the reply goes high."
+    ],
+    "feel": "Moving forward on purpose, not being pushed back.",
+    "reasons": ["clearing a lot and staying back", "late contact that forces defensive shots"],
+    "progression": "Start with drills where you follow your smash or drop in to the net, then play games with a forward goal.",
+    "fix_tags": ["first_step", "contact_height"],
+    "simple": "This is how often you were closer to the net; it is not proof of attacking."
+  }
+}

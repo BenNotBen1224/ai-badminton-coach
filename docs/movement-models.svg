@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="390" viewBox="0 0 1120 390" role="img" aria-labelledby="title desc">
+  <title id="title">Milestone 1 movement-analysis models</title>
+  <desc id="desc">A local video is processed by YOLO26n-Pose for 17 body points and ByteTrack for short-lived track labels. Court and confidence filters produce an annotated video, a side-by-side video, and frame-aligned keypoint JSON. Shuttle tracking and coaching scores are not implemented yet.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#526579"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #172b3a; }
+      .title { font-size: 24px; font-weight: 700; }
+      .label { font-size: 17px; font-weight: 700; }
+      .body { font-size: 14px; }
+      .muted { fill: #536779; }
+      .box { fill: #f5f8fb; stroke: #c5d2df; stroke-width: 2; rx: 14; }
+      .model { fill: #e8f3ff; stroke: #72a9d6; }
+      .track { fill: #e9f8f2; stroke: #66ad8c; }
+      .output { fill: #fff7e8; stroke: #dbb564; }
+      .line { stroke: #526579; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1120" height="390" fill="#ffffff"/>
+  <text x="28" y="42" class="title">What analyzes movement in this build?</text>
+
+  <rect x="28" y="94" width="170" height="112" class="box"/>
+  <text x="48" y="132" class="label">Match video</text>
+  <text x="48" y="159" class="body muted">Full frame in</text>
+  <text x="48" y="181" class="body muted">Local CPU</text>
+
+  <path d="M198 150H235" class="line"/>
+  <rect x="242" y="82" width="250" height="136" class="box model"/>
+  <text x="263" y="118" class="label">YOLO26s-Pose</text>
+  <text x="263" y="146" class="body">Pretrained Ultralytics model</text>
+  <text x="263" y="170" class="body">17 COCO body points per person</text>
+  <text x="263" y="194" class="body muted">Low-confidence joints become null</text>
+
+  <path d="M492 150H529" class="line"/>
+  <rect x="536" y="94" width="222" height="112" class="box track"/>
+  <text x="557" y="132" class="label">ByteTrack</text>
+  <text x="557" y="159" class="body">Follows detections over time</text>
+  <text x="557" y="181" class="body muted">IDs are not player names</text>
+
+  <path d="M758 150H795" class="line"/>
+  <rect x="802" y="82" width="290" height="136" class="box output"/>
+  <text x="823" y="118" class="label">Visible results</text>
+  <text x="823" y="146" class="body">Court filter + confidence checks</text>
+  <text x="823" y="170" class="body">Annotated and side-by-side MP4</text>
+  <text x="823" y="194" class="body">Frame-aligned keypoints JSON</text>
+
+  <rect x="28" y="258" width="1064" height="86" rx="14" fill="#f8f9fa" stroke="#d9dfe5" stroke-width="2"/>
+  <text x="50" y="291" class="label">Not in this milestone</text>
+  <text x="50" y="319" class="body muted">No shuttle model, shot detector, rally ranking, biomechanics claims, or generated coaching narration yet.</text>
+</svg>

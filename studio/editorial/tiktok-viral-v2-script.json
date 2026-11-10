@@ -1,0 +1,143 @@
+{
+  "title_zh": "别只把球打过去",
+  "status": "separate_editorial_remake_for_parent_review",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "format": "vertical_tiktok",
+  "hook": "后场怎么调？",
+  "source_time_mapping": {
+    "original_reel": "<workspace>\\obj2\\work\\H\\downloads\\china-open-2025-ws-final.webm",
+    "unchanged_ranges_s": [[57.8, 64.8], [126.6, 134.0], [272.8, 285.0]],
+    "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52"
+  },
+  "moments": [
+    {
+      "id": "space",
+      "title": "后场调动",
+      "range": [57.8, 64.8],
+      "evidence": "space-sequence",
+      "anchors": [59.45, 60.65, 62.05]
+    },
+    {
+      "id": "time",
+      "title": "被动先过渡",
+      "range": [126.6, 134.0],
+      "evidence": "r1-feedback",
+      "anchors": [128.3167, 130.0167, 131.9833]
+    },
+    {
+      "id": "options",
+      "title": "蹬地回位",
+      "range": [272.8, 285.0],
+      "evidence": "reply-sequence",
+      "anchors": [274.0333, 275.0, 276.3],
+      "emphasis": {
+        "source_range_s": [273.95, 274.8],
+        "target_role": "near",
+        "zoom": 1.12,
+        "purpose": "briefly emphasize the visible low lunge while retaining the other player and court context"
+      }
+    }
+  ],
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "title": "后场调动",
+      "target_speed": 1.0,
+      "hook": true,
+      "text": "红衣在后场，可以放网调动。动作小、手上轻。她若赶到，接下一拍。",
+      "caption_chunks": [
+        "红衣在后场，可以放网调动。",
+        "动作小、手上轻。",
+        "她若赶到，接下一拍。"
+      ],
+      "type": "coach_read",
+      "evidence": [3567, 3639, 3723],
+      "hold": 0.0,
+      "intent_cue": "放网调她上来",
+      "technique_cue": "动作小，手上轻"
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "title": "被动先过渡",
+      "target_speed": 1.0,
+      "text": "被动先过渡，争取回位。对手出拍时，做启动小跳。准备接下一拍。",
+      "caption_chunks": [
+        "被动先过渡，争取回位。",
+        "对手出拍时，做启动小跳。",
+        "准备接下一拍。"
+      ],
+      "type": "coach_read",
+      "evidence": [7699, 7801, 7919],
+      "hold": 0.0,
+      "intent_cue": "被动先过渡，争取回位",
+      "technique_cue": "出拍时做启动小跳"
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 285.0],
+      "title": "蹬地回位",
+      "target_speed": 1.0,
+      "text": "跨步后，蹬地回位、收回重心。红衣若继续前压，可以打身后。让她转身回追；调动后，自己也要连贯跟上。",
+      "caption_chunks": [
+        "跨步后，蹬地回位、收回重心。",
+        "红衣若继续前压，可以打身后。",
+        "让她转身回追；调动后，自己也要连贯跟上。"
+      ],
+      "type": "coach_read",
+      "evidence": [16442, 16500, 16578, 16608, 16644],
+      "hold": 0.0,
+      "intent_cue": "若她继续前压，可以打身后",
+      "technique_cue": "蹬地回位，收回重心"
+    }
+  ],
+  "coach_analysis": {
+    "beats": [
+      {
+        "id": "space",
+        "observed": "红衣处在后场，随后在连续画面中向前移动；球路和落点不可见。",
+        "tactical_read": "若要调动仍在后场的对手，可以考虑放网；这是战术建议，不是原片击球分类或球员意图。",
+        "technique_cue": "放网动作小、手上轻，是教练建议，不是姿势模型测量。",
+        "prepare_for": "对手若赶到，准备接她的回球，不预判回球类型。",
+        "evidence_ids": ["E003567", "E003639", "E003723"],
+        "limitations": ["未验证实际球种、球路或落点。"]
+      },
+      {
+        "id": "time",
+        "observed": "红衣低位伸展后站起；在灰衣下一次后场挥拍前，她已站起来。",
+        "tactical_read": "被动时先过渡并争取回位；画面只支持先低位、后起身的顺序，不量化实际争取的时间。",
+        "technique_cue": "对手出拍时做启动小跳，是建议而非检测结果。",
+        "prepare_for": "准备接下一拍；画面显示对手随后在后场挥拍。",
+        "evidence_ids": ["E007699", "E007801", "E007919"],
+        "limitations": ["不量化回位时间；启动小跳是教练建议。"]
+      },
+      {
+        "id": "options",
+        "observed": "灰衣在近端中后场低位，红衣随后前移；第16442帧不是网前状态。",
+        "tactical_read": "红衣若继续前压，可以考虑打身后，要求她转身回追；这是条件性选择，不是测得的实际球路或确定效果。",
+        "technique_cue": "跨步后蹬地回位、收回重心是教练提示，不是画面测得的重心或蹬地力。",
+        "prepare_for": "若对手没有继续前压，打身后未必创造优势。",
+        "evidence_ids": ["E016442", "E016500", "E016578", "C016608", "C016644"],
+        "limitations": ["未验证实际球路；第16442帧位于近端中后场而非网前。"]
+      }
+    ],
+    "global_limitations": [
+      "单机位二维画面不能证明球拍触球、羽毛球轨迹、落点或三维生物力学。",
+      "战术目的为条件性回看解读，不是已知球员意图或前瞻预测。",
+      "放网、启动小跳和打身后均是教练建议，不代表这些技术动作已被检测。",
+      "完整场地宽景持续可见；短暂强调镜头依据缓存姿态框裁取，且不作为测量。"
+    ]
+  },
+  "claim_checks": [
+    "使用原有三个连续片段，顺序和时间映射均不变；无动作回放或冻结。",
+    "放网、启动小跳和打身后均以教练建议表述；打身后明确以对手继续前压为条件。",
+    "灰衣在第16442帧处于近端中后场，不推断网前压迫。",
+    "姿态缓存仅用于短暂镜头强调和时间对齐，不证明触球、球路、落点或三维力学。",
+    "V3保持冻结；其召回验收仍未通过。"
+  ],
+  "attribution": "Badminton Sphere / Wikimedia Commons, China Open 2025 women's singles final, CC BY 3.0; upstream broadcast rights not independently cleared."
+}

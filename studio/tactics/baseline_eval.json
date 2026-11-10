@@ -1,0 +1,87 @@
+{
+ "tol_s": 0.25,
+ "precision": 0.45038167938931295,
+ "recall": 0.6145833333333334,
+ "zone_agreement": 0.3269230769230769,
+ "depth_agreement": 0.4807692307692308,
+ "family_agreement": 0.23809523809523808,
+ "zone_coverage": 0.8813559322033898,
+ "family_coverage": 0.3559322033898305,
+ "totals": {
+  "label": 96,
+  "engine": 131,
+  "matched": 59,
+  "zone_both": 52,
+  "zone_same": 17,
+  "depth_same": 25,
+  "family_both": 21,
+  "family_same": 5
+ },
+ "per_rally": [
+  {
+   "id": "R1",
+   "label": 15,
+   "engine": 22,
+   "matched": 10,
+   "precision": 0.45454545454545453,
+   "recall": 0.6666666666666666,
+   "zone_both": 9,
+   "zone_same": 5,
+   "depth_same": 6,
+   "family_both": 3,
+   "family_same": 2
+  },
+  {
+   "id": "R2",
+   "label": 25,
+   "engine": 13,
+   "matched": 5,
+   "precision": 0.38461538461538464,
+   "recall": 0.2,
+   "zone_both": 5,
+   "zone_same": 2,
+   "depth_same": 3,
+   "family_both": 2,
+   "family_same": 1
+  },
+  {
+   "id": "R3",
+   "label": 26,
+   "engine": 49,
+   "matched": 21,
+   "precision": 0.42857142857142855,
+   "recall": 0.8076923076923077,
+   "zone_both": 18,
+   "zone_same": 4,
+   "depth_same": 7,
+   "family_both": 10,
+   "family_same": 1
+  },
+  {
+   "id": "R4",
+   "label": 15,
+   "engine": 26,
+   "matched": 11,
+   "precision": 0.4230769230769231,
+   "recall": 0.7333333333333333,
+   "zone_both": 9,
+   "zone_same": 2,
+   "depth_same": 4,
+   "family_both": 4,
+   "family_same": 1
+  },
+  {
+   "id": "R5",
+   "label": 15,
+   "engine": 21,
+   "matched": 12,
+   "precision": 0.5714285714285714,
+   "recall": 0.8,
+   "zone_both": 11,
+   "zone_same": 4,
+   "depth_same": 5,
+   "family_both": 2,
+   "family_same": 0
+  }
+ ]
+}

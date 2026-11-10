@@ -1,0 +1,18 @@
+{
+  "script_sha256": "9235f2f1dbcd188a9ea74de52d0885a754b994451d1084a06ee2793db2cdd889",
+  "previous_script_sha256": "fe8245c328d833e147d33f6a4f042a7af2849347b0d614ad097d52a71d9dea8f",
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "sentences": 13,
+  "author_proposed_why_next": 9,
+  "author_proposed_fraction": 0.6923076923076923,
+  "independent_rating": "pending",
+  "rendered_evidence_and_audio": "not_yet_produced",
+  "mapping": {
+    "A": "<workspace>\\obj2\\work\\TACTICS\\video-script.json",
+    "B": "<workspace>\\badminton-coach\\outputs\\natural-three-moments-20261103-v7\\script.json"
+  },
+  "input_hashes": {
+    "scripts.json": "bbbd968b56a79ec47bd1027dcbe5698db20d8a33ebcd39538b48761613ae5868",
+    "evidence.json": "ae26adbdee5bb12ec7728f826a94667e9facf650629294672f427b3c16aa08eb"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "review_kind": "source-picture inspection by rendering agent; tactical readings are conditional, not known intent",
+  "court_position_method": "visible feet relative to floor markings over the sequence; not hip height or the raised net tape",
+  "observed": [
+    {
+      "id": "O1",
+      "claim_zh": "红衣王祉怡处在后场并向前移动；球路和落点不可见。",
+      "evidence_ids": [
+        "E003567",
+        "E003639",
+        "E003723"
+      ]
+    },
+    {
+      "id": "O2",
+      "claim_zh": "红衣王祉怡低位伸展后站起；在白衣韩悦下一次后场挥拍前，她已站起来。",
+      "evidence_ids": [
+        "E007699",
+        "E007801",
+        "E007919"
+      ]
+    },
+    {
+      "id": "O3",
+      "claim_zh": "白衣韩悦在近端中后场低位，红衣王祉怡随后向前移动。",
+      "evidence_ids": [
+        "E016442",
+        "E016500",
+        "E016578",
+        "C016608",
+        "C016644"
+      ]
+    }
+  ],
+  "conditional": [
+    {
+      "id": "I1",
+      "claim_zh": "把这一段读作韩悦调动王祉怡、争取其回位空当；这是基于位置变化的战术解读，不是已确认的击球意图。",
+      "evidence_ids": [
+        "E003567",
+        "E003639",
+        "E003723"
+      ]
+    },
+    {
+      "id": "I2",
+      "claim_zh": "被动时先过渡，目的是拆掉韩悦的连贯；这是教练解读，不是已测球速或已确认的回球类型。",
+      "evidence_ids": [
+        "E007699",
+        "E007801",
+        "E007919"
+      ]
+    },
+    {
+      "id": "I3",
+      "claim_zh": "王祉怡前压时，打她身后是教练给出的反制选择；不是原片球路、落点或球员意图的判断。",
+      "evidence_ids": [
+        "E016442",
+        "E016500",
+        "E016578",
+        "C016608",
+        "C016644"
+      ]
+    }
+  ],
+  "coach_cues": [
+    {
+      "id": "space",
+      "cue_zh": "前后拉开，不等对手站稳再打。",
+      "prepare_for_zh": "利用回位空当继续施压；下一拍不预判球种。",
+      "evidence_ids": [
+        "E003567",
+        "E003639",
+        "E003723"
+      ],
+      "limitations": [
+        "未验证实际球种、球路或落点。"
+      ]
+    },
+    {
+      "id": "time",
+      "cue_zh": "先过渡争取回位，避免硬顶快球喂舒服下一拍。",
+      "prepare_for_zh": "韩悦下一拍仍可能进攻；回位后继续准备防守。",
+      "evidence_ids": [
+        "E007699",
+        "E007801",
+        "E007919"
+      ],
+      "limitations": [
+        "未验证实际来球速度或回球类型；不量化回位时间。"
+      ]
+    },
+    {
+      "id": "options",
+      "cue_zh": "借前压打身后，逼对手转身回追。",
+      "prepare_for_zh": "被迫回追后对手仍可能继续处理来球；不预判精确回球类型。",
+      "evidence_ids": [
+        "E016442",
+        "E016500",
+        "E016578",
+        "C016608",
+        "C016644"
+      ],
+      "limitations": [
+        "未验证实际球路或落点；第16442帧位于近端中后场而非网前。"
+      ]
+    }
+  ],
+  "omitted_claims": [
+    "known player intention",
+    "racket-shuttle contact",
+    "exact shot family",
+    "shuttle trajectory or landing",
+    "measured time gain",
+    "point winner"
+  ],
+  "caption_review": "Video captions are one short spoken chunk at a time; the written report separates observations from conditional coaching advice.",
+  "voice_review": "No human listening or independent voice naturalness acceptance is claimed."
+}

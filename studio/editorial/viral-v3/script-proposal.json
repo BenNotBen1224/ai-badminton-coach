@@ -1,0 +1,93 @@
+{
+  "title_zh": "先调开，再抓回位",
+  "status": "awaiting_user_script_review",
+  "format": "vertical_tiktok",
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "identity_review": {
+    "scoreboard_source_frame": 3639,
+    "scoreboard_text": [
+      "HAN Y.",
+      "WANG Z.Y."
+    ],
+    "red_kit_source_frames": [
+      3468,
+      3504,
+      3576,
+      3681
+    ],
+    "red_kit_lettering": "WANG ZY",
+    "mapping": {
+      "red_kit": "Wang Zhi Yi",
+      "white_kit": "Han Yue"
+    },
+    "basis": "The source scoreboard identifies both finalists; WANG ZY is readable on the red player's jersey. The white-kit player is Han Yue by elimination in this two-player final. BWF's official China Open 2025 final listing independently names Han Yue and Wang Zhi Yi.",
+    "official_listing": "https://www.youtube.com/watch?v=onKkjicRe3w"
+  },
+  "spoken_script": {
+    "hook": {
+      "source_window_s": [
+        57.8,
+        64.8
+      ],
+      "evidence_frames": [
+        3567,
+        3639,
+        3723
+      ],
+      "text_zh": "对上韩悦，先调动，再抢回位空当。"
+    },
+    "beats": [
+      {
+        "id": "space",
+        "source_window_s": [
+          57.8,
+          64.8
+        ],
+        "evidence_frames": [
+          3567,
+          3639,
+          3723
+        ],
+        "text_zh": "后场这拍：小动作放网，把韩悦调上来；放完跟进，抢先上手。",
+        "observation": "The red-kit player is in the rear court and moves forward during this continuous passage.",
+        "tactical_interpretation": "The net shot and follow-up are direct coaching instructions, not a classification of the stroke shown in the footage."
+      },
+      {
+        "id": "transition",
+        "source_window_s": [
+          126.6,
+          134.0
+        ],
+        "evidence_frames": [
+          7699,
+          7801,
+          7919
+        ],
+        "text_zh": "王祉怡被动先过渡，争取回位；盯韩悦出拍做启动小跳，别等击球后才动。",
+        "observation": "The red-kit player moves from a low extended position to standing before the white-kit player's next visible backcourt swing.",
+        "tactical_interpretation": "Using a transition shot and preparing as the opponent strikes are coaching cues, not measured outcomes."
+      },
+      {
+        "id": "recovery",
+        "source_window_s": [
+          272.8,
+          285.0
+        ],
+        "evidence_frames": [
+          16442,
+          16500,
+          16578,
+          16608,
+          16644
+        ],
+        "text_zh": "韩悦在中后场低位，先蹬地回位、稳住重心；王祉怡前压时，打她身后，逼她转身回追。",
+        "observation": "The white-kit player is low in the near mid/rear court as the red-kit player moves forward.",
+        "tactical_interpretation": "Recovery and playing behind are coaching instructions timed to the visible positions, not claims about the unseen shuttle path or the opponent's intent."
+      }
+    ]
+  },
+  "render_status": {
+    "tts_started": false,
+    "encoding_started": false
+  }
+}

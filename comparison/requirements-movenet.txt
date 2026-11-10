@@ -1,0 +1,2 @@
+tensorflow==2.20.0
+opencv-python==4.14.0.94

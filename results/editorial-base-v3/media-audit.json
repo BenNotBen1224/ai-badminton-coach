@@ -1,0 +1,21 @@
+{
+  "video": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\editorial.mp4",
+  "bytes": 6541716,
+  "sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+  "checks": {
+    "video_stream_present": true,
+    "audio_stream_present": true,
+    "stream_mapping_succeeded": true,
+    "video_decodes": true,
+    "audio_decodes": true,
+    "audio_is_not_silent": true,
+    "video_matches_expected_duration": true
+  },
+  "limits": "Technical media checks only. Passing does not prove natural Chinese speech, narration-to-action alignment, correct coaching, source-frame alignment, or complete application acceptance.",
+  "decoded_frames": 798,
+  "video_duration_s": 26.6,
+  "audio_duration_s": 26.6,
+  "audio_video_duration_difference_s": 0.0,
+  "audio_peak_db": -5.528654,
+  "technical_media_pass": true
+}

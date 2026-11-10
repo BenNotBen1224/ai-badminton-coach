@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "editorial_drafts_not_rendered_or_accepted",
+  "scope": "Two additional match excerpts with different players. Three tactical observation points within each selected exchange, not three independently verified best rallies from a complete match.",
+  "mode": "Picture-reviewed editorial explanation. Automatic hit precision, recall and zone acceptance are not implied.",
+  "timebase": "Engine time on frozen normalized 30fps files. Original capture pictures must be joined with clock-map-ms.csv or clock-map-ws.csv; do not add clip offsets 44 or 66.",
+  "render_contract": {
+    "source_order": "Each selected exchange is played once, monotonically, with selective slowing and brief justified holds. No repeated movement.",
+    "display": "Keep both central-court players visible. Show real pose or image-space player movement, never invented shuttle flight. No exact floor coordinates for airborne players.",
+    "voice": "Local Chinese neural TTS; no fabricated crowd or impact sounds for these silent sources.",
+    "attribution": "Read the actual input attribution files and keep their scope. No claim that upstream redistribution rights are independently cleared.",
+    "evidence": "Rebind the selected normalized source frames to cached pose, inspect the overlays, and omit uncertain joints or assignments. The supplied prose is an editorial draft to check, not an instruction to fabricate supporting evidence.",
+    "application": "Output-only work. No shared application source changes or inference reruns.",
+    "limits": "Keep the separate failed automatic accuracy results visible in the accompanying analysis, without turning every spoken sentence into a disclaimer."
+  },
+  "videos": [
+    {
+      "id": "mens",
+      "title_zh": "跟上网前，也要留好退路",
+      "match": "Muhammad Reza Al Fajri vs Kevin Cordon",
+      "player_names_in_narration": false,
+      "source": "<workspace>\\badminton-coach\\outputs\\tactics-multigame-20261104\\normalized\\arise-2026-ms-30fps.mp4",
+      "source_sha256": "5a5510fcd48fa3c20b0d56080112ae0079a98f7bf598fe85fa7436d73d1634b1",
+      "pose_index": "<workspace>\\badminton-coach\\outputs\\tactics-multigame-20261104\\ms-source-unscored\\pose_cache\\index.json",
+      "source_window_s": [76.5, 89.2],
+      "observation_anchors_s": [77.65, 80.7, 82.4],
+      "rules": ["buy_recovery_time", "rear_then_front", "cover_faster_threat"],
+      "inspected_sheets": [
+        "labels\\sheets\\src\\ms_10fps_76.5.jpg",
+        "labels\\sheets\\src\\ms_10fps_79.5.jpg",
+        "labels\\sheets\\src\\ms_10fps_82.5.jpg",
+        "labels\\sheets\\src\\ms_10fps_85.5.jpg"
+      ],
+      "notes": [
+        "Use only the central court. This passage is beyond the contaminated first 72 seconds.",
+        "The near white/red-shirted player visibly uses the left arm for the overhead; do not inherit an unverified right-hand default.",
+        "The far player is small. Do not invent exact contact times, shot speeds, a stroke inventory, or the point winner.",
+        "Around 80.7-82.4 the near player follows forward, then turns back for another reply. Show the actual continuation rather than grading his base against one fixed target."
+      ],
+      "beats": [
+        {"id": "hook", "text_zh": "这一回，先看两个人怎么换位置。", "rubric": "framing", "why_next_eligible": false},
+        {"id": "deep", "text_zh": "把对手送到后场，也给自己争取了回位的时间。", "source_support_s": [77.3, 79.0], "rubric": "why", "why_next_eligible": true},
+        {"id": "short", "text_zh": "接着放短，对手又得从后面赶到网前。", "source_support_s": [79.7, 81.5], "rubric": "why", "why_next_eligible": true},
+        {"id": "follow", "text_zh": "往前跟，可以先顾到更快的网前回球。", "source_support_s": [80.7, 81.9], "rubric": "what_next", "why_next_eligible": true},
+        {"id": "alternatives", "text_zh": "但对手还能挑后场，跟进时，也要留好后退的准备。", "source_support_s": [81.7, 84.9], "rubric": "what_next_alternatives", "why_next_eligible": true},
+        {"id": "summary", "text_zh": "看对手能打哪里，再决定自己等在哪里。", "rubric": "summary", "why_next_eligible": false}
+      ]
+    },
+    {
+      "id": "womens",
+      "title_zh": "调动对手，也要接住下一拍",
+      "match": "Miranda Wilson vs Huang Ching Ping",
+      "player_names_in_narration": false,
+      "source": "<workspace>\\badminton-coach\\outputs\\tactics-multigame-20261104\\normalized\\arise-2026-ws-30fps.mp4",
+      "source_sha256": "7bd624e2988a25854ecf6164c76d1dabd0754c14e4756a7a42c4fb485f848181",
+      "pose_index": "<workspace>\\badminton-coach\\outputs\\tactics-multigame-20261104\\ws-source-unscored\\pose_cache\\index.json",
+      "source_window_s": [19.0, 27.5],
+      "observation_anchors_s": [21.65, 23.05, 25.4],
+      "rules": ["cover_faster_threat", "net_reply_options"],
+      "inspected_sheets": [
+        "labels\\sheets\\src\\ws_10fps_19.jpg",
+        "labels\\sheets\\src\\ws_10fps_22.jpg",
+        "labels\\sheets\\src\\ws_10fps_25.jpg"
+      ],
+      "notes": [
+        "The source contains browser-capture repetitions; do not call those intentional editorial freezes or smooth them with invented motion.",
+        "The near player wears pink. Do not assume the names map to near/far without separate evidence.",
+        "Around 22.3 the far player reaches to one side; around 24.1 she reaches toward the opposite side. The near player subsequently turns back for the reply around 25.4.",
+        "The lateral sequence supports visible travel burden, not a measured intention or a claim that the opponent was deceived.",
+        "Do not infer the final point winner from body language."
+      ],
+      "beats": [
+        {"id": "hook", "text_zh": "看这三拍，主动是怎么接着来的。", "rubric": "framing", "why_next_eligible": false},
+        {"id": "follow", "text_zh": "对手接得低，向前跟，能更早处理短回球。", "source_support_s": [21.4, 23.1], "rubric": "why", "why_next_eligible": true},
+        {"id": "width", "text_zh": "下一拍换到另一边，让她又得横着赶。", "source_support_s": [23.0, 24.3], "rubric": "why", "why_next_eligible": true},
+        {"id": "reply", "text_zh": "但她还是救了回来，所以不能只守在网前。", "source_support_s": [24.0, 25.5], "rubric": "what_next", "why_next_eligible": true},
+        {"id": "summary", "text_zh": "能让对手跑，也要能接住她的下一拍。", "rubric": "summary", "why_next_eligible": false}
+      ]
+    }
+  ]
+}

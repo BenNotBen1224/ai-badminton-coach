@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="170" viewBox="0 0 1280 170" role="img" aria-label="Use it in four steps">
+<title>Use it in four steps</title>
+<rect width="1280" height="170" rx="20" fill="#0b0f14"/>
+<rect x="40.0" y="30" width="280.5" height="110" rx="16" fill="#141c25" stroke="#2a3644"/>
+<circle cx="76.0" cy="66" r="18" fill="#ff5fa2"/>
+<text x="76.0" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#0b0f14" font-weight="700" text-anchor="middle">1</text>
+<text x="106.0" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#f2f5f8" font-weight="600" text-anchor="start">Get the code</text>
+<text x="64.0" y="114.0" font-family="Consolas,Menlo,monospace" font-size="14" fill="#9aa7b4" font-weight="400" text-anchor="start">clone + one venv</text>
+<rect x="346.5" y="30" width="280.5" height="110" rx="16" fill="#141c25" stroke="#2a3644"/>
+<circle cx="382.5" cy="66" r="18" fill="#ff5fa2"/>
+<text x="382.5" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#0b0f14" font-weight="700" text-anchor="middle">2</text>
+<text x="412.5" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#f2f5f8" font-weight="600" text-anchor="start">Get the models</text>
+<text x="370.5" y="114.0" font-family="Consolas,Menlo,monospace" font-size="14" fill="#9aa7b4" font-weight="400" text-anchor="start">scripts\get_models.py</text>
+<line x1="323.5" y1="85" x2="336.5" y2="85" stroke="#5c6773" stroke-width="2"/><path d="M334.5,79 L343.5,85 L334.5,91 Z" fill="#5c6773"/>
+<rect x="653.0" y="30" width="280.5" height="110" rx="16" fill="#141c25" stroke="#2a3644"/>
+<circle cx="689.0" cy="66" r="18" fill="#ff5fa2"/>
+<text x="689.0" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#0b0f14" font-weight="700" text-anchor="middle">3</text>
+<text x="719.0" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#f2f5f8" font-weight="600" text-anchor="start">Get a match</text>
+<text x="677.0" y="114.0" font-family="Consolas,Menlo,monospace" font-size="14" fill="#9aa7b4" font-weight="400" text-anchor="start">your video, or get_footage.py</text>
+<line x1="630.0" y1="85" x2="643.0" y2="85" stroke="#5c6773" stroke-width="2"/><path d="M641.0,79 L650.0,85 L641.0,91 Z" fill="#5c6773"/>
+<rect x="959.5" y="30" width="280.5" height="110" rx="16" fill="#141c25" stroke="#2a3644"/>
+<circle cx="995.5" cy="66" r="18" fill="#ff5fa2"/>
+<text x="995.5" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#0b0f14" font-weight="700" text-anchor="middle">4</text>
+<text x="1025.5" y="72.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#f2f5f8" font-weight="600" text-anchor="start">Make the review</text>
+<text x="983.5" y="114.0" font-family="Consolas,Menlo,monospace" font-size="14" fill="#9aa7b4" font-weight="400" text-anchor="start">python -m coach.app</text>
+<line x1="936.5" y1="85" x2="949.5" y2="85" stroke="#5c6773" stroke-width="2"/><path d="M947.5,79 L956.5,85 L947.5,91 Z" fill="#5c6773"/>
+</svg>

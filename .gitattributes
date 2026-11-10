@@ -1,0 +1,2 @@
+# Store every file byte-for-byte so results/MANIFEST.json hashes hold on every OS.
+* -text

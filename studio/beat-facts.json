@@ -1,0 +1,71 @@
+{
+  "about": "Per-contact facts for the Han Yue vs Wang Zhiyi commentary. 'measured' comes from TrackNetV3 shuttle tracks (runs/*_ball.csv) and YOLO pose feet projected to court metres; 'reviewed' is a human-style frame review of zoom strips (runs/zoom-*.jpg). Depths are diagnostic projections, not surveyed ground truth. Handedness assumed right-handed for both players.",
+  "conventions": {
+    "court_m": "x 0-6.1 image left to right; y 0 far baseline, 6.7 net, 13.4 near baseline",
+    "contact_time": "midpoint between last pre-reversal and first post-reversal track frame (about +/-0.03 s)",
+    "display_time": "beat display start + (source t - beat source start)"
+  },
+  "beats": [
+    {
+      "id": "space",
+      "source_span_s": [57.8, 64.8],
+      "display_span_s": [0.0, 7.0],
+      "near": "王祉怡 (red)", "far": "韩悦 (white)",
+      "contacts": [
+        {"t": 59.40, "d": 1.60, "player": "韩悦", "reviewed": "underhand shot deep to Wang's forehand rear corner",
+         "measured": {"flight_s": 1.13, "wang_move_m": 2.4}},
+        {"t": 60.53, "d": 2.73, "player": "王祉怡", "reviewed": "forehand side-arm reach at shoulder height (zoom-space-60.40)"},
+        {"t": 61.20, "d": 3.40, "player": "韩悦", "reviewed": "backhand intercept at chest height, cross-court down to Wang's backhand mid-front",
+         "measured": {"flight_s": 0.8, "wang_move_m": 2.8, "wang_move_s": 0.8}},
+        {"t": 62.00, "d": 4.20, "player": "王祉怡", "reviewed": "very deep lunge, lifts it back"},
+        {"t": 63.55, "d": 5.75, "player": "王祉怡", "reviewed": "overhead with arched back (zoom-space-63.47); shuttle leaves frame",
+         "measured": {"han_retreat_m": 4.6}}
+      ],
+      "tactic": "对角调动: deep forehand corner, then backhand cross-court intercept to the backhand front"
+    },
+    {
+      "id": "time",
+      "source_span_s": [126.6, 134.0],
+      "display_span_s": [7.0, 14.4],
+      "near": "王祉怡 (red)", "far": "韩悦 (white)",
+      "contacts": [
+        {"t": 128.20, "d": 8.60, "player": "王祉怡", "reviewed": "lift from her front-left",
+         "measured": {"out_of_frame_s": 1.33, "han_retreat_m": 3.0}},
+        {"t": 130.09, "d": 10.49, "player": "韩悦", "reviewed": "jump smash from the baseline (bbox top 330 to 270), steep to Wang's forehand side",
+         "measured": {"flight_s_range": [0.38, 0.61], "flight_s_said": "约0.5"}},
+        {"t": 131.97, "d": 12.37, "player": "韩悦", "reviewed": "overhead straight drop to Wang's backhand front",
+         "measured": {"flight_s": 0.97, "wang_move_m": 1.9}},
+        {"t": 133.05, "d": 13.45, "player": "王祉怡", "reviewed": "net shot"},
+        {"t": 133.87, "d": 14.27, "player": "韩悦", "reviewed": "rushes to the net and lifts (zoom-time-133.73)"}
+      ],
+      "tactic": "杀吊结合: smash to the forehand, then straight drop to the backhand front"
+    },
+    {
+      "id": "options",
+      "source_span_s": [272.8, 285.0],
+      "display_span_s": [14.4, 26.6],
+      "near": "韩悦 (white top, red shorts)", "far": "王祉怡 (red)",
+      "contacts": [
+        {"t": 273.55, "d": 15.15, "player": "王祉怡", "reviewed": "jump smash from her baseline, backhand-side position (zoom-options-273.40); round-the-head not confirmed",
+         "measured": {"flight_s": 0.47}},
+        {"t": 274.02, "d": 15.62, "player": "韩悦", "reviewed": "forehand lunge receive (zoom-options-273.93), returned cross-court"},
+        {"t": 275.00, "d": 16.60, "player": "王祉怡", "reviewed": "forehand lunge, lifts deep (zoom-options-274.87)",
+         "measured": {"wang_move_m": 3.8, "wang_move_s": 1.0, "next_flight_s": 1.27}},
+        {"t": 276.70, "d": 18.30, "player": "王祉怡", "reviewed": "takes it at head height, down to Han's front-mid"},
+        {"t": 277.70, "d": 19.30, "player": "韩悦", "reviewed": "net shot"},
+        {"t": 278.57, "d": 20.17, "player": "王祉怡", "reviewed": "lift from the net (zoom-options-278.40)", "measured": {"han_retreat_m": 3.2}},
+        {"t": 280.50, "d": 22.10, "player": "韩悦", "reviewed": "jumping overhead from her backhand rear corner (zoom-options-280.33), cross-court high",
+         "measured": {"flight_s": 1.05}},
+        {"t": 281.56, "d": 23.16, "player": "王祉怡", "reviewed": "jumping overhead from her backhand rear corner (zoom-options-281.40), cross-court high back",
+         "measured": {"flight_s": 1.4}},
+        {"t": 282.96, "d": 24.56, "player": "韩悦", "reviewed": "jumping overhead (bbox top 600 to 524), cross-court downward attack (zoom-options-282.87); smash vs cut not separated",
+         "measured": {"flight_s": 0.74}},
+        {"t": 283.70, "d": 25.30, "player": "王祉怡", "reviewed": "low dig, plays it short to Han's front (zoom-options-283.60)"},
+        {"t": 284.75, "d": 26.35, "player": "韩悦", "reviewed": "lunges to the front court on her forehand (zoom-options-284.60)",
+         "measured": {"han_move_m": 4.7, "han_move_s": 1.4}}
+      ],
+      "tactic": "攻守转换: Wang attacks, Han's cross-court receive makes her run, both trade round-the-head cross-court clears, Han attacks and follows to the net",
+      "rally_outcome": "continues past the clip; winner not claimed"
+    }
+  ]
+}

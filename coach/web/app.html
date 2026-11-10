@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badminton Coach</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%B8%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/viewer.css">
+<link rel="stylesheet" href="/static/app.css">
+<script type="module" src="/static/app.js"></script>
+</head>
+<body data-page="app">
+<header class="bar">
+  <a class="brand" href="/">Badminton Coach</a>
+  <span id="warm" class="pill" role="status" aria-live="polite">Warming up the analyser</span>
+  <nav><a href="/" id="nav-home">Sessions</a><a href="/progress">Progress</a></nav>
+</header>
+
+<main id="home" hidden>
+  <div class="hero">
+    <h1>See your rally slowed down, then fix it</h1>
+    <p>Drop in a clip. The coach finds what to work on in your body shape, hitting position, footwork and tactics, shows the moment in slow motion, and suggests gym exercises.</p>
+  </div>
+  <div id="drop" class="drop">
+    <strong>Drop a badminton clip here</strong>
+    <p class="muted">MP4, MOV or WebM, up to 3 minutes. Film from behind one baseline with the whole court in view and a still camera.</p>
+    <label class="button primary" for="file">Choose a video</label>
+    <input id="file" class="file-input" type="file" accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm">
+    <div id="upload" class="upload" hidden>
+      <div class="meter"><span id="upload-bar"></span></div>
+      <p id="upload-text" class="small muted"></p>
+    </div>
+    <p id="home-error" class="error-text" role="alert" hidden></p>
+  </div>
+  <section class="block">
+    <h2>Try a sample clip</h2>
+    <div id="samples" class="chips"></div>
+  </section>
+  <section class="block">
+    <h2>Your sessions</h2>
+    <ul id="sessions" class="sessions"></ul>
+    <p id="no-sessions" class="empty" hidden>No sessions yet. Upload a clip or try a sample.</p>
+  </section>
+</main>
+
+<main id="session" hidden>
+  <div class="crumbs">
+    <h1 id="title">Session</h1>
+  </div>
+  <p id="status" class="status" role="status" aria-live="polite"></p>
+  <p id="notice" class="notice" hidden></p>
+
+  <div id="working" class="working" hidden><span class="spinner" aria-hidden="true"></span><span id="working-text">Waiting to start</span></div>
+
+  <div id="failure" class="failure" role="alert" hidden>
+    <h2 id="failure-title">This clip could not be analysed</h2>
+    <p id="failure-text"></p>
+    <p id="failure-foot" class="muted">Nothing was made up: there is no report for this clip. <a href="/">Try another clip</a>.</p>
+  </div>
+
+  <div id="layout" class="layout" hidden>
+    <div class="left-wrap">
+      <div class="left">
+        <div id="viewer" class="vmount" role="region" aria-label="Clip viewer"></div>
+        <div class="who">
+          <div class="seg" role="group" aria-label="Whose findings">
+            <button type="button" data-player="near" aria-pressed="true"><span class="dot near"></span><span class="lbl">Near player</span></button>
+            <button type="button" data-player="far" aria-pressed="false"><span class="dot far"></span><span class="lbl">Far player</span></button>
+          </div>
+          <form id="names" class="side">
+            <label class="side"><span class="dot near"></span><input id="name-near" maxlength="40" aria-label="Name of the near player" placeholder="Near player"></label>
+            <label class="side"><span class="dot far"></span><input id="name-far" maxlength="40" aria-label="Name of the far player" placeholder="Far player"></label>
+            <button type="submit">Save names</button>
+            <span id="names-msg" class="small muted" role="status"></span>
+          </form>
+        </div>
+      </div>
+      <aside id="drawer" class="drawer" hidden aria-label="Exercises" tabindex="-1">
+        <header><h2>Exercises</h2><button id="drawer-close" type="button">Close</button></header>
+        <div id="ex-list" class="ex-list"></div>
+      </aside>
+    </div>
+
+    <div class="right">
+      <div class="actions">
+        <button id="plan-open" type="button" class="primary">Make my plan</button>
+        <button id="export" type="button">Review video (experimental)</button>
+        <button id="sharpen" type="button" hidden>Sharpen all</button>
+        <p id="action-note" class="note small muted" role="status"></p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Session panels">
+        <button id="tab-findings" type="button" role="tab" aria-selected="true" aria-controls="panel-findings">What to work on</button>
+        <button id="tab-coach" type="button" role="tab" aria-selected="false" aria-controls="panel-coach">Ask the coach</button>
+      </div>
+      <section id="panel-findings" role="tabpanel" aria-labelledby="tab-findings">
+        <div id="groups"></div>
+        <div class="limits">
+          <strong>What these numbers are</strong>
+          <ul>
+            <li>Targets are practice guides, not tested norms for your level or body.</li>
+            <li>Everything is measured from one 2D camera view. Hip height is projected on the picture, not a measured centre of mass, and angles are not 3D.</li>
+            <li>The shuttle is not tracked, so tactics are read from where the players move and swing.</li>
+            <li>This is practice advice, not medical advice.</li>
+          </ul>
+        </div>
+      </section>
+      <section id="panel-coach" class="chat" role="tabpanel" aria-labelledby="tab-coach" hidden>
+        <ol id="chat-log" class="chat-log" aria-live="polite"></ol>
+        <div id="chips" class="chips"></div>
+        <form id="ask" class="ask">
+          <input id="ask-text" maxlength="500" autocomplete="off" aria-label="Your question" placeholder="Ask the coach, for example: how do I fix it?">
+          <button type="submit" class="primary">Send</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</main>
+
+<dialog id="plan-dialog" aria-labelledby="plan-title">
+  <form id="plan-form" method="dialog">
+    <h2 id="plan-title">Make my practice plan</h2>
+    <p id="plan-for" class="muted"></p>
+    <p id="plan-avoid" class="small muted" hidden></p>
+    <label>How many weeks
+      <select id="plan-weeks"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select>
+    </label>
+    <fieldset>
+      <legend>How much do you train in the gym?</legend>
+      <label><input type="radio" name="level" value="1"> New to it</label>
+      <label><input type="radio" name="level" value="2" checked> Some experience</label>
+      <label><input type="radio" name="level" value="3"> Train often</label>
+    </fieldset>
+    <fieldset id="plan-gear">
+      <legend>What do you have?</legend>
+    </fieldset>
+    <p id="plan-msg" class="error-text" role="alert" hidden></p>
+    <div class="buttons">
+      <button type="button" id="plan-cancel">Cancel</button>
+      <button type="submit" class="primary">Make the plan</button>
+    </div>
+  </form>
+</dialog>
+</body>
+</html>

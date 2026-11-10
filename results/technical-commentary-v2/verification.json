@@ -1,0 +1,132 @@
+{
+  "status": "technical_media_verified",
+  "video_sha256": "ccb3b548932009cf26198b112c4858fcec8769d4f7acde5209ba4d8839fc0b49",
+  "plan_sha256": "171239c484442825060e6cf444e3d3455e627ce3065673bc78f52dc7d625a4d8",
+  "frames": 798,
+  "duration_seconds": 26.6,
+  "picture_mae_max": 0.5986704119850187,
+  "picture_mae_mean": 0.32424028235382474,
+  "wrong_one_second_offset_mae": 5.11891383329432,
+  "hook_cover_mae_max": 1.9654030501089326,
+  "hook_chinese_control_mae_min": 19.330855119825706,
+  "after_hook_vs_base_mae_max": 0.13685911401597675,
+  "card_coverage": [
+    {
+      "id": "space-1",
+      "card_mae_max": 1.322545109211776,
+      "base_caption_control_mae_min": 22.790800886356443,
+      "other_card_control_mae_min": 8.076350902184236
+    },
+    {
+      "id": "space-2",
+      "card_mae_max": 1.380474042418487,
+      "base_caption_control_mae_min": 22.922599715099715,
+      "other_card_control_mae_min": 10.900476416587528
+    },
+    {
+      "id": "space-3",
+      "card_mae_max": 1.3134765748654638,
+      "base_caption_control_mae_min": 21.11105254827477,
+      "other_card_control_mae_min": 7.830940170940171
+    },
+    {
+      "id": "time-1",
+      "card_mae_max": 1.3618130737575183,
+      "base_caption_control_mae_min": 21.349436530547642,
+      "other_card_control_mae_min": 6.296411839189617
+    },
+    {
+      "id": "time-2",
+      "card_mae_max": 1.3684283000949669,
+      "base_caption_control_mae_min": 19.34073599240266,
+      "other_card_control_mae_min": 8.087665400443178
+    },
+    {
+      "id": "time-3",
+      "card_mae_max": 1.332948717948718,
+      "base_caption_control_mae_min": 22.25895773979107,
+      "other_card_control_mae_min": 9.141349319404876
+    },
+    {
+      "id": "options-1",
+      "card_mae_max": 1.3358222538778095,
+      "base_caption_control_mae_min": 18.817026748971195,
+      "other_card_control_mae_min": 6.2863817663817665
+    },
+    {
+      "id": "options-2",
+      "card_mae_max": 1.5241310541310542,
+      "base_caption_control_mae_min": 22.95971430832542,
+      "other_card_control_mae_min": 12.086701487812599
+    },
+    {
+      "id": "options-3",
+      "card_mae_max": 1.3666255144032922,
+      "base_caption_control_mae_min": 21.775702754036086,
+      "other_card_control_mae_min": 9.16781418170307
+    },
+    {
+      "id": "options-4",
+      "card_mae_max": 1.4492742956631846,
+      "base_caption_control_mae_min": 23.037307692307692,
+      "other_card_control_mae_min": 9.820475625197847
+    }
+  ],
+  "encoded_audio": [
+    {
+      "id": "space-1",
+      "correlation": 0.9999904866132286,
+      "final_mix_asr_proxy": "韩月仙鸭正手敌脚。"
+    },
+    {
+      "id": "space-2",
+      "correlation": 0.9999900657637651,
+      "final_mix_asr_proxy": "反手斜线拦截对角调动。"
+    },
+    {
+      "id": "space-3",
+      "correlation": 0.999990343203909,
+      "final_mix_asr_proxy": "神仙防守。"
+    },
+    {
+      "id": "time-1",
+      "correlation": 0.9999895390410556,
+      "final_mix_asr_proxy": "网址移调后长。"
+    },
+    {
+      "id": "time-2",
+      "correlation": 0.9999895319178614,
+      "final_mix_asr_proxy": "含月底线暴力跳杀。"
+    },
+    {
+      "id": "time-3",
+      "correlation": 0.9999884099735773,
+      "final_mix_asr_proxy": "在钓直线沙钓结合。"
+    },
+    {
+      "id": "options-1",
+      "correlation": 0.999991144010576,
+      "final_mix_asr_proxy": "王址一后场跳杀。"
+    },
+    {
+      "id": "options-2",
+      "correlation": 0.9999894773311762,
+      "final_mix_asr_proxy": "韩月街杀走对角，把王址一拉开。"
+    },
+    {
+      "id": "options-3",
+      "correlation": 0.9999883693581202,
+      "final_mix_asr_proxy": "两人头顶对角互拉。"
+    },
+    {
+      "id": "options-4",
+      "correlation": 0.9999881733157492,
+      "final_mix_asr_proxy": "韩月下压强王连贯拉满。"
+    }
+  ],
+  "dropped_phonemes": 0,
+  "naturalness_verified": false,
+  "human_listening": false,
+  "asr_note": "Chinese ASR is a rough transcript check, not a human listening or naturalness review.",
+  "numbers_note": "On-screen numbers are TrackNetV3/pose-projection estimates; shot names come from frame review."
+}

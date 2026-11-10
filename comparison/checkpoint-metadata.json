@@ -1,0 +1,16 @@
+{
+  "inspected_date": "2026-10-26",
+  "vitpose": {
+    "source": "https://huggingface.co/api/models/JunkyByte/easy_ViTPose",
+    "repository_head_when_inspected": "e83805274e89428969355ec4afffcbc413e79188",
+    "published_card": {"pipeline_tag": "keypoint-detection"},
+    "checkpoint_license_metadata": "Unspecified in published model card. Upstream ViTPose code is Apache-2.0; do not mistake that for separately verified redistribution terms of the third-party ONNX export.",
+    "actual_downloaded_checkpoint": "Exact file SHA256 and source URL are recorded per model in manifest.json."
+  },
+  "sapiens": {
+    "source": "https://huggingface.co/api/models/facebook/sapiens-pose-0.3b-torchscript",
+    "repository_head_when_inspected": "796d82b26775444bbeb38a8202f8f9783370603f",
+    "published_card": {"language": "en", "license": "cc-by-nc-4.0", "pipeline_tag": "keypoint-detection", "tags": ["sapiens"]},
+    "actual_downloaded_checkpoint": "Public Goliath308 head, exact SHA256 and URL in manifest.json, license text at weights/SAPIENS-LICENSE.txt."
+  }
+}

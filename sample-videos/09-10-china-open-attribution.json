@@ -1,0 +1,35 @@
+{
+  "purpose": "Gating clips from unused ranges of the same China Open 2025 women's singles final already used for clips 04 to 08. This is the same match, not a new event.",
+  "source": {
+    "title": "Wang Zhiyi triumph in all-Chinese China Open finals I China Open 2025",
+    "event": "China Open 2025 (BWF World Tour), women's singles final, Changzhou. Han Yue vs Wang Zhiyi.",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Wang_Zhiyi_triumph_in_all-Chinese_China_Open_finals_I_China_Open_2025.webm",
+    "license": "CC BY 3.0 (as listed on Wikimedia Commons)",
+    "file": "obj2/work/H/downloads/china-open-2025-ws-final.webm"
+  },
+  "changes": "Trimmed 30 s of continuous main-camera play, removed audio, re-encoded H.264 High, yuv420p, 30 fps, 900 frames. No crop, zoom, overlay, or upscale.",
+  "clips": [
+    {
+      "file": "10-china-open-ws-h.mp4",
+      "source_start_seconds": 320,
+      "source_end_seconds": 350,
+      "duration_seconds": 30,
+      "seen": "Broadcast view from behind one baseline. Both players visible. Scoreboard at the start: Han 8, Wang 21, game 3-7."
+    },
+    {
+      "file": "09-china-open-ws-g.mp4",
+      "source_start_seconds": 365,
+      "source_end_seconds": 395,
+      "duration_seconds": 30,
+      "seen": "Same camera. Both players visible. Scoreboard at the start: Han 8, Wang 21, game 6-10."
+    }
+  ],
+  "ranges_already_used_by_other_clips": [
+    "20-50 clip 04",
+    "70-100 clip 06",
+    "110-140 clip 05",
+    "180-210 clip 07",
+    "250-280 clip 08"
+  ],
+  "endorsement": "No endorsement by the players, tournament, or BWF is implied."
+}

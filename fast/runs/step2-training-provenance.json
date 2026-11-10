@@ -1,0 +1,55 @@
+{
+ "train": [
+  "train/lab-ms-0.npz",
+  "train/lab-ws-0.npz"
+ ],
+ "validation": [
+  "train/lab-ms-102.npz"
+ ],
+ "samples": {
+  "train": 2995,
+  "validation": 540
+ },
+ "stage1": {
+  "epochs": 8,
+  "lr": 2e-05,
+  "batch": 32,
+  "seed": 0,
+  "init": "fast/weights/rtmpose-t.onnx",
+  "out": "fast/weights/rtmpose-t-ft2.onnx"
+ },
+ "stage2": {
+  "epochs": 12,
+  "lr": 2e-05,
+  "batch": 32,
+  "seed": 1,
+  "init": "fast/weights/rtmpose-t-ft2.onnx",
+  "out": "fast/weights/rtmpose-t-ft3.onnx"
+ },
+ "environment": {
+  "OMP_NUM_THREADS": 8,
+  "MKL_NUM_THREADS": 8
+ },
+ "excluded_from_training": [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "reserved07"
+ ],
+ "sha256": {
+  "train/lab-ms-0.npz": "1E3E42E5D5559BF024062F27D8AAEA0F7E0B1C8867EC8A459CA2AEF4646BE37D",
+  "train/lab-ws-0.npz": "4EB01A6B7BB3E1B8C5766FC572CF825F38BDCF701724FCCF867B6D92A3E69DF8",
+  "train/lab-ms-102.npz": "79A3CC2BED4E12C2D1115DF00BDE99F55835D0BF11D68B057EED6D7DF61527A3",
+  "train/train.py": "1EA121280517C68976623374DD2289AC033DD1CC55FE132998A2B718E161F552",
+  "train/label.py": "3F62F1102D63D1E42735006082FA85951BF4199183E6422BD1B6B1C60865390E",
+  "fast/weights/rtmpose-t.onnx": "A6C2F6A3896A4D51131D14D7A80A3D08B50F559AF5A58A45D5B098AEF510A70F",
+  "fast/weights/rtmpose-t-ft2.onnx": "2EE9EB2A4B99BDF6682986F371AFFC7DECE7D360F7609DB9A771885AF94B2090",
+  "fast\\weights\\rtmpose-t-ft3.onnx": "B09DB7200A621DACC46518BE5554AD72C1C13EA7C16392D620178CA41B0BF629",
+  "fast\\weights\\rtmpose-t-ft2.json": "92AE520E06EE2510522A80B7400F55FEADB78F0D16743B1D1098C202E356D4BA",
+  "fast\\weights\\rtmpose-t-ft3.json": "6D1910EE845D482A7C0C7504F972330CBB3F05A662700981A988E1C48E7FE672"
+ },
+ "note": "Teacher labelled, not human truth. Existing non-overlapping Arise time windows only; no China Open training."
+}

@@ -1,0 +1,228 @@
+{
+ "v3_hits_sha256": "4ff91a6fb316560314950f119f7fad57ff955d81f6f5756c13995a883942f23d",
+ "rows": 336,
+ "resolved_rows": 127,
+ "gates": {
+  "precision": 0.8,
+  "recall": 0.8,
+  "zone_agreement": 0.7
+ },
+ "variants": {
+  "as_emitted": {
+   "precision": 0.3516483516483517,
+   "recall": 0.3333333333333333,
+   "zone_agreement": 0.7,
+   "zone_coverage": 0.3125,
+   "totals": {
+    "label": 96,
+    "engine": 91,
+    "matched": 32,
+    "zone_both": 10,
+    "zone_same": 7,
+    "depth_same": 7,
+    "family_both": 0,
+    "family_same": 0
+   },
+   "gates_passed": {
+    "precision": false,
+    "recall": false,
+    "zone_agreement": true
+   },
+   "all_gates_passed": false,
+   "development": {
+    "label": 40,
+    "engine": 41,
+    "matched": 13,
+    "precision": 0.3170731707317073,
+    "recall": 0.325,
+    "zone_both": 2,
+    "zone_agreement": 1.0
+   },
+   "evaluation": {
+    "label": 56,
+    "engine": 50,
+    "matched": 19,
+    "precision": 0.38,
+    "recall": 0.3392857142857143,
+    "zone_both": 8,
+    "zone_agreement": 0.625
+   },
+   "per_rally": [
+    [
+     "R1",
+     15,
+     14,
+     6
+    ],
+    [
+     "R2",
+     25,
+     27,
+     7
+    ],
+    [
+     "R3",
+     26,
+     25,
+     8
+    ],
+    [
+     "R4",
+     15,
+     14,
+     5
+    ],
+    [
+     "R5",
+     15,
+     11,
+     6
+    ]
+   ]
+  },
+  "resolved_only": {
+   "precision": 0.9142857142857143,
+   "recall": 0.3333333333333333,
+   "zone_agreement": 0.7,
+   "zone_coverage": 0.3125,
+   "totals": {
+    "label": 96,
+    "engine": 35,
+    "matched": 32,
+    "zone_both": 10,
+    "zone_same": 7,
+    "depth_same": 7,
+    "family_both": 0,
+    "family_same": 0
+   },
+   "gates_passed": {
+    "precision": true,
+    "recall": false,
+    "zone_agreement": true
+   },
+   "all_gates_passed": false,
+   "development": {
+    "label": 40,
+    "engine": 14,
+    "matched": 13,
+    "precision": 0.9285714285714286,
+    "recall": 0.325,
+    "zone_both": 2,
+    "zone_agreement": 1.0
+   },
+   "evaluation": {
+    "label": 56,
+    "engine": 21,
+    "matched": 19,
+    "precision": 0.9047619047619048,
+    "recall": 0.3392857142857143,
+    "zone_both": 8,
+    "zone_agreement": 0.625
+   },
+   "per_rally": [
+    [
+     "R1",
+     15,
+     6,
+     6
+    ],
+    [
+     "R2",
+     25,
+     8,
+     7
+    ],
+    [
+     "R3",
+     26,
+     8,
+     8
+    ],
+    [
+     "R4",
+     15,
+     7,
+     5
+    ],
+    [
+     "R5",
+     15,
+     6,
+     6
+    ]
+   ]
+  },
+  "role_candidate_diagnostic": {
+   "precision": 0.6813186813186813,
+   "recall": 0.6458333333333334,
+   "zone_agreement": 0.7,
+   "zone_coverage": 0.16129032258064516,
+   "totals": {
+    "label": 96,
+    "engine": 91,
+    "matched": 62,
+    "zone_both": 10,
+    "zone_same": 7,
+    "depth_same": 7,
+    "family_both": 0,
+    "family_same": 0
+   },
+   "gates_passed": {
+    "precision": false,
+    "recall": false,
+    "zone_agreement": true
+   },
+   "all_gates_passed": false,
+   "development": {
+    "label": 40,
+    "engine": 41,
+    "matched": 25,
+    "precision": 0.6097560975609756,
+    "recall": 0.625,
+    "zone_both": 2,
+    "zone_agreement": 1.0
+   },
+   "evaluation": {
+    "label": 56,
+    "engine": 50,
+    "matched": 37,
+    "precision": 0.74,
+    "recall": 0.6607142857142857,
+    "zone_both": 8,
+    "zone_agreement": 0.625
+   },
+   "per_rally": [
+    [
+     "R1",
+     15,
+     14,
+     10
+    ],
+    [
+     "R2",
+     25,
+     27,
+     15
+    ],
+    [
+     "R3",
+     26,
+     25,
+     18
+    ],
+    [
+     "R4",
+     15,
+     14,
+     9
+    ],
+    [
+     "R5",
+     15,
+     11,
+     10
+    ]
+   ]
+  }
+ }
+}

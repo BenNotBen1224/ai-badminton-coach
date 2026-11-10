@@ -1,0 +1,236 @@
+.c2-viewer, .c2-viewer * { box-sizing: border-box; }
+
+.c2-viewer {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #111;
+  color: #1c1c1c;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.c2-viewer .app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-rows: minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+}
+
+.c2-viewer .video-col {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.c2-viewer .stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #111;
+}
+
+.c2-viewer .zoom-wrap {
+  position: relative;
+  flex: none;
+  transform-origin: center center;
+}
+
+.c2-viewer .zoom-wrap video,
+.c2-viewer .zoom-wrap canvas.overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.c2-viewer .zoom-wrap video {
+  background: #111;
+}
+
+.c2-viewer .zoom-wrap canvas.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.c2-viewer .caption {
+  flex: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  color: #f6f4f1;
+  background: #111;
+  font-size: 13px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c2-viewer .caption.on {
+  height: 22px;
+}
+
+.c2-viewer .strip {
+  flex: none;
+  height: 44px;
+  width: 100%;
+  display: block;
+  background: #1c1c1c;
+  cursor: pointer;
+}
+
+.c2-viewer .transport {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 8px;
+  background: #181818;
+}
+
+.c2-viewer .panel {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px 16px 12px;
+  background: #f6f4f1;
+  color: #1c1c1c;
+}
+
+.c2-viewer .panel-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.c2-viewer .fixture {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #57534e;
+}
+
+.c2-viewer .headline {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.c2-viewer .explain {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.c2-viewer .block {
+  margin: 0 0 12px;
+}
+
+.c2-viewer .k {
+  display: block;
+  font-size: 12px;
+  color: #57534e;
+  margin-bottom: 2px;
+}
+
+.c2-viewer .v {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.c2-viewer .note, .c2-viewer .tag, .c2-viewer .warn, .c2-viewer .chip, .c2-viewer button {
+  font: inherit;
+}
+
+.c2-viewer .note, .c2-viewer .tag {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #57534e;
+}
+
+.c2-viewer .warn-row, .c2-viewer .chip-row, .c2-viewer .finding-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
+}
+
+.c2-viewer .finding-nav {
+  flex: none;
+  margin: 8px 0 0;
+}
+
+.c2-viewer .warn, .c2-viewer .chip, .c2-viewer button {
+  border: 1px solid #d6d3d1;
+  background: #fff;
+  color: #1c1c1c;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.c2-viewer button {
+  cursor: pointer;
+}
+
+.c2-viewer button[aria-pressed="true"] {
+  background: #1c1c1c;
+  color: #f6f4f1;
+  border-color: #1c1c1c;
+}
+
+.c2-viewer button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.c2-viewer .spark, .c2-viewer .minimap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 12px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.c2-viewer .compare {
+  flex: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 10px;
+}
+
+.c2-viewer .transport button {
+  color: #f6f4f1;
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+}
+
+.c2-viewer .transport button[aria-pressed="true"] {
+  background: #f6f4f1;
+  color: #1c1c1c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c2-viewer .zoom-wrap { transition: none; }
+}

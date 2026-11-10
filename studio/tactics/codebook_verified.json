@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "purpose": "Explain a rally as opponent state, a possible purpose of the shot, the available replies, and the next observed choice.",
+  "authority_limit": "These are conditional coaching interpretations supported by published sources. They are not measurements of a player's intention or proof of national-team coaching expertise.",
+  "source_count_file": "books\\audit.json",
+  "observation_contract": {
+    "measured": [
+      "visible contact time with uncertainty",
+      "player identity by track",
+      "both players' court positions",
+      "opponent movement before contact"
+    ],
+    "inferred": [
+      "shot family without shuttle tracking",
+      "current shot destination from the next receiver contact",
+      "possible tactical purpose"
+    ],
+    "not_measured": [
+      "shuttle landing",
+      "player intention",
+      "three-dimensional joint angles",
+      "forces",
+      "a universal optimal base position"
+    ],
+    "unknown_rule": "If contact, identity, court mapping or the relevant next contact is uncertain, omit that claim instead of completing the sequence from alternation.",
+    "causality_rule": "A later movement is an observed response, not proof that the preceding shot caused it or that the hitter planned it.",
+    "wording_zh": "用“像是想”“可以理解为”“接下来要看”，不用“她早就算准”“必然”“百分之百”。"
+  },
+  "prediction_contract": {
+    "cutoff": "The prediction is made at the current contact, using observations available at or before that contact.",
+    "forbidden_inputs": [
+      "receiver_position_at_next_contact_m",
+      "landing_zone",
+      "time_to_next_contact_s",
+      "shot_family inferred from the next contact",
+      "future labels",
+      "rally outcome"
+    ],
+    "retrospective_note": "A destination inferred using the next contact may explain an observed sequence retrospectively, but is not eligible as an input to a prospective next-reply prediction.",
+    "evaluation": "Freeze rules before the held-out rallies. Report coverage, sample size, prediction-set size and accuracy beside a development-set majority baseline of the same set size. Unknowns are not wins.",
+    "baseline_limit": "Do not learn the majority reply or tune thresholds from the held-out rallies."
+  },
+  "rules": [
+    {
+      "id": "rear_then_front",
+      "title_zh": "先把人推远，再找前面",
+      "opponent_state": "The opponent has been displaced toward the rear and has not yet recovered forward.",
+      "choice": "Consider the available front-court space rather than repeating an unpressured deep shot.",
+      "expected_reply": "The opponent must travel forward if the next shot is genuinely short. An early arrival can still produce an attacking net reply; a late arrival may constrain the reply.",
+      "check": "Show the opponent's position before the choice and where the opponent actually next contacts. Check the travel and contact state, not an untracked landing.",
+      "required_evidence": [
+        "two verified contacts in one continuous rally",
+        "both players' court positions at the choice",
+        "receiver's next measured contact"
+      ],
+      "do_not_apply": [
+        "unreliable court mapping",
+        "intervening camera cut",
+        "the opponent is already moving forward",
+        "the current shot destination is unknown"
+      ],
+      "sources": [
+        "en_pd:p18",
+        "en_theses:p63"
+      ],
+      "source_lineage": [
+        "Virginia Hicks, 1973, singles strategy",
+        "Minh Huynh, 2012, shot glossary"
+      ],
+      "source_limit": "Two authored works support the tactical aim, not a probability that this opponent will lose the rally."
+    },
+    {
+      "id": "front_then_behind",
+      "title_zh": "把人拉上来，才有身后",
+      "opponent_state": "The opponent is reaching or arriving at the front court, leaving distance to cover behind.",
+      "choice": "A deep reply can make the opponent reverse the frontward movement, if the hitter has the time and control to play it.",
+      "expected_reply": "The opponent may retreat for an overhead reply. A short or loose deep shot can instead give the opponent an attack.",
+      "check": "Show the initial forward displacement, the reversal and the next contact depth. Do not equate any backward step with a successful tactical trap.",
+      "required_evidence": [
+        "continuous pre-contact player trail",
+        "current contact",
+        "next receiver contact and depth"
+      ],
+      "do_not_apply": [
+        "receiver already recovered rearward",
+        "unknown intervening contacts",
+        "pose jitter is larger than the apparent reversal"
+      ],
+      "sources": [
+        "en_pd:p18",
+        "en_theses:p62"
+      ],
+      "source_lineage": [
+        "Virginia Hicks, 1973, singles strategy",
+        "Minh Huynh, 2012, shot glossary"
+      ],
+      "source_limit": "The space is created by the opponent's displacement, not by the label of the shot alone."
+    },
+    {
+      "id": "buy_recovery_time",
+      "title_zh": "这拍先把时间拿回来",
+      "opponent_state": "The hitter is late or stretched while the opponent is better positioned to continue attacking.",
+      "choice": "A sufficiently high, deep defensive reply can buy recovery time instead of forcing an immediate winner attempt.",
+      "expected_reply": "The opponent receives farther back while the hitter gets time to recover. A short reply can still be attacked; deep does not mean safe.",
+      "check": "Compare the hitter's position at this contact with the position before the following opponent contact. Show whether recovery actually occurred.",
+      "required_evidence": [
+        "visible late or reaching contact",
+        "next contact interval",
+        "hitter recovery trajectory",
+        "receiver next contact depth"
+      ],
+      "do_not_apply": [
+        "only a single still image",
+        "unseen flight described as a measured high clear",
+        "the next contact is missing"
+      ],
+      "sources": [
+        "en_theses:p54",
+        "zh:p9"
+      ],
+      "source_lineage": [
+        "Jingyi Shannon Chia, 2018, explicitly citing Downey 2007 for the recovery tactic",
+        "蕭博仁, 2005, observed elite women's singles patterns"
+      ],
+      "source_limit": "One source gives the strategic rationale; the other describes a specific player's defensive pattern. Neither makes this the correct choice in every situation."
+    },
+    {
+      "id": "net_reply_options",
+      "title_zh": "接得越低，下一拍越要看清",
+      "opponent_state": "The receiver is late near the net and cannot attack above the net.",
+      "choice": "A tight short shot can make an upward reply more attractive, but the hitter must still cover a net return.",
+      "expected_reply": "Possible replies include a lift, a net return and a cross-court net reply. Do not declare a lift inevitable.",
+      "check": "Pause before the receiver contacts, name the competing replies, then play the actual next contact and identify what happened only if visible.",
+      "required_evidence": [
+        "receiver's visible contact state near the net",
+        "continuous next exchange",
+        "enough image detail to distinguish low from high contact"
+      ],
+      "do_not_apply": [
+        "contact height cannot be seen",
+        "the net shot sits up for a kill",
+        "a family label is inferred only from elapsed time"
+      ],
+      "sources": [
+        "en_theses:p64",
+        "other_lang:p51"
+      ],
+      "source_lineage": [
+        "Minh Huynh, 2012, net-shot objective",
+        "Julie K'Bidy, 2021, recorded expert-coach dialogue with multiple reply options"
+      ],
+      "source_limit": "The coaching aim and the available alternatives are both retained. An intended weak lift is not an observed weak lift."
+    },
+    {
+      "id": "cover_faster_threat",
+      "title_zh": "回位不是回同一个点",
+      "opponent_state": "After a short defensive reply, the opponent can answer quickly at the net or play a slower lift.",
+      "choice": "Recovery can favor the urgent front-court threat while retaining the ability to retreat, instead of always returning to one geometric center.",
+      "expected_reply": "A quick straight net reply is the immediate threat in the cited drill. A lift remains possible and must be allowed for.",
+      "check": "Show where the player waits, what the opponent actually replies and whether that waiting position helps with the response. Do not call a habitual median position universally optimal.",
+      "required_evidence": [
+        "the preceding defensive reply",
+        "opponent's reachable contact state",
+        "player recovery position",
+        "actual next reply"
+      ],
+      "do_not_apply": [
+        "the preceding shot is unknown",
+        "the opponent has a different attacking option",
+        "a fixed central base is used as a correctness target"
+      ],
+      "sources": [
+        "other_lang:p52",
+        "other_lang:p53",
+        "en_theses:p56"
+      ],
+      "source_lineage": [
+        "Julie K'Bidy, 2021, expert-coach and player dialogue",
+        "Jingyi Shannon Chia, 2018, discussion of opponent-relative base position, citing Mack 2016"
+      ],
+      "source_limit": "The source records disagreement from the player, and the coach then adds the lift option. This is a contextual tradeoff, not a universal instruction to stand forward."
+    },
+    {
+      "id": "play_against_commitment",
+      "title_zh": "先看她往哪走",
+      "opponent_state": "The opponent has visibly committed movement toward an expected reply or has been displaced by the previous shot.",
+      "choice": "An available opposite-direction reply may make that movement costly. A cross-court shot is not automatically better, since it can travel farther and allow more time.",
+      "expected_reply": "The opponent may have to brake or reverse. If the opponent was not committed, the same shot may create no advantage.",
+      "check": "Show the motion before contact and the observed movement after it. Use a direction change as evidence; do not infer deception or intention from position alone.",
+      "required_evidence": [
+        "stable opponent track before contact",
+        "current verified contact",
+        "observed next receiver contact"
+      ],
+      "do_not_apply": [
+        "movement vector is dominated by noise",
+        "the opponent is settled",
+        "unseen shuttle direction is drawn as a tracked path"
+      ],
+      "sources": [
+        "en_pd:p20",
+        "other_lang:p61"
+      ],
+      "source_lineage": [
+        "Virginia Hicks, 1973, conditional cross-court serve return",
+        "Julie K'Bidy, 2021, coach prioritizing speed opposite a displaced opponent"
+      ],
+      "source_limit": "The two contexts differ. They support reading committed movement, not prescribing the same cross-court shot for every rally."
+    }
+  ],
+  "interpretation_guard": {
+    "text_zh": "同一个动作，不一定是同一个目的。先看双方的位置、来球和前一拍，再说这一拍可能在争什么。",
+    "sources": [
+      "zh:p43",
+      "other_lang:p63"
+    ],
+    "meaning": "The same stroke can attack, neutralize pressure or conserve effort. Placement and speed matter through their effect on this opponent in this rally."
+  },
+  "citations": [
+    {
+      "passage_id": "en_pd:p18",
+      "book": "en_pd:2",
+      "canonical_book": "en_pd:2",
+      "title": "The How To of Badminton from Player to Teacher",
+      "locator": "Game Strategy: Singles Play, PDF p.31, char 49081",
+      "quote": "Since the singles court is long and\nnarrow, the players aim is to move the opponent up and back on the court.",
+      "source_url": "https://eric.ed.gov/?id=ED104803",
+      "text_sha256_norm": "f5da6b2e143dba56fc0b4881b95cbeccecc3b2d2b7bcd78c29cfed284c86b451"
+    },
+    {
+      "passage_id": "en_theses:p63",
+      "book": "en_theses:45",
+      "canonical_book": "en_theses:45",
+      "title": "Training and evaluating champions: a skills acquisition training tool in badminton",
+      "locator": "pdf p.15, char 12142",
+      "quote": "Generally, this shot is used to move your opponent to the backcourt. It \nwill create space in the frontcourt for you to exploit.",
+      "source_url": "https://research-repository.rmit.edu.au/articles/thesis/Training_and_evaluating_champions_a_skills_acquisition_training_tool_in_badminton/27579615",
+      "text_sha256_norm": "241b4d39c64ba0e3d799fb7d500da2c9f7158a166b6b6a475e9e777a571c406d"
+    },
+    {
+      "passage_id": "en_theses:p62",
+      "book": "en_theses:45",
+      "canonical_book": "en_theses:45",
+      "title": "Training and evaluating champions: a skills acquisition training tool in badminton",
+      "locator": "pdf p.15, char 12005",
+      "quote": "It is intended to move your opponent to the frontcourt \ncreating space in their midcourt and backcourt for you to exploit.",
+      "source_url": "https://research-repository.rmit.edu.au/articles/thesis/Training_and_evaluating_champions_a_skills_acquisition_training_tool_in_badminton/27579615",
+      "text_sha256_norm": "241b4d39c64ba0e3d799fb7d500da2c9f7158a166b6b6a475e9e777a571c406d"
+    },
+    {
+      "passage_id": "en_theses:p54",
+      "book": "en_theses:30",
+      "canonical_book": "en_theses:30",
+      "title": "Influence of fatigue and acute caffeine supplementation in badminton men's singles",
+      "locator": "pdf p.164, char 278056",
+      "quote": "using a high clear shot to the rear of the court to gain more time to recover and prepare \nfor the next shot",
+      "source_url": "https://repository.lboro.ac.uk/articles/thesis/Influence_of_fatigue_and_acute_caffeine_supplementation_in_badminton_men_s_singles/9630515",
+      "text_sha256_norm": "3eb4b30c835f1e7f739f6280a8d4f6851d1cd927d08daffb8c8fc51bbed2f38a"
+    },
+    {
+      "passage_id": "zh:p9",
+      "book": "zh:3",
+      "canonical_book": "zh:3",
+      "title": "世界級女子羽球單打選手後場正拍擊球球路分析",
+      "locator": "pdf p.40, char 22097",
+      "quote": "在處於被動時多以回擊對方中間速度較慢的長球為主",
+      "source_url": "http://rportal.lib.ntnu.edu.tw/handle/20.500.12235/104874",
+      "text_sha256_norm": "d8f2d93e6b9457ed6eacf3633e673823d9a89d23711ed4c7e7041c1889353bfa"
+    },
+    {
+      "passage_id": "en_theses:p64",
+      "book": "en_theses:45",
+      "canonical_book": "en_theses:45",
+      "title": "Training and evaluating champions: a skills acquisition training tool in badminton",
+      "locator": "pdf p.15, char 12454",
+      "quote": "The objective is to force your opponent to hit a \nweak lift or hit that could not clear the net.",
+      "source_url": "https://research-repository.rmit.edu.au/articles/thesis/Training_and_evaluating_champions_a_skills_acquisition_training_tool_in_badminton/27579615",
+      "text_sha256_norm": "241b4d39c64ba0e3d799fb7d500da2c9f7158a166b6b6a475e9e777a571c406d"
+    },
+    {
+      "passage_id": "other_lang:p51",
+      "book": "other_lang:24",
+      "canonical_book": "other_lang:24",
+      "title": "Comprendre - Transformer - Comprendre : Analyse de la dynamique interactive entraîneurs experts – badistes de Haut Niveau et étude de l’impact d’un dispositif transformatif sur le développement profes",
+      "locator": "PDF p.187, char 394642",
+      "quote": "Tu prends le filet, tu peux faire une bande, soit tu repousses le volant au fond, soit tu \nviens croiser",
+      "source_url": "https://theses.hal.science/tel-03179994v1",
+      "text_sha256_norm": "25e924f8c27665b836ad1aea797ef53dbc506c0e6709aab41f0fb654ea39d091"
+    },
+    {
+      "passage_id": "other_lang:p52",
+      "book": "other_lang:24",
+      "canonical_book": "other_lang:24",
+      "title": "Comprendre - Transformer - Comprendre : Analyse de la dynamique interactive entraîneurs experts – badistes de Haut Niveau et étude de l’impact d’un dispositif transformatif sur le développement profes",
+      "locator": "PDF p.201, char 432943",
+      "quote": "prendre une forte option vers l’avant pour être rapide et \nefficace sur une réponse de l’adversaire au filet",
+      "source_url": "https://theses.hal.science/tel-03179994v1",
+      "text_sha256_norm": "25e924f8c27665b836ad1aea797ef53dbc506c0e6709aab41f0fb654ea39d091"
+    },
+    {
+      "passage_id": "other_lang:p53",
+      "book": "other_lang:24",
+      "canonical_book": "other_lang:24",
+      "title": "Comprendre - Transformer - Comprendre : Analyse de la dynamique interactive entraîneurs experts – badistes de Haut Niveau et étude de l’impact d’un dispositif transformatif sur le développement profes",
+      "locator": "PDF p.206, char 447541",
+      "quote": "J aura le temps de se réadapter si l’adversaire lobe, le danger se situe donc sur le \ncourt droit",
+      "source_url": "https://theses.hal.science/tel-03179994v1",
+      "text_sha256_norm": "25e924f8c27665b836ad1aea797ef53dbc506c0e6709aab41f0fb654ea39d091"
+    },
+    {
+      "passage_id": "en_theses:p56",
+      "book": "en_theses:30",
+      "canonical_book": "en_theses:30",
+      "title": "Influence of fatigue and acute caffeine supplementation in badminton men's singles",
+      "locator": "pdf p.186, char 311790",
+      "quote": "the centre of the court might be the most ideal position only when the \nopponent is in the centre as well",
+      "source_url": "https://repository.lboro.ac.uk/articles/thesis/Influence_of_fatigue_and_acute_caffeine_supplementation_in_badminton_men_s_singles/9630515",
+      "text_sha256_norm": "3eb4b30c835f1e7f739f6280a8d4f6851d1cd927d08daffb8c8fc51bbed2f38a"
+    },
+    {
+      "passage_id": "en_pd:p20",
+      "book": "en_pd:2",
+      "canonical_book": "en_pd:2",
+      "title": "The How To of Badminton from Player to Teacher",
+      "locator": "Game Strategy: Singles Play, PDF p.32, char 51678",
+      "quote": "An occasional cross\ncourt clear may be effective if your opponent is anticipating a down the line clear\nand moving in that direction",
+      "source_url": "https://eric.ed.gov/?id=ED104803",
+      "text_sha256_norm": "f5da6b2e143dba56fc0b4881b95cbeccecc3b2d2b7bcd78c29cfed284c86b451"
+    },
+    {
+      "passage_id": "other_lang:p61",
+      "book": "other_lang:24",
+      "canonical_book": "other_lang:24",
+      "title": "Comprendre - Transformer - Comprendre : Analyse de la dynamique interactive entraîneurs experts – badistes de Haut Niveau et étude de l’impact d’un dispositif transformatif sur le développement profes",
+      "locator": "PDF p.315, char 752473",
+      "quote": "mettre de la vitesse dans le volant à l’opposé de l’adversaire, \naprès l’avoir déséquilibré à la suite du slice (ou revers slice)",
+      "source_url": "https://theses.hal.science/tel-03179994v1",
+      "text_sha256_norm": "25e924f8c27665b836ad1aea797ef53dbc506c0e6709aab41f0fb654ea39d091"
+    },
+    {
+      "passage_id": "zh:p43",
+      "book": "zh:22",
+      "canonical_book": "zh:22",
+      "title": "羽球運動的肉身性研究—以內在時間意識為啟發",
+      "locator": "pdf p.138, char 126870",
+      "quote": "在主動的時候以攻擊性、讓對手被動的目的執行這拍切球",
+      "source_url": "http://rportal.lib.ntnu.edu.tw/handle/20.500.12235/117774",
+      "text_sha256_norm": "2ae212bd6cca3cdd3f49f309a4abfa004720ada01f96d2373312af704c9078ae"
+    },
+    {
+      "passage_id": "other_lang:p63",
+      "book": "other_lang:24",
+      "canonical_book": "other_lang:24",
+      "title": "Comprendre - Transformer - Comprendre : Analyse de la dynamique interactive entraîneurs experts – badistes de Haut Niveau et étude de l’impact d’un dispositif transformatif sur le développement profes",
+      "locator": "PDF p.260, char 599895",
+      "quote": "c’est bien d’être précis, mais si c’est trop lent, ça peut ne pas gêner \nl’adversaire et inversement",
+      "source_url": "https://theses.hal.science/tel-03179994v1",
+      "text_sha256_norm": "25e924f8c27665b836ad1aea797ef53dbc506c0e6709aab41f0fb654ea39d091"
+    }
+  ],
+  "verification": {
+    "rules": 6,
+    "distinct_source_works": 6,
+    "citations": 14,
+    "quoted_whitespace_tokens_by_work": {
+      "en_pd:2": 45,
+      "en_theses:45": 64,
+      "en_theses:30": 44,
+      "zh:3": 1,
+      "other_lang:24": 96,
+      "zh:22": 1
+    },
+    "quoted_cjk_characters_by_work": {
+      "en_pd:2": 0,
+      "en_theses:45": 0,
+      "en_theses:30": 0,
+      "zh:3": 23,
+      "other_lang:24": 0,
+      "zh:22": 24
+    },
+    "errors": [],
+    "scope": "Source identity, verbatim quotations and minimum distinct-work counts are checked. Source agreement is not a measured probability or independent experimental validation."
+  }
+}

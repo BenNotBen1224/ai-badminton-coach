@@ -1,0 +1,395 @@
+{
+  "analysis_sha256": "55cd53390fef5a03024f2afa3c9db6719830e70bdebcb41294e9782a47b1d416",
+  "court_geometry": {
+    "far_baseline_m": 0,
+    "net_m": 6.7,
+    "far_short_service_m": 4.72,
+    "near_short_service_m": 8.68,
+    "near_baseline_m": 13.4
+  },
+  "videos": {
+    "mens": {
+      "pose_sha256": "0f69bddcf1bffa7ea6a286b332147f13ff20fedb990e2da6a543e9448230d7dd",
+      "pose_index_sha256": "abc71010daa17f4fa915cc7eca3d1cce0297c632f707b181a7059d686df74b3e",
+      "claim_anchor_recomputations": [
+        {
+          "id": "M1",
+          "norm_index": 2330,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  1.3928743583921777,
+                  11.27634716389952
+                ],
+                [
+                  1.7743099653508407,
+                  11.593360505933234
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                11.27634716389952,
+                11.593360505933234
+              ],
+              "court_x_m": [
+                1.3928743583921777,
+                1.7743099653508407
+              ]
+            },
+            "far": {
+              "ankles_xy_m": [
+                [
+                  2.6887702615227393,
+                  1.8548396510463452
+                ],
+                [
+                  1.9084026307776385,
+                  1.8552749753236941
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                1.8548396510463452,
+                1.8552749753236941
+              ],
+              "court_x_m": [
+                2.6887702615227393,
+                1.9084026307776385
+              ]
+            }
+          }
+        },
+        {
+          "id": "M2",
+          "norm_index": 2370,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  2.723082768484393,
+                  10.326031360035593
+                ],
+                [
+                  2.9975023932830496,
+                  9.15587098634351
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                10.326031360035593,
+                9.15587098634351
+              ],
+              "court_x_m": [
+                2.723082768484393,
+                2.9975023932830496
+              ]
+            }
+          }
+        },
+        {
+          "id": "M3",
+          "norm_index": 2421,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  3.777500648900582,
+                  9.809940679378158
+                ],
+                [
+                  4.4715065813549595,
+                  8.748500971146536
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                9.809940679378158,
+                8.748500971146536
+              ],
+              "court_x_m": [
+                3.777500648900582,
+                4.4715065813549595
+              ]
+            },
+            "far": {
+              "ankles_xy_m": [
+                [
+                  3.9432299799890993,
+                  2.2990522359080647
+                ],
+                [
+                  3.376708837306615,
+                  1.9320668062860018
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                2.2990522359080647,
+                1.9320668062860018
+              ],
+              "court_x_m": [
+                3.9432299799890993,
+                3.376708837306615
+              ]
+            }
+          }
+        },
+        {
+          "id": "M4",
+          "norm_index": 2472,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  3.487564262033832,
+                  10.854665736685924
+                ],
+                [
+                  2.909996132600266,
+                  10.824005057305891
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                10.854665736685924,
+                10.824005057305891
+              ],
+              "court_x_m": [
+                3.487564262033832,
+                2.909996132600266
+              ]
+            }
+          }
+        },
+        {
+          "id": "M5",
+          "norm_index": 2547,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  4.107925703061234,
+                  10.431140919966795
+                ],
+                [
+                  5.007890407875884,
+                  10.755771457799383
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                10.431140919966795,
+                10.755771457799383
+              ],
+              "court_x_m": [
+                4.107925703061234,
+                5.007890407875884
+              ]
+            },
+            "far": {
+              "ankles_xy_m": [
+                [
+                  4.064554589485304,
+                  1.708444616825617
+                ],
+                [
+                  3.511613092737243,
+                  1.8822199151140404
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                1.708444616825617,
+                1.8822199151140404
+              ],
+              "court_x_m": [
+                4.064554589485304,
+                3.511613092737243
+              ]
+            }
+          }
+        }
+      ],
+      "scan": {
+        "range": [
+          2295,
+          2676
+        ],
+        "step": 3,
+        "valid_both_player_frames": 123,
+        "far_foot_max_depth_from_far_baseline_m": 4.404,
+        "far_foot_min_distance_from_net_m": 2.296,
+        "far_frames_at_or_past_short_service_line": 0,
+        "near_foot_min_depth_from_far_baseline_m": 8.613,
+        "sampled_frames_missing_confident_ankles_for_either_player": 5
+      }
+    },
+    "womens": {
+      "pose_sha256": "f1768ca7c70e91794ec95498cc025a28142f87668cc1733eb93fe114aab84277",
+      "pose_index_sha256": "768351e18bdeda73a089ba0dbea2771b3579510f2ec57aef59fa8ce7ca8c3480",
+      "claim_anchor_recomputations": [
+        {
+          "id": "W1",
+          "norm_index": 650,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  0.4761458557324104,
+                  12.234484348161905
+                ],
+                [
+                  1.546522226208672,
+                  12.312266729536875
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                12.234484348161905,
+                12.312266729536875
+              ],
+              "court_x_m": [
+                0.4761458557324104,
+                1.546522226208672
+              ]
+            },
+            "far": {
+              "ankles_xy_m": [
+                [
+                  2.9356109180775216,
+                  0.6774909111067072
+                ],
+                [
+                  2.632043050658429,
+                  1.5122735181974276
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                0.6774909111067072,
+                1.5122735181974276
+              ],
+              "court_x_m": [
+                2.9356109180775216,
+                2.632043050658429
+              ]
+            }
+          }
+        },
+        {
+          "id": "W2",
+          "norm_index": 669,
+          "roles": {
+            "far": {
+              "ankles_xy_m": [
+                [
+                  3.1761254468662297,
+                  1.9265562223162065
+                ],
+                [
+                  1.6812902821166025,
+                  1.9889242654107613
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                1.9265562223162065,
+                1.9889242654107613
+              ],
+              "court_x_m": [
+                3.1761254468662297,
+                1.6812902821166025
+              ]
+            }
+          }
+        },
+        {
+          "id": "W3",
+          "norm_index": 692,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  2.1947741132002614,
+                  10.037370911500902
+                ],
+                [
+                  2.0250571785651004,
+                  9.191508937741133
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                10.037370911500902,
+                9.191508937741133
+              ],
+              "court_x_m": [
+                2.1947741132002614,
+                2.0250571785651004
+              ]
+            }
+          }
+        },
+        {
+          "id": "W4",
+          "norm_index": 723,
+          "roles": {
+            "far": {
+              "ankles_xy_m": [
+                [
+                  3.080062641052745,
+                  2.37500554434802
+                ],
+                [
+                  4.100333512550215,
+                  4.139540473899437
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                2.37500554434802,
+                4.139540473899437
+              ],
+              "court_x_m": [
+                3.080062641052745,
+                4.100333512550215
+              ]
+            }
+          }
+        },
+        {
+          "id": "W5",
+          "norm_index": 762,
+          "roles": {
+            "near": {
+              "ankles_xy_m": [
+                [
+                  3.6298649402350085,
+                  11.791111451323694
+                ],
+                [
+                  4.595630754452511,
+                  12.649546630523181
+                ]
+              ],
+              "depth_from_far_baseline_m": [
+                11.791111451323694,
+                12.649546630523181
+              ],
+              "court_x_m": [
+                3.6298649402350085,
+                4.595630754452511
+              ]
+            }
+          }
+        }
+      ],
+      "scan": {
+        "range": [
+          570,
+          825
+        ],
+        "step": 3,
+        "valid_both_player_frames": 83,
+        "far_foot_max_depth_from_far_baseline_m": 4.247,
+        "far_foot_min_distance_from_net_m": 2.453,
+        "far_frames_at_or_past_short_service_line": 0,
+        "near_foot_min_depth_from_far_baseline_m": 8.083,
+        "sampled_frames_missing_confident_ankles_for_either_player": 3
+      }
+    }
+  },
+  "limits": [
+    "Projection is a diagnostic from a single broadcast camera, not surveyed ground truth.",
+    "Only ankle detections with confidence at least 0.7 count in the scan.",
+    "A court location does not establish shuttle location, shot family, or player intention."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "title_zh": "这一拍想争什么？技术怎么做？",
+  "status": "parent_reviewed_for_render_not_user_acceptance",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "display_label": "战术解读与技术建议｜不是球员意图实测",
+  "variant_of": "outputs/tactics-original-editorial-20261105/concise-30-35s/editorial.mp4",
+  "moments": [
+    {
+      "id": "space",
+      "title": "01  拉开对手，不是比力量",
+      "range": [57.8, 64.8],
+      "evidence": "space-sequence",
+      "anchors": [59.45, 60.65, 62.05]
+    },
+    {
+      "id": "time",
+      "title": "02  解围之后，抢下一次启动",
+      "range": [126.6, 134.0],
+      "evidence": "r1-feedback",
+      "anchors": [128.3167, 130.0167, 131.9833]
+    },
+    {
+      "id": "options",
+      "title": "03  先恢复，再利用她的前压",
+      "range": [272.8, 285.0],
+      "evidence": "reply-sequence",
+      "anchors": [274.0333, 275.0, 276.3]
+    }
+  ],
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "target_speed": 0.88,
+      "text": "红衣还在后场，可以用短球拉她向前。身前控短要小幅送拍，别大甩手臂。",
+      "type": "coach_read",
+      "evidence": [3567, 3639, 3723],
+      "hold": 0.0,
+      "cue": "意图：拉她向前｜技术：小幅送拍，别甩大臂"
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "target_speed": 0.88,
+      "text": "被动救球先争恢复时间。来不及回中也别一直赶路；对手出拍时做分腿垫步，准备再次蹬出。",
+      "type": "coach_read",
+      "evidence": [7699, 7801, 7919],
+      "hold": 0.0,
+      "cue": "意图：争恢复时间｜技术：卡着出拍做启动垫步"
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 285.0],
+      "target_speed": 0.88,
+      "text": "弓步接完及时蹬回，别把重心留在跨步上。红衣若继续前压，灰衣可打她身后，逼她转身回追。",
+      "type": "coach_read",
+      "evidence": [16442, 16500, 16578, 16608, 16644],
+      "hold": 0.0,
+      "cue": "技术：跨步后蹬回｜意图：利用前压身后的空间"
+    }
+  ],
+  "coach_analysis": {
+    "observation_method": "Source picture and synchronized cached 2D pose. Court position is read from feet and floor markings across the moving sequence. Coaching cues are advice, not measurements of executed technique.",
+    "beats": [
+      {
+        "id": "space",
+        "observed": "红衣仍在后场；所见位置和同步姿态支持当前状态描述，但没有测得灰衣实际打出的球种或球路。",
+        "tactical_read": "若选择身前短球，可以把仍在后场的红衣拉向前场；这是一个条件性战术目的，不是对灰衣真实意图的认定。",
+        "technique_cue": "教练要点：身前控短用小幅送拍，避免大幅甩臂。这是建议，不是画面测得的拍面或手臂动作。",
+        "prepare_for": "观察红衣能否及时前移及下一次可见处理；如果她赶到前场仍能回球，要准备继续处理下一拍。",
+        "evidence_ids": ["E003567", "E003639", "E003723"],
+        "limitations": ["未检测羽毛球触拍或落点；不把原片中的实际球判成已验证的网前球。"]
+      },
+      {
+        "id": "time",
+        "observed": "红衣低位伸展后，灰衣在后场举拍；灰衣下一次挥拍前红衣已站起。",
+        "tactical_read": "在被动低位时，优先保住下一次响应能力、争取恢复，比强求立即反攻更稳妥；原片没有量化任何实际争取到的时间。",
+        "technique_cue": "教练要点：来不及回到几何中点时不要盲目赶路；在对手出拍时做小幅分腿垫步，再准备蹬出。原片没有检测分腿垫步。",
+        "prepare_for": "灰衣仍可能继续进攻；以对手出拍作为启动时机，而不是把回中点当作唯一目标。",
+        "evidence_ids": ["E007699", "E007801", "E007919"],
+        "limitations": ["没有测量回球球路、时间增益、腾空时长、关节力或执行了分腿垫步。"]
+      },
+      {
+        "id": "options",
+        "observed": "第16442帧的灰衣在近端中后场低位，红衣随后前移；这不是网前状态。画面没有显示可验证的球路或精确击球类型。",
+        "tactical_read": "如果红衣继续前压，灰衣可考虑把球送向她身后，迫使她转身回追；这是条件性选择，不是画面显示的实际落点或确定结果。",
+        "technique_cue": "教练要点：弓步处理后及时蹬回，不把重心留在跨步上。此建议不是对量化重心、蹬地力或实际动作的测量。",
+        "prepare_for": "若选择打向身后，准备红衣转身回追；若她没有继续前压，这个选择未必创造优势。",
+        "evidence_ids": ["E016442", "E016500", "E016578", "C016608", "C016644"],
+        "limitations": ["不使用低位网前逻辑；没有追踪球路，不能确认打向身后已实际发生或会带来确定结果。"]
+      }
+    ],
+    "global_limitations": [
+      "单机位二维画面不能证明球拍触球、羽毛球轨迹、落点或三维生物力学。",
+      "战术目的为条件性回看解读，不是已知球员意图，也不是前瞻预测。",
+      "技术提示是教练建议，不声称从画面中测得相关动作或力学。",
+      "没有人类听音评估或独立编辑验收；自动引擎召回门槛仍未通过。"
+    ]
+  },
+  "claim_checks": [
+    "旁白逐字采用 parent-reviewed coaching-content-spec.json 的三条讲解；无第四段泛化结尾。",
+    "每段区分条件性战术目的和可执行技术建议；字幕也分别标出意图与技术。",
+    "第16442帧明确为近端中后场，不使用网前压力或网前回球规则。",
+    "不虚构触球、精确球种、球路、落点、球员想法或量化恢复收益。",
+    "教练提示是建议，不冒充画面中已验证的执行动作或测量值。",
+    "V3自动引擎召回验收仍未通过；无人工听音或最终独立编辑验收结论。"
+  ]
+}

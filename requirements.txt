@@ -1,0 +1,16 @@
+# Python 3.12. These are the exact versions the tests passed with (Windows 11, x64, CPU only).
+numpy==2.4.6
+opencv-python==5.0.0.93
+openvino==2026.0.0
+pillow==13.0.0
+psutil==7.2.2
+av==19.0.2
+sherpa-onnx==1.13.8
+pytest==9.2.0
+
+# Only for scripts/get_models.py, which rebuilds the YOLO26 ONNX files.
+ultralytics==8.4.63
+torch==2.14.1
+torchvision==0.29.1
+onnx==1.20.1
+onnxslim==0.1.98

@@ -1,0 +1,247 @@
+{
+  "title_zh": "救得回来，为什么还在挨打？",
+  "display_label": "从对手状态判断：调动、过渡、反制。",
+  "status": "coordinator-directed-editorial-revision",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "format": "vertical_tiktok",
+  "source_time_mapping": {
+    "original_reel": "<workspace>\\obj2\\work\\H\\downloads\\china-open-2025-ws-final.webm",
+    "unchanged_ranges_s": [
+      [
+        57.8,
+        64.8
+      ],
+      [
+        126.6,
+        134.0
+      ],
+      [
+        272.8,
+        285.0
+      ]
+    ],
+    "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52"
+  },
+  "identity_review": {
+    "scoreboard_source_frame": 3639,
+    "scoreboard_text": [
+      "HAN Y.",
+      "WANG Z.Y."
+    ],
+    "red_kit_lettering": "WANG ZY",
+    "red_kit_source_frames": [
+      3468,
+      3504,
+      3576,
+      3681
+    ],
+    "mapping": {
+      "red_kit": "Wang Zhi Yi",
+      "white_kit": "Han Yue"
+    },
+    "basis": "The scoreboard names both finalists and WANG ZY is readable on the red-kit player's jersey. The white-kit player is Han Yue by elimination in this two-player final; the white jersey lettering is not relied on.",
+    "official_listing": "https://www.youtube.com/watch?v=onKkjicRe3w"
+  },
+  "moments": [
+    {
+      "id": "space",
+      "title": "前后调动，抓回位空当",
+      "range": [
+        57.8,
+        64.8
+      ],
+      "evidence": "space-sequence",
+      "anchors": [
+        59.45,
+        60.65,
+        62.05
+      ]
+    },
+    {
+      "id": "time",
+      "title": "先拆连贯，再争回位",
+      "range": [
+        126.6,
+        134.0
+      ],
+      "evidence": "r1-feedback",
+      "anchors": [
+        128.3167,
+        130.0167,
+        131.9833
+      ]
+    },
+    {
+      "id": "options",
+      "title": "前压之后，打她身后",
+      "range": [
+        272.8,
+        285.0
+      ],
+      "evidence": "reply-sequence",
+      "anchors": [
+        274.0333,
+        275.0,
+        276.3
+      ],
+      "emphasis": {
+        "source_range_s": [
+          273.95,
+          274.8
+        ],
+        "target_role": "near",
+        "zoom": 1.12,
+        "purpose": "briefly emphasize Han Yue's visible low position while preserving both players and court context"
+      }
+    }
+  ],
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [
+        57.8,
+        64.8
+      ],
+      "title": "前后调动",
+      "target_speed": 1.0,
+      "hook": true,
+      "hook_text": "救得回来，为什么还在挨打？",
+      "text": "韩悦调王祉怡，抓的是回位空当。前后拉开，别等她站稳了再打。",
+      "caption_chunks": [
+        "韩悦调王祉怡，抓的是回位空当。",
+        "前后拉开，别等她站稳了再打。"
+      ],
+      "type": "coach_read",
+      "evidence": [
+        3567,
+        3639,
+        3723
+      ],
+      "hold": 0.0,
+      "intent_cue": "前后调动，争取回位空当",
+      "technique_cue": "别等对手站稳，再继续施压"
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [
+        126.6,
+        134.0
+      ],
+      "title": "先拆连贯",
+      "target_speed": 1.0,
+      "text": "王祉怡被动，先过渡拆连贯。硬顶快球，容易把韩悦的下一拍喂舒服。",
+      "caption_chunks": [
+        "王祉怡被动，先过渡拆连贯。",
+        "硬顶快球，",
+        "容易把韩悦的下一拍喂舒服。"
+      ],
+      "type": "coach_read",
+      "evidence": [
+        7699,
+        7801,
+        7919
+      ],
+      "hold": 0.0,
+      "intent_cue": "过渡球拆掉韩悦的连续进攻",
+      "technique_cue": "避免被动时硬顶，争取回位"
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [
+        272.8,
+        285.0
+      ],
+      "title": "打她身后",
+      "target_speed": 1.0,
+      "text": "换韩悦被压，王祉怡再往前抢，就打她身后，逼她掉头。防守想翻身，先让对手打不顺。",
+      "caption_chunks": [
+        "换韩悦被压，",
+        "王祉怡再往前抢，",
+        "就打她身后，逼她掉头。",
+        "防守想翻身，先让对手打不顺。"
+      ],
+      "type": "coach_read",
+      "evidence": [
+        16442,
+        16500,
+        16578,
+        16608,
+        16644
+      ],
+      "hold": 0.0,
+      "intent_cue": "防守反制前压，打身后争取打乱连续进攻",
+      "technique_cue": "把前压态势变成转身回追"
+    }
+  ],
+  "coach_analysis": {
+    "beats": [
+      {
+        "id": "space",
+        "observed": "红衣王祉怡处在后场并向前移动；球路和落点不可见。",
+        "tactical_read": "把这一段读作韩悦调动王祉怡、争取其回位空当；这是基于位置变化的战术解读，不是已确认的击球意图。",
+        "technique_cue": "前后拉开，不等对手站稳再打。",
+        "prepare_for": "利用回位空当继续施压；下一拍不预判球种。",
+        "evidence_ids": [
+          "E003567",
+          "E003639",
+          "E003723"
+        ],
+        "limitations": [
+          "未验证实际球种、球路或落点。"
+        ]
+      },
+      {
+        "id": "time",
+        "observed": "红衣王祉怡低位伸展后站起；在白衣韩悦下一次后场挥拍前，她已站起来。",
+        "tactical_read": "被动时先过渡，目的是拆掉韩悦的连贯；这是教练解读，不是已测球速或已确认的回球类型。",
+        "technique_cue": "先过渡争取回位，避免硬顶快球喂舒服下一拍。",
+        "prepare_for": "韩悦下一拍仍可能进攻；回位后继续准备防守。",
+        "evidence_ids": [
+          "E007699",
+          "E007801",
+          "E007919"
+        ],
+        "limitations": [
+          "未验证实际来球速度或回球类型；不量化回位时间。"
+        ]
+      },
+      {
+        "id": "options",
+        "observed": "白衣韩悦在近端中后场低位，红衣王祉怡随后向前移动。",
+        "tactical_read": "王祉怡前压时，打她身后是教练给出的反制选择；不是原片球路、落点或球员意图的判断。",
+        "technique_cue": "借前压打身后，逼对手转身回追。",
+        "prepare_for": "被迫回追后对手仍可能继续处理来球；不预判精确回球类型。",
+        "evidence_ids": [
+          "E016442",
+          "E016500",
+          "E016578",
+          "C016608",
+          "C016644"
+        ],
+        "limitations": [
+          "未验证实际球路或落点；第16442帧位于近端中后场而非网前。"
+        ]
+      }
+    ],
+    "global_limitations": [
+      "战术目的属于回看解读与教练建议，不是已知球员意图或自动检测结论。",
+      "未跟踪羽毛球；单机位二维画面不能证明球拍触球、精确球种、球路或落点。",
+      "姿态缓存仅用于短暂的真实姿态可视化和同步，不代表技术质量或三维生物力学测量。"
+    ]
+  },
+  "claim_checks": [
+    "标题是教学问题，不声称视频结果或模型已通过验收。",
+    "球员身份由源帧记分牌与红衣背部 WANG ZY 字样对应；白衣选手由两人决赛的对应关系确认为韩悦。",
+    "第一段的回位空当是基于连续位置变化的战术解读，不是确认的实际战术意图或球路。",
+    "第二段的过渡球与硬顶快球是教练建议，不声称原片中实际出现了这些已识别球种或球速。",
+    "第三段的打身后是教练指令，不声称原片显示了该球路、落点或其成功结果。",
+    "保留 V3 召回门槛未通过的既有结论；此人工编辑视频不是模型准确率验收。"
+  ],
+  "attribution": {
+    "credit": "Badminton Sphere / Wikimedia Commons, China Open 2025 women's singles final, CC BY 3.0",
+    "upstream_broadcast_rights": "not independently cleared"
+  }
+}

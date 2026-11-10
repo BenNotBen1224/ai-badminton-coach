@@ -1,0 +1,101 @@
+{
+  "text": "I will stop the coaching here. Please stop and rest. If you have pain, an injury or feel unwell, check with a doctor or physiotherapist before you train again. If it is sudden or severe, such as chest pain, trouble breathing or fainting, get urgent medical help. I cannot give medical advice, so I will not suggest exercises for this.",
+  "suggestions": [],
+  "always": [
+    "pain", "pains", "painful", "painkiller", "painkillers", "ache", "aches", "aching", "achy", "achey", "headache", "headaches",
+    "numb", "numbness", "tingling", "tingly", "lightheaded", "light-headed", "chest", "doctor", "doctors", "doc", "dr", "gp", "nurse",
+    "acl", "mcl", "pcl", "meniscus", "achilles", "cartilage", "bruise", "bruised", "bruising", "blood", "sick", "unwell", "pregnant",
+    "pregnancy", "asthma", "asthmatic", "fever", "tear", "torn", "tore", "migraine", "hospital", "ambulance", "emergency", "mri",
+    "xray", "x-ray", "ibuprofen", "paracetamol", "aspirin", "medication", "medicine", "medical", "pian", "injery", "injurey", "soar",
+    "sprian", "dizy", "docter", "doctr", "physo", "fisio", "surgury", "ligment", "swolen", "hert", "herts", "concusion", "brused",
+    "peins", "hurst", "injuried", "spraned", "seizure", "epilepsy", "diabetes", "diabetic", "collapsed",
+    "unconscious", "palpitations", "stitches", "wound", "bleeding", "limping", "crutches", "splint", "sling", "ouch", "covid",
+    "flu", "infection", "inhaler", "epipen", "allergic", "allergy", "operation", "physiotherapy", "chiropractor", "osteopath",
+    "agony", "agonising", "agonizing", "excruciating", "shinsplints", "niggle", "niggles", "niggly"
+  ],
+  "stems": [
+    "injur", "sprain", "strain", "dislocat", "fractur", "concuss", "tendin", "tendon", "ligament", "physio", "rehab", "surg",
+    "inflam", "arthrit", "dizz", "nause", "vomit", "bleed", "swell", "swoll", "cramp", "hurt", "sore", "faint", "osteo",
+    "hernia", "sciatic", "bursit", "plantar", "spasm"
+  ],
+  "phrases": [
+    "short of breath", "can not breathe", "cannot breathe", "trouble breathing", "hard to breathe", "struggle to breathe",
+    "struggling to breathe", "difficulty breathing", "pulled something", "pulled a muscle", "felt a pop", "heard a pop",
+    "tennis elbow", "golfers elbow", "shin splints", "rotator cuff", "jumpers knee", "runners knee", "panic attack", "feel ill",
+    "feeling ill", "felt ill", "passed out", "pass out", "black out", "blacked out", "throw up", "threw up", "pins and needles",
+    "heart attack", "my heart", "heart racing", "heart pounding", "heart problem", "heart condition", "heart hurts",
+    "bad knee", "bad knees", "bad back", "bad ankle", "bad ankles", "bad shoulder", "bad hip", "bad hips", "bad wrist", "bad elbow",
+    "bad neck", "bad for my", "bad for the knees", "bad for your knees", "bad for your back", "i fell", "fell over", "fell down",
+    "had a fall", "bad fall", "took a fall", "fell on", "locked up", "locks up", "keeps locking", "gave way", "gives way",
+    "giving way", "giving out", "gave out", "ice it", "icing my", "put ice", "see a doctor", "see a physio", "seeing a physio",
+    "not feeling well", "do not feel well", "feel weird", "feel faint", "feel funny", "something is wrong with my", "went dark",
+    "seeing stars", "can not walk", "can not move my", "can not lift my", "can not bend my", "can not straighten my",
+    "hit my head", "hit in the head", "hit in the eye", "hit my eye", "in the eye", "hit my face", "is it safe", "is this safe",
+    "is that safe", "safe for me", "safe to train", "safe to play", "safe to keep", "safe to continue", "safe to do",
+    "dangerous for me", "dangerous for my", "risky for me", "risky for my", "too old to", "over training", "overtraining",
+    "gives out", "give way", "put my back out", "threw my back out", "threw out my back", "put out my back", "back went out",
+    "back gave out", "did my back in", "done my back in", "knee replacement", "hip replacement", "shoulder replacement",
+    "joint replacement", "tweaked something", "twisted something", "did something to my", "done something to my",
+    "felt something go", "physical therapy", "physical therapist", "knee brace", "ankle brace", "wrist brace", "back brace",
+    "elbow brace", "wear a brace", "wearing a brace", "kinesio tape"
+  ],
+  "joint_concern": [
+    "ok for", "okay for", "alright for", "fine for", "safe for", "hard on", "hard for", "tough on", "rough on", "easy on",
+    "easier on", "gentle on", "harsh on", "bad on", "ok on", "okay on", "ok with", "okay with", "fine with", "too much for",
+    "too hard on", "too much on", "a problem for", "an issue for", "stress on", "strain on", "load on", "impact on"
+  ],
+  "conditional_any": [
+    "click", "clicks", "clicking", "clicked", "pop", "pops", "popping", "popped", "pulled", "twisted", "twisting", "rolled",
+    "tweaked", "broke", "broken", "cracking", "cracked", "grinding", "throbbing", "sharp", "locking", "dislocated", "safe",
+    "unsafe", "dangerous", "risky", "risk", "damage", "damaged", "damaging", "wreck", "ruin", "ruined", "jarred", "jammed",
+    "tightness", "stiffness", "weakness", "instability", "pinching", "pinch", "stabbing", "shooting", "safely", "harmful", "harm",
+    "killing", "stinging", "stings", "throbs", "tender", "acting up", "playing up", "niggling", "bothering", "bugging",
+    "flaring", "flared", "flare up", "giving me trouble", "giving me grief", "strapping", "strapped", "taped", "sensitive",
+    "fragile", "dodgy", "iffy", "creaky", "creaking", "aggravate", "aggravated", "aggravating", "irritated"
+  ],
+  "conditional_joint": [
+    "burning", "burns", "shaking", "shaky", "wobbly", "weak", "unstable", "bad",
+    "hot", "warm", "heavy", "dead", "funny", "weird", "strange", "not right", "give out"
+  ],
+  "body_parts": [
+    "knee", "knees", "ankle", "ankles", "shoulder", "shoulders", "hip", "hips", "wrist", "wrists", "elbow", "elbows", "neck",
+    "hamstring", "hamstrings", "calf", "calves", "foot", "feet", "heel", "heels", "toe", "toes", "groin", "thigh", "thighs",
+    "shin", "shins", "arm", "arms", "leg", "legs", "spine", "joint", "joints", "muscle", "muscles", "eye", "eyes", "head",
+    "hand", "hands", "finger", "fingers", "thumb", "quad", "quads", "glute", "glutes", "rib", "ribs", "back", "lower back",
+    "upper back", "tendon", "achilles", "kneecap", "knee cap", "forearm", "forearms", "bicep", "biceps", "tricep", "triceps",
+    "chest", "stomach", "abs", "face", "nose", "teeth", "mouth", "jaw", "body"
+  ],
+  "joint_parts": [
+    "knee", "knees", "ankle", "ankles", "shoulder", "shoulders", "hip", "hips", "wrist", "wrists", "elbow", "elbows", "neck",
+    "back", "lower back", "upper back", "spine", "joint", "joints", "kneecap", "achilles", "chest", "heart"
+  ],
+  "safe_phrases": [
+    "chest up", "chests up", "turn the chest", "turn your chest", "turn my chest", "turning the chest", "at your chest",
+    "at the chest", "at my chest", "to your chest", "to the chest", "to my chest", "chest forward", "chest over", "chest high",
+    "chest towards", "chest toward", "chest tall", "chest open", "chest facing", "chest to the net", "chest height",
+    "click on", "click here", "click the", "click it", "clicking on", "medicine ball", "med ball", "heart rate", "heart of the",
+    "back court", "backcourt", "back of the court", "back corner", "back corners", "back line", "backhand", "back hand",
+    "back to base", "back to the", "back towards", "get back", "getting back", "come back", "push back", "pushing back",
+    "step back", "move back", "moving back", "back foot", "back leg", "back knee", "lean back", "go back", "way back",
+    "feet back", "head over", "head up", "arm extension", "arm straight", "straight arm", "racket arm", "hitting arm",
+    "landing with stiff knees", "stiff knees when landing", "not locked", "but not locked", "tight grip", "grip tight",
+    "hand speed", "racket hand", "free hand", "non racket hand", "knees bent", "bent knees", "bend the knees", "bend my knees",
+    "bend your knees", "knee bend", "knee angle", "knees over", "knee over", "hip height", "hips high", "hips low",
+    "is it safe to say", "safe to assume", "risk it", "take a risk", "risky shot", "risky shots", "sharp angle", "sharp angles",
+    "weak side", "weak shot", "weak shots", "weak point", "weak points", "weak backhand", "weak forehand", "weak smash",
+    "weak clear", "weak clears", "hot streak", "warm up", "warm-up", "warming up", "dead shuttle", "off balance", "head start",
+    "stiff knee landing", "rolled the shuttle", "broke serve", "broke the", "high hips", "hips too high", "hips stay high",
+    "hips are high", "hips are too high", "low hips", "hips lower", "hips down", "hip position", "straight knee", "straight knees",
+    "straight legs", "knees straight", "bent knee", "elbow angle", "arm angle", "bent arm", "bent elbow", "elbow bent", "arm bent",
+    "chest do", "chest position", "chest rotation", "chest turn", "knees in line", "knee in line", "hips back", "hips square",
+    "legs bent", "knees cave", "knees caving", "body turn", "body lean", "upper body", "head still", "back to centre",
+    "back to center", "back to middle", "back to the middle", "pop back", "bounce back", "spring back", "snap back", "back home"
+  ],
+  "non_english": [
+    "dolor", "duele", "douleur", "j ai mal", "jai mal", "schmerz", "dolore", "fa male", "sakit", "pijn", "tut weh",
+    "痛", "疼", "受伤", "伤到", "아파", "아프", "다쳤", "부상", "怪我", "けが", "lesión", "lesion", "lesão", "blessure",
+    "blessé", "verletz", "боль", "болит", "травм", "दर्द", "चोट", "ألم", "إصابة", "machuc", "lastim", "mareo", "mareado",
+    "schwindel", "đau", "chấn thương", "เจ็บ", "ağrı", "ból", "kontuzj", "infortun", "malade", "enfermo", "krank"
+  ],
+  "non_english_tokens": ["dor", "mal", "weh", "ouch", "ow", "oww", "owww"]
+}

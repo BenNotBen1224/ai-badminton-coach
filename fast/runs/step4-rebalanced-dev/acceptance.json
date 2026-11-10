@@ -1,0 +1,7682 @@
+{
+ "suite": "step4-rebalanced-dev",
+ "created_utc": "2026-10-27T13:03:25.980471+00:00",
+ "limit_s": 10.0,
+ "timer": "perf_counter_ns around Popen..exit of a fresh `python pipeline.py VIDEO OUT.json`; includes imports, decode, automatic court finding, inference/tracking and JSON save; excludes setup, OpenVINO cache preparation, overlay rendering",
+ "reference_note": "judge = YOLOX-x + RTMPose-x model output, not human ground truth; its three joints/sapiens/posewarper slots are duplicates of one model's joints",
+ "runs": [
+  {
+   "tag": "01-r1",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\01-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r1.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r1.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:03:52.034218+00:00",
+   "wall_ns": 7386591600,
+   "wall_s": 7.3865916,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r1.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r1.stderr.txt",
+   "stdout_sha256": "5B4F10F5F91FA70F2A7793E2D5E240B8475ABCC1214E54C47D2076CB7BEF7F2D",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1127191,
+   "output_sha256": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "internal": {
+    "total_s": 6.73,
+    "load_s": 0.78,
+    "court_s": 0.78,
+    "decode_done_s": 2.22,
+    "follow_s": 0.04,
+    "relinked": {
+     "5": 3
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 1915,
+    "frames": 780,
+    "workers": [
+     [
+      0.78,
+      6.51
+     ],
+     [
+      0.78,
+      6.5
+     ],
+     [
+      1.07,
+      5.87
+     ],
+     [
+      1.51,
+      5.41
+     ],
+     [
+      0.78,
+      4.63
+     ],
+     [
+      0.89,
+      5.84
+     ],
+     [
+      1.33,
+      5.85
+     ],
+     [
+      1.79,
+      6.09
+     ]
+    ],
+    "cpu_s": 77.9,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.29,
+      0.73,
+      0.0,
+      0.11,
+      0.54,
+      1.0
+     ],
+     "det": [
+      0.52,
+      0.58,
+      0.54,
+      0.88,
+      0.68,
+      0.62,
+      0.59,
+      0.66
+     ],
+     "pose": [
+      4.7,
+      4.69,
+      3.73,
+      2.51,
+      2.68,
+      3.81,
+      3.4,
+      3.16
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 48,
+     "pose": 1634,
+     "pose_small": 1060,
+     "reused": 482,
+     "refined": 0,
+     "officials": 10,
+     "fallback": 201,
+     "tail_fallback": 151,
+     "pose_requests": 477,
+     "pose_small_requests": 614
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "01",
+   "run": 1,
+   "load_before": {
+    "cpu_percent": 27.2,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "top_processes": [
+     [
+      135.4,
+      "MsMpEng.exe",
+      4452
+     ],
+     [
+      66.5,
+      "python.exe",
+      52728
+     ],
+     [
+      26.3,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      19.4,
+      "MsSense.exe",
+      4304
+     ],
+     [
+      9.1,
+      "copilot-runtime.exe",
+      22124
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9811,
+    "pck10": 0.9928,
+    "pck10_vs_sapiens": 0.9928,
+    "pck10_vs_posewarper": 0.9928,
+    "pck05_exact": 0.9810699588477366,
+    "pck10_exact": 0.9928277483833039,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8344,
+      8505
+     ],
+     "pck10": [
+      8444,
+      8505
+     ],
+     "player_frames_found": [
+      503,
+      503
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9842002916869227,
+      "pck10": 0.9948954788526981
+     },
+     "far": {
+      "pck05": 0.9781370986107948,
+      "pck10": 0.9908904577544978
+     }
+    },
+    "pck05_agreed": 0.9811,
+    "agreed_joints": 8505,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 503,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9811
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9822,
+    "pck10": 0.9935,
+    "pck10_vs_sapiens": 0.9935,
+    "pck10_vs_posewarper": 0.9935,
+    "pck05_exact": 0.9822290220077674,
+    "pck10_exact": 0.9935271272213723,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8346,
+      8497
+     ],
+     "pck10": [
+      8442,
+      8497
+     ],
+     "player_frames_found": [
+      500,
+      500
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9878463782207098,
+      "pck10": 0.9963539134662129
+     },
+     "far": {
+      "pck05": 0.9769564225416382,
+      "pck10": 0.9908738307095597
+     }
+    },
+    "pck05_agreed": 0.9822,
+    "agreed_joints": 8497,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 500,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9822
+   }
+  },
+  {
+   "tag": "02-r1",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\02-singles-dive.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r1.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r1.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:04:03.033713+00:00",
+   "wall_ns": 8720696800,
+   "wall_s": 8.7206968,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r1.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r1.stderr.txt",
+   "stdout_sha256": "A04340CE755F96B8A3EB6E01CDD6296F37D4A2861AC344A50A20502693A383AD",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1233029,
+   "output_sha256": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "internal": {
+    "total_s": 8.08,
+    "load_s": 0.85,
+    "court_s": 0.85,
+    "decode_done_s": 2.56,
+    "follow_s": 1.27,
+    "relinked": {},
+    "cuts": [],
+    "followers": [
+     [
+      5,
+      675,
+      770,
+      [
+       [
+        1,
+        2,
+        771
+       ]
+      ]
+     ]
+    ],
+    "crops": 2090,
+    "frames": 900,
+    "workers": [
+     [
+      0.85,
+      5.94
+     ],
+     [
+      0.85,
+      6.42
+     ],
+     [
+      1.2,
+      6.13
+     ],
+     [
+      1.7,
+      6.47
+     ],
+     [
+      0.85,
+      6.05
+     ],
+     [
+      1.03,
+      6.58
+     ],
+     [
+      1.54,
+      5.87
+     ],
+     [
+      2.06,
+      6.61
+     ]
+    ],
+    "cpu_s": 91.8,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.35,
+      0.85,
+      0.0,
+      0.18,
+      0.69,
+      1.2
+     ],
+     "det": [
+      0.56,
+      0.65,
+      0.75,
+      0.85,
+      0.61,
+      0.63,
+      0.81,
+      0.79
+     ],
+     "pose": [
+      3.94,
+      4.34,
+      3.63,
+      3.36,
+      4.03,
+      4.37,
+      3.08,
+      3.21
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 59,
+     "pose": 1738,
+     "pose_small": 1154,
+     "reused": 567,
+     "refined": 0,
+     "officials": 9,
+     "fallback": 215,
+     "tail_fallback": 167,
+     "pose_requests": 536,
+     "pose_small_requests": 737
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "02",
+   "run": 1,
+   "load_before": {
+    "cpu_percent": 7.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     0.15,
+     0.03,
+     0.01
+    ],
+    "top_processes": [
+     [
+      54.9,
+      "python.exe",
+      52728
+     ],
+     [
+      19.6,
+      "msedgewebview2.exe",
+      32716
+     ],
+     [
+      12.7,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      11.5,
+      "System",
+      4
+     ],
+     [
+      9.9,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r1.json",
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.9899,
+    "pck05": 0.9756,
+    "pck10": 0.9888,
+    "pck10_vs_sapiens": 0.9888,
+    "pck10_vs_posewarper": 0.9888,
+    "pck05_exact": 0.9756073474224768,
+    "pck10_exact": 0.9888406083349792,
+    "player_frames_found_exact": 0.9949664429530202,
+    "counts": {
+     "pck05": [
+      9879,
+      10126
+     ],
+     "pck10": [
+      10013,
+      10126
+     ],
+     "player_frames_found": [
+      593,
+      596
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9860702373945458,
+      "pck10": 0.9976456739258387
+     },
+     "far": {
+      "pck05": 0.965002982700338,
+      "pck10": 0.9799164843905349
+     }
+    },
+    "pck05_agreed": 0.9756,
+    "agreed_joints": 10126,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 596,
+    "role_correct": 0.995,
+    "pck05_by_role": 0.9766
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r1.json",
+    "player_frames_found": 0.9983,
+    "near_found": 1.0,
+    "far_found": 0.9965,
+    "pck05": 0.9828,
+    "pck10": 0.9941,
+    "pck10_vs_sapiens": 0.9941,
+    "pck10_vs_posewarper": 0.9941,
+    "pck05_exact": 0.9827742520398912,
+    "pck10_exact": 0.9940566132769215,
+    "player_frames_found_exact": 0.9982876712328768,
+    "counts": {
+     "pck05": [
+      9756,
+      9927
+     ],
+     "pck10": [
+      9868,
+      9927
+     ],
+     "player_frames_found": [
+      583,
+      584
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9880392156862745,
+      "pck10": 0.9986274509803922
+     },
+     "far": {
+      "pck05": 0.9772115185415372,
+      "pck10": 0.9892272633105449
+     }
+    },
+    "pck05_agreed": 0.9828,
+    "agreed_joints": 9927,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 584,
+    "role_correct": 0.9983,
+    "pck05_by_role": 0.9828
+   }
+  },
+  {
+   "tag": "03-r1",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\03-womens-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r1.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r1.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:04:15.845682+00:00",
+   "wall_ns": 9866349000,
+   "wall_s": 9.866349,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r1.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r1.stderr.txt",
+   "stdout_sha256": "27C510A52CF8B8C4852B1887C9E3CABB6A4CFC2537CF8D28A5CB621119768890",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1659082,
+   "output_sha256": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "internal": {
+    "total_s": 9.22,
+    "load_s": 0.75,
+    "court_s": 0.75,
+    "decode_done_s": 2.92,
+    "follow_s": 0.07,
+    "relinked": {
+     "11": 1
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 2820,
+    "frames": 1080,
+    "workers": [
+     [
+      0.75,
+      7.42
+     ],
+     [
+      0.78,
+      8.75
+     ],
+     [
+      1.35,
+      8.74
+     ],
+     [
+      1.96,
+      8.89
+     ],
+     [
+      0.75,
+      8.4
+     ],
+     [
+      0.94,
+      8.52
+     ],
+     [
+      1.52,
+      8.75
+     ],
+     [
+      2.14,
+      8.5
+     ]
+    ],
+    "cpu_s": 111.3,
+    "secs": {
+     "wait": [
+      0.0,
+      0.03,
+      0.6,
+      1.21,
+      0.0,
+      0.19,
+      0.76,
+      1.39
+     ],
+     "det": [
+      0.8,
+      0.87,
+      0.86,
+      1.31,
+      0.68,
+      0.68,
+      0.85,
+      1.13
+     ],
+     "pose": [
+      5.18,
+      6.3,
+      5.83,
+      4.94,
+      6.2,
+      6.23,
+      5.69,
+      4.51
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 64,
+     "pose": 2269,
+     "pose_small": 1429,
+     "reused": 864,
+     "refined": 0,
+     "officials": 20,
+     "fallback": 312,
+     "tail_fallback": 237,
+     "pose_requests": 720,
+     "pose_small_requests": 864
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "03",
+   "run": 1,
+   "load_before": {
+    "cpu_percent": 3.0,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     0.27,
+     0.06,
+     0.02
+    ],
+    "top_processes": [
+     [
+      60.2,
+      "python.exe",
+      52728
+     ],
+     [
+      21.7,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      17.5,
+      "System",
+      4
+     ],
+     [
+      12.3,
+      "MsMpEng.exe",
+      4452
+     ],
+     [
+      11.4,
+      "copilot-runtime.exe",
+      22124
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r1.json",
+    "player_frames_found": 0.9986,
+    "near_found": 1.0,
+    "far_found": 0.9972,
+    "pck05": 0.9737,
+    "pck10": 0.9904,
+    "pck10_vs_sapiens": 0.9904,
+    "pck10_vs_posewarper": 0.9904,
+    "pck05_exact": 0.97365191064561,
+    "pck10_exact": 0.9904263153588087,
+    "player_frames_found_exact": 0.9986091794158554,
+    "counts": {
+     "pck05": [
+      11899,
+      12221
+     ],
+     "pck10": [
+      12104,
+      12221
+     ],
+     "player_frames_found": [
+      718,
+      719
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9764667429318517,
+      "pck10": 0.9949338127144959
+     },
+     "far": {
+      "pck05": 0.970829236315962,
+      "pck10": 0.9859062602425435
+     }
+    },
+    "pck05_agreed": 0.9737,
+    "agreed_joints": 12221,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 719,
+    "role_correct": 0.9986,
+    "pck05_by_role": 0.9742
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9816,
+    "pck10": 0.9933,
+    "pck10_vs_sapiens": 0.9933,
+    "pck10_vs_posewarper": 0.9933,
+    "pck05_exact": 0.9816218889072029,
+    "pck10_exact": 0.993324542607549,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      11911,
+      12134
+     ],
+     "pck10": [
+      12053,
+      12134
+     ],
+     "player_frames_found": [
+      714,
+      714
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9862446138548226,
+      "pck10": 0.9970169042094796
+     },
+     "far": {
+      "pck05": 0.9770491803278688,
+      "pck10": 0.9896721311475409
+     }
+    },
+    "pck05_agreed": 0.9816,
+    "agreed_joints": 12134,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 714,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9816
+   }
+  },
+  {
+   "tag": "04-r1",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r1.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r1.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:04:29.380268+00:00",
+   "wall_ns": 8090724800,
+   "wall_s": 8.0907248,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r1.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r1.stderr.txt",
+   "stdout_sha256": "91FCC0036AAB0E50E1D86DC812FF24C42E7654B6530CE51EDDB272BCD5EFFEA2",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1063403,
+   "output_sha256": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "internal": {
+    "total_s": 7.45,
+    "load_s": 0.76,
+    "court_s": 0.76,
+    "decode_done_s": 2.45,
+    "follow_s": 0.04,
+    "relinked": {},
+    "cuts": [
+     212,
+     367,
+     665
+    ],
+    "followers": [],
+    "crops": 1802,
+    "frames": 900,
+    "workers": [
+     [
+      0.76,
+      6.43
+     ],
+     [
+      0.76,
+      6.63
+     ],
+     [
+      1.15,
+      6.13
+     ],
+     [
+      1.66,
+      6.86
+     ],
+     [
+      0.76,
+      6.8
+     ],
+     [
+      0.92,
+      6.82
+     ],
+     [
+      1.41,
+      6.61
+     ],
+     [
+      1.92,
+      7.25
+     ]
+    ],
+    "cpu_s": 87.3,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.39,
+      0.9,
+      0.0,
+      0.16,
+      0.64,
+      1.16
+     ],
+     "det": [
+      0.55,
+      0.86,
+      0.73,
+      0.79,
+      0.64,
+      0.82,
+      0.77,
+      0.73
+     ],
+     "pose": [
+      4.58,
+      4.46,
+      3.77,
+      3.95,
+      4.85,
+      4.55,
+      3.9,
+      4.14
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 52,
+     "pose": 1737,
+     "pose_small": 918,
+     "reused": 369,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 304,
+     "tail_fallback": 234,
+     "pose_requests": 729,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "04",
+   "run": 1,
+   "load_before": {
+    "cpu_percent": 1.7,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     1.26,
+     0.3,
+     0.1
+    ],
+    "top_processes": [
+     [
+      53.9,
+      "python.exe",
+      52728
+     ],
+     [
+      16.3,
+      "System",
+      4
+     ],
+     [
+      15.3,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      4.9,
+      "msedgewebview2.exe",
+      34464
+     ],
+     [
+      2.8,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9534,
+    "pck10": 0.9838,
+    "pck10_vs_sapiens": 0.9838,
+    "pck10_vs_posewarper": 0.9838,
+    "pck05_exact": 0.9534222396548343,
+    "pck10_exact": 0.983820356932732,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9723,
+      10198
+     ],
+     "pck10": [
+      10033,
+      10198
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9519513630123554,
+      "pck10": 0.9833300647185723
+     },
+     "far": {
+      "pck05": 0.9548931162973132,
+      "pck10": 0.9843106491468916
+     }
+    },
+    "pck05_agreed": 0.9534,
+    "agreed_joints": 10198,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9534
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9597,
+    "pck10": 0.9855,
+    "pck10_vs_sapiens": 0.9855,
+    "pck10_vs_posewarper": 0.9855,
+    "pck05_exact": 0.9597329224447868,
+    "pck10_exact": 0.9855161787365178,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9343,
+      9735
+     ],
+     "pck10": [
+      9594,
+      9735
+     ],
+     "player_frames_found": [
+      573,
+      573
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9536918480580452,
+      "pck10": 0.9844216816047802
+     },
+     "far": {
+      "pck05": 0.9653396712220241,
+      "pck10": 0.9865319865319865
+     }
+    },
+    "pck05_agreed": 0.9597,
+    "agreed_joints": 9735,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 573,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9597
+   }
+  },
+  {
+   "tag": "05-r1",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\05-china-open-ws-b.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r1.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r1.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:04:41.196700+00:00",
+   "wall_ns": 8369890300,
+   "wall_s": 8.3698903,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r1.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r1.stderr.txt",
+   "stdout_sha256": "CE6E631E503E3265FCAD23640D8641F4337AAECD958CABCD73D21CDB049A7C9B",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1070624,
+   "output_sha256": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "internal": {
+    "total_s": 7.73,
+    "load_s": 0.76,
+    "court_s": 0.76,
+    "decode_done_s": 2.43,
+    "follow_s": 0.51,
+    "relinked": {},
+    "cuts": [
+     41,
+     369,
+     883
+    ],
+    "followers": [
+     [
+      1,
+      225,
+      225,
+      [
+       [
+        0,
+        1,
+        226
+       ]
+      ]
+     ]
+    ],
+    "crops": 1800,
+    "frames": 900,
+    "workers": [
+     [
+      0.76,
+      6.22
+     ],
+     [
+      0.76,
+      6.65
+     ],
+     [
+      1.15,
+      6.93
+     ],
+     [
+      1.68,
+      7.01
+     ],
+     [
+      0.77,
+      6.68
+     ],
+     [
+      0.91,
+      6.6
+     ],
+     [
+      1.39,
+      6.97
+     ],
+     [
+      1.91,
+      7.04
+     ]
+    ],
+    "cpu_s": 92.1,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.38,
+      0.92,
+      0.0,
+      0.15,
+      0.62,
+      1.14
+     ],
+     "det": [
+      0.85,
+      0.62,
+      0.65,
+      1.02,
+      0.57,
+      0.63,
+      0.68,
+      0.88
+     ],
+     "pose": [
+      4.15,
+      4.75,
+      4.72,
+      3.86,
+      4.78,
+      4.58,
+      4.41,
+      3.82
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 53,
+     "pose": 1770,
+     "pose_small": 908,
+     "reused": 316,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 286,
+     "tail_fallback": 211,
+     "pose_requests": 764,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "05",
+   "run": 1,
+   "load_before": {
+    "cpu_percent": 1.6,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     2.39,
+     0.58,
+     0.2
+    ],
+    "top_processes": [
+     [
+      55.0,
+      "python.exe",
+      52728
+     ],
+     [
+      11.9,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      9.0,
+      "System",
+      4
+     ],
+     [
+      6.6,
+      "github.exe",
+      27484
+     ],
+     [
+      4.6,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 2
+   },
+   "output_sha256_recheck": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9435,
+    "pck10": 0.9753,
+    "pck10_vs_sapiens": 0.9753,
+    "pck10_vs_posewarper": 0.9753,
+    "pck05_exact": 0.9435017165277096,
+    "pck10_exact": 0.975282000980873,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9619,
+      10195
+     ],
+     "pck10": [
+      9943,
+      10195
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9574509803921568,
+      "pck10": 0.9831372549019608
+     },
+     "far": {
+      "pck05": 0.9295387634936212,
+      "pck10": 0.9674190382728165
+     }
+    },
+    "pck05_agreed": 0.9435,
+    "agreed_joints": 10195,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9435
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r1.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9513,
+    "pck10": 0.9795,
+    "pck10_vs_sapiens": 0.9795,
+    "pck10_vs_posewarper": 0.9795,
+    "pck05_exact": 0.951340206185567,
+    "pck10_exact": 0.9794845360824742,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9228,
+      9700
+     ],
+     "pck10": [
+      9501,
+      9700
+     ],
+     "player_frames_found": [
+      571,
+      571
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9673565180285897,
+      "pck10": 0.9903989758907616
+     },
+     "far": {
+      "pck05": 0.9363654498304409,
+      "pck10": 0.9692798723319369
+     }
+    },
+    "pck05_agreed": 0.9513,
+    "agreed_joints": 9700,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 571,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9513
+   }
+  },
+  {
+   "tag": "02-r2",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\02-singles-dive.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r2.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r2.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:04:54.689241+00:00",
+   "wall_ns": 8727345800,
+   "wall_s": 8.7273458,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r2.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r2.stderr.txt",
+   "stdout_sha256": "25729B459E1F0F35BC818A030FC3C3998C7FA552CD08D9F8FDEF8467159C0821",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1233029,
+   "output_sha256": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "internal": {
+    "total_s": 8.04,
+    "load_s": 0.89,
+    "court_s": 0.89,
+    "decode_done_s": 2.61,
+    "follow_s": 1.27,
+    "relinked": {},
+    "cuts": [],
+    "followers": [
+     [
+      5,
+      675,
+      770,
+      [
+       [
+        1,
+        2,
+        771
+       ]
+      ]
+     ]
+    ],
+    "crops": 2090,
+    "frames": 900,
+    "workers": [
+     [
+      0.9,
+      5.63
+     ],
+     [
+      0.9,
+      6.54
+     ],
+     [
+      1.23,
+      6.16
+     ],
+     [
+      1.72,
+      6.54
+     ],
+     [
+      0.9,
+      6.07
+     ],
+     [
+      1.09,
+      6.57
+     ],
+     [
+      1.59,
+      5.97
+     ],
+     [
+      2.11,
+      6.52
+     ]
+    ],
+    "cpu_s": 90.6,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.33,
+      0.83,
+      0.0,
+      0.19,
+      0.69,
+      1.21
+     ],
+     "det": [
+      0.61,
+      0.57,
+      0.72,
+      0.82,
+      0.59,
+      0.6,
+      0.85,
+      0.75
+     ],
+     "pose": [
+      3.57,
+      4.51,
+      3.66,
+      3.48,
+      4.05,
+      4.35,
+      3.09,
+      3.2
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 59,
+     "pose": 1738,
+     "pose_small": 1154,
+     "reused": 567,
+     "refined": 0,
+     "officials": 9,
+     "fallback": 215,
+     "tail_fallback": 167,
+     "pose_requests": 536,
+     "pose_small_requests": 737
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "02",
+   "run": 2,
+   "load_before": {
+    "cpu_percent": 4.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     3.02,
+     0.83,
+     0.29
+    ],
+    "top_processes": [
+     [
+      72.3,
+      "python.exe",
+      52728
+     ],
+     [
+      18.3,
+      "MsMpEng.exe",
+      4452
+     ],
+     [
+      14.3,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      12.0,
+      "System",
+      4
+     ],
+     [
+      10.9,
+      "MsSense.exe",
+      4304
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r2.json",
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.9899,
+    "pck05": 0.9756,
+    "pck10": 0.9888,
+    "pck10_vs_sapiens": 0.9888,
+    "pck10_vs_posewarper": 0.9888,
+    "pck05_exact": 0.9756073474224768,
+    "pck10_exact": 0.9888406083349792,
+    "player_frames_found_exact": 0.9949664429530202,
+    "counts": {
+     "pck05": [
+      9879,
+      10126
+     ],
+     "pck10": [
+      10013,
+      10126
+     ],
+     "player_frames_found": [
+      593,
+      596
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9860702373945458,
+      "pck10": 0.9976456739258387
+     },
+     "far": {
+      "pck05": 0.965002982700338,
+      "pck10": 0.9799164843905349
+     }
+    },
+    "pck05_agreed": 0.9756,
+    "agreed_joints": 10126,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 596,
+    "role_correct": 0.995,
+    "pck05_by_role": 0.9766
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r2.json",
+    "player_frames_found": 0.9983,
+    "near_found": 1.0,
+    "far_found": 0.9965,
+    "pck05": 0.9828,
+    "pck10": 0.9941,
+    "pck10_vs_sapiens": 0.9941,
+    "pck10_vs_posewarper": 0.9941,
+    "pck05_exact": 0.9827742520398912,
+    "pck10_exact": 0.9940566132769215,
+    "player_frames_found_exact": 0.9982876712328768,
+    "counts": {
+     "pck05": [
+      9756,
+      9927
+     ],
+     "pck10": [
+      9868,
+      9927
+     ],
+     "player_frames_found": [
+      583,
+      584
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9880392156862745,
+      "pck10": 0.9986274509803922
+     },
+     "far": {
+      "pck05": 0.9772115185415372,
+      "pck10": 0.9892272633105449
+     }
+    },
+    "pck05_agreed": 0.9828,
+    "agreed_joints": 9927,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 584,
+    "role_correct": 0.9983,
+    "pck05_by_role": 0.9828
+   }
+  },
+  {
+   "tag": "03-r2",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\03-womens-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r2.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r2.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:05:07.281675+00:00",
+   "wall_ns": 9240092400,
+   "wall_s": 9.2400924,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r2.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r2.stderr.txt",
+   "stdout_sha256": "2F7F398992F79F60BCDF3D6DA4A6D01382EB8BFB89A76655F206A495EB78ED65",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1659082,
+   "output_sha256": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "internal": {
+    "total_s": 8.61,
+    "load_s": 0.73,
+    "court_s": 0.73,
+    "decode_done_s": 2.79,
+    "follow_s": 0.07,
+    "relinked": {
+     "11": 1
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 2820,
+    "frames": 1080,
+    "workers": [
+     [
+      0.73,
+      7.09
+     ],
+     [
+      0.77,
+      8.16
+     ],
+     [
+      1.34,
+      8.19
+     ],
+     [
+      1.94,
+      8.28
+     ],
+     [
+      0.74,
+      8.05
+     ],
+     [
+      0.91,
+      8.06
+     ],
+     [
+      1.49,
+      8.16
+     ],
+     [
+      2.11,
+      7.93
+     ]
+    ],
+    "cpu_s": 106.3,
+    "secs": {
+     "wait": [
+      0.0,
+      0.04,
+      0.61,
+      1.21,
+      0.0,
+      0.18,
+      0.76,
+      1.37
+     ],
+     "det": [
+      0.8,
+      0.73,
+      0.87,
+      0.98,
+      0.72,
+      0.7,
+      0.82,
+      1.0
+     ],
+     "pose": [
+      4.84,
+      5.93,
+      5.32,
+      4.76,
+      5.84,
+      5.82,
+      5.11,
+      4.13
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 64,
+     "pose": 2269,
+     "pose_small": 1429,
+     "reused": 864,
+     "refined": 0,
+     "officials": 20,
+     "fallback": 312,
+     "tail_fallback": 237,
+     "pose_requests": 720,
+     "pose_small_requests": 864
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "03",
+   "run": 2,
+   "load_before": {
+    "cpu_percent": 2.8,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     2.69,
+     0.87,
+     0.31
+    ],
+    "top_processes": [
+     [
+      54.6,
+      "python.exe",
+      52728
+     ],
+     [
+      11.7,
+      "msedgewebview2.exe",
+      34464
+     ],
+     [
+      10.5,
+      "System",
+      4
+     ],
+     [
+      9.7,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      4.9,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r2.json",
+    "player_frames_found": 0.9986,
+    "near_found": 1.0,
+    "far_found": 0.9972,
+    "pck05": 0.9737,
+    "pck10": 0.9904,
+    "pck10_vs_sapiens": 0.9904,
+    "pck10_vs_posewarper": 0.9904,
+    "pck05_exact": 0.97365191064561,
+    "pck10_exact": 0.9904263153588087,
+    "player_frames_found_exact": 0.9986091794158554,
+    "counts": {
+     "pck05": [
+      11899,
+      12221
+     ],
+     "pck10": [
+      12104,
+      12221
+     ],
+     "player_frames_found": [
+      718,
+      719
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9764667429318517,
+      "pck10": 0.9949338127144959
+     },
+     "far": {
+      "pck05": 0.970829236315962,
+      "pck10": 0.9859062602425435
+     }
+    },
+    "pck05_agreed": 0.9737,
+    "agreed_joints": 12221,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 719,
+    "role_correct": 0.9986,
+    "pck05_by_role": 0.9742
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9816,
+    "pck10": 0.9933,
+    "pck10_vs_sapiens": 0.9933,
+    "pck10_vs_posewarper": 0.9933,
+    "pck05_exact": 0.9816218889072029,
+    "pck10_exact": 0.993324542607549,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      11911,
+      12134
+     ],
+     "pck10": [
+      12053,
+      12134
+     ],
+     "player_frames_found": [
+      714,
+      714
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9862446138548226,
+      "pck10": 0.9970169042094796
+     },
+     "far": {
+      "pck05": 0.9770491803278688,
+      "pck10": 0.9896721311475409
+     }
+    },
+    "pck05_agreed": 0.9816,
+    "agreed_joints": 12134,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 714,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9816
+   }
+  },
+  {
+   "tag": "04-r2",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r2.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r2.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:05:20.202569+00:00",
+   "wall_ns": 8069870100,
+   "wall_s": 8.0698701,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r2.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r2.stderr.txt",
+   "stdout_sha256": "890FA038C173E03CFF83C5F6AA95AE82B180BCF7BE1F086263ECD1FDC2535C68",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1063403,
+   "output_sha256": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "internal": {
+    "total_s": 7.43,
+    "load_s": 0.79,
+    "court_s": 0.79,
+    "decode_done_s": 2.42,
+    "follow_s": 0.04,
+    "relinked": {},
+    "cuts": [
+     212,
+     367,
+     665
+    ],
+    "followers": [],
+    "crops": 1802,
+    "frames": 900,
+    "workers": [
+     [
+      0.79,
+      6.47
+     ],
+     [
+      0.79,
+      6.6
+     ],
+     [
+      1.15,
+      6.16
+     ],
+     [
+      1.65,
+      6.97
+     ],
+     [
+      0.79,
+      6.81
+     ],
+     [
+      0.92,
+      6.89
+     ],
+     [
+      1.41,
+      6.58
+     ],
+     [
+      1.91,
+      7.22
+     ]
+    ],
+    "cpu_s": 86.5,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.36,
+      0.86,
+      0.0,
+      0.13,
+      0.61,
+      1.12
+     ],
+     "det": [
+      0.6,
+      0.85,
+      0.79,
+      1.04,
+      0.6,
+      0.76,
+      0.82,
+      0.7
+     ],
+     "pose": [
+      4.56,
+      4.52,
+      3.75,
+      3.76,
+      4.94,
+      4.7,
+      3.83,
+      4.2
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 52,
+     "pose": 1737,
+     "pose_small": 918,
+     "reused": 369,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 304,
+     "tail_fallback": 234,
+     "pose_requests": 729,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "04",
+   "run": 2,
+   "load_before": {
+    "cpu_percent": 15.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     3.08,
+     1.02,
+     0.37
+    ],
+    "top_processes": [
+     [
+      56.7,
+      "python.exe",
+      52728
+     ],
+     [
+      40.7,
+      "MsSense.exe",
+      4304
+     ],
+     [
+      11.8,
+      "System",
+      4
+     ],
+     [
+      10.9,
+      "MonAgentCore.exe",
+      36524
+     ],
+     [
+      10.8,
+      "msedgewebview2.exe",
+      36240
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9534,
+    "pck10": 0.9838,
+    "pck10_vs_sapiens": 0.9838,
+    "pck10_vs_posewarper": 0.9838,
+    "pck05_exact": 0.9534222396548343,
+    "pck10_exact": 0.983820356932732,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9723,
+      10198
+     ],
+     "pck10": [
+      10033,
+      10198
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9519513630123554,
+      "pck10": 0.9833300647185723
+     },
+     "far": {
+      "pck05": 0.9548931162973132,
+      "pck10": 0.9843106491468916
+     }
+    },
+    "pck05_agreed": 0.9534,
+    "agreed_joints": 10198,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9534
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9597,
+    "pck10": 0.9855,
+    "pck10_vs_sapiens": 0.9855,
+    "pck10_vs_posewarper": 0.9855,
+    "pck05_exact": 0.9597329224447868,
+    "pck10_exact": 0.9855161787365178,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9343,
+      9735
+     ],
+     "pck10": [
+      9594,
+      9735
+     ],
+     "player_frames_found": [
+      573,
+      573
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9536918480580452,
+      "pck10": 0.9844216816047802
+     },
+     "far": {
+      "pck05": 0.9653396712220241,
+      "pck10": 0.9865319865319865
+     }
+    },
+    "pck05_agreed": 0.9597,
+    "agreed_joints": 9735,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 573,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9597
+   }
+  },
+  {
+   "tag": "05-r2",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\05-china-open-ws-b.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r2.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r2.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:05:31.916630+00:00",
+   "wall_ns": 8349413800,
+   "wall_s": 8.3494138,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r2.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r2.stderr.txt",
+   "stdout_sha256": "128C9781B9FBE881AAE92733D0F5EC7E2E2950F629630CED747D93A5FC9AEDE8",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1070624,
+   "output_sha256": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "internal": {
+    "total_s": 7.7,
+    "load_s": 0.76,
+    "court_s": 0.76,
+    "decode_done_s": 2.41,
+    "follow_s": 0.51,
+    "relinked": {},
+    "cuts": [
+     41,
+     369,
+     883
+    ],
+    "followers": [
+     [
+      1,
+      225,
+      225,
+      [
+       [
+        0,
+        1,
+        226
+       ]
+      ]
+     ]
+    ],
+    "crops": 1800,
+    "frames": 900,
+    "workers": [
+     [
+      0.77,
+      6.14
+     ],
+     [
+      0.77,
+      6.53
+     ],
+     [
+      1.13,
+      6.85
+     ],
+     [
+      1.63,
+      6.83
+     ],
+     [
+      0.77,
+      6.7
+     ],
+     [
+      0.9,
+      6.54
+     ],
+     [
+      1.38,
+      7.02
+     ],
+     [
+      1.9,
+      6.94
+     ]
+    ],
+    "cpu_s": 90.8,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.36,
+      0.87,
+      0.0,
+      0.14,
+      0.61,
+      1.13
+     ],
+     "det": [
+      0.87,
+      0.6,
+      0.65,
+      1.05,
+      0.57,
+      0.64,
+      0.81,
+      0.9
+     ],
+     "pose": [
+      4.07,
+      4.71,
+      4.62,
+      3.73,
+      4.88,
+      4.5,
+      4.45,
+      3.75
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 53,
+     "pose": 1770,
+     "pose_small": 908,
+     "reused": 316,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 286,
+     "tail_fallback": 211,
+     "pose_requests": 764,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "05",
+   "run": 2,
+   "load_before": {
+    "cpu_percent": 2.9,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.18,
+     1.31,
+     0.48
+    ],
+    "top_processes": [
+     [
+      55.2,
+      "python.exe",
+      52728
+     ],
+     [
+      11.6,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      11.6,
+      "System",
+      4
+     ],
+     [
+      8.3,
+      "svchost.exe",
+      6964
+     ],
+     [
+      5.5,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9435,
+    "pck10": 0.9753,
+    "pck10_vs_sapiens": 0.9753,
+    "pck10_vs_posewarper": 0.9753,
+    "pck05_exact": 0.9435017165277096,
+    "pck10_exact": 0.975282000980873,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9619,
+      10195
+     ],
+     "pck10": [
+      9943,
+      10195
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9574509803921568,
+      "pck10": 0.9831372549019608
+     },
+     "far": {
+      "pck05": 0.9295387634936212,
+      "pck10": 0.9674190382728165
+     }
+    },
+    "pck05_agreed": 0.9435,
+    "agreed_joints": 10195,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9435
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9513,
+    "pck10": 0.9795,
+    "pck10_vs_sapiens": 0.9795,
+    "pck10_vs_posewarper": 0.9795,
+    "pck05_exact": 0.951340206185567,
+    "pck10_exact": 0.9794845360824742,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9228,
+      9700
+     ],
+     "pck10": [
+      9501,
+      9700
+     ],
+     "player_frames_found": [
+      571,
+      571
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9673565180285897,
+      "pck10": 0.9903989758907616
+     },
+     "far": {
+      "pck05": 0.9363654498304409,
+      "pck10": 0.9692798723319369
+     }
+    },
+    "pck05_agreed": 0.9513,
+    "agreed_joints": 9700,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 571,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9513
+   }
+  },
+  {
+   "tag": "01-r2",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\01-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r2.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r2.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:05:43.909130+00:00",
+   "wall_ns": 7257844100,
+   "wall_s": 7.2578441,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r2.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r2.stderr.txt",
+   "stdout_sha256": "CEFAAEB87E840F1134C515251567A27F22A1350A3BE0EC0FFCD9946E4F22FCEF",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1127191,
+   "output_sha256": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "internal": {
+    "total_s": 6.62,
+    "load_s": 0.8,
+    "court_s": 0.8,
+    "decode_done_s": 2.17,
+    "follow_s": 0.04,
+    "relinked": {
+     "5": 3
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 1915,
+    "frames": 780,
+    "workers": [
+     [
+      0.8,
+      6.39
+     ],
+     [
+      0.8,
+      6.35
+     ],
+     [
+      1.06,
+      5.7
+     ],
+     [
+      1.49,
+      5.25
+     ],
+     [
+      0.8,
+      4.47
+     ],
+     [
+      0.88,
+      5.78
+     ],
+     [
+      1.3,
+      5.83
+     ],
+     [
+      1.74,
+      6.05
+     ]
+    ],
+    "cpu_s": 76.9,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.25,
+      0.69,
+      0.0,
+      0.08,
+      0.5,
+      0.93
+     ],
+     "det": [
+      0.51,
+      0.55,
+      0.61,
+      0.81,
+      0.62,
+      0.6,
+      0.76,
+      0.65
+     ],
+     "pose": [
+      4.57,
+      4.63,
+      3.58,
+      2.45,
+      2.53,
+      3.81,
+      3.3,
+      3.14
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 48,
+     "pose": 1634,
+     "pose_small": 1060,
+     "reused": 482,
+     "refined": 0,
+     "officials": 10,
+     "fallback": 201,
+     "tail_fallback": 151,
+     "pose_requests": 477,
+     "pose_small_requests": 614
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "01",
+   "run": 2,
+   "load_before": {
+    "cpu_percent": 3.8,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.5,
+     1.53,
+     0.56
+    ],
+    "top_processes": [
+     [
+      55.3,
+      "python.exe",
+      52728
+     ],
+     [
+      12.0,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      10.7,
+      "System",
+      4
+     ],
+     [
+      6.7,
+      "svchost.exe",
+      3884
+     ],
+     [
+      4.9,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9811,
+    "pck10": 0.9928,
+    "pck10_vs_sapiens": 0.9928,
+    "pck10_vs_posewarper": 0.9928,
+    "pck05_exact": 0.9810699588477366,
+    "pck10_exact": 0.9928277483833039,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8344,
+      8505
+     ],
+     "pck10": [
+      8444,
+      8505
+     ],
+     "player_frames_found": [
+      503,
+      503
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9842002916869227,
+      "pck10": 0.9948954788526981
+     },
+     "far": {
+      "pck05": 0.9781370986107948,
+      "pck10": 0.9908904577544978
+     }
+    },
+    "pck05_agreed": 0.9811,
+    "agreed_joints": 8505,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 503,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9811
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r2.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9822,
+    "pck10": 0.9935,
+    "pck10_vs_sapiens": 0.9935,
+    "pck10_vs_posewarper": 0.9935,
+    "pck05_exact": 0.9822290220077674,
+    "pck10_exact": 0.9935271272213723,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8346,
+      8497
+     ],
+     "pck10": [
+      8442,
+      8497
+     ],
+     "player_frames_found": [
+      500,
+      500
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9878463782207098,
+      "pck10": 0.9963539134662129
+     },
+     "far": {
+      "pck05": 0.9769564225416382,
+      "pck10": 0.9908738307095597
+     }
+    },
+    "pck05_agreed": 0.9822,
+    "agreed_joints": 8497,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 500,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9822
+   }
+  },
+  {
+   "tag": "03-r3",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\03-womens-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r3.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r3.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:05:54.770166+00:00",
+   "wall_ns": 9300841900,
+   "wall_s": 9.3008419,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r3.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r3.stderr.txt",
+   "stdout_sha256": "E528F792420CFFB21E98E2ADC809EBA1B2C80E3BEC3082050370E346ED0964C2",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1659082,
+   "output_sha256": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "internal": {
+    "total_s": 8.67,
+    "load_s": 0.75,
+    "court_s": 0.75,
+    "decode_done_s": 2.88,
+    "follow_s": 0.07,
+    "relinked": {
+     "11": 1
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 2820,
+    "frames": 1080,
+    "workers": [
+     [
+      0.75,
+      7.06
+     ],
+     [
+      0.81,
+      8.17
+     ],
+     [
+      1.41,
+      8.23
+     ],
+     [
+      2.03,
+      8.34
+     ],
+     [
+      0.75,
+      7.98
+     ],
+     [
+      0.94,
+      8.14
+     ],
+     [
+      1.57,
+      8.18
+     ],
+     [
+      2.2,
+      8.01
+     ]
+    ],
+    "cpu_s": 106.5,
+    "secs": {
+     "wait": [
+      0.0,
+      0.06,
+      0.66,
+      1.28,
+      0.0,
+      0.19,
+      0.81,
+      1.44
+     ],
+     "det": [
+      0.77,
+      0.73,
+      0.82,
+      0.93,
+      0.68,
+      0.86,
+      0.82,
+      1.01
+     ],
+     "pose": [
+      4.94,
+      5.9,
+      5.33,
+      4.74,
+      5.8,
+      5.68,
+      5.14,
+      4.1
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 64,
+     "pose": 2269,
+     "pose_small": 1429,
+     "reused": 864,
+     "refined": 0,
+     "officials": 20,
+     "fallback": 312,
+     "tail_fallback": 237,
+     "pose_requests": 720,
+     "pose_small_requests": 864
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "03",
+   "run": 3,
+   "load_before": {
+    "cpu_percent": 3.6,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.03,
+     1.52,
+     0.57
+    ],
+    "top_processes": [
+     [
+      54.9,
+      "python.exe",
+      52728
+     ],
+     [
+      13.3,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      5.6,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      4.8,
+      "System",
+      4
+     ],
+     [
+      4.2,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r3.json",
+    "player_frames_found": 0.9986,
+    "near_found": 1.0,
+    "far_found": 0.9972,
+    "pck05": 0.9737,
+    "pck10": 0.9904,
+    "pck10_vs_sapiens": 0.9904,
+    "pck10_vs_posewarper": 0.9904,
+    "pck05_exact": 0.97365191064561,
+    "pck10_exact": 0.9904263153588087,
+    "player_frames_found_exact": 0.9986091794158554,
+    "counts": {
+     "pck05": [
+      11899,
+      12221
+     ],
+     "pck10": [
+      12104,
+      12221
+     ],
+     "player_frames_found": [
+      718,
+      719
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9764667429318517,
+      "pck10": 0.9949338127144959
+     },
+     "far": {
+      "pck05": 0.970829236315962,
+      "pck10": 0.9859062602425435
+     }
+    },
+    "pck05_agreed": 0.9737,
+    "agreed_joints": 12221,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 719,
+    "role_correct": 0.9986,
+    "pck05_by_role": 0.9742
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9816,
+    "pck10": 0.9933,
+    "pck10_vs_sapiens": 0.9933,
+    "pck10_vs_posewarper": 0.9933,
+    "pck05_exact": 0.9816218889072029,
+    "pck10_exact": 0.993324542607549,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      11911,
+      12134
+     ],
+     "pck10": [
+      12053,
+      12134
+     ],
+     "player_frames_found": [
+      714,
+      714
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9862446138548226,
+      "pck10": 0.9970169042094796
+     },
+     "far": {
+      "pck05": 0.9770491803278688,
+      "pck10": 0.9896721311475409
+     }
+    },
+    "pck05_agreed": 0.9816,
+    "agreed_joints": 12134,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 714,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9816
+   }
+  },
+  {
+   "tag": "04-r3",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r3.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r3.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:06:07.688600+00:00",
+   "wall_ns": 8003998000,
+   "wall_s": 8.003998,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r3.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r3.stderr.txt",
+   "stdout_sha256": "4E7CFF03DD1F3A1598607F3CC0E1B42A161F2A6CCDBE33EAB4073E0123820E7F",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1063403,
+   "output_sha256": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "internal": {
+    "total_s": 7.37,
+    "load_s": 0.76,
+    "court_s": 0.76,
+    "decode_done_s": 2.42,
+    "follow_s": 0.04,
+    "relinked": {},
+    "cuts": [
+     212,
+     367,
+     665
+    ],
+    "followers": [],
+    "crops": 1802,
+    "frames": 900,
+    "workers": [
+     [
+      0.76,
+      6.51
+     ],
+     [
+      0.76,
+      6.64
+     ],
+     [
+      1.11,
+      6.17
+     ],
+     [
+      1.62,
+      6.88
+     ],
+     [
+      0.76,
+      6.78
+     ],
+     [
+      0.9,
+      6.71
+     ],
+     [
+      1.38,
+      6.62
+     ],
+     [
+      1.9,
+      7.16
+     ]
+    ],
+    "cpu_s": 87.9,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.36,
+      0.86,
+      0.0,
+      0.14,
+      0.62,
+      1.13
+     ],
+     "det": [
+      0.64,
+      0.94,
+      0.69,
+      0.88,
+      0.55,
+      0.84,
+      0.79,
+      0.83
+     ],
+     "pose": [
+      4.6,
+      4.44,
+      3.92,
+      3.96,
+      4.94,
+      4.52,
+      3.98,
+      4.08
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 52,
+     "pose": 1737,
+     "pose_small": 918,
+     "reused": 369,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 304,
+     "tail_fallback": 234,
+     "pose_requests": 729,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "04",
+   "run": 3,
+   "load_before": {
+    "cpu_percent": 4.8,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     3.89,
+     1.63,
+     0.62
+    ],
+    "top_processes": [
+     [
+      54.9,
+      "python.exe",
+      52728
+     ],
+     [
+      12.0,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      7.6,
+      "System",
+      4
+     ],
+     [
+      6.3,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      5.6,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9534,
+    "pck10": 0.9838,
+    "pck10_vs_sapiens": 0.9838,
+    "pck10_vs_posewarper": 0.9838,
+    "pck05_exact": 0.9534222396548343,
+    "pck10_exact": 0.983820356932732,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9723,
+      10198
+     ],
+     "pck10": [
+      10033,
+      10198
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9519513630123554,
+      "pck10": 0.9833300647185723
+     },
+     "far": {
+      "pck05": 0.9548931162973132,
+      "pck10": 0.9843106491468916
+     }
+    },
+    "pck05_agreed": 0.9534,
+    "agreed_joints": 10198,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9534
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9597,
+    "pck10": 0.9855,
+    "pck10_vs_sapiens": 0.9855,
+    "pck10_vs_posewarper": 0.9855,
+    "pck05_exact": 0.9597329224447868,
+    "pck10_exact": 0.9855161787365178,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9343,
+      9735
+     ],
+     "pck10": [
+      9594,
+      9735
+     ],
+     "player_frames_found": [
+      573,
+      573
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9536918480580452,
+      "pck10": 0.9844216816047802
+     },
+     "far": {
+      "pck05": 0.9653396712220241,
+      "pck10": 0.9865319865319865
+     }
+    },
+    "pck05_agreed": 0.9597,
+    "agreed_joints": 9735,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 573,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9597
+   }
+  },
+  {
+   "tag": "05-r3",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\05-china-open-ws-b.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r3.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r3.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:06:19.467394+00:00",
+   "wall_ns": 8503067300,
+   "wall_s": 8.5030673,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r3.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r3.stderr.txt",
+   "stdout_sha256": "6A7EAA97403C6B815ECA99E4DCB7DD3E38FD573DBA715F42D804A36AA394FE2E",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1070624,
+   "output_sha256": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "internal": {
+    "total_s": 7.86,
+    "load_s": 0.83,
+    "court_s": 0.83,
+    "decode_done_s": 2.46,
+    "follow_s": 0.51,
+    "relinked": {},
+    "cuts": [
+     41,
+     369,
+     883
+    ],
+    "followers": [
+     [
+      1,
+      225,
+      225,
+      [
+       [
+        0,
+        1,
+        226
+       ]
+      ]
+     ]
+    ],
+    "crops": 1800,
+    "frames": 900,
+    "workers": [
+     [
+      0.83,
+      6.4
+     ],
+     [
+      0.83,
+      6.7
+     ],
+     [
+      1.18,
+      7.02
+     ],
+     [
+      1.68,
+      7.06
+     ],
+     [
+      0.84,
+      6.8
+     ],
+     [
+      0.93,
+      6.64
+     ],
+     [
+      1.41,
+      7.17
+     ],
+     [
+      1.92,
+      7.06
+     ]
+    ],
+    "cpu_s": 91.3,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.34,
+      0.85,
+      0.0,
+      0.1,
+      0.57,
+      1.08
+     ],
+     "det": [
+      0.87,
+      0.61,
+      0.73,
+      1.11,
+      0.56,
+      0.65,
+      0.83,
+      1.01
+     ],
+     "pose": [
+      4.23,
+      4.77,
+      4.65,
+      3.78,
+      4.9,
+      4.57,
+      4.51,
+      3.69
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 53,
+     "pose": 1770,
+     "pose_small": 908,
+     "reused": 316,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 286,
+     "tail_fallback": 211,
+     "pose_requests": 764,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "05",
+   "run": 3,
+   "load_before": {
+    "cpu_percent": 4.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.54,
+     1.85,
+     0.71
+    ],
+    "top_processes": [
+     [
+      56.7,
+      "python.exe",
+      52728
+     ],
+     [
+      16.7,
+      "CollectGuestLogs.exe",
+      51392
+     ],
+     [
+      15.4,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      12.0,
+      "System",
+      4
+     ],
+     [
+      10.7,
+      "MsMpEng.exe",
+      4452
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9435,
+    "pck10": 0.9753,
+    "pck10_vs_sapiens": 0.9753,
+    "pck10_vs_posewarper": 0.9753,
+    "pck05_exact": 0.9435017165277096,
+    "pck10_exact": 0.975282000980873,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9619,
+      10195
+     ],
+     "pck10": [
+      9943,
+      10195
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9574509803921568,
+      "pck10": 0.9831372549019608
+     },
+     "far": {
+      "pck05": 0.9295387634936212,
+      "pck10": 0.9674190382728165
+     }
+    },
+    "pck05_agreed": 0.9435,
+    "agreed_joints": 10195,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9435
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9513,
+    "pck10": 0.9795,
+    "pck10_vs_sapiens": 0.9795,
+    "pck10_vs_posewarper": 0.9795,
+    "pck05_exact": 0.951340206185567,
+    "pck10_exact": 0.9794845360824742,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9228,
+      9700
+     ],
+     "pck10": [
+      9501,
+      9700
+     ],
+     "player_frames_found": [
+      571,
+      571
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9673565180285897,
+      "pck10": 0.9903989758907616
+     },
+     "far": {
+      "pck05": 0.9363654498304409,
+      "pck10": 0.9692798723319369
+     }
+    },
+    "pck05_agreed": 0.9513,
+    "agreed_joints": 9700,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 571,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9513
+   }
+  },
+  {
+   "tag": "01-r3",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\01-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r3.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r3.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:06:31.824886+00:00",
+   "wall_ns": 7407338100,
+   "wall_s": 7.4073381,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r3.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r3.stderr.txt",
+   "stdout_sha256": "C50C6EB08AA8EEFF1A141271FEDFE729EBE839ECD0BA743696890CE75B5EBC42",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1127191,
+   "output_sha256": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "internal": {
+    "total_s": 6.75,
+    "load_s": 0.79,
+    "court_s": 0.79,
+    "decode_done_s": 2.21,
+    "follow_s": 0.04,
+    "relinked": {
+     "5": 3
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 1915,
+    "frames": 780,
+    "workers": [
+     [
+      0.8,
+      6.42
+     ],
+     [
+      0.8,
+      6.52
+     ],
+     [
+      1.06,
+      5.81
+     ],
+     [
+      1.51,
+      5.34
+     ],
+     [
+      0.8,
+      4.61
+     ],
+     [
+      0.88,
+      5.87
+     ],
+     [
+      1.32,
+      6.03
+     ],
+     [
+      1.76,
+      6.19
+     ]
+    ],
+    "cpu_s": 78.4,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.27,
+      0.71,
+      0.0,
+      0.08,
+      0.52,
+      0.96
+     ],
+     "det": [
+      0.54,
+      0.52,
+      0.78,
+      0.91,
+      0.64,
+      0.65,
+      1.0,
+      0.75
+     ],
+     "pose": [
+      4.61,
+      4.81,
+      3.54,
+      2.48,
+      2.72,
+      3.89,
+      3.29,
+      3.25
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 48,
+     "pose": 1634,
+     "pose_small": 1060,
+     "reused": 482,
+     "refined": 0,
+     "officials": 10,
+     "fallback": 201,
+     "tail_fallback": 151,
+     "pose_requests": 477,
+     "pose_small_requests": 614
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "01",
+   "run": 3,
+   "load_before": {
+    "cpu_percent": 7.6,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     6.12,
+     2.29,
+     0.87
+    ],
+    "top_processes": [
+     [
+      57.1,
+      "python.exe",
+      52728
+     ],
+     [
+      28.2,
+      "msedgewebview2.exe",
+      32716
+     ],
+     [
+      20.9,
+      "MsSense.exe",
+      4304
+     ],
+     [
+      13.5,
+      "System",
+      4
+     ],
+     [
+      13.4,
+      "msedgewebview2.exe",
+      36240
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9811,
+    "pck10": 0.9928,
+    "pck10_vs_sapiens": 0.9928,
+    "pck10_vs_posewarper": 0.9928,
+    "pck05_exact": 0.9810699588477366,
+    "pck10_exact": 0.9928277483833039,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8344,
+      8505
+     ],
+     "pck10": [
+      8444,
+      8505
+     ],
+     "player_frames_found": [
+      503,
+      503
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9842002916869227,
+      "pck10": 0.9948954788526981
+     },
+     "far": {
+      "pck05": 0.9781370986107948,
+      "pck10": 0.9908904577544978
+     }
+    },
+    "pck05_agreed": 0.9811,
+    "agreed_joints": 8505,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 503,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9811
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r3.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9822,
+    "pck10": 0.9935,
+    "pck10_vs_sapiens": 0.9935,
+    "pck10_vs_posewarper": 0.9935,
+    "pck05_exact": 0.9822290220077674,
+    "pck10_exact": 0.9935271272213723,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8346,
+      8497
+     ],
+     "pck10": [
+      8442,
+      8497
+     ],
+     "player_frames_found": [
+      500,
+      500
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9878463782207098,
+      "pck10": 0.9963539134662129
+     },
+     "far": {
+      "pck05": 0.9769564225416382,
+      "pck10": 0.9908738307095597
+     }
+    },
+    "pck05_agreed": 0.9822,
+    "agreed_joints": 8497,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 500,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9822
+   }
+  },
+  {
+   "tag": "02-r3",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\02-singles-dive.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r3.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r3.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:06:42.884136+00:00",
+   "wall_ns": 8695049500,
+   "wall_s": 8.6950495,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r3.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r3.stderr.txt",
+   "stdout_sha256": "32EA1E272301F9CD75ED928779A074A64F64138A56441A4B77A333E400A54B54",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1233029,
+   "output_sha256": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "internal": {
+    "total_s": 8.06,
+    "load_s": 0.81,
+    "court_s": 0.81,
+    "decode_done_s": 2.51,
+    "follow_s": 1.27,
+    "relinked": {},
+    "cuts": [],
+    "followers": [
+     [
+      5,
+      675,
+      770,
+      [
+       [
+        1,
+        2,
+        771
+       ]
+      ]
+     ]
+    ],
+    "crops": 2090,
+    "frames": 900,
+    "workers": [
+     [
+      0.81,
+      5.77
+     ],
+     [
+      0.81,
+      6.35
+     ],
+     [
+      1.18,
+      5.95
+     ],
+     [
+      1.69,
+      6.42
+     ],
+     [
+      0.81,
+      6.05
+     ],
+     [
+      1.0,
+      6.59
+     ],
+     [
+      1.49,
+      5.86
+     ],
+     [
+      2.01,
+      6.51
+     ]
+    ],
+    "cpu_s": 91.7,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.37,
+      0.88,
+      0.0,
+      0.19,
+      0.68,
+      1.2
+     ],
+     "det": [
+      0.68,
+      0.61,
+      0.6,
+      0.79,
+      0.65,
+      0.57,
+      0.84,
+      0.75
+     ],
+     "pose": [
+      3.71,
+      4.38,
+      3.62,
+      3.44,
+      4.06,
+      4.51,
+      3.09,
+      3.23
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 59,
+     "pose": 1738,
+     "pose_small": 1154,
+     "reused": 567,
+     "refined": 0,
+     "officials": 9,
+     "fallback": 215,
+     "tail_fallback": 167,
+     "pose_requests": 536,
+     "pose_small_requests": 737
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "02",
+   "run": 3,
+   "load_before": {
+    "cpu_percent": 6.7,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.77,
+     2.18,
+     0.86
+    ],
+    "top_processes": [
+     [
+      55.4,
+      "python.exe",
+      52728
+     ],
+     [
+      33.1,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      10.4,
+      "System",
+      4
+     ],
+     [
+      6.1,
+      "github.exe",
+      27484
+     ],
+     [
+      4.1,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r3.json",
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.9899,
+    "pck05": 0.9756,
+    "pck10": 0.9888,
+    "pck10_vs_sapiens": 0.9888,
+    "pck10_vs_posewarper": 0.9888,
+    "pck05_exact": 0.9756073474224768,
+    "pck10_exact": 0.9888406083349792,
+    "player_frames_found_exact": 0.9949664429530202,
+    "counts": {
+     "pck05": [
+      9879,
+      10126
+     ],
+     "pck10": [
+      10013,
+      10126
+     ],
+     "player_frames_found": [
+      593,
+      596
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9860702373945458,
+      "pck10": 0.9976456739258387
+     },
+     "far": {
+      "pck05": 0.965002982700338,
+      "pck10": 0.9799164843905349
+     }
+    },
+    "pck05_agreed": 0.9756,
+    "agreed_joints": 10126,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 596,
+    "role_correct": 0.995,
+    "pck05_by_role": 0.9766
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r3.json",
+    "player_frames_found": 0.9983,
+    "near_found": 1.0,
+    "far_found": 0.9965,
+    "pck05": 0.9828,
+    "pck10": 0.9941,
+    "pck10_vs_sapiens": 0.9941,
+    "pck10_vs_posewarper": 0.9941,
+    "pck05_exact": 0.9827742520398912,
+    "pck10_exact": 0.9940566132769215,
+    "player_frames_found_exact": 0.9982876712328768,
+    "counts": {
+     "pck05": [
+      9756,
+      9927
+     ],
+     "pck10": [
+      9868,
+      9927
+     ],
+     "player_frames_found": [
+      583,
+      584
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9880392156862745,
+      "pck10": 0.9986274509803922
+     },
+     "far": {
+      "pck05": 0.9772115185415372,
+      "pck10": 0.9892272633105449
+     }
+    },
+    "pck05_agreed": 0.9828,
+    "agreed_joints": 9927,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 584,
+    "role_correct": 0.9983,
+    "pck05_by_role": 0.9828
+   }
+  },
+  {
+   "tag": "04-r4",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r4.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r4.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:06:55.265829+00:00",
+   "wall_ns": 7979455100,
+   "wall_s": 7.9794551,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r4.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r4.stderr.txt",
+   "stdout_sha256": "89C4C4B134986170922FED86C6437359353AD3FF810023C2D04724BC8B3425FB",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1063403,
+   "output_sha256": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "internal": {
+    "total_s": 7.35,
+    "load_s": 0.75,
+    "court_s": 0.75,
+    "decode_done_s": 2.42,
+    "follow_s": 0.04,
+    "relinked": {},
+    "cuts": [
+     212,
+     367,
+     665
+    ],
+    "followers": [],
+    "crops": 1802,
+    "frames": 900,
+    "workers": [
+     [
+      0.75,
+      6.49
+     ],
+     [
+      0.76,
+      6.51
+     ],
+     [
+      1.14,
+      6.27
+     ],
+     [
+      1.64,
+      6.88
+     ],
+     [
+      0.76,
+      6.61
+     ],
+     [
+      0.92,
+      6.68
+     ],
+     [
+      1.39,
+      6.39
+     ],
+     [
+      1.89,
+      7.15
+     ]
+    ],
+    "cpu_s": 86.5,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.39,
+      0.88,
+      0.0,
+      0.16,
+      0.63,
+      1.14
+     ],
+     "det": [
+      0.56,
+      0.84,
+      0.92,
+      1.05,
+      0.53,
+      0.81,
+      0.67,
+      0.69
+     ],
+     "pose": [
+      4.68,
+      4.41,
+      3.78,
+      3.76,
+      4.83,
+      4.49,
+      3.88,
+      4.12
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 52,
+     "pose": 1737,
+     "pose_small": 918,
+     "reused": 369,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 304,
+     "tail_fallback": 234,
+     "pose_requests": 729,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "04",
+   "run": 4,
+   "load_before": {
+    "cpu_percent": 3.4,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.63,
+     2.24,
+     0.89
+    ],
+    "top_processes": [
+     [
+      54.9,
+      "python.exe",
+      52728
+     ],
+     [
+      11.8,
+      "System",
+      4
+     ],
+     [
+      10.6,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      10.6,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      6.3,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9534,
+    "pck10": 0.9838,
+    "pck10_vs_sapiens": 0.9838,
+    "pck10_vs_posewarper": 0.9838,
+    "pck05_exact": 0.9534222396548343,
+    "pck10_exact": 0.983820356932732,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9723,
+      10198
+     ],
+     "pck10": [
+      10033,
+      10198
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9519513630123554,
+      "pck10": 0.9833300647185723
+     },
+     "far": {
+      "pck05": 0.9548931162973132,
+      "pck10": 0.9843106491468916
+     }
+    },
+    "pck05_agreed": 0.9534,
+    "agreed_joints": 10198,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9534
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9597,
+    "pck10": 0.9855,
+    "pck10_vs_sapiens": 0.9855,
+    "pck10_vs_posewarper": 0.9855,
+    "pck05_exact": 0.9597329224447868,
+    "pck10_exact": 0.9855161787365178,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9343,
+      9735
+     ],
+     "pck10": [
+      9594,
+      9735
+     ],
+     "player_frames_found": [
+      573,
+      573
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9536918480580452,
+      "pck10": 0.9844216816047802
+     },
+     "far": {
+      "pck05": 0.9653396712220241,
+      "pck10": 0.9865319865319865
+     }
+    },
+    "pck05_agreed": 0.9597,
+    "agreed_joints": 9735,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 573,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9597
+   }
+  },
+  {
+   "tag": "05-r4",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\05-china-open-ws-b.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r4.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r4.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:07:07.048307+00:00",
+   "wall_ns": 8330771900,
+   "wall_s": 8.3307719,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r4.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r4.stderr.txt",
+   "stdout_sha256": "1253E3103A521DD24D2EB7E2DBE99223369A4A23F506A35486955ACA8A02A4D0",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1070624,
+   "output_sha256": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "internal": {
+    "total_s": 7.68,
+    "load_s": 0.74,
+    "court_s": 0.74,
+    "decode_done_s": 2.44,
+    "follow_s": 0.51,
+    "relinked": {},
+    "cuts": [
+     41,
+     369,
+     883
+    ],
+    "followers": [
+     [
+      1,
+      225,
+      225,
+      [
+       [
+        0,
+        1,
+        226
+       ]
+      ]
+     ]
+    ],
+    "crops": 1800,
+    "frames": 900,
+    "workers": [
+     [
+      0.75,
+      6.03
+     ],
+     [
+      0.75,
+      6.54
+     ],
+     [
+      1.14,
+      6.85
+     ],
+     [
+      1.63,
+      6.89
+     ],
+     [
+      0.75,
+      6.46
+     ],
+     [
+      0.93,
+      6.39
+     ],
+     [
+      1.41,
+      6.99
+     ],
+     [
+      1.93,
+      6.99
+     ]
+    ],
+    "cpu_s": 91.8,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.39,
+      0.89,
+      0.0,
+      0.18,
+      0.66,
+      1.18
+     ],
+     "det": [
+      0.76,
+      0.75,
+      0.65,
+      0.96,
+      0.57,
+      0.63,
+      0.76,
+      0.86
+     ],
+     "pose": [
+      4.08,
+      4.56,
+      4.55,
+      3.85,
+      4.65,
+      4.37,
+      4.35,
+      3.76
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 53,
+     "pose": 1770,
+     "pose_small": 908,
+     "reused": 316,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 286,
+     "tail_fallback": 211,
+     "pose_requests": 764,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "05",
+   "run": 4,
+   "load_before": {
+    "cpu_percent": 3.4,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     5.53,
+     2.52,
+     1.01
+    ],
+    "top_processes": [
+     [
+      54.9,
+      "python.exe",
+      52728
+     ],
+     [
+      45.1,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      9.5,
+      "System",
+      4
+     ],
+     [
+      6.8,
+      "svchost.exe",
+      3884
+     ],
+     [
+      6.2,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9435,
+    "pck10": 0.9753,
+    "pck10_vs_sapiens": 0.9753,
+    "pck10_vs_posewarper": 0.9753,
+    "pck05_exact": 0.9435017165277096,
+    "pck10_exact": 0.975282000980873,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9619,
+      10195
+     ],
+     "pck10": [
+      9943,
+      10195
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9574509803921568,
+      "pck10": 0.9831372549019608
+     },
+     "far": {
+      "pck05": 0.9295387634936212,
+      "pck10": 0.9674190382728165
+     }
+    },
+    "pck05_agreed": 0.9435,
+    "agreed_joints": 10195,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9435
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9513,
+    "pck10": 0.9795,
+    "pck10_vs_sapiens": 0.9795,
+    "pck10_vs_posewarper": 0.9795,
+    "pck05_exact": 0.951340206185567,
+    "pck10_exact": 0.9794845360824742,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9228,
+      9700
+     ],
+     "pck10": [
+      9501,
+      9700
+     ],
+     "player_frames_found": [
+      571,
+      571
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9673565180285897,
+      "pck10": 0.9903989758907616
+     },
+     "far": {
+      "pck05": 0.9363654498304409,
+      "pck10": 0.9692798723319369
+     }
+    },
+    "pck05_agreed": 0.9513,
+    "agreed_joints": 9700,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 571,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9513
+   }
+  },
+  {
+   "tag": "01-r4",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\01-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r4.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r4.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:07:18.996795+00:00",
+   "wall_ns": 7357713100,
+   "wall_s": 7.3577131,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r4.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r4.stderr.txt",
+   "stdout_sha256": "7806A0B2E749E7C9747822C4B8CD6A04C58957448F7C6BA11D4ACC4E1BA5D1DC",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1127191,
+   "output_sha256": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "internal": {
+    "total_s": 6.72,
+    "load_s": 0.8,
+    "court_s": 0.8,
+    "decode_done_s": 2.22,
+    "follow_s": 0.04,
+    "relinked": {
+     "5": 3
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 1915,
+    "frames": 780,
+    "workers": [
+     [
+      0.8,
+      6.41
+     ],
+     [
+      0.8,
+      6.49
+     ],
+     [
+      1.1,
+      5.7
+     ],
+     [
+      1.54,
+      5.38
+     ],
+     [
+      0.81,
+      4.51
+     ],
+     [
+      0.91,
+      5.78
+     ],
+     [
+      1.34,
+      5.95
+     ],
+     [
+      1.78,
+      6.22
+     ]
+    ],
+    "cpu_s": 78.5,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.29,
+      0.73,
+      0.0,
+      0.1,
+      0.54,
+      0.97
+     ],
+     "det": [
+      0.55,
+      0.53,
+      0.69,
+      0.85,
+      0.62,
+      0.6,
+      0.85,
+      0.72
+     ],
+     "pose": [
+      4.59,
+      4.75,
+      3.48,
+      2.52,
+      2.63,
+      3.86,
+      3.32,
+      3.24
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 48,
+     "pose": 1634,
+     "pose_small": 1060,
+     "reused": 482,
+     "refined": 0,
+     "officials": 10,
+     "fallback": 201,
+     "tail_fallback": 151,
+     "pose_requests": 477,
+     "pose_small_requests": 614
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "01",
+   "run": 4,
+   "load_before": {
+    "cpu_percent": 4.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.38,
+     2.42,
+     0.99
+    ],
+    "top_processes": [
+     [
+      55.6,
+      "python.exe",
+      52728
+     ],
+     [
+      12.5,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      12.3,
+      "System",
+      4
+     ],
+     [
+      6.9,
+      "msedgewebview2.exe",
+      32716
+     ],
+     [
+      4.9,
+      "msedgewebview2.exe",
+      34464
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9811,
+    "pck10": 0.9928,
+    "pck10_vs_sapiens": 0.9928,
+    "pck10_vs_posewarper": 0.9928,
+    "pck05_exact": 0.9810699588477366,
+    "pck10_exact": 0.9928277483833039,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8344,
+      8505
+     ],
+     "pck10": [
+      8444,
+      8505
+     ],
+     "player_frames_found": [
+      503,
+      503
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9842002916869227,
+      "pck10": 0.9948954788526981
+     },
+     "far": {
+      "pck05": 0.9781370986107948,
+      "pck10": 0.9908904577544978
+     }
+    },
+    "pck05_agreed": 0.9811,
+    "agreed_joints": 8505,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 503,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9811
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9822,
+    "pck10": 0.9935,
+    "pck10_vs_sapiens": 0.9935,
+    "pck10_vs_posewarper": 0.9935,
+    "pck05_exact": 0.9822290220077674,
+    "pck10_exact": 0.9935271272213723,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8346,
+      8497
+     ],
+     "pck10": [
+      8442,
+      8497
+     ],
+     "player_frames_found": [
+      500,
+      500
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9878463782207098,
+      "pck10": 0.9963539134662129
+     },
+     "far": {
+      "pck05": 0.9769564225416382,
+      "pck10": 0.9908738307095597
+     }
+    },
+    "pck05_agreed": 0.9822,
+    "agreed_joints": 8497,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 500,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9822
+   }
+  },
+  {
+   "tag": "02-r4",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\02-singles-dive.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r4.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r4.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:07:31.131922+00:00",
+   "wall_ns": 8659604400,
+   "wall_s": 8.6596044,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r4.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r4.stderr.txt",
+   "stdout_sha256": "481D8CAA54884A57505DA3AFEABB290C0EBB018C9CE88A04A0B35CCBF0675D75",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1233029,
+   "output_sha256": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "internal": {
+    "total_s": 8.01,
+    "load_s": 0.83,
+    "court_s": 0.84,
+    "decode_done_s": 2.54,
+    "follow_s": 1.24,
+    "relinked": {},
+    "cuts": [],
+    "followers": [
+     [
+      5,
+      675,
+      770,
+      [
+       [
+        1,
+        2,
+        771
+       ]
+      ]
+     ]
+    ],
+    "crops": 2090,
+    "frames": 900,
+    "workers": [
+     [
+      0.84,
+      5.89
+     ],
+     [
+      0.84,
+      6.43
+     ],
+     [
+      1.21,
+      6.13
+     ],
+     [
+      1.71,
+      6.43
+     ],
+     [
+      0.84,
+      5.96
+     ],
+     [
+      1.02,
+      6.56
+     ],
+     [
+      1.53,
+      5.82
+     ],
+     [
+      2.04,
+      6.48
+     ]
+    ],
+    "cpu_s": 91.5,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.38,
+      0.87,
+      0.0,
+      0.18,
+      0.69,
+      1.2
+     ],
+     "det": [
+      0.68,
+      0.59,
+      0.79,
+      0.79,
+      0.59,
+      0.61,
+      0.81,
+      0.65
+     ],
+     "pose": [
+      3.77,
+      4.46,
+      3.52,
+      3.32,
+      3.9,
+      4.33,
+      3.07,
+      3.21
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 59,
+     "pose": 1738,
+     "pose_small": 1154,
+     "reused": 567,
+     "refined": 0,
+     "officials": 9,
+     "fallback": 215,
+     "tail_fallback": 167,
+     "pose_requests": 536,
+     "pose_small_requests": 737
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "02",
+   "run": 4,
+   "load_before": {
+    "cpu_percent": 25.4,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.59,
+     2.53,
+     1.05
+    ],
+    "top_processes": [
+     [
+      58.7,
+      "python.exe",
+      52728
+     ],
+     [
+      39.4,
+      "svchost.exe",
+      11504
+     ],
+     [
+      34.3,
+      "MsSense.exe",
+      4304
+     ],
+     [
+      28.0,
+      "msedgewebview2.exe",
+      34464
+     ],
+     [
+      23.0,
+      "svchost.exe",
+      1788
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r4.json",
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.9899,
+    "pck05": 0.9756,
+    "pck10": 0.9888,
+    "pck10_vs_sapiens": 0.9888,
+    "pck10_vs_posewarper": 0.9888,
+    "pck05_exact": 0.9756073474224768,
+    "pck10_exact": 0.9888406083349792,
+    "player_frames_found_exact": 0.9949664429530202,
+    "counts": {
+     "pck05": [
+      9879,
+      10126
+     ],
+     "pck10": [
+      10013,
+      10126
+     ],
+     "player_frames_found": [
+      593,
+      596
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9860702373945458,
+      "pck10": 0.9976456739258387
+     },
+     "far": {
+      "pck05": 0.965002982700338,
+      "pck10": 0.9799164843905349
+     }
+    },
+    "pck05_agreed": 0.9756,
+    "agreed_joints": 10126,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 596,
+    "role_correct": 0.995,
+    "pck05_by_role": 0.9766
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r4.json",
+    "player_frames_found": 0.9983,
+    "near_found": 1.0,
+    "far_found": 0.9965,
+    "pck05": 0.9828,
+    "pck10": 0.9941,
+    "pck10_vs_sapiens": 0.9941,
+    "pck10_vs_posewarper": 0.9941,
+    "pck05_exact": 0.9827742520398912,
+    "pck10_exact": 0.9940566132769215,
+    "player_frames_found_exact": 0.9982876712328768,
+    "counts": {
+     "pck05": [
+      9756,
+      9927
+     ],
+     "pck10": [
+      9868,
+      9927
+     ],
+     "player_frames_found": [
+      583,
+      584
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9880392156862745,
+      "pck10": 0.9986274509803922
+     },
+     "far": {
+      "pck05": 0.9772115185415372,
+      "pck10": 0.9892272633105449
+     }
+    },
+    "pck05_agreed": 0.9828,
+    "agreed_joints": 9927,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 584,
+    "role_correct": 0.9983,
+    "pck05_by_role": 0.9828
+   }
+  },
+  {
+   "tag": "03-r4",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\03-womens-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r4.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r4.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:07:44.174807+00:00",
+   "wall_ns": 9292286100,
+   "wall_s": 9.2922861,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r4.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r4.stderr.txt",
+   "stdout_sha256": "9B5EEC3CC4DC32CB5258CE547F558003D2F860F32E6998E2DCED4E8F4C7264E4",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1659082,
+   "output_sha256": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "internal": {
+    "total_s": 8.64,
+    "load_s": 0.74,
+    "court_s": 0.74,
+    "decode_done_s": 2.83,
+    "follow_s": 0.07,
+    "relinked": {
+     "11": 1
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 2820,
+    "frames": 1080,
+    "workers": [
+     [
+      0.74,
+      7.15
+     ],
+     [
+      0.79,
+      8.14
+     ],
+     [
+      1.35,
+      8.17
+     ],
+     [
+      1.96,
+      8.3
+     ],
+     [
+      0.75,
+      8.15
+     ],
+     [
+      0.94,
+      8.22
+     ],
+     [
+      1.52,
+      8.26
+     ],
+     [
+      2.13,
+      7.9
+     ]
+    ],
+    "cpu_s": 106.6,
+    "secs": {
+     "wait": [
+      0.0,
+      0.05,
+      0.61,
+      1.21,
+      0.0,
+      0.2,
+      0.77,
+      1.38
+     ],
+     "det": [
+      0.78,
+      0.66,
+      0.7,
+      1.03,
+      0.74,
+      0.72,
+      0.88,
+      0.95
+     ],
+     "pose": [
+      5.0,
+      6.03,
+      5.33,
+      4.62,
+      5.94,
+      5.92,
+      5.14,
+      4.17
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 64,
+     "pose": 2269,
+     "pose_small": 1429,
+     "reused": 864,
+     "refined": 0,
+     "officials": 20,
+     "fallback": 312,
+     "tail_fallback": 237,
+     "pose_requests": 720,
+     "pose_small_requests": 864
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "03",
+   "run": 4,
+   "load_before": {
+    "cpu_percent": 3.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     5.06,
+     2.75,
+     1.15
+    ],
+    "top_processes": [
+     [
+      314.8,
+      "msedgewebview2.exe",
+      44164
+     ],
+     [
+      64.1,
+      "python.exe",
+      52728
+     ],
+     [
+      19.0,
+      "System",
+      4
+     ],
+     [
+      11.6,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      10.5,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r4.json",
+    "player_frames_found": 0.9986,
+    "near_found": 1.0,
+    "far_found": 0.9972,
+    "pck05": 0.9737,
+    "pck10": 0.9904,
+    "pck10_vs_sapiens": 0.9904,
+    "pck10_vs_posewarper": 0.9904,
+    "pck05_exact": 0.97365191064561,
+    "pck10_exact": 0.9904263153588087,
+    "player_frames_found_exact": 0.9986091794158554,
+    "counts": {
+     "pck05": [
+      11899,
+      12221
+     ],
+     "pck10": [
+      12104,
+      12221
+     ],
+     "player_frames_found": [
+      718,
+      719
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9764667429318517,
+      "pck10": 0.9949338127144959
+     },
+     "far": {
+      "pck05": 0.970829236315962,
+      "pck10": 0.9859062602425435
+     }
+    },
+    "pck05_agreed": 0.9737,
+    "agreed_joints": 12221,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 719,
+    "role_correct": 0.9986,
+    "pck05_by_role": 0.9742
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r4.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9816,
+    "pck10": 0.9933,
+    "pck10_vs_sapiens": 0.9933,
+    "pck10_vs_posewarper": 0.9933,
+    "pck05_exact": 0.9816218889072029,
+    "pck10_exact": 0.993324542607549,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      11911,
+      12134
+     ],
+     "pck10": [
+      12053,
+      12134
+     ],
+     "player_frames_found": [
+      714,
+      714
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9862446138548226,
+      "pck10": 0.9970169042094796
+     },
+     "far": {
+      "pck05": 0.9770491803278688,
+      "pck10": 0.9896721311475409
+     }
+    },
+    "pck05_agreed": 0.9816,
+    "agreed_joints": 12134,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 714,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9816
+   }
+  },
+  {
+   "tag": "05-r5",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\05-china-open-ws-b.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r5.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r5.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:07:57.345382+00:00",
+   "wall_ns": 8467645100,
+   "wall_s": 8.4676451,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r5.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\05-r5.stderr.txt",
+   "stdout_sha256": "47B0EE952800C5AB6F3A29F6B5E3C445746290D714D97C57FB23A9A50BA01E29",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1070624,
+   "output_sha256": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "internal": {
+    "total_s": 7.82,
+    "load_s": 0.77,
+    "court_s": 0.77,
+    "decode_done_s": 2.4,
+    "follow_s": 0.5,
+    "relinked": {},
+    "cuts": [
+     41,
+     369,
+     883
+    ],
+    "followers": [
+     [
+      1,
+      225,
+      225,
+      [
+       [
+        0,
+        1,
+        226
+       ]
+      ]
+     ]
+    ],
+    "crops": 1800,
+    "frames": 900,
+    "workers": [
+     [
+      0.77,
+      6.33
+     ],
+     [
+      0.77,
+      6.64
+     ],
+     [
+      1.14,
+      6.92
+     ],
+     [
+      1.65,
+      6.99
+     ],
+     [
+      0.77,
+      6.7
+     ],
+     [
+      0.91,
+      6.59
+     ],
+     [
+      1.39,
+      7.14
+     ],
+     [
+      1.88,
+      7.09
+     ]
+    ],
+    "cpu_s": 92.8,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.38,
+      0.88,
+      0.0,
+      0.14,
+      0.62,
+      1.11
+     ],
+     "det": [
+      0.76,
+      0.68,
+      0.63,
+      1.02,
+      0.61,
+      0.59,
+      0.76,
+      0.91
+     ],
+     "pose": [
+      4.32,
+      4.65,
+      4.68,
+      3.86,
+      4.86,
+      4.65,
+      4.54,
+      3.84
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 53,
+     "pose": 1770,
+     "pose_small": 908,
+     "reused": 316,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 286,
+     "tail_fallback": 211,
+     "pose_requests": 764,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "05",
+   "run": 5,
+   "load_before": {
+    "cpu_percent": 2.8,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     5.09,
+     2.84,
+     1.2
+    ],
+    "top_processes": [
+     [
+      57.3,
+      "python.exe",
+      52728
+     ],
+     [
+      48.4,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      11.7,
+      "System",
+      4
+     ],
+     [
+      10.5,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      6.5,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "554A7DEFA1934AEF14FCDE1474C3846B98B22A50C540F444F6C03B24B8620568",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9435,
+    "pck10": 0.9753,
+    "pck10_vs_sapiens": 0.9753,
+    "pck10_vs_posewarper": 0.9753,
+    "pck05_exact": 0.9435017165277096,
+    "pck10_exact": 0.975282000980873,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9619,
+      10195
+     ],
+     "pck10": [
+      9943,
+      10195
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9574509803921568,
+      "pck10": 0.9831372549019608
+     },
+     "far": {
+      "pck05": 0.9295387634936212,
+      "pck10": 0.9674190382728165
+     }
+    },
+    "pck05_agreed": 0.9435,
+    "agreed_joints": 10195,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9435
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9513,
+    "pck10": 0.9795,
+    "pck10_vs_sapiens": 0.9795,
+    "pck10_vs_posewarper": 0.9795,
+    "pck05_exact": 0.951340206185567,
+    "pck10_exact": 0.9794845360824742,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9228,
+      9700
+     ],
+     "pck10": [
+      9501,
+      9700
+     ],
+     "player_frames_found": [
+      571,
+      571
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9673565180285897,
+      "pck10": 0.9903989758907616
+     },
+     "far": {
+      "pck05": 0.9363654498304409,
+      "pck10": 0.9692798723319369
+     }
+    },
+    "pck05_agreed": 0.9513,
+    "agreed_joints": 9700,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 571,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9513
+   }
+  },
+  {
+   "tag": "01-r5",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\01-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r5.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r5.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:08:09.460607+00:00",
+   "wall_ns": 7373483500,
+   "wall_s": 7.3734835,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r5.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\01-r5.stderr.txt",
+   "stdout_sha256": "7171998D6C81A16F5EF8ADA6CDEAA3645CE2DAD4323DBEFE29BB0A8CCE076FDD",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1127191,
+   "output_sha256": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "internal": {
+    "total_s": 6.73,
+    "load_s": 0.8,
+    "court_s": 0.8,
+    "decode_done_s": 2.23,
+    "follow_s": 0.04,
+    "relinked": {
+     "5": 3
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 1915,
+    "frames": 780,
+    "workers": [
+     [
+      0.81,
+      6.42
+     ],
+     [
+      0.81,
+      6.5
+     ],
+     [
+      1.1,
+      5.69
+     ],
+     [
+      1.53,
+      5.36
+     ],
+     [
+      0.81,
+      4.56
+     ],
+     [
+      0.91,
+      5.9
+     ],
+     [
+      1.34,
+      5.97
+     ],
+     [
+      1.79,
+      6.19
+     ]
+    ],
+    "cpu_s": 77.1,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.29,
+      0.72,
+      0.0,
+      0.11,
+      0.53,
+      0.97
+     ],
+     "det": [
+      0.53,
+      0.53,
+      0.65,
+      0.86,
+      0.58,
+      0.61,
+      0.72,
+      0.7
+     ],
+     "pose": [
+      4.57,
+      4.77,
+      3.49,
+      2.45,
+      2.63,
+      3.93,
+      3.48,
+      3.19
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 48,
+     "pose": 1634,
+     "pose_small": 1060,
+     "reused": 482,
+     "refined": 0,
+     "officials": 10,
+     "fallback": 201,
+     "tail_fallback": 151,
+     "pose_requests": 477,
+     "pose_small_requests": 614
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "01",
+   "run": 5,
+   "load_before": {
+    "cpu_percent": 5.6,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.11,
+     2.73,
+     1.19
+    ],
+    "top_processes": [
+     [
+      55.8,
+      "python.exe",
+      52728
+     ],
+     [
+      15.1,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      12.3,
+      "System",
+      4
+     ],
+     [
+      11.0,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      4.8,
+      "explorer.exe",
+      13852
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "AC6943FA3D4EAB3FE49F1C190C3BDDA402078FA3C87FEAB85238F349DB3D2205",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9811,
+    "pck10": 0.9928,
+    "pck10_vs_sapiens": 0.9928,
+    "pck10_vs_posewarper": 0.9928,
+    "pck05_exact": 0.9810699588477366,
+    "pck10_exact": 0.9928277483833039,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8344,
+      8505
+     ],
+     "pck10": [
+      8444,
+      8505
+     ],
+     "player_frames_found": [
+      503,
+      503
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9842002916869227,
+      "pck10": 0.9948954788526981
+     },
+     "far": {
+      "pck05": 0.9781370986107948,
+      "pck10": 0.9908904577544978
+     }
+    },
+    "pck05_agreed": 0.9811,
+    "agreed_joints": 8505,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 503,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9811
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9822,
+    "pck10": 0.9935,
+    "pck10_vs_sapiens": 0.9935,
+    "pck10_vs_posewarper": 0.9935,
+    "pck05_exact": 0.9822290220077674,
+    "pck10_exact": 0.9935271272213723,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      8346,
+      8497
+     ],
+     "pck10": [
+      8442,
+      8497
+     ],
+     "player_frames_found": [
+      500,
+      500
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9878463782207098,
+      "pck10": 0.9963539134662129
+     },
+     "far": {
+      "pck05": 0.9769564225416382,
+      "pck10": 0.9908738307095597
+     }
+    },
+    "pck05_agreed": 0.9822,
+    "agreed_joints": 8497,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 500,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9822
+   }
+  },
+  {
+   "tag": "02-r5",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\02-singles-dive.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r5.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r5.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:08:20.513852+00:00",
+   "wall_ns": 8718791400,
+   "wall_s": 8.7187914,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r5.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\02-r5.stderr.txt",
+   "stdout_sha256": "AFF4D0D21FA0082EB599FD30F1B771622F7B1FB452C09245BD1DD957F88D9EA5",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1233029,
+   "output_sha256": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "internal": {
+    "total_s": 8.08,
+    "load_s": 0.77,
+    "court_s": 0.77,
+    "decode_done_s": 2.61,
+    "follow_s": 1.27,
+    "relinked": {},
+    "cuts": [],
+    "followers": [
+     [
+      5,
+      675,
+      770,
+      [
+       [
+        1,
+        2,
+        771
+       ]
+      ]
+     ]
+    ],
+    "crops": 2090,
+    "frames": 900,
+    "workers": [
+     [
+      0.77,
+      5.78
+     ],
+     [
+      0.77,
+      6.51
+     ],
+     [
+      1.19,
+      6.09
+     ],
+     [
+      1.71,
+      6.37
+     ],
+     [
+      0.77,
+      5.93
+     ],
+     [
+      1.03,
+      6.6
+     ],
+     [
+      1.54,
+      5.86
+     ],
+     [
+      2.09,
+      6.48
+     ]
+    ],
+    "cpu_s": 91.7,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.43,
+      0.94,
+      0.0,
+      0.26,
+      0.77,
+      1.32
+     ],
+     "det": [
+      0.55,
+      0.58,
+      0.69,
+      0.83,
+      0.61,
+      0.57,
+      0.95,
+      0.7
+     ],
+     "pose": [
+      3.89,
+      4.59,
+      3.7,
+      3.31,
+      4.02,
+      4.48,
+      2.91,
+      3.13
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 59,
+     "pose": 1738,
+     "pose_small": 1154,
+     "reused": 567,
+     "refined": 0,
+     "officials": 9,
+     "fallback": 215,
+     "tail_fallback": 167,
+     "pose_requests": 536,
+     "pose_small_requests": 737
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "02",
+   "run": 5,
+   "load_before": {
+    "cpu_percent": 6.1,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     4.29,
+     2.82,
+     1.23
+    ],
+    "top_processes": [
+     [
+      56.6,
+      "python.exe",
+      52728
+     ],
+     [
+      13.1,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      12.8,
+      "System",
+      4
+     ],
+     [
+      6.9,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      6.0,
+      "MsMpEng.exe",
+      4452
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "3E8556C496C140AA95B2ACDBEBEE49C7D13535305FFBAD72D7C7ED1E28CFCE49",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r5.json",
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.9899,
+    "pck05": 0.9756,
+    "pck10": 0.9888,
+    "pck10_vs_sapiens": 0.9888,
+    "pck10_vs_posewarper": 0.9888,
+    "pck05_exact": 0.9756073474224768,
+    "pck10_exact": 0.9888406083349792,
+    "player_frames_found_exact": 0.9949664429530202,
+    "counts": {
+     "pck05": [
+      9879,
+      10126
+     ],
+     "pck10": [
+      10013,
+      10126
+     ],
+     "player_frames_found": [
+      593,
+      596
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9860702373945458,
+      "pck10": 0.9976456739258387
+     },
+     "far": {
+      "pck05": 0.965002982700338,
+      "pck10": 0.9799164843905349
+     }
+    },
+    "pck05_agreed": 0.9756,
+    "agreed_joints": 10126,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 596,
+    "role_correct": 0.995,
+    "pck05_by_role": 0.9766
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r5.json",
+    "player_frames_found": 0.9983,
+    "near_found": 1.0,
+    "far_found": 0.9965,
+    "pck05": 0.9828,
+    "pck10": 0.9941,
+    "pck10_vs_sapiens": 0.9941,
+    "pck10_vs_posewarper": 0.9941,
+    "pck05_exact": 0.9827742520398912,
+    "pck10_exact": 0.9940566132769215,
+    "player_frames_found_exact": 0.9982876712328768,
+    "counts": {
+     "pck05": [
+      9756,
+      9927
+     ],
+     "pck10": [
+      9868,
+      9927
+     ],
+     "player_frames_found": [
+      583,
+      584
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9880392156862745,
+      "pck10": 0.9986274509803922
+     },
+     "far": {
+      "pck05": 0.9772115185415372,
+      "pck10": 0.9892272633105449
+     }
+    },
+    "pck05_agreed": 0.9828,
+    "agreed_joints": 9927,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 584,
+    "role_correct": 0.9983,
+    "pck05_by_role": 0.9828
+   }
+  },
+  {
+   "tag": "03-r5",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\03-womens-singles-rally.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r5.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r5.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:08:32.936114+00:00",
+   "wall_ns": 9670748800,
+   "wall_s": 9.6707488,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r5.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\03-r5.stderr.txt",
+   "stdout_sha256": "F1C033E63CC26EDECE676F605FAA67B673F802B46588109A87D7437E48B05B68",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1659082,
+   "output_sha256": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "internal": {
+    "total_s": 9.03,
+    "load_s": 0.79,
+    "court_s": 0.79,
+    "decode_done_s": 2.89,
+    "follow_s": 0.08,
+    "relinked": {
+     "11": 1
+    },
+    "cuts": [],
+    "followers": [],
+    "crops": 2820,
+    "frames": 1080,
+    "workers": [
+     [
+      0.79,
+      7.25
+     ],
+     [
+      0.83,
+      8.35
+     ],
+     [
+      1.41,
+      8.53
+     ],
+     [
+      2.0,
+      8.67
+     ],
+     [
+      0.79,
+      8.28
+     ],
+     [
+      0.96,
+      8.27
+     ],
+     [
+      1.54,
+      8.49
+     ],
+     [
+      2.17,
+      8.35
+     ]
+    ],
+    "cpu_s": 106.5,
+    "secs": {
+     "wait": [
+      0.0,
+      0.05,
+      0.62,
+      1.22,
+      0.0,
+      0.17,
+      0.75,
+      1.38
+     ],
+     "det": [
+      0.79,
+      0.65,
+      0.86,
+      1.02,
+      0.72,
+      0.71,
+      0.92,
+      1.06
+     ],
+     "pose": [
+      5.11,
+      6.13,
+      5.53,
+      4.96,
+      6.03,
+      5.95,
+      5.32,
+      4.37
+     ]
+    },
+    "calls": {
+     "start": 8,
+     "det": 64,
+     "pose": 2269,
+     "pose_small": 1429,
+     "reused": 864,
+     "refined": 0,
+     "officials": 20,
+     "fallback": 312,
+     "tail_fallback": 237,
+     "pose_requests": 720,
+     "pose_small_requests": 864
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "03",
+   "run": 5,
+   "load_before": {
+    "cpu_percent": 2.3,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     3.68,
+     2.76,
+     1.24
+    ],
+    "top_processes": [
+     [
+      56.2,
+      "python.exe",
+      52728
+     ],
+     [
+      13.7,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      11.3,
+      "System",
+      4
+     ],
+     [
+      5.5,
+      "msedgewebview2.exe",
+      32716
+     ],
+     [
+      4.1,
+      "msedgewebview2.exe",
+      37332
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "73EC1B99C7220DE96EF46D991F69A129276FAE780CEF0EE9FB8E2ABD4F749E5D",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r5.json",
+    "player_frames_found": 0.9986,
+    "near_found": 1.0,
+    "far_found": 0.9972,
+    "pck05": 0.9737,
+    "pck10": 0.9904,
+    "pck10_vs_sapiens": 0.9904,
+    "pck10_vs_posewarper": 0.9904,
+    "pck05_exact": 0.97365191064561,
+    "pck10_exact": 0.9904263153588087,
+    "player_frames_found_exact": 0.9986091794158554,
+    "counts": {
+     "pck05": [
+      11899,
+      12221
+     ],
+     "pck10": [
+      12104,
+      12221
+     ],
+     "player_frames_found": [
+      718,
+      719
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9764667429318517,
+      "pck10": 0.9949338127144959
+     },
+     "far": {
+      "pck05": 0.970829236315962,
+      "pck10": 0.9859062602425435
+     }
+    },
+    "pck05_agreed": 0.9737,
+    "agreed_joints": 12221,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 719,
+    "role_correct": 0.9986,
+    "pck05_by_role": 0.9742
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9816,
+    "pck10": 0.9933,
+    "pck10_vs_sapiens": 0.9933,
+    "pck10_vs_posewarper": 0.9933,
+    "pck05_exact": 0.9816218889072029,
+    "pck10_exact": 0.993324542607549,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      11911,
+      12134
+     ],
+     "pck10": [
+      12053,
+      12134
+     ],
+     "player_frames_found": [
+      714,
+      714
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9862446138548226,
+      "pck10": 0.9970169042094796
+     },
+     "far": {
+      "pck05": 0.9770491803278688,
+      "pck10": 0.9896721311475409
+     }
+    },
+    "pck05_agreed": 0.9816,
+    "agreed_joints": 12134,
+    "id_switches": {
+     "near": 0,
+     "far": 0
+    },
+    "player_frames": 714,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9816
+   }
+  },
+  {
+   "tag": "04-r5",
+   "command": [
+    "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+    "<workspace>\\badminton-coach\\fast\\pipeline.py",
+    "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+    "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r5.json"
+   ],
+   "output": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r5.json",
+   "cwd": "<workspace>\\badminton-coach",
+   "started_utc": "2026-10-27T13:08:46.542486+00:00",
+   "wall_ns": 7835683400,
+   "wall_s": 7.8356834,
+   "returncode": 0,
+   "timed_out": false,
+   "stdout_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r5.stdout.txt",
+   "stderr_log": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\logs\\04-r5.stderr.txt",
+   "stdout_sha256": "32F63E44B5B32812F3E871383C27CF49E711E908E309459EBE6B45804DF63454",
+   "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "output_bytes": 1063403,
+   "output_sha256": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "internal": {
+    "total_s": 7.21,
+    "load_s": 0.75,
+    "court_s": 0.75,
+    "decode_done_s": 2.39,
+    "follow_s": 0.04,
+    "relinked": {},
+    "cuts": [
+     212,
+     367,
+     665
+    ],
+    "followers": [],
+    "crops": 1802,
+    "frames": 900,
+    "workers": [
+     [
+      0.75,
+      6.22
+     ],
+     [
+      0.75,
+      6.45
+     ],
+     [
+      1.11,
+      6.23
+     ],
+     [
+      1.62,
+      6.74
+     ],
+     [
+      0.75,
+      6.55
+     ],
+     [
+      0.88,
+      6.67
+     ],
+     [
+      1.37,
+      6.38
+     ],
+     [
+      1.87,
+      7.0
+     ]
+    ],
+    "cpu_s": 86.9,
+    "secs": {
+     "wait": [
+      0.0,
+      0.0,
+      0.36,
+      0.87,
+      0.0,
+      0.13,
+      0.62,
+      1.12
+     ],
+     "det": [
+      0.59,
+      0.84,
+      0.69,
+      0.99,
+      0.55,
+      0.82,
+      0.85,
+      0.74
+     ],
+     "pose": [
+      4.43,
+      4.32,
+      3.98,
+      3.71,
+      4.78,
+      4.47,
+      3.68,
+      4.0
+     ]
+    },
+    "calls": {
+     "start": 11,
+     "det": 52,
+     "pose": 1737,
+     "pose_small": 918,
+     "reused": 369,
+     "refined": 0,
+     "officials": 0,
+     "fallback": 304,
+     "tail_fallback": 234,
+     "pose_requests": 729,
+     "pose_small_requests": 677
+    }
+   },
+   "validation_problems": [],
+   "valid": true,
+   "under_limit": true,
+   "pass": true,
+   "clip": "04",
+   "run": 5,
+   "load_before": {
+    "cpu_percent": 4.1,
+    "sample_seconds": 1.0,
+    "loadavg": [
+     3.41,
+     2.74,
+     1.25
+    ],
+    "top_processes": [
+     [
+      55.9,
+      "python.exe",
+      52728
+     ],
+     [
+      22.8,
+      "System",
+      4
+     ],
+     [
+      12.4,
+      "msedgewebview2.exe",
+      36240
+     ],
+     [
+      6.2,
+      "msedgewebview2.exe",
+      37332
+     ],
+     [
+      3.4,
+      "msedgewebview2.exe",
+      32716
+     ]
+    ],
+    "unavailable_processes": 0
+   },
+   "output_sha256_recheck": "31F554FCB9FEA80BA2749BF1F6F2CFCCBA617FBC1129505E9AB3CB13ABE27BAB",
+   "vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9534,
+    "pck10": 0.9838,
+    "pck10_vs_sapiens": 0.9838,
+    "pck10_vs_posewarper": 0.9838,
+    "pck05_exact": 0.9534222396548343,
+    "pck10_exact": 0.983820356932732,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9723,
+      10198
+     ],
+     "pck10": [
+      10033,
+      10198
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9519513630123554,
+      "pck10": 0.9833300647185723
+     },
+     "far": {
+      "pck05": 0.9548931162973132,
+      "pck10": 0.9843106491468916
+     }
+    },
+    "pck05_agreed": 0.9534,
+    "agreed_joints": 10198,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 600,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9534
+   },
+   "vs_baseline": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r5.json",
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck05": 0.9597,
+    "pck10": 0.9855,
+    "pck10_vs_sapiens": 0.9855,
+    "pck10_vs_posewarper": 0.9855,
+    "pck05_exact": 0.9597329224447868,
+    "pck10_exact": 0.9855161787365178,
+    "player_frames_found_exact": 1.0,
+    "counts": {
+     "pck05": [
+      9343,
+      9735
+     ],
+     "pck10": [
+      9594,
+      9735
+     ],
+     "player_frames_found": [
+      573,
+      573
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9536918480580452,
+      "pck10": 0.9844216816047802
+     },
+     "far": {
+      "pck05": 0.9653396712220241,
+      "pck10": 0.9865319865319865
+     }
+    },
+    "pck05_agreed": 0.9597,
+    "agreed_joints": 9735,
+    "id_switches": {
+     "near": 3,
+     "far": 3
+    },
+    "player_frames": 573,
+    "role_correct": 1.0,
+    "pck05_by_role": 0.9597
+   }
+  }
+ ],
+ "clips": {
+  "01": {
+   "video": "<workspace>\\badminton-coach\\sample-videos\\01-singles-rally.mp4",
+   "judge": "<workspace>\\badminton-coach\\fast\\runs\\judge-01.json",
+   "baseline": "<workspace>\\badminton-coach\\fast\\runs\\baseline-01.json",
+   "probe": {
+    "frame_count": 780,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "duration_s": 26.0
+   },
+   "video_sha256": "0B802AAB93573D98FDB706D7296CF4F1BC1D37B137A700EC5B0940FB8230AC4D",
+   "judge_sha256": "7DCCC50C8A5F97F4CDF62929E3BE8DDCB74650142BB29638C1AE77C01F293C18",
+   "baseline_sha256": "E176B9C624F8B5181622D367E51F4E4C3A51818CC785FDBCD999D55898C80CF7",
+   "baseline_vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\baseline-01.json",
+    "player_frames_found": 0.994,
+    "near_found": 0.9959,
+    "far_found": 0.9923,
+    "pck05": 0.9754,
+    "pck10": 0.9853,
+    "pck10_vs_sapiens": 0.9853,
+    "pck10_vs_posewarper": 0.9853,
+    "pck05_exact": 0.9754262198706644,
+    "pck10_exact": 0.9853027630805409,
+    "player_frames_found_exact": 0.9940357852882704,
+    "counts": {
+     "pck05": [
+      8296,
+      8505
+     ],
+     "pck10": [
+      8380,
+      8505
+     ],
+     "player_frames_found": [
+      500,
+      503
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9827418570734079,
+      "pck10": 0.9910063198833252
+     },
+     "far": {
+      "pck05": 0.9685720792530176,
+      "pck10": 0.9799590070598952
+     }
+    },
+    "pck05_agreed": 0.9754,
+    "agreed_joints": 8505,
+    "id_switches": {
+     "near": 0,
+     "far": 33
+    },
+    "player_frames": 503
+   },
+   "baseline_reference_players_dropped": 3
+  },
+  "02": {
+   "video": "<workspace>\\badminton-coach\\sample-videos\\02-singles-dive.mp4",
+   "judge": "<workspace>\\badminton-coach\\fast\\runs\\judge-02.json",
+   "baseline": "<workspace>\\badminton-coach\\fast\\runs\\baseline-02.json",
+   "probe": {
+    "frame_count": 900,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "duration_s": 30.0
+   },
+   "video_sha256": "C0C8BE94AC47B83B858673AF0F1CAD589673B9B09069AB60DA7CCCD9A98DF9A3",
+   "judge_sha256": "B3EAF1B90A2A8B2DFD1B42C44BC30B112AAB53402072070B88C86412461ACE43",
+   "baseline_sha256": "D9B15C290D8E58F0304C132556C5A45A5270234F95A042117005128888FBEC83",
+   "baseline_vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\baseline-02.json",
+    "player_frames_found": 0.9765,
+    "near_found": 1.0,
+    "far_found": 0.9527,
+    "pck05": 0.9619,
+    "pck10": 0.9725,
+    "pck10_vs_sapiens": 0.9725,
+    "pck10_vs_posewarper": 0.9725,
+    "pck05_exact": 0.9618803081177167,
+    "pck10_exact": 0.9725459213904799,
+    "player_frames_found_exact": 0.9765100671140939,
+    "counts": {
+     "pck05": [
+      9740,
+      10126
+     ],
+     "pck10": [
+      9848,
+      10126
+     ],
+     "player_frames_found": [
+      582,
+      596
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9909750833823818,
+      "pck10": 0.9980380616048656
+     },
+     "far": {
+      "pck05": 0.9323921256711076,
+      "pck10": 0.9467090872936965
+     }
+    },
+    "pck05_agreed": 0.9619,
+    "agreed_joints": 10126,
+    "id_switches": {
+     "near": 0,
+     "far": 42
+    },
+    "player_frames": 596
+   },
+   "baseline_reference_players_dropped": 12
+  },
+  "03": {
+   "video": "<workspace>\\badminton-coach\\sample-videos\\03-womens-singles-rally.mp4",
+   "judge": "<workspace>\\badminton-coach\\fast\\runs\\judge-03.json",
+   "baseline": "<workspace>\\badminton-coach\\fast\\runs\\baseline-03.json",
+   "probe": {
+    "frame_count": 1080,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "duration_s": 36.0
+   },
+   "video_sha256": "5C43DD02A3BE1038CAF35003073EB256EF37B1FD1DDFDC7E5AC90DFE56CFE300",
+   "judge_sha256": "AC6A11E6F7708E9B1228904485A32B6629D0E329E100BA5B0B8442DBA2E1D868",
+   "baseline_sha256": "2C596F1F241B72EAA5C9BDEB09BA36B93397490148841152A34F7946A938B2FF",
+   "baseline_vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\baseline-03.json",
+    "player_frames_found": 0.9958,
+    "near_found": 0.9917,
+    "far_found": 1.0,
+    "pck05": 0.9729,
+    "pck10": 0.9866,
+    "pck10_vs_sapiens": 0.9866,
+    "pck10_vs_posewarper": 0.9866,
+    "pck05_exact": 0.9729154733655184,
+    "pck10_exact": 0.9865804762294411,
+    "player_frames_found_exact": 0.9958275382475661,
+    "counts": {
+     "pck05": [
+      11890,
+      12221
+     ],
+     "pck10": [
+      12057,
+      12221
+     ],
+     "player_frames_found": [
+      716,
+      719
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9727079588168002,
+      "pck10": 0.9859454159176336
+     },
+     "far": {
+      "pck05": 0.97312356604392,
+      "pck10": 0.9872173058013766
+     }
+    },
+    "pck05_agreed": 0.9729,
+    "agreed_joints": 12221,
+    "id_switches": {
+     "near": 4,
+     "far": 55
+    },
+    "player_frames": 719
+   },
+   "baseline_reference_players_dropped": 5
+  },
+  "04": {
+   "video": "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+   "judge": "<workspace>\\badminton-coach\\fast\\runs\\judge-04.json",
+   "baseline": "<workspace>\\badminton-coach\\fast\\runs\\baseline-04.json",
+   "probe": {
+    "frame_count": 900,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "duration_s": 30.0
+   },
+   "video_sha256": "93BD090CF314400ED3DF53CEEA7C181B52337FC809054A79E4C6008B3C13C31F",
+   "judge_sha256": "54E05EFB74BB872AC6F0F125874936A9FB0B6F87DDB392786137813F72720EC0",
+   "baseline_sha256": "C469B8DC813A0A99432E586C25D4653273D950E2E81DD0AF79B2262E56E52FCD",
+   "baseline_vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\baseline-04.json",
+    "player_frames_found": 0.955,
+    "near_found": 0.92,
+    "far_found": 0.99,
+    "pck05": 0.9276,
+    "pck10": 0.9451,
+    "pck10_vs_sapiens": 0.9451,
+    "pck10_vs_posewarper": 0.9451,
+    "pck05_exact": 0.9276328691900373,
+    "pck10_exact": 0.9450872720141205,
+    "player_frames_found_exact": 0.955,
+    "counts": {
+     "pck05": [
+      9460,
+      10198
+     ],
+     "pck10": [
+      9638,
+      10198
+     ],
+     "player_frames_found": [
+      573,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.8905667777995685,
+      "pck10": 0.910374583251618
+     },
+     "far": {
+      "pck05": 0.964698960580506,
+      "pck10": 0.9797999607766229
+     }
+    },
+    "pck05_agreed": 0.9276,
+    "agreed_joints": 10198,
+    "id_switches": {
+     "near": 6,
+     "far": 15
+    },
+    "player_frames": 600
+   },
+   "baseline_reference_players_dropped": 27
+  },
+  "05": {
+   "video": "<workspace>\\badminton-coach\\sample-videos\\05-china-open-ws-b.mp4",
+   "judge": "<workspace>\\badminton-coach\\fast\\runs\\judge-05.json",
+   "baseline": "<workspace>\\badminton-coach\\fast\\runs\\baseline-05.json",
+   "probe": {
+    "frame_count": 900,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "duration_s": 30.0
+   },
+   "video_sha256": "B19906246DAE7AFF2FA11BBD51B327A9210929475DC33CE2492643D246F6A53B",
+   "judge_sha256": "E1783FDD6802264F5A2A304837C4AFF81A94A2415DD9D2093412F21184CA7F76",
+   "baseline_sha256": "284BC9B53BD690621B5C91EA8347CC263DDCACE8D05BAEB60E45BEE4EDBFFA42",
+   "baseline_vs_judge": {
+    "file": "<workspace>\\badminton-coach\\fast\\runs\\baseline-05.json",
+    "player_frames_found": 0.9517,
+    "near_found": 0.92,
+    "far_found": 0.9833,
+    "pck05": 0.9157,
+    "pck10": 0.9365,
+    "pck10_vs_sapiens": 0.9365,
+    "pck10_vs_posewarper": 0.9365,
+    "pck05_exact": 0.9157430112800392,
+    "pck10_exact": 0.9365375183913683,
+    "player_frames_found_exact": 0.9516666666666667,
+    "counts": {
+     "pck05": [
+      9336,
+      10195
+     ],
+     "pck10": [
+      9548,
+      10195
+     ],
+     "player_frames_found": [
+      571,
+      600
+     ]
+    },
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.8935294117647059,
+      "pck10": 0.9109803921568628
+     },
+     "far": {
+      "pck05": 0.9379784102060844,
+      "pck10": 0.9621197252208047
+     }
+    },
+    "pck05_agreed": 0.9157,
+    "agreed_joints": 10195,
+    "id_switches": {
+     "near": 6,
+     "far": 20
+    },
+    "player_frames": 600
+   },
+   "baseline_reference_players_dropped": 29
+  }
+ },
+ "setup": {
+  "code_sha256": {
+   "pipeline.py": "EEE0C7C6C6E55C54D3EFB65B508CC5EC59F9C29ACB876D2CFF2CC7C84411DFD9",
+   "court.py": "C315146422BD57FBE159D0E134BAB6F5EABCD87D3C9D70BC014C8F1B4037FCE9",
+   "detect.py": "DE7A53A52C63FE9DC71BD2EF9ACB7274289F4DF335FD9C8672AAA39B256A0FBA",
+   "pose.py": "AF179AC06C8F04C74DCAA2AE5D1E876EA282372998B0F0AECAF0C0F9E735F0F2",
+   "ovcache.py": "A691A0F1999E6F6DFC19E5D949B1E01CA5CC8718DC510C58D85D4FADE8DAD64D",
+   "evaluate.py": "3177662B9205C8BEBBA5C175255945F7DC531668ABA15EC33205861EC04FA694",
+   "acceptance.py": "3547DE2831C0811CC37666296E92875ACA3AAA426BDB03C6ABCDB2B25D0B43C4",
+   "prepare_cache.py": "92EA571004400602399AA555F87B563777256525F177D76FC6DD90C5BB10E7B2"
+  },
+  "pose_model": "<workspace>\\badminton-coach\\fast\\weights\\rtmpose-s-ft1.onnx",
+  "pose_model_sha256": "5538151BB67352E23E4D8EBA85FE072542407599A0ECEEF4963B855C2992D9BD",
+  "frozen_expectations": {
+   "pipeline": "EEE0C7C6C6E55C54D3EFB65B508CC5EC59F9C29ACB876D2CFF2CC7C84411DFD9",
+   "pose": "5538151BB67352E23E4D8EBA85FE072542407599A0ECEEF4963B855C2992D9BD"
+  },
+  "runtime": {
+   "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+   "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+   "numpy": "2.4.6",
+   "cv2": "5.0.0",
+   "openvino": "2026.0.0-20965-c6d6a13a886-releases/2026/0",
+   "onnxruntime": "1.24.4",
+   "psutil": "7.2.2"
+  },
+  "host": {
+   "cpu": "AMD EPYC 7763 64-Core Processor",
+   "logical_cores": 16,
+   "physical_cores": 8,
+   "ram_gb": 64.0,
+   "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "cache_dir": "<workspace>\\badminton-coach\\fast\\cache",
+  "cache_before": {
+   "11623801142454591821.blob": {
+    "bytes": 13523421,
+    "sha256": "C12132A88928855C5C81FF35C0A9DACBD27804ED9509723FD1A8878B226ADA9E"
+   },
+   "1260641638344269770.blob": {
+    "bytes": 13524948,
+    "sha256": "D69F880EE611A225A085BAC0DBCB885FEDE11E8FA81EF35041EAE14D92744FE2"
+   },
+   "12781108254812635832.blob": {
+    "bytes": 22082433,
+    "sha256": "A1D49A1757F4AFBED8C7F58CAE1E7B76630566E0286493351C574E5703E2E8F7"
+   },
+   "15817772773096937827.blob": {
+    "bytes": 13528691,
+    "sha256": "681790C571E312240D28F2EDC858C5E9845D05E8D8748A2F5B36F382C613E205"
+   },
+   "17227578127944900908.blob": {
+    "bytes": 38635250,
+    "sha256": "615400D87D459AAC6BCF0711FB62F94DA9ACC14C505B9066CD0D6FD2F4BA0884"
+   },
+   "18176700697599290247.blob": {
+    "bytes": 10245126,
+    "sha256": "E5F7909520077F8150548F1FB909C0683C149E4EDD3436F6A7D4BE2B19276342"
+   },
+   "6635095136199203407.blob": {
+    "bytes": 22084657,
+    "sha256": "AE459BCB888E7663ACE5BEE29C6D4D2435EEFC7CF0A682D43A7EECD2376008AF"
+   },
+   "prepared-models.zip": {
+    "bytes": 130296330,
+    "sha256": "202A2D1808BCC49848739CA40FA8CA8B7C9F227BCBDB866476C592F3A4AEE594"
+   },
+   "rtmpose-s-cf6e0b54d926.bin": {
+    "bytes": 21870248,
+    "sha256": "AD48EEE0302FA05624F21F8190DD8D6431CBBE88584C882C060FBFF087AECDF1"
+   },
+   "rtmpose-s-cf6e0b54d926.xml": {
+    "bytes": 205221,
+    "sha256": "81F7A75036145EBC0A010D5208E08F20E1579A7C418328B250B332BF8C61E095"
+   },
+   "rtmpose-s-ft1-8d74f2b36185.bin": {
+    "bytes": 21870256,
+    "sha256": "3B9E3715CC73BE29CA4B3374F6E5DFDEFCE2F996E5EB3B567DE5D89B3F97DC9A"
+   },
+   "rtmpose-s-ft1-8d74f2b36185.xml": {
+    "bytes": 221978,
+    "sha256": "858629428171039D85D98A227D7447EB77602B19376C05F08A4FF711B8EA3F0C"
+   },
+   "rtmpose-t-79642b953f3b.bin": {
+    "bytes": 13332728,
+    "sha256": "CA1FE4B2F2209DE7CF817F1FB48A2C619541F5BFBEBE795ACDEEB4388ECAF70E"
+   },
+   "rtmpose-t-79642b953f3b.xml": {
+    "bytes": 183686,
+    "sha256": "4C978C35FA6D057419D8BCDC327BC1EA7D927FBA1031F84F3649D221E1508CB1"
+   },
+   "rtmpose-t-ft2-ca7da812e425.bin": {
+    "bytes": 13332736,
+    "sha256": "4BA897F9E2E99E899D00029900167169E9856054F78D876ACF690FAA1F820BD4"
+   },
+   "rtmpose-t-ft2-ca7da812e425.xml": {
+    "bytes": 199740,
+    "sha256": "CAC6D41770C3A34254291353E56AE6A824B6A9C33D6A529D42A95921FBAE88F0"
+   },
+   "rtmpose-t-ft3-fc0e5be188b6.bin": {
+    "bytes": 13332736,
+    "sha256": "B113057B1A0A6E3EB98CD4DFB79DB754A7BD553F2B7D5FB087FB29BC65159FBE"
+   },
+   "rtmpose-t-ft3-fc0e5be188b6.xml": {
+    "bytes": 200728,
+    "sha256": "8A5DA20C135E06535B80435511625C2B17EE2AF8895A2EDDD7ACC9A5816C01DD"
+   },
+   "yolo26n-384x640-40ace08062e4.bin": {
+    "bytes": 9696656,
+    "sha256": "FDFF677E4C554AE9A81516ACEAF92E8B694E3C2D43E1ABC8C5736A96C09F39EB"
+   },
+   "yolo26n-384x640-40ace08062e4.xml": {
+    "bytes": 447337,
+    "sha256": "CE9335ED015562CE1F77E31F00664C65EB802FA4637257F4E5C5383BADBA80DD"
+   },
+   "yolo26s-448x768-4287c8355dab.bin": {
+    "bytes": 38069680,
+    "sha256": "41E2A95B2CDBDA015D31DEC02CD65B941C3183C2C0B8D9694BD52734F450AB68"
+   },
+   "yolo26s-448x768-4287c8355dab.xml": {
+    "bytes": 448164,
+    "sha256": "0BBFB8F7F4C8B999D8C4D6067A5FACAB9E9DFE1716FE4D9E4A1E1BB4FDBBE44B"
+   }
+  },
+  "warmup_runs": 0,
+  "model_sha256": {
+   "<workspace>\\badminton-coach\\fast\\weights\\rtmpose-s-ft1.onnx": "5538151BB67352E23E4D8EBA85FE072542407599A0ECEEF4963B855C2992D9BD",
+   "<workspace>\\badminton-coach\\fast\\weights\\yolo26s-448x768.onnx": "65C41B422FD432070886CBFF8A8F4E6B42DA678EB2F827B9ECC766A42A6B2AEA",
+   "<workspace>\\badminton-coach\\fast\\weights\\yolo26n-384x640.onnx": "11B9C86466D31B704F2CDE8DC994172D53BA510687D22FCEB2B11180E95F13A4",
+   "<workspace>\\badminton-coach\\fast\\weights\\rtmpose-t-ft3.onnx": "B09DB7200A621DACC46518BE5554AD72C1C13EA7C16392D620178CA41B0BF629"
+  },
+  "production_config": {
+   "primary_pose": "<workspace>\\badminton-coach\\fast\\weights\\rtmpose-s-ft1.onnx",
+   "small_pose": "<workspace>\\badminton-coach\\fast\\weights\\rtmpose-t-ft3.onnx",
+   "small_min_mean_confidence": 1.0,
+   "small_min_joint_confidence": 0.65,
+   "large_hold_inferences": 8
+  },
+  "cache_after": {
+   "11623801142454591821.blob": {
+    "bytes": 13523421,
+    "sha256": "C12132A88928855C5C81FF35C0A9DACBD27804ED9509723FD1A8878B226ADA9E"
+   },
+   "1260641638344269770.blob": {
+    "bytes": 13524948,
+    "sha256": "D69F880EE611A225A085BAC0DBCB885FEDE11E8FA81EF35041EAE14D92744FE2"
+   },
+   "12781108254812635832.blob": {
+    "bytes": 22082433,
+    "sha256": "A1D49A1757F4AFBED8C7F58CAE1E7B76630566E0286493351C574E5703E2E8F7"
+   },
+   "15817772773096937827.blob": {
+    "bytes": 13528691,
+    "sha256": "681790C571E312240D28F2EDC858C5E9845D05E8D8748A2F5B36F382C613E205"
+   },
+   "17227578127944900908.blob": {
+    "bytes": 38635250,
+    "sha256": "615400D87D459AAC6BCF0711FB62F94DA9ACC14C505B9066CD0D6FD2F4BA0884"
+   },
+   "18176700697599290247.blob": {
+    "bytes": 10245126,
+    "sha256": "E5F7909520077F8150548F1FB909C0683C149E4EDD3436F6A7D4BE2B19276342"
+   },
+   "6635095136199203407.blob": {
+    "bytes": 22084657,
+    "sha256": "AE459BCB888E7663ACE5BEE29C6D4D2435EEFC7CF0A682D43A7EECD2376008AF"
+   },
+   "prepared-models.zip": {
+    "bytes": 130296330,
+    "sha256": "202A2D1808BCC49848739CA40FA8CA8B7C9F227BCBDB866476C592F3A4AEE594"
+   },
+   "rtmpose-s-cf6e0b54d926.bin": {
+    "bytes": 21870248,
+    "sha256": "AD48EEE0302FA05624F21F8190DD8D6431CBBE88584C882C060FBFF087AECDF1"
+   },
+   "rtmpose-s-cf6e0b54d926.xml": {
+    "bytes": 205221,
+    "sha256": "81F7A75036145EBC0A010D5208E08F20E1579A7C418328B250B332BF8C61E095"
+   },
+   "rtmpose-s-ft1-8d74f2b36185.bin": {
+    "bytes": 21870256,
+    "sha256": "3B9E3715CC73BE29CA4B3374F6E5DFDEFCE2F996E5EB3B567DE5D89B3F97DC9A"
+   },
+   "rtmpose-s-ft1-8d74f2b36185.xml": {
+    "bytes": 221978,
+    "sha256": "858629428171039D85D98A227D7447EB77602B19376C05F08A4FF711B8EA3F0C"
+   },
+   "rtmpose-t-79642b953f3b.bin": {
+    "bytes": 13332728,
+    "sha256": "CA1FE4B2F2209DE7CF817F1FB48A2C619541F5BFBEBE795ACDEEB4388ECAF70E"
+   },
+   "rtmpose-t-79642b953f3b.xml": {
+    "bytes": 183686,
+    "sha256": "4C978C35FA6D057419D8BCDC327BC1EA7D927FBA1031F84F3649D221E1508CB1"
+   },
+   "rtmpose-t-ft2-ca7da812e425.bin": {
+    "bytes": 13332736,
+    "sha256": "4BA897F9E2E99E899D00029900167169E9856054F78D876ACF690FAA1F820BD4"
+   },
+   "rtmpose-t-ft2-ca7da812e425.xml": {
+    "bytes": 199740,
+    "sha256": "CAC6D41770C3A34254291353E56AE6A824B6A9C33D6A529D42A95921FBAE88F0"
+   },
+   "rtmpose-t-ft3-fc0e5be188b6.bin": {
+    "bytes": 13332736,
+    "sha256": "B113057B1A0A6E3EB98CD4DFB79DB754A7BD553F2B7D5FB087FB29BC65159FBE"
+   },
+   "rtmpose-t-ft3-fc0e5be188b6.xml": {
+    "bytes": 200728,
+    "sha256": "8A5DA20C135E06535B80435511625C2B17EE2AF8895A2EDDD7ACC9A5816C01DD"
+   },
+   "yolo26n-384x640-40ace08062e4.bin": {
+    "bytes": 9696656,
+    "sha256": "FDFF677E4C554AE9A81516ACEAF92E8B694E3C2D43E1ABC8C5736A96C09F39EB"
+   },
+   "yolo26n-384x640-40ace08062e4.xml": {
+    "bytes": 447337,
+    "sha256": "CE9335ED015562CE1F77E31F00664C65EB802FA4637257F4E5C5383BADBA80DD"
+   },
+   "yolo26s-448x768-4287c8355dab.bin": {
+    "bytes": 38069680,
+    "sha256": "41E2A95B2CDBDA015D31DEC02CD65B941C3183C2C0B8D9694BD52734F450AB68"
+   },
+   "yolo26s-448x768-4287c8355dab.xml": {
+    "bytes": 448164,
+    "sha256": "0BBFB8F7F4C8B999D8C4D6067A5FACAB9E9DFE1716FE4D9E4A1E1BB4FDBBE44B"
+   }
+  },
+  "cache_unchanged": true,
+  "code_unchanged": true,
+  "models_unchanged": true
+ },
+ "order": [
+  "01-r1",
+  "02-r1",
+  "03-r1",
+  "04-r1",
+  "05-r1",
+  "02-r2",
+  "03-r2",
+  "04-r2",
+  "05-r2",
+  "01-r2",
+  "03-r3",
+  "04-r3",
+  "05-r3",
+  "01-r3",
+  "02-r3",
+  "04-r4",
+  "05-r4",
+  "01-r4",
+  "02-r4",
+  "03-r4",
+  "05-r5",
+  "01-r5",
+  "02-r5",
+  "03-r5",
+  "04-r5"
+ ],
+ "secondary_consensus": {
+  "note": "Separate real earlier Sapiens/PoseWarper reference, not the primary judge",
+  "reference": "<workspace>\\badminton-coach\\fast\\reference\\consensus.json",
+  "reference_sha256": "30B8A90358187B7ADA2915B673A5A07A2E979768C364DDD12026B0B54DE6D2A1",
+  "baseline": {
+   "file": "<workspace>\\badminton-coach\\fast\\runs\\baseline-01.json",
+   "player_frames_found": 1.0,
+   "near_found": 1.0,
+   "far_found": 1.0,
+   "pck05": 0.9873,
+   "pck10": 0.9942,
+   "pck10_vs_sapiens": 0.986,
+   "pck10_vs_posewarper": 0.9901,
+   "pck05_exact": 0.9873271283588368,
+   "pck10_exact": 0.9941631172109165,
+   "player_frames_found_exact": 1.0,
+   "counts": {
+    "pck05": [
+     18776,
+     19017
+    ],
+    "pck10": [
+     18906,
+     19017
+    ],
+    "player_frames_found": [
+     1493,
+     1493
+    ]
+   },
+   "pck_by_role": {
+    "near": {
+     "pck05": 0.9891479531535403,
+     "pck10": 0.9939830235306758
+    },
+    "far": {
+     "pck05": 0.9855818743563337,
+     "pck10": 0.994335736354274
+    }
+   },
+   "pck05_agreed": 0.9909,
+   "agreed_joints": 18616,
+   "id_switches": {
+    "near": 0,
+    "far": 43
+   },
+   "player_frames": 1493
+  },
+  "runs": [
+   {
+    "tag": "01-r1",
+    "clip": "01",
+    "vs_judge": {
+     "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r1.json",
+     "player_frames_found": 1.0,
+     "near_found": 1.0,
+     "far_found": 1.0,
+     "pck05": 0.9875,
+     "pck10": 0.9947,
+     "pck10_vs_sapiens": 0.987,
+     "pck10_vs_posewarper": 0.9908,
+     "pck05_exact": 0.987484881947731,
+     "pck10_exact": 0.9946889625072304,
+     "player_frames_found_exact": 1.0,
+     "counts": {
+      "pck05": [
+       18779,
+       19017
+      ],
+      "pck10": [
+       18916,
+       19017
+      ],
+      "player_frames_found": [
+       1493,
+       1493
+      ]
+     },
+     "pck_by_role": {
+      "near": {
+       "pck05": 0.9857096808853552,
+       "pck10": 0.9947351455893414
+      },
+      "far": {
+       "pck05": 0.9891864057672503,
+       "pck10": 0.9946446961894954
+      }
+     },
+     "pck05_agreed": 0.9909,
+     "agreed_joints": 18616,
+     "id_switches": {
+      "near": 0,
+      "far": 0
+     },
+     "player_frames": 1493,
+     "role_correct": 1.0,
+     "pck05_by_role": 0.9875
+    }
+   },
+   {
+    "tag": "01-r2",
+    "clip": "01",
+    "vs_judge": {
+     "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r2.json",
+     "player_frames_found": 1.0,
+     "near_found": 1.0,
+     "far_found": 1.0,
+     "pck05": 0.9875,
+     "pck10": 0.9947,
+     "pck10_vs_sapiens": 0.987,
+     "pck10_vs_posewarper": 0.9908,
+     "pck05_exact": 0.987484881947731,
+     "pck10_exact": 0.9946889625072304,
+     "player_frames_found_exact": 1.0,
+     "counts": {
+      "pck05": [
+       18779,
+       19017
+      ],
+      "pck10": [
+       18916,
+       19017
+      ],
+      "player_frames_found": [
+       1493,
+       1493
+      ]
+     },
+     "pck_by_role": {
+      "near": {
+       "pck05": 0.9857096808853552,
+       "pck10": 0.9947351455893414
+      },
+      "far": {
+       "pck05": 0.9891864057672503,
+       "pck10": 0.9946446961894954
+      }
+     },
+     "pck05_agreed": 0.9909,
+     "agreed_joints": 18616,
+     "id_switches": {
+      "near": 0,
+      "far": 0
+     },
+     "player_frames": 1493,
+     "role_correct": 1.0,
+     "pck05_by_role": 0.9875
+    }
+   },
+   {
+    "tag": "01-r3",
+    "clip": "01",
+    "vs_judge": {
+     "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r3.json",
+     "player_frames_found": 1.0,
+     "near_found": 1.0,
+     "far_found": 1.0,
+     "pck05": 0.9875,
+     "pck10": 0.9947,
+     "pck10_vs_sapiens": 0.987,
+     "pck10_vs_posewarper": 0.9908,
+     "pck05_exact": 0.987484881947731,
+     "pck10_exact": 0.9946889625072304,
+     "player_frames_found_exact": 1.0,
+     "counts": {
+      "pck05": [
+       18779,
+       19017
+      ],
+      "pck10": [
+       18916,
+       19017
+      ],
+      "player_frames_found": [
+       1493,
+       1493
+      ]
+     },
+     "pck_by_role": {
+      "near": {
+       "pck05": 0.9857096808853552,
+       "pck10": 0.9947351455893414
+      },
+      "far": {
+       "pck05": 0.9891864057672503,
+       "pck10": 0.9946446961894954
+      }
+     },
+     "pck05_agreed": 0.9909,
+     "agreed_joints": 18616,
+     "id_switches": {
+      "near": 0,
+      "far": 0
+     },
+     "player_frames": 1493,
+     "role_correct": 1.0,
+     "pck05_by_role": 0.9875
+    }
+   },
+   {
+    "tag": "01-r4",
+    "clip": "01",
+    "vs_judge": {
+     "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r4.json",
+     "player_frames_found": 1.0,
+     "near_found": 1.0,
+     "far_found": 1.0,
+     "pck05": 0.9875,
+     "pck10": 0.9947,
+     "pck10_vs_sapiens": 0.987,
+     "pck10_vs_posewarper": 0.9908,
+     "pck05_exact": 0.987484881947731,
+     "pck10_exact": 0.9946889625072304,
+     "player_frames_found_exact": 1.0,
+     "counts": {
+      "pck05": [
+       18779,
+       19017
+      ],
+      "pck10": [
+       18916,
+       19017
+      ],
+      "player_frames_found": [
+       1493,
+       1493
+      ]
+     },
+     "pck_by_role": {
+      "near": {
+       "pck05": 0.9857096808853552,
+       "pck10": 0.9947351455893414
+      },
+      "far": {
+       "pck05": 0.9891864057672503,
+       "pck10": 0.9946446961894954
+      }
+     },
+     "pck05_agreed": 0.9909,
+     "agreed_joints": 18616,
+     "id_switches": {
+      "near": 0,
+      "far": 0
+     },
+     "player_frames": 1493,
+     "role_correct": 1.0,
+     "pck05_by_role": 0.9875
+    }
+   },
+   {
+    "tag": "01-r5",
+    "clip": "01",
+    "vs_judge": {
+     "file": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r5.json",
+     "player_frames_found": 1.0,
+     "near_found": 1.0,
+     "far_found": 1.0,
+     "pck05": 0.9875,
+     "pck10": 0.9947,
+     "pck10_vs_sapiens": 0.987,
+     "pck10_vs_posewarper": 0.9908,
+     "pck05_exact": 0.987484881947731,
+     "pck10_exact": 0.9946889625072304,
+     "player_frames_found_exact": 1.0,
+     "counts": {
+      "pck05": [
+       18779,
+       19017
+      ],
+      "pck10": [
+       18916,
+       19017
+      ],
+      "player_frames_found": [
+       1493,
+       1493
+      ]
+     },
+     "pck_by_role": {
+      "near": {
+       "pck05": 0.9857096808853552,
+       "pck10": 0.9947351455893414
+      },
+      "far": {
+       "pck05": 0.9891864057672503,
+       "pck10": 0.9946446961894954
+      }
+     },
+     "pck05_agreed": 0.9909,
+     "agreed_joints": 18616,
+     "id_switches": {
+      "near": 0,
+      "far": 0
+     },
+     "player_frames": 1493,
+     "role_correct": 1.0,
+     "pck05_by_role": 0.9875
+    }
+   }
+  ],
+  "gate": {
+   "passed": true,
+   "failures": []
+  }
+ },
+ "gate": {
+  "runs": 25,
+  "failed": 0,
+  "failed_tags": [],
+  "passed": true,
+  "speed_and_validity_passed": true,
+  "frozen_setup_passed": true
+ },
+ "quality_gate": {
+  "passed": true,
+  "failures": []
+ },
+ "timing_by_clip": {
+  "01": {
+   "n": 5,
+   "min": 7.2578441,
+   "median": 7.3734835,
+   "max": 7.4073381
+  },
+  "02": {
+   "n": 5,
+   "min": 8.6596044,
+   "median": 8.7187914,
+   "max": 8.7273458
+  },
+  "03": {
+   "n": 5,
+   "min": 9.2400924,
+   "median": 9.3008419,
+   "max": 9.866349
+  },
+  "04": {
+   "n": 5,
+   "min": 7.8356834,
+   "median": 8.003998,
+   "max": 8.0907248
+  },
+  "05": {
+   "n": 5,
+   "min": 8.3307719,
+   "median": 8.3698903,
+   "max": 8.5030673
+  }
+ },
+ "timing_all": {
+  "n": 25,
+  "min": 7.2578441,
+  "median": 8.3698903,
+  "max": 9.866349
+ },
+ "accuracy_by_clip": {
+  "01": {
+   "fast_vs_judge": {
+    "pck05": {
+     "min": 0.9811,
+     "median": 0.9811,
+     "max": 0.9811
+    },
+    "pck10": {
+     "min": 0.9928,
+     "median": 0.9928,
+     "max": 0.9928
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "fast_vs_baseline": {
+    "pck05": {
+     "min": 0.9822,
+     "median": 0.9822,
+     "max": 0.9822
+    },
+    "pck10": {
+     "min": 0.9935,
+     "median": 0.9935,
+     "max": 0.9935
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "baseline_vs_judge": {
+    "pck05": 0.9754,
+    "pck10": 0.9853,
+    "player_frames_found": 0.994,
+    "near_found": 0.9959,
+    "far_found": 0.9923
+   }
+  },
+  "02": {
+   "fast_vs_judge": {
+    "pck05": {
+     "min": 0.9756,
+     "median": 0.9756,
+     "max": 0.9756
+    },
+    "pck10": {
+     "min": 0.9888,
+     "median": 0.9888,
+     "max": 0.9888
+    },
+    "player_frames_found": {
+     "min": 0.995,
+     "median": 0.995,
+     "max": 0.995
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 0.9899,
+     "median": 0.9899,
+     "max": 0.9899
+    }
+   },
+   "fast_vs_baseline": {
+    "pck05": {
+     "min": 0.9828,
+     "median": 0.9828,
+     "max": 0.9828
+    },
+    "pck10": {
+     "min": 0.9941,
+     "median": 0.9941,
+     "max": 0.9941
+    },
+    "player_frames_found": {
+     "min": 0.9983,
+     "median": 0.9983,
+     "max": 0.9983
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 0.9965,
+     "median": 0.9965,
+     "max": 0.9965
+    }
+   },
+   "baseline_vs_judge": {
+    "pck05": 0.9619,
+    "pck10": 0.9725,
+    "player_frames_found": 0.9765,
+    "near_found": 1.0,
+    "far_found": 0.9527
+   }
+  },
+  "03": {
+   "fast_vs_judge": {
+    "pck05": {
+     "min": 0.9737,
+     "median": 0.9737,
+     "max": 0.9737
+    },
+    "pck10": {
+     "min": 0.9904,
+     "median": 0.9904,
+     "max": 0.9904
+    },
+    "player_frames_found": {
+     "min": 0.9986,
+     "median": 0.9986,
+     "max": 0.9986
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 0.9972,
+     "median": 0.9972,
+     "max": 0.9972
+    }
+   },
+   "fast_vs_baseline": {
+    "pck05": {
+     "min": 0.9816,
+     "median": 0.9816,
+     "max": 0.9816
+    },
+    "pck10": {
+     "min": 0.9933,
+     "median": 0.9933,
+     "max": 0.9933
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "baseline_vs_judge": {
+    "pck05": 0.9729,
+    "pck10": 0.9866,
+    "player_frames_found": 0.9958,
+    "near_found": 0.9917,
+    "far_found": 1.0
+   }
+  },
+  "04": {
+   "fast_vs_judge": {
+    "pck05": {
+     "min": 0.9534,
+     "median": 0.9534,
+     "max": 0.9534
+    },
+    "pck10": {
+     "min": 0.9838,
+     "median": 0.9838,
+     "max": 0.9838
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "fast_vs_baseline": {
+    "pck05": {
+     "min": 0.9597,
+     "median": 0.9597,
+     "max": 0.9597
+    },
+    "pck10": {
+     "min": 0.9855,
+     "median": 0.9855,
+     "max": 0.9855
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "baseline_vs_judge": {
+    "pck05": 0.9276,
+    "pck10": 0.9451,
+    "player_frames_found": 0.955,
+    "near_found": 0.92,
+    "far_found": 0.99
+   }
+  },
+  "05": {
+   "fast_vs_judge": {
+    "pck05": {
+     "min": 0.9435,
+     "median": 0.9435,
+     "max": 0.9435
+    },
+    "pck10": {
+     "min": 0.9753,
+     "median": 0.9753,
+     "max": 0.9753
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "fast_vs_baseline": {
+    "pck05": {
+     "min": 0.9513,
+     "median": 0.9513,
+     "max": 0.9513
+    },
+    "pck10": {
+     "min": 0.9795,
+     "median": 0.9795,
+     "max": 0.9795
+    },
+    "player_frames_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "near_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    },
+    "far_found": {
+     "min": 1.0,
+     "median": 1.0,
+     "max": 1.0
+    }
+   },
+   "baseline_vs_judge": {
+    "pck05": 0.9157,
+    "pck10": 0.9365,
+    "player_frames_found": 0.9517,
+    "near_found": 0.92,
+    "far_found": 0.9833
+   }
+  }
+ }
+}

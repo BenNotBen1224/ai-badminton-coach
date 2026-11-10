@@ -1,0 +1,75 @@
+{
+  "status": "parent_reviewed_for_render_not_user_acceptance",
+  "goal": "Teach the tactical purpose and an executable technique, rather than describing visible movement.",
+  "title_zh": "这一拍想争什么？技术怎么做？",
+  "display_label": "战术解读与技术建议｜不是球员意图实测",
+  "duration_target_s": [30, 35],
+  "omit_generic_closing_summary": true,
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "title": "01  拉开对手，不是比力量",
+      "text": "红衣还在后场，可以用短球拉她向前。身前控短要小幅送拍，别大甩手臂。",
+      "intent_quote": "可以用短球拉她向前",
+      "technique_quote": "身前控短要小幅送拍，别大甩手臂",
+      "intent": "Use the front space while the opponent has rearward displacement, making her cover longitudinal distance.",
+      "technique": "For the proposed short shot played in front of the body, use a small controlled stroke instead of a large arm swing. This is advice, not a measured racket action.",
+      "cue": "意图：拉她向前｜技术：小幅送拍，别甩大臂",
+      "evidence_ids": ["E003567", "E003639", "E003723"],
+      "sources": [
+        "codebook_verified.json:rear_then_front",
+        "books\\en_pd\\text\\eric_ED104803.txt:1033-1041 (Net Drop Shot)"
+      ],
+      "avoid": "Do not classify the observed shot as a measured net shot, draw a tracked shuttle path, or claim to know the player's thoughts."
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "title": "02  解围之后，抢下一次启动",
+      "text": "被动救球先争恢复时间。来不及回中也别一直赶路；对手出拍时做分腿垫步，准备再次蹬出。",
+      "intent_quote": "被动救球先争恢复时间",
+      "technique_quote": "对手出拍时做分腿垫步，准备再次蹬出",
+      "intent": "Prioritize surviving pressure and restoring the ability to respond, rather than forcing an immediate attack.",
+      "technique": "Time readiness and a small split step around the opponent's stroke instead of continuing a blind run to the geometric centre. This is a coaching cue, not a claim that the split step was detected.",
+      "cue": "意图：争恢复时间｜技术：卡着出拍做启动垫步",
+      "evidence_ids": ["E007699", "E007801", "E007919"],
+      "sources": [
+        "codebook_verified.json:buy_recovery_time",
+        "books\\verified_passages.jsonl:id_ms:p58",
+        "books\\verified_passages.jsonl:other_lang:p46",
+        "books\\verified_passages.jsonl:other_lang:p47",
+        "books\\verified_passages.jsonl:en_theses:p60"
+      ],
+      "avoid": "Do not claim measured time gained, an exact airborne interval, joint force, or a detected split step."
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 285.0],
+      "title": "03  先恢复，再利用她的前压",
+      "text": "弓步接完及时蹬回，别把重心留在跨步上。红衣若继续前压，灰衣可打她身后，逼她转身回追。",
+      "intent_quote": "红衣若继续前压，灰衣可打她身后，逼她转身回追",
+      "technique_quote": "弓步接完及时蹬回，别把重心留在跨步上",
+      "intent": "If the opponent continues committing forward, use the space behind her to demand a reversal rather than feed her preferred forward interception.",
+      "technique": "After the visible low lunge, recover from the extended stance so the next change of direction remains possible. This is advice, not a claim about measured force or centre of mass.",
+      "cue": "技术：跨步后蹬回｜意图：利用前压身后的空间",
+      "evidence_ids": ["E016442", "E016500", "E016578", "C016608", "C016644"],
+      "sources": [
+        "codebook_verified.json:front_then_behind",
+        "codebook_verified.json:play_against_commitment",
+        "books\\verified_passages.jsonl:other_lang:p46"
+      ],
+      "avoid": "Frame 16442 is near mid/rear court, not at the net. Do not invoke low-at-net logic. The behind-opponent shot is a conditional option, not the measured actual trajectory or a guaranteed result."
+    }
+  ],
+  "render_requirements": [
+    "Use these exact spoken lines; do not replace them with '一种读法', '可考虑前场选择', '重心留活', or an empty '继续判断' closing.",
+    "Keep purpose and technique visible as separate short cues. Use the existing source pictures and synchronized pose for illustration; do not fabricate measurements.",
+    "Do not add a generic fourth summary beat. Fit the three natural-speed voice clips to continuous source passages, targeting 30-35 seconds without repeated action.",
+    "Keep the old variants untouched and output a separate version."
+  ],
+  "review_limits": "This is parent editorial approval to render, not independent expert review, human voice-naturalness review, model acceptance, or user acceptance."
+}

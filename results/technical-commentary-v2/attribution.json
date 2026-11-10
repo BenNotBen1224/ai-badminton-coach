@@ -1,0 +1,9 @@
+{
+  "existing_footage_attribution": {
+    "credit": "Badminton Sphere / Wikimedia Commons, China Open 2025 women's singles final, CC BY 3.0",
+    "upstream_broadcast_rights": "not independently cleared"
+  },
+  "shuttle_model": "TrackNetV3 official checkpoint (qaz812345/TrackNetV3, MIT), local inference",
+  "speech_model": "Kokoro v1.1 multi-lang, Chinese sid 60 (sherpa-onnx), local inference",
+  "asr_proxy_model": "SenseVoice int8 2024-07-17 (sherpa-onnx), local inference"
+}

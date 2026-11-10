@@ -1,0 +1,64 @@
+{
+ "script": "..\\..\\..\\badminton-coach\\outputs\\natural-three-moments-20261103-v7\\script.json",
+ "rubric": "rubric.txt",
+ "scorer": "parent (by hand, before any new script exists)",
+ "rows": [
+  {
+   "id": "hook",
+   "text": "来，你看这三个瞬间。",
+   "class": "OTHER",
+   "tied": false,
+   "note": ""
+  },
+  {
+   "id": "m1_see",
+   "text": "右脚跨出去，前腿弯下去。",
+   "class": "SEE",
+   "tied": false,
+   "note": ""
+  },
+  {
+   "id": "m1_tip",
+   "text": "发力从脚到腰，别光靠手。",
+   "class": "TIP",
+   "tied": false,
+   "note": ""
+  },
+  {
+   "id": "m2_see",
+   "text": "你来我往，两个人轮流往下沉。",
+   "class": "SEE",
+   "tied": false,
+   "note": ""
+  },
+  {
+   "id": "m2_tip",
+   "text": "每跨一步，都要想着回到中间。",
+   "class": "TIP",
+   "tied": false,
+   "note": ""
+  },
+  {
+   "id": "m3_see",
+   "text": "对面一挥拍，她就扑出去了。",
+   "class": "SEE",
+   "tied": false,
+   "note": "names the opponent swing and her dive, but the dive is a forced reaction, not a choice; no evidence ids; so SEE"
+  },
+  {
+   "id": "m3_tip",
+   "text": "扑完以后，先想怎么起身。",
+   "class": "TIP",
+   "tied": false,
+   "note": ""
+  },
+  {
+   "id": "outro",
+   "text": "记住，跨出去，更要回得来。",
+   "class": "TIP",
+   "tied": false,
+   "note": ""
+  }
+ ],
+ "score": 0.0
+}

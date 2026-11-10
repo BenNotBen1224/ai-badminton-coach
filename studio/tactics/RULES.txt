@@ -1,0 +1,55 @@
+TACTICS goal - rules (Phase A framing, written 2026-11-04)
+
+User ask (verbatim):
+"still not good enough to capture the essence, now you are only describing physical
+movements, which is not bad, but need to infer further why it's done, what's next.
+badminton is a feedback loop, you hit depending on the opponent's state. read 100
+badminton books to understand it like a national team coach"
+
+Plain goal: the video should explain each shot as a choice made from the opponent's
+state (where she is, which way she is moving, how balanced she is), say what that shot
+sets up next, and then show whether that happened.
+
+DONE means all of these are true, checked by files, not by my say-so:
+
+1. Books
+   a. Target 100 book-length badminton works (body text >= 15,000 words each).
+   b. Legal only: public domain, open access licence, or an official free download
+      from the author or publisher. No pirate copies. Quotes kept to <= 25 words.
+   c. On-topic: about the sport. The Badminton Magazine / Badminton Library series and
+      place-name uses are out. A text counts only if sport words (shuttle, racket,
+      smash, clear, drop, net, rally) appear often enough (filter in manifest).
+   d. Counted by type (old public-domain book, coaching manual, federation manual,
+      thesis, open book). If fewer than 100 exist legally, report the true count and
+      why. Never pad with short articles.
+   e. A tactics codebook: each rule is "opponent state -> my choice -> expected reply",
+      backed by >= 2 independent sources with short quotes and page/section pointers.
+
+2. Tactics engine (per hit, from real pose tracks; shuttle is NOT tracked)
+   a. Records: hitter, contact time, both players' court positions, opponent movement
+      direction and speed, distance from base, balance/reach at contact.
+   b. Infers: landing zone (from where the receiver makes the next contact), shot family
+      (from contact height, time to next contact, depth), intent (a codebook rule),
+      expected reply set, then checks it against the real next hit.
+   c. Checked against my own by-eye labels on the chosen rallies:
+      hit detection precision and recall >= 0.8; landing-zone agreement >= 70%;
+      reply-prediction hit rate reported next to a naive baseline (no target, honest).
+
+3. Video
+   a. >= 60% of narration sentences say WHY (reason from opponent state) or WHAT NEXT,
+      each tied to something measured and shown on screen (mini-court with both
+      players, arrows, open space, opponent movement).
+   b. v7 is scored with the same rubric as the baseline.
+   c. Old gates still pass: picture/skeleton sync, pacing, voice inside its window,
+      no silent gaps, no repeated action.
+
+4. Judge: a blind judge from a different model prefers the new script on why/what-next
+   and finds no unsupported claim (for example, no claim of tracking the shuttle).
+
+5. Final judge: the user's eyes and ears. Not claimed in advance.
+
+Scope: the full China Open 2025 WS final reel (8:25, CC BY 3.0, mostly one main camera
+with a few replay angles) - choose the best rallies for tactics, not just 30 s clips.
+Rigor: high (published claims about sport; honesty of counts).
+Out of scope: shuttle tracking model, 3D, medical claims, paid sources, uploading footage.
+Write area: obj2\work\TACTICS (me); badminton-coach changes only via the child session.

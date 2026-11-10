@@ -1,0 +1,627 @@
+{
+  "source": {
+    "file": "01-singles-rally.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "frame_count": 780,
+    "sha256": "0b802aab93573d98fdb706d7296cf4f1bc1d37b137a700ec5b0940fb8230ac4d"
+  },
+  "caveats": "No labeled ground truth. Counts and confidence are not accuracy. Timings are single-run elapsed times, not general benchmarks. Setup/download, shared detector acquisition, pose inference and render are distinct.",
+  "methods": {
+    "original": {
+      "status": "complete",
+      "label": "Original YOLO26s-Pose + ByteTrack",
+      "license": "AGPL-3.0",
+      "checkpoint": "https://github.com/ultralytics/assets/releases",
+      "input_size": 1280,
+      "tracker": "ByteTrack",
+      "notes": "Preserved original video and JSON; person cutoff 0.25, joint cutoff 0.25, tracker acquisition 0.1.",
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "preserved_video_sha256": "3e1a102f0e9993d98bd973b368be7a0f180b5728aad664f00ed7cf34e3fe227e",
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.25,
+      "yolo_iou_parameter": 0.5,
+      "yolo_iou_note": "Passed to Ultralytics; YOLO26 end-to-end model path is not conventional NMS.",
+      "elapsed_original_detection_and_drawing_excludes_final_encoding_seconds": 316.8,
+      "device": "cpu",
+      "execution_location": "local",
+      "checkpoint_sha256": "a083adb42303728ae14c4bd6bd56d80da46f82fb2564dbd6f31dcc92ea321646"
+    },
+    "crop": {
+      "status": "complete",
+      "label": "YOLO26s + targeted far-court crop retries",
+      "license": "AGPL-3.0",
+      "checkpoint": "local original yolo26s-pose.pt",
+      "input_size": [
+        1280,
+        640
+      ],
+      "tracker": "ByteTrack for full-frame detections; added crop IDs unknown",
+      "notes": "Retain full-frame detections >=0.25 unchanged; retry far region pixel[384,238,1498,713] when far detection (box bottom<600px) is missing or confidence<0.5. Replace only sub0.25 overlapping detections when crop confidence is higher. Common top-down acquisition also retains 0.1-0.25 boxes; this display uses >=0.25.",
+      "setup_and_download_seconds": 6.589,
+      "inference_seconds": 228.163,
+      "checkpoint_path": "yolo26s-pose.pt",
+      "checkpoint_sha256": "a083adb42303728ae14c4bd6bd56d80da46f82fb2564dbd6f31dcc92ea321646",
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 23.241,
+      "video_sha256": "cc93e03cd90b41c09a9b93b1d0fdd26de6e5cad00411417a65021ba08cdeb724",
+      "people_per_frame": {
+        "3": 114,
+        "2": 621,
+        "4": 33,
+        "1": 12
+      },
+      "hard_frame_players": {
+        "8": 2,
+        "15": 2,
+        "22": 2
+      },
+      "acquisition_revision": 2,
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.25,
+      "yolo_iou_parameter": 0.5,
+      "yolo_iou_note": "Passed to Ultralytics; YOLO26 end-to-end model path is not conventional NMS.",
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+        "numpy": "2.4.6",
+        "opencv": "5.0.0"
+      },
+      "cpu_inference_threads": 4,
+      "actual_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "last_cached_video_verify_seconds": 3.355,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "rtmpose": {
+      "status": "complete",
+      "label": "Tracked crops + RTMPose-m ONNX",
+      "license": "Apache-2.0 (MMPose/RTMLib)",
+      "checkpoint": "https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/onnx_sdk/rtmpose-m_simcc-body7_pt-body7_420e-256x192-e48f03d0_20230504.zip",
+      "input_size": [
+        192,
+        256
+      ],
+      "tracker": "Common YOLO26s/ByteTrack + crop recovery",
+      "notes": "Fresh RTMPose inference on every current-frame box acquired at >=0.1, before baseline display cutoff. Common acquisition time recorded separately. COCO17, BGR converted to RGB per checkpoint pipeline.json, affine padding 1.25.",
+      "setup_and_download_seconds": 0.653,
+      "inference_seconds": 43.007,
+      "checkpoint_path": "comparison\\weights\\rtmpose.onnx",
+      "checkpoint_sha256": "5c0a4bf67953e6d2ac43ce15e77dc9d5d354ae18430a47d2c5963a7bc5683e3c",
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 19.211,
+      "video_sha256": "d7453395556075853bfc4c199fea6e0cfa3714c6ad7b4cd12681e252fa1ee332",
+      "people_per_frame": {
+        "3": 203,
+        "2": 498,
+        "4": 77,
+        "5": 2
+      },
+      "hard_frame_players": {
+        "8": 3,
+        "15": 2,
+        "22": 2
+      },
+      "acquisition_revision": 2,
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.1,
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+        "numpy": "2.4.6",
+        "opencv": "5.0.0"
+      },
+      "cpu_inference_threads": 4,
+      "last_cached_video_verify_seconds": 3.412,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "rtmo": {
+      "status": "complete",
+      "label": "RTMO-s one-stage ONNX",
+      "license": "Apache-2.0 (MMPose/RTMLib)",
+      "checkpoint": "https://download.openmmlab.com/mmpose/v1/projects/rtmo/onnx_sdk/rtmo-s_8xb32-600e_body7-640x640-dac2bf74_20231211.zip",
+      "input_size": [
+        640,
+        640
+      ],
+      "tracker": "None; ID unknown",
+      "notes": "Native detector and pose outputs; confidence 0.25, NMS 0.45, top-left letterbox. No substituted YOLO boxes.",
+      "setup_and_download_seconds": 0.708,
+      "inference_seconds": 88.557,
+      "checkpoint_path": "comparison\\weights\\rtmo.onnx",
+      "checkpoint_sha256": "d0703d40d19f3921da51ae725402d5fdae4d2478c7442072d3101bd396f370d8",
+      "packages": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 20.625,
+      "video_sha256": "a9f9785c957302971af864cb1af258b6887ab9a3b7cf6f8c8f4e3cd50fdd1a9d",
+      "people_per_frame": {
+        "2": 414,
+        "1": 358,
+        "3": 8
+      },
+      "hard_frame_players": {
+        "8": 1,
+        "15": 2,
+        "22": 2
+      },
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.25,
+      "person_display_threshold": 0.25,
+      "nms_iou_threshold": 0.45,
+      "last_cached_video_verify_seconds": 3.311,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "vitpose": {
+      "status": "complete",
+      "label": "Tracked crops + ViTPose++-small ONNX",
+      "license": "Apache-2.0 upstream ViTPose; third-party ONNX export has no explicit license in its Hugging Face model-card metadata",
+      "checkpoint": "https://huggingface.co/JunkyByte/easy_ViTPose/resolve/main/onnx/coco/vitpose-s-coco.onnx",
+      "input_size": [
+        192,
+        256
+      ],
+      "tracker": "Common YOLO26s/ByteTrack + crop recovery",
+      "notes": "Actual small COCO17 export linked in RTMLib model zoo; fresh pose on boxes >=0.1. RGB per exporter, mean/std normalization, UDP/DARK decoding. Common acquisition time separate.",
+      "acquisition_revision": 2,
+      "setup_and_download_seconds": 0.693,
+      "inference_seconds": 98.403,
+      "checkpoint_path": "comparison\\weights\\vitpose-s-coco.onnx",
+      "checkpoint_sha256": "4fa1d994578f76eb96e95f3cebecb6ebecd7021a85d16b4f4de8eb4441006da5",
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 19.104,
+      "video_sha256": "de48c40a9f13f54c5f7126787857c243bce4d7ab5483b999b86f97eeee19d654",
+      "people_per_frame": {
+        "3": 203,
+        "2": 498,
+        "4": 77,
+        "5": 2
+      },
+      "hard_frame_players": {
+        "8": 3,
+        "15": 2,
+        "22": 2
+      },
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.1,
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+        "numpy": "2.4.6",
+        "opencv": "5.0.0"
+      },
+      "cpu_inference_threads": 4,
+      "last_cached_video_verify_seconds": 3.347,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "mediapipe": {
+      "status": "complete",
+      "label": "MediaPipe Pose Landmarker Full",
+      "license": "Apache-2.0",
+      "checkpoint": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/latest/pose_landmarker_full.task",
+      "input_size": "native task detector 224 and landmark 256",
+      "tracker": "VIDEO mode internal tracking; exported IDs unknown",
+      "native_layout": "MediaPipe33",
+      "notes": "Up to 4 poses, detection/presence 0.25, tracking 0.5. Native 33 points retained; explicit COCO17 display mapping [0,2,5,7,8,11,12,13,14,15,16,23,24,25,26,27,28]. RGB input; confidence=min(visibility,presence).",
+      "setup_and_download_seconds": 2.266,
+      "inference_seconds": 29.981,
+      "checkpoint_path": "comparison\\weights\\pose_landmarker_full.task",
+      "checkpoint_sha256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad",
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 21.359,
+      "video_sha256": "ac2b86cc44095d30287c9e0c1c7c6221ae722ae3666e7d7e186d18fb5bfc17b1",
+      "people_per_frame": {
+        "0": 762,
+        "1": 18
+      },
+      "hard_frame_players": {
+        "8": 0,
+        "15": 0,
+        "22": 0
+      },
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.25,
+      "person_display_threshold": null,
+      "tracking_confidence_threshold": 0.5,
+      "person_display_threshold_note": "No detector score is exposed; visible-landmark-derived bbox court filter, visibility/presence>=0.25.",
+      "last_cached_video_verify_seconds": 3.178,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "movenet": {
+      "status": "complete",
+      "label": "MoveNet MultiPose Lightning",
+      "license": "Apache-2.0 (TensorFlow model)",
+      "checkpoint": "https://www.kaggle.com/models/google/movenet/tensorFlow2/multipose-lightning/1",
+      "input_size": [
+        448,
+        256
+      ],
+      "tracker": "None; ID unknown",
+      "notes": "TensorFlow SavedModel on CPU, RGB int32 top-left padded to multiples of 32; up to 6 people. COCO17; instance and joint cutoff 0.25.",
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.25,
+      "person_display_threshold": 0.25,
+      "setup_and_download_seconds": 25.605,
+      "inference_seconds": 660.461,
+      "checkpoint_path": "comparison\\weights\\movenet-multipose",
+      "checkpoint_sha256": null,
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "Q:\\.venv-movenet\\Scripts\\python.exe",
+        "numpy": "2.5.4",
+        "opencv": "4.14.0"
+      },
+      "cpu_inference_threads": 4,
+      "packages": {
+        "numpy": "2.5.4"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 23.26,
+      "video_sha256": "12dda901adb19d868ba63ef4da8acee95703e261671b6bf9073222b00fa175f3",
+      "people_per_frame": {
+        "0": 68,
+        "1": 622,
+        "2": 90
+      },
+      "hard_frame_players": {
+        "8": 1,
+        "15": 1,
+        "22": 2
+      },
+      "last_cached_video_verify_seconds": 3.351,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "botsort": {
+      "status": "complete",
+      "label": "YOLO26s-Pose + BoT-SORT",
+      "license": "AGPL-3.0",
+      "checkpoint": "local original yolo26s-pose.pt",
+      "input_size": 1280,
+      "tracker": "BoT-SORT, appearance ReID DISABLED",
+      "notes": "Ultralytics botsort.yaml defaults; with_reid=false, sparseOptFlow GMC; acquisition0.1, display0.25, joint0.25. Not an appearance-ReID result.",
+      "setup_and_download_seconds": 6.543,
+      "inference_seconds": 258.018,
+      "checkpoint_path": "yolo26s-pose.pt",
+      "checkpoint_sha256": "a083adb42303728ae14c4bd6bd56d80da46f82fb2564dbd6f31dcc92ea321646",
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 19.601,
+      "video_sha256": "4af465ef9df4f3e3599ed196c3ca8284136c3b7ee02c5abd317c63ae214dab4e",
+      "people_per_frame": {
+        "3": 28,
+        "2": 638,
+        "1": 114
+      },
+      "hard_frame_players": {
+        "8": 2,
+        "15": 2,
+        "22": 1
+      },
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.25,
+      "yolo_iou_parameter": 0.5,
+      "yolo_iou_note": "Passed to Ultralytics; YOLO26 end-to-end model path is not conventional NMS.",
+      "last_cached_video_verify_seconds": 3.29,
+      "device": "cpu",
+      "execution_location": "local"
+    },
+    "posewarper": {
+      "status": "complete",
+      "label": "Temporal PoseWarper",
+      "license": "Apache-2.0 (reference repository and MMPose)",
+      "checkpoint": "https://download.openmmlab.com/mmpose/top_down/posewarper/hrnet_w48_posetrack18_384x288_posewarper_stage2-4abf88db_20211130.pth",
+      "input_size": [
+        288,
+        384
+      ],
+      "tracker": "Temporal learned feature warping",
+      "notes": "Real HRNetW48 + learned temporal neck, current,-2,-1,+1,+2 frames weighted .3,.1,.25,.25,.1, clamped only at source boundaries. CPU torchvision deform_conv2d, all2010 state entries strict. COCO display mapping [0,null,null,null,null,5,6,7,8,9,10,11,12,13,14,15,16]; missing face joints null, native pose preserved. Common acquired boxes>=0.1. RGB ImageNet normalization, current-box affine used on all five actual images; not pose smoothing.",
+      "acquisition_revision": 2,
+      "native_layout": "PoseTrack17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.1,
+      "failure_log": "results/posewarper/failure.txt",
+      "device": "cpu",
+      "execution_location": "local",
+      "setup_and_download_seconds": 11.616,
+      "inference_seconds": 6784.993,
+      "checkpoint_path": "comparison\\weights\\hrnet_w48_posetrack18_384x288_posewarper_stage2-4abf88db_20211130.pth",
+      "checkpoint_sha256": "4abf88db25e90e0e3f3c4113f3269173e438beebaf8dee7ee3a56089bc796194",
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+        "numpy": "2.4.6",
+        "opencv": "5.0.0"
+      },
+      "cpu_inference_threads": 8,
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 24.115,
+      "video_sha256": "b8f4c8adf80577d93e1c443f9d896437577c6cd948b18447f2d483618c810f0a",
+      "people_per_frame": {
+        "3": 203,
+        "2": 498,
+        "4": 77,
+        "5": 2
+      },
+      "hard_frame_players": {
+        "8": 3,
+        "15": 2,
+        "22": 2
+      }
+    },
+    "sapiens": {
+      "status": "complete",
+      "label": "Sapiens 0.3B Goliath308",
+      "license": "CC-BY-NC-4.0",
+      "checkpoint": "https://huggingface.co/facebook/sapiens-pose-0.3b-torchscript/resolve/main/sapiens_0.3b_goliath_best_goliath_AP_573_torchscript.pt2",
+      "input_size": [
+        768,
+        1024
+      ],
+      "tracker": "Common YOLO26s/ByteTrack + crop recovery",
+      "notes": "Public official Goliath head, NOT COCO-trained. COCO17 display indices [0,1,2,3,4,5,6,7,8,62,41,9,10,11,12,13,14]. Native308 retained. FP32 TorchScript checkpoint; unchanged graph executed by verified OpenVINO CPU, with TorchScript CPU fallback. COCO17 checkpoint was gated (HTTP401), not bypassed. RGB, UDP affine at trained3:4 aspect, padding1.25, official UDP decoder; no demo hardcoded CUDA.",
+      "native_layout": "Goliath308",
+      "acquisition_revision": 2,
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.1,
+      "device": "cpu",
+      "execution_location": "local",
+      "setup_and_download_seconds": 4.502,
+      "inference_seconds": 12557.621,
+      "checkpoint_path": "comparison\\weights\\sapiens_0.3b_goliath_torchscript.pt2",
+      "checkpoint_sha256": "59ea239bfb217caf76cbeac1836460ef8f9ab5f39aeb22f2577373b62fa25edc",
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+        "numpy": "2.4.6",
+        "opencv": "5.0.0"
+      },
+      "cpu_inference_threads": 8,
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "backend": "OpenVINO FP32 CPU (verified unchanged TorchScript graph)",
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 24.124,
+      "video_sha256": "17b18c99fee5ad48a257fa8b2aad10fcfc400ff3fcd00d470f112c8a83b9dac8",
+      "people_per_frame": {
+        "3": 203,
+        "2": 498,
+        "4": 77,
+        "5": 2
+      },
+      "hard_frame_players": {
+        "8": 3,
+        "15": 2,
+        "22": 2
+      },
+      "last_cached_video_verify_seconds": 3.384
+    },
+    "onnx": {
+      "status": "complete",
+      "label": "Original YOLO26s exported to ONNX Runtime CPU",
+      "license": "AGPL-3.0",
+      "checkpoint": "Export of local original yolo26s-pose.pt",
+      "input_size": 1280,
+      "tracker": "ByteTrack",
+      "notes": "Ultralytics portable ONNX export, dynamic=False, simplify=False, opset17, batch1; same detector and display thresholds as baseline. Fixed1280x1280 letterbox, whereas PyTorch uses rectangular padding for this clip; backend/input-padding comparison, not guaranteed bit-identical poses.",
+      "setup_and_download_seconds": 9.749,
+      "inference_seconds": 285.627,
+      "checkpoint_path": "comparison\\weights\\yolo26s-pose.onnx",
+      "checkpoint_sha256": "f018fca2a062ca8e218710bf78b973ece24ebc6cb1586482d60625233616b21a",
+      "environment": {
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "executable": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+        "numpy": "2.4.6",
+        "opencv": "5.0.0"
+      },
+      "cpu_inference_threads": 4,
+      "packages": {
+        "numpy": "2.4.6",
+        "torch": "2.14.1",
+        "ultralytics": "8.4.63",
+        "onnxruntime": "1.24.4",
+        "rtmlib": "0.0.15",
+        "mediapipe": "0.10.32"
+      },
+      "actual_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "frame_count": 780,
+      "duration_seconds": 26,
+      "render_and_verify_seconds": 18.586,
+      "video_sha256": "858956249c5e42dedc750596b876b9ff9fe3206fb57197ef062544e4fff6f710",
+      "people_per_frame": {
+        "3": 42,
+        "2": 648,
+        "1": 90
+      },
+      "hard_frame_players": {
+        "8": 2,
+        "15": 2,
+        "22": 2
+      },
+      "native_layout": "COCO17",
+      "display_layout": "COCO17",
+      "joint_display_threshold": 0.25,
+      "person_acquisition_threshold": 0.1,
+      "person_display_threshold": 0.25,
+      "yolo_iou_parameter": 0.5,
+      "yolo_iou_note": "Passed to Ultralytics; YOLO26 end-to-end model path is not conventional NMS.",
+      "last_cached_video_verify_seconds": 3.346,
+      "device": "cpu",
+      "execution_location": "local"
+    }
+  },
+  "footage_attribution": {
+    "creator": "Arise Sports Complex",
+    "source_title": "2026 YONEX Arise International Challenge | Day 3 - Court 1 | Quarter Finals",
+    "source_url": "https://www.youtube.com/watch?v=M4vUm6wl6pc&t=8817s",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "derivative_changes": "These derivative videos add AI skeletons and model labels to the silent, trimmed test clip.",
+    "no_endorsement": "No endorsement by the venue, players, tournament, or BWF is implied.",
+    "original_attribution_copy": "sample-videos/source-attribution.json",
+    "attribution_sha256": "ecbc36f85c184678f997074545cf188e2b26027ee04845cde7bbaa46ab14598d"
+  },
+  "shared_acquisition": {
+    "method": "YOLO26s-Pose/ByteTrack + targeted crop retries, >=0.1 before display cutoff",
+    "revision": 2,
+    "path": "results/crop/acquisition.json",
+    "sha256": "ce98c18f5b0df92f120e1249fc2d057657cebe0ee083cb8d2911de20f6fad25a",
+    "elapsed_seconds": 228.163,
+    "used_by": [
+      "rtmpose",
+      "vitpose",
+      "sapiens",
+      "posewarper"
+    ],
+    "timing_note": "Top-down pose inference times exclude this reusable detector pass; add it for uncached pipeline cost."
+  },
+  "asset_downloads": [
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/sapiens/main/LICENSE",
+      "bytes": 19921,
+      "sha256": "327a71fc6dde573ec05f9b931c63da6561c9622258bb8636fe5d353ec92c1dd8",
+      "download_seconds": 0.164
+    },
+    {
+      "url": "https://huggingface.co/facebook/sapiens-pose-0.3b-torchscript/resolve/main/sapiens_0.3b_goliath_best_goliath_AP_573_torchscript.pt2",
+      "bytes": 1319574979,
+      "sha256": "59ea239bfb217caf76cbeac1836460ef8f9ab5f39aeb22f2577373b62fa25edc",
+      "download_seconds": 15.249
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/sapiens/main/lite/demo/classes_and_palettes.py",
+      "bytes": 33341,
+      "sha256": "3f3b910f56b3eb04eb1e1e94c77bfa02f7c7bc50fac6942f7ec538a9ff3f450e",
+      "download_seconds": 0.212
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/sapiens/main/lite/demo/pose_utils.py",
+      "bytes": 9683,
+      "sha256": "78aa6c9d4631c00fe05362ea1e9066821e8a1e4c7b1f58d1a34cf2715e3342f7",
+      "download_seconds": 0.186
+    }
+  ],
+  "prefetch_timing_note": "Initial RTMPose/RTMO/ViTPose/MediaPipe and MoveNet checkpoint downloads were prefetched outside inference and their elapsed times were not instrumented. Model setup timers exclude these prefetches. Later downloads have explicit asset timings.",
+  "provenance_files": {
+    "PoseWarper": "posewarper-port.json",
+    "Sapiens": "weights/sapiens-port.json"
+  }
+}

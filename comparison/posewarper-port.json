@@ -1,0 +1,434 @@
+{
+  "implementation": "Portable CPU inference adapter for MMPose v0.29.0 HRNet-W48 PoseWarper stage 2",
+  "dependencies": {
+    "added": [],
+    "existing": [
+      "torch",
+      "torchvision (CPU deform_conv2d)",
+      "numpy",
+      "opencv-python"
+    ],
+    "isolation": "comparison/.venv; no modifications to the baseline environment"
+  },
+  "provenance": {
+    "source": "https://github.com/open-mmlab/mmpose/tree/v0.29.0",
+    "checkpoint": "https://download.openmmlab.com/mmpose/top_down/posewarper/hrnet_w48_posetrack18_384x288_posewarper_stage2-4abf88db_20211130.pth",
+    "mmpose_source_license": "Apache-2.0; full text in posewarper_vendor/LICENSE",
+    "upstream_research": "https://github.com/facebookresearch/PoseWarper",
+    "upstream_research_license": "Apache-2.0"
+  },
+  "attempts": [
+    {
+      "attempt": "Direct official checkpoint download",
+      "outcome": "Slow single stream resumed successfully with four verified HTTP byte-range workers; final size and full SHA256 match the release."
+    },
+    {
+      "attempt": "torch.load(weights_only=True)",
+      "outcome": "Initial load rejected official NumPy scalar metadata. Fixed using a scoped NumPy scalar/dtype allowlist; unsafe pickle loading is never enabled."
+    },
+    {
+      "attempt": "Portable learned DCNv1 neck",
+      "outcome": "Exact interleaved dy/dx offsets, 17 offset groups, dense weight group 1, no bias or modulation, matching padding/dilations; independent bilinear numerical checks passed."
+    }
+  ],
+  "adapter_contract": {
+    "import": "from comparison.posewarper import PoseWarper",
+    "initialization": "adapter = PoseWarper()",
+    "invocation": "players = adapter(frame_bgr_1920x1080, zero_based_frame_index)",
+    "cleanup": "adapter.close()",
+    "acquisition": "comparison/results/crop/acquisition.json; all current-frame boxes with confidence >=0.1",
+    "cpu": "Uses existing comparison/.venv CPU torch/torchvision; no added dependencies, no CUDA/MMCV extension, no cloud calls or video uploads. Constructor downloads only official pretrained weights if absent.",
+    "temporal_input": "current,-2,-1,+1,+2 source frames, boundary clamped, same current bbox affine in all five frames; weights 0.3,0.1,0.25,0.25,0.1",
+    "preprocessing": "288W x 384H, bbox aspect 0.75, padding 1.25, non-UDP affine, BGR to RGB, ImageNet normalization",
+    "decoding": "Official MMPose default heatmap argmax with quarter-pixel gradient refinement; map 72W x 96H heatmap coordinates back to original source",
+    "coco_mapping": "Native nose index0 and body indices5..16 map directly. COCO eyes/ears indices1..4 display as null; raw finite17x3 uses [0,0,0] unavailable sentinels, explicitly identified by unavailable_coco_indices, never fabricated visible joints. Native17 predictions and names are retained separately.",
+    "tracking": "Retains common acquisition track IDs; temporal network is not itself an identity tracker",
+    "full_video": "Not run by this worker to avoid competing with parent workloads; parent must run and validate all780 frames before presenting a complete candidate."
+  },
+  "reproduction": {
+    "regenerate_port": "comparison\\.venv\\Scripts\\python.exe comparison\\posewarper_vendor\\port.py",
+    "operator_and_preprocessing": "comparison\\.venv\\Scripts\\python.exe -m comparison.posewarper_vendor.verify --operator-only",
+    "one_real_temporal_box": "comparison\\.venv\\Scripts\\python.exe -m comparison.posewarper_vendor.verify --frame 240 --person 0"
+  },
+  "result": "verified portable CPU five-frame learned PoseWarper; full-video run left to parent",
+  "operator_verification": {
+    "result": "passed",
+    "offset_groups": 17,
+    "weight_groups": 1,
+    "offset_order": "group, kernel_y, kernel_x, interleaved dy then dx",
+    "padding": "same as dilation for 3x3 kernel",
+    "bias": false,
+    "modulation_mask": null,
+    "reference": "independent bilinear grid_sample summation of every dense kernel weight",
+    "max_absolute_error_by_dilation": {
+      "3": 8.344650268554688e-07,
+      "6": 4.76837158203125e-07,
+      "12": 2.980232238769531e-07,
+      "18": 2.2351741790771484e-07,
+      "24": 2.682209014892578e-07
+    },
+    "source_equivalence": {
+      "mmcv": "mmcv_deform_cpu.cpp:140-155",
+      "torchvision": "torchvision_deform_cpu.cpp:174-202"
+    }
+  },
+  "preprocessing_decoding_verification": {
+    "result": "passed",
+    "reference": "official v0.29.0 affine and default quarter-pixel decoder"
+  },
+  "smoke_verification": {
+    "result": "passed",
+    "torch_threads": 1,
+    "source": "sample-videos\\01-singles-rally.mp4",
+    "source_frame_count": 780,
+    "complete_callable_tested": true,
+    "source_edge_window_checks": {
+      "0": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "779": [
+        779,
+        777,
+        778,
+        779,
+        779
+      ]
+    },
+    "frame_index": 240,
+    "temporal_frame_indices": [
+      240,
+      238,
+      239,
+      241,
+      242
+    ],
+    "acquired_person_index": 0,
+    "checkpoint_bytes": 285763417,
+    "checkpoint_sha256": "4abf88db25e90e0e3f3c4113f3269173e438beebaf8dee7ee3a56089bc796194",
+    "missing_state_keys": [],
+    "unexpected_state_keys": [],
+    "loaded_state_entries": 2010,
+    "parameters": 71154350,
+    "learned_neck_parameters": 7559438,
+    "heatmaps": {
+      "shape": [
+        1,
+        17,
+        96,
+        72
+      ],
+      "finite": true,
+      "minimum": -0.028578896075487137,
+      "maximum": 0.9270215034484863
+    },
+    "offset_layer_forward_calls": 25,
+    "maximum_learned_offset": 73.70056915283203,
+    "seconds_including_loading": 16.263,
+    "record": {
+      "track_id": 1,
+      "bbox_xyxy": [
+        978.43,
+        419.52,
+        1066.4,
+        658.46
+      ],
+      "box_confidence": 0.91152,
+      "joints": [
+        [
+          1016.97,
+          449.54,
+          0.8924
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          1051.19,
+          457.32,
+          0.9135
+        ],
+        [
+          1002.97,
+          461.99,
+          0.9054
+        ],
+        [
+          1062.08,
+          493.1,
+          0.9028
+        ],
+        [
+          992.08,
+          494.66,
+          0.8869
+        ],
+        [
+          1040.3,
+          507.1,
+          0.8796
+        ],
+        [
+          979.64,
+          525.77,
+          0.927
+        ],
+        [
+          1037.19,
+          536.66,
+          0.8761
+        ],
+        [
+          1012.3,
+          535.1,
+          0.822
+        ],
+        [
+          1030.97,
+          584.88,
+          0.9126
+        ],
+        [
+          1016.97,
+          584.88,
+          0.906
+        ],
+        [
+          1046.53,
+          620.66,
+          0.8578
+        ],
+        [
+          1023.19,
+          633.1,
+          0.8795
+        ]
+      ],
+      "raw_joints": [
+        [
+          1016.970458984375,
+          449.54302978515625,
+          0.8924105167388916
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1051.193603515625,
+          457.321044921875,
+          0.9134777784347534
+        ],
+        [
+          1002.9700317382812,
+          461.98785400390625,
+          0.9054480195045471
+        ],
+        [
+          1062.082763671875,
+          493.0998229980469,
+          0.9028284549713135
+        ],
+        [
+          992.0808715820312,
+          494.6554260253906,
+          0.8868699073791504
+        ],
+        [
+          1040.304443359375,
+          507.1002197265625,
+          0.8796277046203613
+        ],
+        [
+          979.6360473632812,
+          525.7673950195312,
+          0.9270215034484863
+        ],
+        [
+          1037.1932373046875,
+          536.6566162109375,
+          0.8760512471199036
+        ],
+        [
+          1012.3036499023438,
+          535.1010131835938,
+          0.8220075964927673
+        ],
+        [
+          1030.9708251953125,
+          584.8801879882812,
+          0.912590742111206
+        ],
+        [
+          1016.970458984375,
+          584.8801879882812,
+          0.9060096144676208
+        ],
+        [
+          1046.52685546875,
+          620.658935546875,
+          0.8577539324760437
+        ],
+        [
+          1023.19287109375,
+          633.103759765625,
+          0.8794829845428467
+        ]
+      ],
+      "unavailable_coco_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "native_layout": "PoseTrack17 (head_bottom/head_top are not COCO eyes)",
+      "native_joint_names": [
+        "nose",
+        "head_bottom",
+        "head_top",
+        "left_ear",
+        "right_ear",
+        "left_shoulder",
+        "right_shoulder",
+        "left_elbow",
+        "right_elbow",
+        "left_wrist",
+        "right_wrist",
+        "left_hip",
+        "right_hip",
+        "left_knee",
+        "right_knee",
+        "left_ankle",
+        "right_ankle"
+      ],
+      "native_joints": [
+        [
+          1016.9704428778755,
+          449.5430450439453,
+          0.8924105167388916
+        ],
+        [
+          1026.304033915202,
+          457.32103983561194,
+          0.8930302858352661
+        ],
+        [
+          1015.4148398505317,
+          424.65346018473304,
+          0.7221134901046753
+        ],
+        [
+          1038.7488310072158,
+          447.9874471028646,
+          0.38138115406036377
+        ],
+        [
+          1004.5256525675456,
+          430.875857035319,
+          0.39326077699661255
+        ],
+        [
+          1051.1936280992295,
+          457.32103983561194,
+          0.9134777784347534
+        ],
+        [
+          1002.9700495402019,
+          461.9878387451172,
+          0.9054480195045471
+        ],
+        [
+          1062.0828153822158,
+          493.0998179117838,
+          0.9028284549713135
+        ],
+        [
+          992.0808554755317,
+          494.65542093912757,
+          0.8868699073791504
+        ],
+        [
+          1040.3044272528755,
+          507.10021464029944,
+          0.8796277046203613
+        ],
+        [
+          979.6360651652019,
+          525.7674001057943,
+          0.9270215034484863
+        ],
+        [
+          1037.193234761556,
+          536.6565907796224,
+          0.8760512471199036
+        ],
+        [
+          1012.3036473592122,
+          535.1009877522787,
+          0.8220075964927673
+        ],
+        [
+          1030.970836215549,
+          584.8801625569662,
+          0.912590742111206
+        ],
+        [
+          1016.9704428778755,
+          584.8801625569662,
+          0.9060096144676208
+        ],
+        [
+          1046.5268257988823,
+          620.6589304606119,
+          0.8577539324760437
+        ],
+        [
+          1023.1928414238823,
+          633.1037343343099,
+          0.8794829845428467
+        ]
+      ],
+      "temporal_offsets": [
+        0,
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "temporal_weights": [
+        0.3,
+        0.1,
+        0.25,
+        0.25,
+        0.1
+      ],
+      "temporal_frame_indices": [
+        240,
+        238,
+        239,
+        241,
+        242
+      ]
+    }
+  }
+}

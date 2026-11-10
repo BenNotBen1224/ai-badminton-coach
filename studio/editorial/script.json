@@ -1,0 +1,33 @@
+{
+  "title_zh": "这一拍，给下一拍留下什么？",
+  "status": "editorial_claims_checked_against_source_pictures_independent_final_acceptance_pending",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "moments": [
+    {"id": "space", "title": "01  看位置，再看下一拍", "range": [57.8, 64.8], "evidence": "space-sequence", "anchors": [59.45, 60.65, 62.05]},
+    {"id": "time", "title": "02  救回来，还得跟上", "range": [126.6, 134.0], "evidence": "r1-feedback", "anchors": [128.3167, 130.0167, 131.9833]},
+    {"id": "options", "title": "03  留两种答案，继续判断", "range": [272.8, 285.0], "evidence": "reply-sequence", "anchors": [274.0333, 275.0, 276.3]}
+  ],
+  "beats": [
+    {"id": "space-1", "moment": "space", "range": [57.8, 60.65], "text": "先看红衣，正退到画面右后场。", "type": "observed", "evidence": [3567, 3639], "hold": 0.0, "cue": "红衣｜向画面右后移动"},
+    {"id": "space-2", "moment": "space", "range": [60.65, 62.05], "text": "红衣还在后面，灰衣可以考虑前场。", "type": "conditional", "evidence": [3639, 3723], "hold": 0.6, "cue": "战术解读｜不是已测量的落点"},
+    {"id": "space-3", "moment": "space", "range": [62.05, 64.8], "text": "红衣赶上了，但灰衣还会回球，起身后还得接着防。", "type": "observed_then_conditional", "evidence": [3723], "hold": 0.0, "cue": "救球之后｜看下一次来球"},
+    {"id": "time-1", "moment": "time", "range": [126.6, 128.3167], "text": "红衣扑低以后，先看能否起身。", "type": "observed_then_conditional", "evidence": [7699], "hold": 0.0, "cue": "红衣｜低位之后能否跟上"},
+    {"id": "time-2", "moment": "time", "range": [128.3167, 130.0167], "text": "灰衣后场举拍时，红衣已经站起来。", "type": "observed", "evidence": [7699, 7801], "hold": 0.0, "cue": "看顺序｜起身在下一次头顶挥拍之前"},
+    {"id": "time-3", "moment": "time", "range": [130.0167, 134.0], "text": "如果自己还没站稳，回球就要兼顾恢复；灰衣还能进攻，红衣还得防下一拍。", "type": "conditional_then_observed", "evidence": [7801, 7919], "hold": 0.0, "cue": "条件建议｜恢复不等于转守为攻"},
+    {"id": "options-1", "moment": "options", "range": [272.8, 274.0333333333], "text": "灰衣低位回球，红衣随后前移。", "type": "observed", "evidence": [16442, 16500], "hold": 0.0, "cue": "此段｜近端灰衣，远端红衣"},
+    {"id": "options-2", "moment": "options", "range": [274.0333333333, 275.0], "text": "要防回网，也要防挑后场。", "type": "conditional_alternatives", "evidence": [16442, 16500], "hold": 0.8, "cue": "可能回球｜回网 / 挑后场"},
+    {"id": "options-3", "moment": "options", "range": [275.0, 276.3], "text": "这次灰衣退后，准备头顶挥拍。", "type": "observed", "evidence": [16500, 16578], "hold": 0.0, "cue": "实际后续｜灰衣退后举拍"},
+    {"id": "options-4", "moment": "options", "range": [276.3, 278.9], "text": "红衣又接回来了，灰衣还得重新判断。", "type": "observed_then_conditional", "evidence": [16578], "hold": 0.0, "cue": "一拍未结束｜重新看对手"},
+    {"id": "summary-1", "moment": "options", "range": [278.9, 282.0], "text": "记住：对手在后，留意前场；自己失位，给恢复留余地。", "type": "conditional_summary", "evidence": [3639, 3723, 7699, 7801], "hold": 0.0, "cue": "总结 ① 对手在后看前场  ② 自己失位顾恢复"},
+    {"id": "summary-2", "moment": "options", "range": [282.0, 285.0], "text": "对手低位接球，准备两种回球；打完一拍，再看对手。", "type": "conditional_summary", "evidence": [16442, 16500, 16578], "hold": 0.0, "cue": "总结 ③ 留两种回球  ④ 每拍重新判断"}
+  ],
+  "claim_checks": [
+    "All red/gray references identify shirt colors; left/right is the screen view. Position claims use feet and floor markings across moving context, not hip image height or proximity to raised net tape.",
+    "No statement of measured shuttle landing, exact block/lift/smash family, intention, time gain or point winner.",
+    "The possibility of a net reply and a lift is conditional, not a scored forecast.",
+    "The recovery claim is visible ordering before the opponent overhead, not a measured improvement over a counterfactual.",
+    "The first and final passages have continuous follow-up beyond the rescue or overhead; they are not described as point-winning.",
+    "V3 failed its recall acceptance gate. This is manually selected editorial material, not proof of detector acceptance.",
+    "The final independent evidence/video acceptance is pending. Local voice synthesis is not a human voice-quality verdict."
+  ]
+}

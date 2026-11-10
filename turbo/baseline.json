@@ -1,0 +1,595 @@
+{
+ "source": "fast/runs/step4-final/acceptance.json",
+ "cold_process": "internal.total_s is a fresh-process child clock, including imports and model load. wall_s is the frozen harness clock around that process.",
+ "note": "Copied, not re-measured. Every retained run is a fresh process. total_s is the child clock. wall_s is the frozen harness clock. vs_baseline is evaluate.score(pipeline output, baseline-NN.json). vs_judge is evaluate.score(pipeline output, judge-NN.json). These are old pipeline values, not the dense baseline scored against itself.",
+ "timing_all_wall_s": {
+  "n": 50,
+  "min": 7.2578441,
+  "median": 9.1981065,
+  "max": 9.928779
+ },
+ "clips": {
+  "01": {
+   "runs": [
+    {
+     "tag": "01-r1",
+     "total_s": 6.73,
+     "wall_s": 7.3865916,
+     "wall_ns": 7386591600
+    },
+    {
+     "tag": "01-r2",
+     "total_s": 6.62,
+     "wall_s": 7.2578441,
+     "wall_ns": 7257844100
+    },
+    {
+     "tag": "01-r3",
+     "total_s": 6.75,
+     "wall_s": 7.4073381,
+     "wall_ns": 7407338100
+    },
+    {
+     "tag": "01-r4",
+     "total_s": 6.72,
+     "wall_s": 7.3577131,
+     "wall_ns": 7357713100
+    },
+    {
+     "tag": "01-r5",
+     "total_s": 6.73,
+     "wall_s": 7.3734835,
+     "wall_ns": 7373483500
+    }
+   ],
+   "vs_baseline": {
+    "pck05": 0.9822,
+    "pck10": 0.9935,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9878463782207098,
+      "pck10": 0.9963539134662129
+     },
+     "far": {
+      "pck05": 0.9769564225416382,
+      "pck10": 0.9908738307095597
+     }
+    },
+    "counts": {
+     "pck05": [
+      8346,
+      8497
+     ],
+     "pck10": [
+      8442,
+      8497
+     ],
+     "player_frames_found": [
+      500,
+      500
+     ]
+    }
+   },
+   "vs_judge": {
+    "pck05": 0.9811,
+    "pck10": 0.9928,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9842002916869227,
+      "pck10": 0.9948954788526981
+     },
+     "far": {
+      "pck05": 0.9781370986107948,
+      "pck10": 0.9908904577544978
+     }
+    },
+    "counts": {
+     "pck05": [
+      8344,
+      8505
+     ],
+     "pck10": [
+      8444,
+      8505
+     ],
+     "player_frames_found": [
+      503,
+      503
+     ]
+    }
+   },
+   "prediction": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\01-r1.json"
+  },
+  "02": {
+   "runs": [
+    {
+     "tag": "02-r1",
+     "total_s": 8.08,
+     "wall_s": 8.7206968,
+     "wall_ns": 8720696800
+    },
+    {
+     "tag": "02-r2",
+     "total_s": 8.04,
+     "wall_s": 8.7273458,
+     "wall_ns": 8727345800
+    },
+    {
+     "tag": "02-r3",
+     "total_s": 8.06,
+     "wall_s": 8.6950495,
+     "wall_ns": 8695049500
+    },
+    {
+     "tag": "02-r4",
+     "total_s": 8.01,
+     "wall_s": 8.6596044,
+     "wall_ns": 8659604400
+    },
+    {
+     "tag": "02-r5",
+     "total_s": 8.08,
+     "wall_s": 8.7187914,
+     "wall_ns": 8718791400
+    }
+   ],
+   "vs_baseline": {
+    "pck05": 0.9828,
+    "pck10": 0.9941,
+    "player_frames_found": 0.9983,
+    "near_found": 1.0,
+    "far_found": 0.9965,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9880392156862745,
+      "pck10": 0.9986274509803922
+     },
+     "far": {
+      "pck05": 0.9772115185415372,
+      "pck10": 0.9892272633105449
+     }
+    },
+    "counts": {
+     "pck05": [
+      9756,
+      9927
+     ],
+     "pck10": [
+      9868,
+      9927
+     ],
+     "player_frames_found": [
+      583,
+      584
+     ]
+    }
+   },
+   "vs_judge": {
+    "pck05": 0.9756,
+    "pck10": 0.9888,
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.9899,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9860702373945458,
+      "pck10": 0.9976456739258387
+     },
+     "far": {
+      "pck05": 0.965002982700338,
+      "pck10": 0.9799164843905349
+     }
+    },
+    "counts": {
+     "pck05": [
+      9879,
+      10126
+     ],
+     "pck10": [
+      10013,
+      10126
+     ],
+     "player_frames_found": [
+      593,
+      596
+     ]
+    }
+   },
+   "prediction": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\02-r1.json"
+  },
+  "03": {
+   "runs": [
+    {
+     "tag": "03-r1",
+     "total_s": 9.22,
+     "wall_s": 9.866349,
+     "wall_ns": 9866349000
+    },
+    {
+     "tag": "03-r2",
+     "total_s": 8.61,
+     "wall_s": 9.2400924,
+     "wall_ns": 9240092400
+    },
+    {
+     "tag": "03-r3",
+     "total_s": 8.67,
+     "wall_s": 9.3008419,
+     "wall_ns": 9300841900
+    },
+    {
+     "tag": "03-r4",
+     "total_s": 8.64,
+     "wall_s": 9.2922861,
+     "wall_ns": 9292286100
+    },
+    {
+     "tag": "03-r5",
+     "total_s": 9.03,
+     "wall_s": 9.6707488,
+     "wall_ns": 9670748800
+    }
+   ],
+   "vs_baseline": {
+    "pck05": 0.9816,
+    "pck10": 0.9933,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9862446138548226,
+      "pck10": 0.9970169042094796
+     },
+     "far": {
+      "pck05": 0.9770491803278688,
+      "pck10": 0.9896721311475409
+     }
+    },
+    "counts": {
+     "pck05": [
+      11911,
+      12134
+     ],
+     "pck10": [
+      12053,
+      12134
+     ],
+     "player_frames_found": [
+      714,
+      714
+     ]
+    }
+   },
+   "vs_judge": {
+    "pck05": 0.9737,
+    "pck10": 0.9904,
+    "player_frames_found": 0.9986,
+    "near_found": 1.0,
+    "far_found": 0.9972,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9764667429318517,
+      "pck10": 0.9949338127144959
+     },
+     "far": {
+      "pck05": 0.970829236315962,
+      "pck10": 0.9859062602425435
+     }
+    },
+    "counts": {
+     "pck05": [
+      11899,
+      12221
+     ],
+     "pck10": [
+      12104,
+      12221
+     ],
+     "player_frames_found": [
+      718,
+      719
+     ]
+    }
+   },
+   "prediction": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\03-r1.json"
+  },
+  "04": {
+   "runs": [
+    {
+     "tag": "04-r1",
+     "total_s": 7.45,
+     "wall_s": 8.0907248,
+     "wall_ns": 8090724800
+    },
+    {
+     "tag": "04-r2",
+     "total_s": 7.43,
+     "wall_s": 8.0698701,
+     "wall_ns": 8069870100
+    },
+    {
+     "tag": "04-r3",
+     "total_s": 7.37,
+     "wall_s": 8.003998,
+     "wall_ns": 8003998000
+    },
+    {
+     "tag": "04-r4",
+     "total_s": 7.35,
+     "wall_s": 7.9794551,
+     "wall_ns": 7979455100
+    },
+    {
+     "tag": "04-r5",
+     "total_s": 7.21,
+     "wall_s": 7.8356834,
+     "wall_ns": 7835683400
+    }
+   ],
+   "vs_baseline": {
+    "pck05": 0.9597,
+    "pck10": 0.9855,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9536918480580452,
+      "pck10": 0.9844216816047802
+     },
+     "far": {
+      "pck05": 0.9653396712220241,
+      "pck10": 0.9865319865319865
+     }
+    },
+    "counts": {
+     "pck05": [
+      9343,
+      9735
+     ],
+     "pck10": [
+      9594,
+      9735
+     ],
+     "player_frames_found": [
+      573,
+      573
+     ]
+    }
+   },
+   "vs_judge": {
+    "pck05": 0.9534,
+    "pck10": 0.9838,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9519513630123554,
+      "pck10": 0.9833300647185723
+     },
+     "far": {
+      "pck05": 0.9548931162973132,
+      "pck10": 0.9843106491468916
+     }
+    },
+    "counts": {
+     "pck05": [
+      9723,
+      10198
+     ],
+     "pck10": [
+      10033,
+      10198
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    }
+   },
+   "prediction": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\04-r1.json"
+  },
+  "05": {
+   "runs": [
+    {
+     "tag": "05-r1",
+     "total_s": 7.73,
+     "wall_s": 8.3698903,
+     "wall_ns": 8369890300
+    },
+    {
+     "tag": "05-r2",
+     "total_s": 7.7,
+     "wall_s": 8.3494138,
+     "wall_ns": 8349413800
+    },
+    {
+     "tag": "05-r3",
+     "total_s": 7.86,
+     "wall_s": 8.5030673,
+     "wall_ns": 8503067300
+    },
+    {
+     "tag": "05-r4",
+     "total_s": 7.68,
+     "wall_s": 8.3307719,
+     "wall_ns": 8330771900
+    },
+    {
+     "tag": "05-r5",
+     "total_s": 7.82,
+     "wall_s": 8.4676451,
+     "wall_ns": 8467645100
+    }
+   ],
+   "vs_baseline": {
+    "pck05": 0.9513,
+    "pck10": 0.9795,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9673565180285897,
+      "pck10": 0.9903989758907616
+     },
+     "far": {
+      "pck05": 0.9363654498304409,
+      "pck10": 0.9692798723319369
+     }
+    },
+    "counts": {
+     "pck05": [
+      9228,
+      9700
+     ],
+     "pck10": [
+      9501,
+      9700
+     ],
+     "player_frames_found": [
+      571,
+      571
+     ]
+    }
+   },
+   "vs_judge": {
+    "pck05": 0.9435,
+    "pck10": 0.9753,
+    "player_frames_found": 1.0,
+    "near_found": 1.0,
+    "far_found": 1.0,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9574509803921568,
+      "pck10": 0.9831372549019608
+     },
+     "far": {
+      "pck05": 0.9295387634936212,
+      "pck10": 0.9674190382728165
+     }
+    },
+    "counts": {
+     "pck05": [
+      9619,
+      10195
+     ],
+     "pck10": [
+      9943,
+      10195
+     ],
+     "player_frames_found": [
+      600,
+      600
+     ]
+    }
+   },
+   "prediction": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-dev\\outputs\\05-r1.json"
+  },
+  "08": {
+   "runs": [
+    {
+     "tag": "08-r1",
+     "total_s": 8.0,
+     "wall_s": 8.6489333,
+     "wall_ns": 8648933300
+    },
+    {
+     "tag": "08-r2",
+     "total_s": 7.85,
+     "wall_s": 8.5025336,
+     "wall_ns": 8502533600
+    },
+    {
+     "tag": "08-r3",
+     "total_s": 7.51,
+     "wall_s": 8.1489926,
+     "wall_ns": 8148992600
+    },
+    {
+     "tag": "08-r4",
+     "total_s": 7.82,
+     "wall_s": 8.4721631,
+     "wall_ns": 8472163100
+    },
+    {
+     "tag": "08-r5",
+     "total_s": 8.6,
+     "wall_s": 9.664432,
+     "wall_ns": 9664432000
+    }
+   ],
+   "vs_baseline": {
+    "pck05": 0.9428,
+    "pck10": 0.9711,
+    "player_frames_found": 0.9948,
+    "near_found": 1.0,
+    "far_found": 0.99,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9630788485607009,
+      "pck10": 0.9849812265331664
+     },
+     "far": {
+      "pck05": 0.9236370793150954,
+      "pck10": 0.9580791182838024
+     }
+    },
+    "counts": {
+     "pck05": [
+      9310,
+      9875
+     ],
+     "pck10": [
+      9590,
+      9875
+     ],
+     "player_frames_found": [
+      578,
+      581
+     ]
+    }
+   },
+   "vs_judge": {
+    "pck05": 0.9395,
+    "pck10": 0.9701,
+    "player_frames_found": 0.995,
+    "near_found": 1.0,
+    "far_found": 0.99,
+    "pck_by_role": {
+     "near": {
+      "pck05": 0.9595999215532457,
+      "pck10": 0.9856834673465386
+     },
+     "far": {
+      "pck05": 0.9193643319599765,
+      "pck10": 0.9544830292328821
+     }
+    },
+    "counts": {
+     "pck05": [
+      9579,
+      10196
+     ],
+     "pck10": [
+      9891,
+      10196
+     ],
+     "player_frames_found": [
+      597,
+      600
+     ]
+    }
+   },
+   "prediction": "<workspace>\\badminton-coach\\fast\\runs\\step4-rebalanced-holdout08\\outputs\\08-r1.json"
+  }
+ }
+}

@@ -1,0 +1,481 @@
+{
+ "what": "Badminton coaching points ranked by how often coaches stress them (channel-weighted).",
+ "provenance": {
+  "learner": "corpus_learn.py",
+  "learner_sha256": "bba2e957ba89ad4fb5827e2fbea633fa5c70f64876a7b1a05da6e3048b1d55fd",
+  "learned_sha256": "3d4d64c4cdcbf99f7b32f6557feb49f4ae0c3d84e85fc4da2b8802fe170455db",
+  "coaching_videos": 100,
+  "coaching_channels": 40,
+  "relevant_videos": 254,
+  "sources": {
+   "youtube-commons": {
+    "fetched": 254,
+    "relevant": 177,
+    "licence": "CC-BY 4.0 transcripts (PleIAs/YouTube-Commons); quotes allowed with attribution"
+   },
+   "vidchapters": {
+    "fetched": 237,
+    "relevant": 68,
+    "licence": "VidChapters-7M ASR, research use; counts only, no quotes"
+   },
+   "yodas2": {
+    "fetched": 328,
+    "relevant": 9,
+    "licence": "YODAS2 transcripts of CC-licensed videos; counts only"
+   }
+  },
+  "why_not_1000": "YouTube blocks bulk transcript download; only open transcript datasets were used."
+ },
+ "visible_order": [
+  "footwork",
+  "knee_bend",
+  "recovery",
+  "contact_point",
+  "non_racket_arm",
+  "lunge",
+  "arm_extension",
+  "ready_position",
+  "stance_width"
+ ],
+ "concepts": [
+  {
+   "rank": 1,
+   "key": "grip",
+   "label": "Grip",
+   "label_zh": "握拍",
+   "observe": "racket_closeup",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 30,
+   "coaching_videos_stressing": 11,
+   "channel_stressed_share": 0.201,
+   "most_important_hits": 3,
+   "cue_quotes": [
+    {
+     "video_id": "4aYxnorVjKU",
+     "channel": "Coaching Badminton",
+     "text": "now the important thing about the ready&nbsp; grip is you should be able to change it&nbsp;&nbsp; so look from"
+    },
+    {
+     "video_id": "4aYxnorVjKU",
+     "channel": "Coaching Badminton",
+     "text": "st arm swing to compensate to instead&nbsp; of changing the grip so look not like this there so get this is a very important"
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "key": "placement",
+   "label": "Placement, tactics",
+   "label_zh": "落点与战术",
+   "observe": "shuttle",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 26,
+   "coaching_videos_stressing": 9,
+   "channel_stressed_share": 0.176,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "uuc-fcP0_JU",
+     "channel": "Coaching Badminton",
+     "text": "ecap to be able to win singles match the basic important of tactics number one you must be able to hit deep clear fast or takin"
+    },
+    {
+     "video_id": "RdAW4809xv0",
+     "channel": "Stefan Ljutzkanov",
+     "text": "t we as a coach we have to do we have to give them a proper strategy so if you're performing and you really have to focus on som"
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "key": "forearm_wrist",
+   "label": "Forearm rotation, wrist",
+   "label_zh": "前臂旋转与手腕",
+   "observe": "racket_closeup",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 23,
+   "coaching_videos_stressing": 6,
+   "channel_stressed_share": 0.125,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "4aYxnorVjKU",
+     "channel": "Coaching Badminton",
+     "text": "so get this is a very important tool&nbsp; that makes your wrist live what do I mean"
+    }
+   ]
+  },
+  {
+   "rank": 4,
+   "key": "footwork",
+   "label": "Footwork pattern",
+   "label_zh": "步法",
+   "observe": "pose",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 9,
+   "coaching_videos_stressing": 4,
+   "channel_stressed_share": 0.075,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "3ETECwnQP8A",
+     "channel": "Coaching Badminton",
+     "text": "r you is to understand all the important factors in singles footwork skills the number one important thing is the normal base ma"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "key": "relax_power",
+   "label": "Relax, then power",
+   "label_zh": "放松再发力",
+   "observe": "not_visible",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 24,
+   "coaching_videos_stressing": 3,
+   "channel_stressed_share": 0.075,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "RdAW4809xv0",
+     "channel": "Stefan Ljutzkanov",
+     "text": "rtant that you cool down did you take yourself you put some relaxing music on New Year's you lie down you imagine how its relaxe"
+    },
+    {
+     "video_id": "RdAW4809xv0",
+     "channel": "Stefan Ljutzkanov",
+     "text": "and you can imagine the Sun and how it's warm and cozy and relaxed and you focus on the positive thing now many players many p"
+    }
+   ]
+  },
+  {
+   "rank": 6,
+   "key": "fitness",
+   "label": "Fitness, warm-up",
+   "label_zh": "体能热身",
+   "observe": "not_visible",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 9,
+   "coaching_videos_stressing": 3,
+   "channel_stressed_share": 0.075,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 7,
+   "key": "knee_bend",
+   "label": "Bend knees, stay low",
+   "label_zh": "屈膝降重心",
+   "observe": "pose",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 3,
+   "coaching_videos_stressing": 3,
+   "channel_stressed_share": 0.075,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 8,
+   "key": "recovery",
+   "label": "Recover to the centre",
+   "label_zh": "击球后回中",
+   "observe": "pose",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 15,
+   "coaching_videos_stressing": 3,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "CDWRn5EQKwg",
+     "channel": "Coaching Badminton",
+     "text": "ickly so one is crucial sidestep is crucial holding hitting recovery ready ready Esther Esther at the impact time hitting landin"
+    }
+   ]
+  },
+  {
+   "rank": 9,
+   "key": "timing",
+   "label": "Timing",
+   "label_zh": "击球时机",
+   "observe": "shuttle",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 10,
+   "coaching_videos_stressing": 3,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "sdSwe0T46D4",
+     "channel": "Luckminton",
+     "text": "the smash isn't just about strength it's a blend of perfect timing the right angle and a solid grip remember the key is to hit"
+    },
+    {
+     "video_id": "Tx8vuc5I_Bs",
+     "channel": "Coaching Badminton",
+     "text": "deeper this small initial steps are crucial in making good timing even be able to make deceptive shots [Music] you"
+    }
+   ]
+  },
+  {
+   "rank": 10,
+   "key": "first_step",
+   "label": "Fast reaction, first step",
+   "label_zh": "反应快第一步快",
+   "observe": "pose+opponent_contact",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 10,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "3V2hw_NMrc4",
+     "channel": "MR Halal",
+     "text": "the video i'll be sharing&nbsp; with you my observation and reaction&nbsp;&nbsp; so please make sure you stay until the end with"
+    }
+   ]
+  },
+  {
+   "rank": 11,
+   "key": "contact_point",
+   "label": "Hit high and in front",
+   "label_zh": "高点、身前击球",
+   "observe": "pose+hand",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 9,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "sdSwe0T46D4",
+     "channel": "Luckminton",
+     "text": "ing the right angle and a solid grip remember the key is to hit the shuttle at the highest point next time you're on the court Channel your inner cham"
+    }
+   ]
+  },
+  {
+   "rank": 12,
+   "key": "non_racket_arm",
+   "label": "Non-racket arm for balance",
+   "label_zh": "非持拍手平衡",
+   "observe": "pose+hand",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 7,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 13,
+   "key": "lunge",
+   "label": "Lunge",
+   "label_zh": "弓步上网",
+   "observe": "pose",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 4,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 1,
+   "cue_quotes": []
+  },
+  {
+   "rank": 14,
+   "key": "split_step",
+   "label": "Split step as opponent hits",
+   "label_zh": "对手击球时启动垫步",
+   "observe": "pose+opponent_contact",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 3,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.05,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 15,
+   "key": "deception",
+   "label": "Deception",
+   "label_zh": "假动作",
+   "observe": "racket+shuttle",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 12,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.025,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "Tx8vuc5I_Bs",
+     "channel": "Coaching Badminton",
+     "text": "teps are crucial in making good timing even be able to make deceptive shots [Music] you"
+    }
+   ]
+  },
+  {
+   "rank": 16,
+   "key": "mental",
+   "label": "Mental focus",
+   "label_zh": "心态",
+   "observe": "not_visible",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 8,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.025,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "uuc-fcP0_JU",
+     "channel": "Coaching Badminton",
+     "text": "errors errors coming from - eagerness errors coming from - nervousness so please remember when you are making the shot go for"
+    }
+   ]
+  },
+  {
+   "rank": 17,
+   "key": "consistency",
+   "label": "Consistency, fewer errors",
+   "label_zh": "稳定少失误",
+   "observe": "many_rallies",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 4,
+   "coaching_videos_stressing": 2,
+   "channel_stressed_share": 0.025,
+   "most_important_hits": 1,
+   "cue_quotes": [
+    {
+     "video_id": "uuc-fcP0_JU",
+     "channel": "Coaching Badminton",
+     "text": "way the most important thing to win a match is do not make errors do not try to hit so accurate sometimes they play a smash t"
+    },
+    {
+     "video_id": "uuc-fcP0_JU",
+     "channel": "Coaching Badminton",
+     "text": "t because of on a tomato shirt because himself make lots of errors errors coming from - eagerness errors coming from - nervous"
+    }
+   ]
+  },
+  {
+   "rank": 18,
+   "key": "body_rotation",
+   "label": "Turn body, shift weight",
+   "label_zh": "转体与重心转移",
+   "observe": "pose_3d",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 7,
+   "coaching_videos_stressing": 1,
+   "channel_stressed_share": 0.025,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 19,
+   "key": "racket_up",
+   "label": "Racket up, prepare early",
+   "label_zh": "早举拍早准备",
+   "observe": "racket",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 5,
+   "coaching_videos_stressing": 1,
+   "channel_stressed_share": 0.025,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 20,
+   "key": "arm_extension",
+   "label": "Straight arm at contact",
+   "label_zh": "击球手臂伸展",
+   "observe": "pose+hand",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 2,
+   "coaching_videos_stressing": 1,
+   "channel_stressed_share": 0.025,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 21,
+   "key": "ready_position",
+   "label": "Ready position",
+   "label_zh": "准备姿势",
+   "observe": "pose",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 12,
+   "coaching_videos_stressing": 1,
+   "channel_stressed_share": 0.0,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "CDWRn5EQKwg",
+     "channel": "Coaching Badminton",
+     "text": "ready there is a rhythm from there is running wife am late get ready ready best get ready ready ready it's the best in order to"
+    },
+    {
+     "video_id": "CDWRn5EQKwg",
+     "channel": "Coaching Badminton",
+     "text": "thm from there is running wife am late get ready ready best get ready ready ready it's the best in order to do that you have to m"
+    }
+   ]
+  },
+  {
+   "rank": 22,
+   "key": "watch_shuttle",
+   "label": "Watch the shuttle",
+   "label_zh": "盯球",
+   "observe": "gaze",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 1,
+   "coaching_videos_stressing": 1,
+   "channel_stressed_share": 0.0,
+   "most_important_hits": 0,
+   "cue_quotes": [
+    {
+     "video_id": "6z5p7bR7Ycc",
+     "channel": "Coaching Badminton",
+     "text": "at practice can be used in the real match remember you must watch the shuttle number one you must imagine opponent hitting that's number"
+    }
+   ]
+  },
+  {
+   "rank": 23,
+   "key": "equipment",
+   "label": "Equipment",
+   "label_zh": "器材",
+   "observe": "not_visible",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 13,
+   "coaching_videos_stressing": 0,
+   "channel_stressed_share": 0.0,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 24,
+   "key": "follow_through",
+   "label": "Follow-through",
+   "label_zh": "随挥",
+   "observe": "racket",
+   "visible_in_match_video": false,
+   "coaching_videos_mentioning": 3,
+   "coaching_videos_stressing": 0,
+   "channel_stressed_share": 0.0,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  },
+  {
+   "rank": 25,
+   "key": "stance_width",
+   "label": "Feet width",
+   "label_zh": "两脚站距",
+   "observe": "pose",
+   "visible_in_match_video": true,
+   "coaching_videos_mentioning": 1,
+   "coaching_videos_stressing": 0,
+   "channel_stressed_share": 0.0,
+   "most_important_hits": 0,
+   "cue_quotes": []
+  }
+ ]
+}

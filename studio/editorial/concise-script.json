@@ -1,0 +1,67 @@
+{
+  "title_zh": "看对手，再想下一拍",
+  "status": "concise_editorial_variant_pending_independent_review",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "variant_of": "outputs/tactics-original-editorial-20261105/editorial.mp4",
+  "moments": [
+    {"id": "space", "title": "01  看位置，再看下一拍", "range": [57.8, 64.8], "evidence": "space-sequence", "anchors": [59.45, 60.65, 62.05]},
+    {"id": "time", "title": "02  救回来，还得跟上", "range": [126.6, 134.0], "evidence": "r1-feedback", "anchors": [128.3167, 130.0167, 131.9833]},
+    {"id": "options", "title": "03  留两种答案，继续判断", "range": [272.8, 285.0], "evidence": "reply-sequence", "anchors": [274.0333, 275.0, 276.3]}
+  ],
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "target_speed": 0.88,
+      "text": "红衣还在后场，灰衣可以考虑前场；再看红衣怎么接。",
+      "type": "conditional_then_observed",
+      "evidence": [3639, 3723],
+      "hold": 0.0,
+      "cue": "红衣仍在后场｜灰衣可考虑前场"
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "target_speed": 0.88,
+      "text": "红衣低位救球后，灰衣下一次挥拍前，她已站起来；后面还得继续接。",
+      "type": "observed",
+      "evidence": [7699, 7801, 7919],
+      "hold": 0.0,
+      "cue": "可见顺序｜起身早于下一次挥拍"
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 280.0],
+      "target_speed": 0.88,
+      "text": "灰衣低位回球，红衣前移；要留意回网或挑后场。随后灰衣退后挥拍，红衣接回。",
+      "type": "conditional_alternatives_then_observed",
+      "evidence": [16442, 16500, 16578, 16608, 16644],
+      "hold": 0.0,
+      "cue": "可能回球｜随后展示实际回应"
+    },
+    {
+      "id": "summary",
+      "moment": "options",
+      "range": [280.0, 285.0],
+      "target_speed": 0.88,
+      "text": "记住：看对手位置，留两种答案；打完一拍，再重新判断。",
+      "type": "conditional_summary",
+      "evidence": [3639, 3723, 16442, 16500, 16578],
+      "hold": 0.0,
+      "cue": "看位置｜留选择｜再判断"
+    }
+  ],
+  "claim_checks": [
+    "All red/gray references identify shirt colors; screen-left/right would be explicitly named if used.",
+    "Court position uses visible feet and floor markings across moving context, not raised net tape or hip image height.",
+    "The first explanation is a conditional option, not a measured shuttle destination or player intention.",
+    "The recovery line reports visible ordering before the next swing; it does not claim measured time gained or a tactical reversal.",
+    "The reply options are conditional; the later shown action is an observation, not an inevitable outcome or scored prediction. No exact shot-family label or point winner is claimed.",
+    "No shuttle landing, flight, speed, 3D biomechanics, or racket contact is asserted.",
+    "The render is editorial. The V3 automatic engine's failed recall gate remains unchanged.",
+    "No viewer/listener or independent final acceptance is implied by technical checks."
+  ]
+}

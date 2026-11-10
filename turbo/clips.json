@@ -1,0 +1,91 @@
+{
+  "envelope": {
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "max_frames": 1080,
+    "max_seconds": 36,
+    "view": "broadcast full court from behind one baseline",
+    "claim": "Every speed and quality claim is about this envelope. Clip 11 is outside it."
+  },
+  "clips": {
+    "01": {
+      "file": "sample-videos/01-singles-rally.mp4",
+      "role": "gating",
+      "video_sha256": "0b802aab93573d98fdb706d7296cf4f1bc1d37b137a700ec5b0940fb8230ac4d",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 780, "duration_s": 26.0, "has_b_frames": 2, "bytes": 14526630}
+    },
+    "02": {
+      "file": "sample-videos/02-singles-dive.mp4",
+      "role": "gating",
+      "video_sha256": "c0c8be94ac47b83b858673af0f1cad589673b9b09069ab60da7cccd9a98df9a3",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 16224979}
+    },
+    "03": {
+      "file": "sample-videos/03-womens-singles-rally.mp4",
+      "role": "gating",
+      "video_sha256": "5c43dd02a3be1038caf35003073eb256ef37b1fd1ddfdc7e5ac90dfe56cfe300",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 1080, "duration_s": 36.0, "has_b_frames": 2, "bytes": 20820090}
+    },
+    "04": {
+      "file": "sample-videos/04-china-open-ws-a.mp4",
+      "role": "gating",
+      "video_sha256": "93bd090cf314400ed3df53ceea7c181b52337fc809054a79e4c6008b3c13c31f",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 8832054}
+    },
+    "05": {
+      "file": "sample-videos/05-china-open-ws-b.mp4",
+      "role": "gating",
+      "video_sha256": "b19906246dae7aff2fa11bbd51b327a9210929475dc33ce2492643d246f6a53b",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 9328582}
+    },
+    "07": {
+      "file": "sample-videos/07-china-open-ws-d.mp4",
+      "role": "warmup",
+      "video_sha256": "ef478cb961015b9cab194023127f16cd6892db75fed6b068da499af323b48ec3",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 7266937}
+    },
+    "08": {
+      "file": "sample-videos/08-china-open-ws-f.mp4",
+      "role": "gating",
+      "video_sha256": "4ef1529b3670c21689c9f657a3bbc793c22ab89bf1a14f29ecbd08791852393a",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 6829774}
+    },
+    "09": {
+      "file": "sample-videos/09-china-open-ws-g.mp4",
+      "role": "gating",
+      "video_sha256": "3842017cac2ef78c0bd6c7f6330426ec3bc0ac882f1df7c87d12ade54c9a393d",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 3378837}
+    },
+    "10": {
+      "file": "sample-videos/10-china-open-ws-h.mp4",
+      "role": "gating",
+      "video_sha256": "af5856bab954c595b17bfdb992156aed22b2ddbd0ad0ab2ee991b9e1d404e860",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 1920, "height": 1080, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 3484476}
+    },
+    "11": {
+      "file": "sample-videos/11-eurogames-2023.mp4",
+      "role": "edge",
+      "outside_envelope": true,
+      "pose_quality_reference": "unavailable",
+      "not_a_success": true,
+      "not_zero_scored": true,
+      "reason": "Side view. Frozen court finder best fit 0.42. No dense pose file and no phase-2 pose reference.",
+      "video_sha256": "ad081819b505a3235fa97b8475a40e07b02ea25d8ec132924a1ac9a1d89f26ab",
+      "repeat_share": 0.0,
+      "probe": {"codec": "h264", "profile": "High", "pix_fmt": "yuv420p", "width": 618, "height": 464, "fps": 30.0, "frame_count": 900, "duration_s": 30.0, "has_b_frames": 2, "bytes": 5582917}
+    }
+  }
+}

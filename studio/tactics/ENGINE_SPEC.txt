@@ -1,0 +1,71 @@
+TACTICS ENGINE - spec for the coding session (stage 1 of 2)
+
+User's request, verbatim:
+  "still not good enough to capture the essence, now you are only describing physical movements,
+  which is not bad, but need to infer further why it's done, what's next. badminton is a feedback
+  loop, you hit depending on the opponent's state. read 100 badminton books to understand it like a
+  national team coach"
+
+Stage 1 (this message): a per-hit table for the whole reel, with what each player was doing at
+each hit and an inferred answer for where the shuttle went and what kind of shot it was.
+Stage 2 (later message): reasons and expected replies from a book-based rulebook, then the video.
+
+ROOT = <workspace>
+Video  ROOT\obj2\work\H\downloads\china-open-2025-ws-final.webm  1920x1080, 60 fps, 505.83 s.
+       China Open 2025 women's singles final, Han Yue vs Wang Zhiyi. It is a highlights reel that
+       shows nearly every point, each cut to a few seconds; it is not the full match. Licence CC BY
+       3.0 via Wikimedia Commons; upstream broadcast rights are not cleared.
+Inputs I made for you (read only):
+  ROOT\obj2\work\TACTICS\look\segments.json      main broadcast camera stretches (87.2% of reel);
+                                                  outside them are replays and other angles.
+  ROOT\obj2\work\TACTICS\look\score_states.json  60 score states read from the on-screen score
+                                                  box (game, score Han-Wang, serve icon, start/end
+                                                  seconds). The box updates right after each point,
+                                                  so a state = end of one point to end of the next
+                                                  shown point. Inside a state there is usually an
+                                                  invisible same-angle cut; find it from a sudden
+                                                  jump of both players' positions.
+Do NOT read anything under ROOT\obj2\work\TACTICS\labels\ (it is the hidden answer key).
+
+Confirmed requirements
+ 1. Run real pose on the main-camera stretches of the whole reel (30 fps is fine) with the
+    existing pipeline; keep the per-frame pose cache in the output folder.
+ 2. Split rallies: score states + pose jump cuts + serve start. Give each rally its score, game,
+    start and end time.
+ 3. Find hits (every racket contact, serve included), each with: time, hitter (near/far and
+    which player), and a confidence. You may use the arena sound: the reel keeps court audio and
+    racket hits are sharp clicks (a quick test with a first-difference RMS over 20 ms windows,
+    peaks above 4x median, gave clicks about once a second in 268-296 s). Combine sound with
+    pose (swing, wrist speed, who is reaching) and with alternation (hitters alternate).
+ 4. Per hit, record in court metres (CourtGeometry / foot_court): both players' foot positions at
+    contact; the opponent's movement direction and speed over the 0.2 s before contact; each
+    player's distance from her own base (base = her usual waiting spot in this match, e.g. median
+    position at the opponent's contacts; say how you define it); a simple balance state
+    (settled / moving / stretched-lunge / airborne) from pose; contact height (overhead / side /
+    underarm from wrist vs head and hip); time to the next contact; the receiver's foot position
+    at the next contact.
+ 5. Inferred landing zone = the receiver's next contact spot as a 3x3 zone on her half (front /
+    mid / rear with front = net to short service line, rear = last third; left / center / right as
+    thirds of the singles width as seen on screen). Last hit of a rally: "unknown" unless you can
+    support it. Always label this as inferred from the next contact, never as a tracked flight.
+ 6. Inferred shot family (serve, clear, lift, smash, drop, net, drive/push, block, unknown) from
+    contact height, where the hitter and receiver are, and time to next contact. Keep the rules
+    simple and written down; low-evidence cases must say unknown.
+ 7. Two measured "feedback loop" numbers per hit, both from data you already have:
+      pull_m  = distance from where the receiver stood at this contact to where she hit next
+      against = whether that move went against her movement direction at contact (wrong foot)
+    These are what the later narration will point at.
+ 8. Behaviour tests with literal expected values for the inference rules (synthetic positions in,
+    exact family/zone out), plus the existing suite where it applies.
+ 9. Write a fresh folder ROOT\badminton-coach\outputs\tactics-engine-20261104\ with hits.json
+    (one row per hit with all fields above and evidence frame numbers), rallies.json, the pose
+    cache, run.json, tests.json and handoff.json (absolute paths, changed source files with hashes,
+    counts, honest limits). Do not touch older outputs. Use the CPU lock for heavy runs:
+    ROOT\obj2\work\cpu.lock via audit\with_lock.py.
+10. Report back: counts (rallies, hits, hits per rally), how hits were found, rule tables for
+    zone/family, run time, test results, and every limit (2D only, no shuttle tracking, etc.).
+
+Suggestions (your call): a new module such as coach\tactics.py with a CLI
+  python -B -m coach.tactics <video> <out> --segments <segments.json> --states <score_states.json>
+reusing tracks.py (CourtGeometry, foot_court), events.py (_swings, _contact, _above_head,
+_lunges) and analyze_move.py (base and recovery helpers).

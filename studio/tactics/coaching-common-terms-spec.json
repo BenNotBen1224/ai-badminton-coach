@@ -1,0 +1,74 @@
+{
+  "status": "parent_reviewed_for_render_not_user_acceptance",
+  "goal": "Keep the approved tactical purposes and technique advice, using familiar Chinese badminton coaching terms and spoken phrasing.",
+  "title_zh": "看懂战术，学会怎么打",
+  "display_label": "战术解读和技术建议，不是球员意图实测",
+  "duration_target_s": [30, 35],
+  "omit_generic_closing_summary": true,
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "title": "01  放网，调动对手",
+      "text": "红衣还在后场，可以放网，调动她上网。放网动作要小，手上要轻，别大幅甩臂。",
+      "intent_quote": "可以放网，调动她上网",
+      "technique_quote": "放网动作要小，手上要轻，别大幅甩臂",
+      "intent": "用网前球调动后场的对手上网。",
+      "technique": "放网时动作小、手上轻。这里讲的是身前处理网前球的建议，不是后场吊球的挥拍方法。",
+      "cue": "战术：放网调动｜技术：动作小，手上轻",
+      "evidence_ids": ["E003567", "E003639", "E003723"],
+      "sources": ["codebook_verified.json:rear_then_front", "books\\en_pd\\text\\eric_ED104803.txt:1033-1041 (Net Drop Shot)"],
+      "avoid": "This recommends a net shot; do not claim the actual shot was detected or replace it with an overhead drop. Do not invent a shuttle path."
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "title": "02  被动过渡，准备下一拍",
+      "text": "被动球先过渡，给自己争取回位时间。别只顾着往中间跑，对手出拍时做启动小跳，准备接下一拍。",
+      "intent_quote": "被动球先过渡，给自己争取回位时间",
+      "technique_quote": "对手出拍时做启动小跳，准备接下一拍",
+      "intent": "被动时先过渡，给自己留出回位和接下一拍的机会。",
+      "technique": "别盲目赶回中间，配合对手出拍做启动小跳。启动小跳也叫分腿垫步。",
+      "cue": "战术：被动过渡｜技术：回位，启动小跳",
+      "evidence_ids": ["E007699", "E007801", "E007919"],
+      "sources": ["codebook_verified.json:buy_recovery_time", "books\\verified_passages.jsonl:id_ms:p58", "books\\verified_passages.jsonl:other_lang:p46", "books\\verified_passages.jsonl:other_lang:p47", "books\\verified_passages.jsonl:en_theses:p60"],
+      "avoid": "Advice only. Do not claim a split step was detected, measured time gained, or a specific defensive shot family."
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 285.0],
+      "title": "03  蹬地回位，抓机会打身后",
+      "text": "跨步接球后，及时蹬地回位，把重心收回来。红衣如果继续往前压，灰衣可以打她身后，让她转身回追。",
+      "intent_quote": "红衣如果继续往前压，灰衣可以打她身后",
+      "technique_quote": "跨步接球后，及时蹬地回位，把重心收回来",
+      "intent": "如果对手继续往前压，可以打身后，调动她转身回追。",
+      "technique": "跨步接球后蹬地回位，收回重心，准备再启动。",
+      "cue": "技术：蹬地回位｜战术：前压时打身后",
+      "evidence_ids": ["E016442", "E016500", "E016578", "C016608", "C016644"],
+      "sources": ["codebook_verified.json:front_then_behind", "codebook_verified.json:play_against_commitment", "books\\verified_passages.jsonl:other_lang:p46"],
+      "avoid": "Frame 16442 is near mid/rear court, not at the net. Behind-opponent play is conditional advice, not a measured actual shuttle trajectory or guaranteed outcome."
+    }
+  ],
+  "terminology": [
+    {"previous": "身前控短、小幅送拍", "current": "放网，动作小、手上轻", "boundary": "Only the proposed net shot. Do not confuse it with an overhead drop."},
+    {"previous": "争恢复时间", "current": "被动过渡、争取回位时间"},
+    {"previous": "分腿垫步", "current": "启动小跳", "note": "Keep 分腿垫步 as the explanatory synonym in the report, not another spoken technical label."},
+    {"previous": "跨步后蹬回", "current": "蹬地回位、收回重心"},
+    {"previous": "利用前压身后的空间", "current": "打身后", "boundary": "Keep the condition 如果对手继续往前压."}
+  ],
+  "usage_references": [
+    {"url": "https://www.aiyuke.com/video_special/301.html", "title": "杜杜教练《女神教你打球》", "evidence": "Indexed episode titles include 启动小跳怎么跳（一/二）. This is terminology evidence, not a claim that the full videos were watched."},
+    {"url": "https://www.aiyuke.com/video_special/143.html", "title": "陶菲克、李宗伟示范教学", "evidence": "Indexed titles list 正手放网 separately from 正手吊球. These are different techniques, not interchangeable labels."}
+  ],
+  "render_requirements": [
+    "Use these exact three spoken lines and titles. Refresh captions, short cues, narration files and report terminology together.",
+    "Preserve the tactical and technique meanings. Do not add a fourth summary or any new measured-shot/intent claim.",
+    "Use the same continuous source ranges and synchronized cached poses. Target 30-35 seconds without replay or freezes.",
+    "Keep all previous variants and frozen engine/application files unchanged. Output to a new folder.",
+    "Preserve the established audit artifact names and schemas so the existing parent media audit can verify this version."
+  ],
+  "review_limits": "Wording approval for rendering only. Human listening, expert acceptance and automatic recognition acceptance are not established."
+}

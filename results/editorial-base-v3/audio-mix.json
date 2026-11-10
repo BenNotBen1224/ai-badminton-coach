@@ -1,0 +1,12 @@
+{
+  "sample_rate": 24000,
+  "samples": 638400,
+  "duration_s": 26.6,
+  "voice_model": "local Kokoro sid60 speed1.0",
+  "court_audio_gain": 0.08,
+  "court_time_model": "frame_map_linear_resampling_slowed_pitch_not_contact_confirmation",
+  "digital_zero_samples": 129,
+  "peak": 0.527606189250946,
+  "time_padding": false,
+  "synthetic_impacts": false
+}

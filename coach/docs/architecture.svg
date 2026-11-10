@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="750" viewBox="0 0 1080 750" font-family="Segoe UI, system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <title>How the badminton coach is put together</title>
+  <desc>The browser talks to a local server. The server keeps sessions in a store and sends one clip at a time through four steps: find the body points, read the moves, build the review data, save three files. Only those four steps are timed. The player then gets slow motion, a chat coach, exercise cards, sharpening, a plan, progress charts and an experimental review video.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6e6e73"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="750" fill="#ffffff"/>
+
+  <text x="30" y="44" font-size="22" font-weight="600" fill="#1d1d1f">How the badminton coach is put together</text>
+  <text x="30" y="68" font-size="14" fill="#6e6e73">Everything runs on this computer.</text>
+
+  <!-- Row 1: browser and server -->
+  <rect x="30" y="86" width="480" height="174" rx="14" fill="#eef4ff" stroke="#8fb0ea" stroke-width="1.5"/>
+  <text x="50" y="116" font-size="17" font-weight="600" fill="#1d1d1f">Your browser</text>
+  <g font-size="14" fill="#1d1d1f">
+    <text x="50" y="146">Home: upload a clip, or try a sample clip</text>
+    <text x="50" y="170">Session: the video, findings in four groups,</text>
+    <text x="50" y="190">a chat and exercise cards</text>
+    <text x="50" y="214">Plan: a printable plan, one page per week</text>
+    <text x="50" y="238">Progress: one small chart per measure</text>
+  </g>
+
+  <rect x="570" y="86" width="480" height="174" rx="14" fill="#f3f0ff" stroke="#a99be6" stroke-width="1.5"/>
+  <text x="590" y="116" font-size="17" font-weight="600" fill="#1d1d1f">Local server <tspan font-size="13" font-weight="400" fill="#6e6e73" font-family="Consolas, Menlo, monospace">python -m coach.app</tspan></text>
+  <g font-size="14" fill="#1d1d1f">
+    <text x="590" y="146">Answers the pages: upload, chat, plan, progress</text>
+    <text x="590" y="170">One worker: new clips first, then sharpening</text>
+    <text x="590" y="194">Store: one SQLite file and a folder per session,</text>
+    <text x="590" y="214">with each revision's files</text>
+    <text x="590" y="238">The review video is drawn on its own thread</text>
+  </g>
+
+  <line x1="512" y1="173" x2="568" y2="173" stroke="#6e6e73" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Arrows between the server and the analysis lane -->
+  <line x1="640" y1="262" x2="640" y2="306" stroke="#6e6e73" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="652" y="290" font-size="12" fill="#6e6e73">one clip at a time</text>
+  <line x1="975" y1="351" x2="975" y2="264" stroke="#6e6e73" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="985" y="290" font-size="12" fill="#6e6e73">saved</text>
+
+  <!-- Row 2: one analysis -->
+  <rect x="30" y="308" width="1020" height="236" rx="14" fill="#f3faf5" stroke="#9fd5b2" stroke-width="1.5"/>
+  <text x="50" y="336" font-size="16" font-weight="600" fill="#1d1d1f">One analysis: the part the app times</text>
+
+  <rect x="50" y="353" width="120" height="130" rx="10" fill="#ffffff" stroke="#b8b8b8" stroke-width="1.5"/>
+  <text x="110" y="412" font-size="14" font-weight="600" fill="#1d1d1f" text-anchor="middle">Your clip</text>
+  <text x="110" y="432" font-size="13" fill="#6e6e73" text-anchor="middle">tested up to 36 s</text>
+
+  <rect x="210" y="353" width="260" height="130" rx="10" fill="#ffffff" stroke="#5fb67f" stroke-width="1.5"/>
+  <g font-size="14" font-weight="600" fill="#1d1d1f">
+    <text x="224" y="376">1. Find the court and both</text>
+    <text x="224" y="394">players' body points</text>
+  </g>
+  <text x="224" y="414" font-size="12" fill="#6e6e73">done by one of three analysers:</text>
+  <g font-size="13" fill="#1d1d1f">
+    <text x="224" y="434">Turbo: stays loaded, quick first</text>
+    <text x="224" y="452">Fast: every frame, new process</text>
+    <text x="224" y="470">Replay: stored poses, tests only</text>
+  </g>
+
+  <rect x="510" y="353" width="190" height="130" rx="10" fill="#ffffff" stroke="#5fb67f" stroke-width="1.5"/>
+  <text x="605" y="400" font-size="14" font-weight="600" fill="#1d1d1f" text-anchor="middle">2. Read the moves</text>
+  <g font-size="13" fill="#1d1d1f" text-anchor="middle">
+    <text x="605" y="422">technique, contact,</text>
+    <text x="605" y="440">footwork, tactics</text>
+  </g>
+
+  <rect x="740" y="353" width="140" height="130" rx="10" fill="#ffffff" stroke="#5fb67f" stroke-width="1.5"/>
+  <g font-size="14" font-weight="600" fill="#1d1d1f" text-anchor="middle">
+    <text x="810" y="404">3. Build the</text>
+    <text x="810" y="422">review data</text>
+  </g>
+  <text x="810" y="442" font-size="13" fill="#1d1d1f" text-anchor="middle">for the viewer</text>
+
+  <rect x="920" y="353" width="110" height="130" rx="10" fill="#ffffff" stroke="#5fb67f" stroke-width="1.5"/>
+  <text x="975" y="404" font-size="14" font-weight="600" fill="#1d1d1f" text-anchor="middle">4. Save</text>
+  <g font-size="13" fill="#1d1d1f" text-anchor="middle">
+    <text x="975" y="424">pose, report,</text>
+    <text x="975" y="442">review data</text>
+  </g>
+
+  <g stroke="#6e6e73" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="171" y1="418" x2="208" y2="418"/>
+    <line x1="471" y1="418" x2="508" y2="418"/>
+    <line x1="701" y1="418" x2="738" y2="418"/>
+    <line x1="881" y1="418" x2="918" y2="418"/>
+  </g>
+
+  <path d="M210,492 L210,500 L1030,500 L1030,492" fill="none" stroke="#5fb67f" stroke-width="1.5"/>
+  <g font-size="13" fill="#1d1d1f" text-anchor="middle">
+    <text x="620" y="518">Timed and shown as “Ready in …”. Upload, waiting in line and warm-up are listed apart.</text>
+    <text x="620" y="536">Step 1 takes most of the time.</text>
+  </g>
+
+  <!-- Row 3: what the player sees -->
+  <text x="30" y="580" font-size="16" font-weight="600" fill="#1d1d1f">What the player sees</text>
+  <g fill="#fff8ee" stroke="#e6b46e" stroke-width="1.5">
+    <rect x="30" y="594" width="190" height="104" rx="10"/>
+    <rect x="237.5" y="594" width="190" height="104" rx="10"/>
+    <rect x="445" y="594" width="190" height="104" rx="10"/>
+    <rect x="652.5" y="594" width="190" height="104" rx="10"/>
+    <rect x="860" y="594" width="190" height="104" rx="10"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="#1d1d1f" text-anchor="middle">
+    <text x="125" y="620">Slow motion</text>
+    <text x="332.5" y="620">Chat coach</text>
+    <text x="540" y="620">Exercise cards</text>
+    <text x="747.5" y="620">Sharpen</text>
+    <text x="955" y="620">Plan and progress</text>
+  </g>
+  <g font-size="13" fill="#1d1d1f" text-anchor="middle">
+    <text x="125" y="642">jumps to the moment,</text>
+    <text x="125" y="660">slows down, freezes on</text>
+    <text x="125" y="678">the key frame with a cue</text>
+
+    <text x="332.5" y="642">answers “how?” and</text>
+    <text x="332.5" y="660">“too hard” from a library</text>
+    <text x="332.5" y="678">on this computer</text>
+
+    <text x="540" y="642">dose, cues, mistakes,</text>
+    <text x="540" y="660">a safety note and a</text>
+    <text x="540" y="678">drawn GIF</text>
+
+    <text x="747.5" y="642">measures more frames</text>
+    <text x="747.5" y="660">in the background; the</text>
+    <text x="747.5" y="678">video keeps its place</text>
+
+    <text x="955" y="642">printable weekly plan,</text>
+    <text x="955" y="660">a chart per measure,</text>
+    <text x="955" y="678">review video: experimental</text>
+  </g>
+
+  <text x="30" y="732" font-size="13" fill="#6e6e73">Nothing is sent over the internet. No shuttle tracking: findings come from body points seen by one camera.</text>
+</svg>

@@ -1,0 +1,127 @@
+{
+  "title_zh": "看懂战术，学会怎么打",
+  "status": "parent_reviewed_for_render_not_user_acceptance",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "display_label": "战术解读和技术建议，不是球员意图实测",
+  "variant_of": "outputs/tactics-original-editorial-20261105/coach-focused-approved-v1/editorial.mp4",
+  "moments": [
+    {
+      "id": "space",
+      "title": "01  放网，调动对手",
+      "range": [57.8, 64.8],
+      "evidence": "space-sequence",
+      "anchors": [59.45, 60.65, 62.05]
+    },
+    {
+      "id": "time",
+      "title": "02  被动过渡，准备下一拍",
+      "range": [126.6, 134.0],
+      "evidence": "r1-feedback",
+      "anchors": [128.3167, 130.0167, 131.9833]
+    },
+    {
+      "id": "options",
+      "title": "03  蹬地回位，抓机会打身后",
+      "range": [272.8, 285.0],
+      "evidence": "reply-sequence",
+      "anchors": [274.0333, 275.0, 276.3]
+    }
+  ],
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "title": "01  放网，调动对手",
+      "target_speed": 0.88,
+      "text": "红衣还在后场，可以放网，调动她上网。放网动作要小，手上要轻，别大幅甩臂。",
+      "type": "coach_read",
+      "evidence": [3567, 3639, 3723],
+      "hold": 0.0,
+      "cue": "战术：放网调动｜技术：动作小，手上轻"
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "title": "02  被动过渡，准备下一拍",
+      "target_speed": 0.88,
+      "voice_speed": 1.05,
+      "text": "被动球先过渡，给自己争取回位时间。别只顾着往中间跑，对手出拍时做启动小跳，准备接下一拍。",
+      "type": "coach_read",
+      "evidence": [7699, 7801, 7919],
+      "hold": 0.0,
+      "cue": "战术：被动过渡｜技术：回位，启动小跳"
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 285.0],
+      "title": "03  蹬地回位，抓机会打身后",
+      "target_speed": 0.88,
+      "text": "跨步接球后，及时蹬地回位，把重心收回来。红衣如果继续往前压，灰衣可以打她身后，让她转身回追。",
+      "type": "coach_read",
+      "evidence": [16442, 16500, 16578, 16608, 16644],
+      "hold": 0.0,
+      "cue": "技术：蹬地回位｜战术：前压时打身后"
+    }
+  ],
+  "coach_analysis": {
+    "observation_method": "Source picture and synchronized cached 2D pose. Court position is read from feet and floor markings across the moving sequence. Coaching cues are advice, not measurements of executed technique.",
+    "beats": [
+      {
+        "id": "space",
+        "observed": "红衣还在后场；没有测得灰衣实际打出的球种或球路。",
+        "tactical_read": "如果选择身前放网，可以调动仍在后场的红衣上网。这是条件性战术建议，不是对灰衣真实意图的认定。",
+        "technique_cue": "教练要点：放网动作小、手上轻，别大幅甩臂。这里说的是建议的网前放网技术，不是原片击球分类，也不是后场吊球动作。",
+        "prepare_for": "观察红衣上网后的实际处理，再准备接续下一拍；画面没有显示可验证的球路或落点。",
+        "evidence_ids": ["E003567", "E003639", "E003723"],
+        "limitations": ["未检测羽毛球触拍或落点；“放网”是建议技术，不代表原片这一拍被识别为放网。"]
+      },
+      {
+        "id": "time",
+        "observed": "红衣低位伸展后，灰衣在后场举拍；灰衣下一次挥拍前红衣已站起。",
+        "tactical_read": "被动时先过渡，优先保住回位和接下一拍的机会；不强求从失衡状态立即反攻，也不声称实际测得了多少恢复时间。",
+        "technique_cue": "教练要点：别盲目一直往中间赶；对手出拍时做启动小跳（也叫分腿垫步），再准备蹬地启动。原片没有检测到启动小跳。",
+        "prepare_for": "以对手出拍作为启动时机，准备接下一拍；不把回到几何中点当作唯一目标。",
+        "evidence_ids": ["E007699", "E007801", "E007919"],
+        "limitations": ["没有测量回球球路、时间增益、腾空时长、关节力或执行了启动小跳。"]
+      },
+      {
+        "id": "options",
+        "observed": "第16442帧的灰衣在近端中后场低位，红衣随后前移；这不是网前状态。画面没有显示可验证的球路或精确击球类型。",
+        "tactical_read": "如果红衣继续往前压，灰衣可以考虑打她身后，调动她转身回追；这是条件性选择，不是画面显示的实际落点或确定结果。",
+        "technique_cue": "教练要点：跨步接球后及时蹬地回位，把重心收回来；这是建议，不是画面测得的重心或蹬地力。",
+        "prepare_for": "若选择打身后，准备红衣转身回追；若她没有继续前压，这个选择未必创造优势。",
+        "evidence_ids": ["E016442", "E016500", "E016578", "C016608", "C016644"],
+        "limitations": ["不使用低位网前逻辑；没有跟踪球路，不能确认打身后已经实际发生或会带来确定结果。"]
+      }
+    ],
+    "global_limitations": [
+      "单机位二维画面不能证明球拍触球、羽毛球轨迹、落点或三维生物力学。",
+      "战术目的为条件性回看解读，不是已知球员意图，也不是前瞻预测。",
+      "“放网”是建议的网前技术，不是对原片球路的分类，也不等同于后场吊球。",
+      "技术提示是教练建议，不声称从画面中测得相关动作或力学。",
+      "没有人类听音评估或独立编辑验收；自动引擎召回门槛仍未通过。"
+    ]
+  },
+  "terminology": [
+    {"previous": "身前控短、小幅送拍", "current": "放网，动作小、手上轻", "boundary": "仅指建议的网前球，不等于后场吊球，也不表示原片这一拍已被分类为放网。"},
+    {"previous": "争恢复时间", "current": "被动过渡、争取回位时间"},
+    {"previous": "分腿垫步", "current": "启动小跳", "note": "报告中保留分腿垫步作为解释性同义词；旁白只说启动小跳。"},
+    {"previous": "跨步后蹬回", "current": "蹬地回位、把重心收回来"},
+    {"previous": "利用前压身后的空间", "current": "打身后", "boundary": "保留“如果红衣继续往前压”的条件。"}
+  ],
+  "usage_references": [
+    {"url": "https://www.aiyuke.com/video_special/301.html", "title": "杜杜教练《女神教你打球》", "evidence": "Indexed episode titles include 启动小跳怎么跳（一/二）. This is terminology evidence, not a claim that the full videos were watched."},
+    {"url": "https://www.aiyuke.com/video_special/143.html", "title": "陶菲克、李宗伟示范教学", "evidence": "Indexed titles list 正手放网 separately from 正手吊球. These are different techniques, not interchangeable labels."}
+  ],
+  "claim_checks": [
+    "旁白、标题和短提示逐字采用 parent-approved coaching-common-terms-spec.json 的三段内容，无第四段总结。",
+    "“放网”是建议的网前球技术，不是原片球种分类，也不等同于后场吊球。",
+    "第16442帧明确为近端中后场，不使用网前压力或网前回球规则。",
+    "战术目的保持条件性；不虚构触球、球路、落点、球员想法或量化恢复收益。",
+    "教练提示是建议，不冒充画面中已验证的执行动作或测量值。",
+    "V3自动引擎召回验收仍未通过；无人工听音或最终独立编辑验收结论。"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "coaching_videos": 100,
+  "known_channel_names": 17,
+  "videos_without_channel_metadata": 23,
+  "weighting_groups": 40,
+  "grouping_rule": "Each named channel is one group; each video without channel metadata uses its video_id.",
+  "source": {
+    "file": "learned.json",
+    "sha256": "3d4d64c4cdcbf99f7b32f6557feb49f4ae0c3d84e85fc4da2b8802fe170455db",
+    "field": "coaching_videos",
+    "derivation": "describe_corpus.py"
+  }
+}

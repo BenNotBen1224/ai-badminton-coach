@@ -1,0 +1,32 @@
+{
+  "base_spot": {
+    "findings": ["tactics.base_discipline", "footwork.recovery"],
+    "title": "where to wait between shots",
+    "text": "The shuttle is not tracked, so I cannot see which shot you played before each wait. A common guide is to wait a little back from the middle after a high clear and a little forward after a net shot or drop. Being away from the exact middle is a description, not a mistake by itself."
+  },
+  "split_timing": {
+    "findings": ["footwork.split_step", "footwork.first_step"],
+    "title": "timing the split step",
+    "text": "The shuttle is not tracked, so timing is read from the players' swings only. Start a small, low hop just before the opponent hits and push off just after. You do not need to be back at the middle first, and some fast shots leave no time for a clear hop."
+  },
+  "coverage": {
+    "findings": ["footwork.coverage"],
+    "title": "using the whole court",
+    "text": "The shuttle is not tracked, so I only see where you moved, not where the shots went. A corner you never visited may simply be one the rally never needed. In practice, move to every corner so none of them feels far."
+  },
+  "initiative": {
+    "findings": ["tactics.initiative"],
+    "title": "moving forward on purpose",
+    "text": "The shuttle is not tracked, so time spent nearer the net is a position share, not proof of who was attacking. When your shot makes the opponent hit up, a step forward may help you take the next shot early."
+  },
+  "tempo": {
+    "findings": ["tactics.tempo"],
+    "title": "changing the pace",
+    "text": "The shuttle is not tracked, so tempo here is the time between swings, not shot speed. Faster is not always better: a high clear can slow a rally you are losing, and an early, flat shot can speed up one you are winning."
+  },
+  "step_pattern": {
+    "findings": ["footwork.step_pattern"],
+    "title": "steps to the corner",
+    "text": "The shuttle is not tracked, so the step count is read from the feet only. A few larger steps and then a lunge usually reach the corner in balance; many small steps before the lunge often mean a late start."
+  }
+}

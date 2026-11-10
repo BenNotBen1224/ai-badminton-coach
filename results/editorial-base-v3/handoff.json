@@ -1,0 +1,624 @@
+{
+  "output_directory": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render",
+  "video": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\editorial.mp4",
+  "video_sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+  "planned_duration_s": 26.6,
+  "verification": {
+    "status": "passed",
+    "artifact_sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+    "decoded_frames": 798,
+    "expected_frames": 798,
+    "planned_duration_s": 26.6,
+    "speech_window_checks": [
+      {
+        "beat": "space",
+        "voice_correlation": 0.9998312930849415,
+        "rms": 0.07945684343576431,
+        "speech_span_s": [
+          0.08,
+          6.37125
+        ]
+      },
+      {
+        "beat": "time",
+        "voice_correlation": 0.9998930528293632,
+        "rms": 0.07714901119470596,
+        "speech_span_s": [
+          7.08,
+          13.677375000000001
+        ]
+      },
+      {
+        "beat": "options",
+        "voice_correlation": 0.9999237510652157,
+        "rms": 0.07952425628900528,
+        "speech_span_s": [
+          14.48,
+          23.22116666666667
+        ]
+      }
+    ],
+    "source_picture_checks": [
+      {
+        "output_frame": 0,
+        "trimmed_picture_mae": 2.764463726061349,
+        "wrong_plus_1s_mae": 5.276757838060162
+      },
+      {
+        "output_frame": 15,
+        "trimmed_picture_mae": 2.8258905643471715,
+        "wrong_plus_1s_mae": 5.066557298385338
+      },
+      {
+        "output_frame": 30,
+        "trimmed_picture_mae": 2.8153744856490253,
+        "wrong_plus_1s_mae": 5.0182747854699095
+      },
+      {
+        "output_frame": 45,
+        "trimmed_picture_mae": 2.837541143206432,
+        "wrong_plus_1s_mae": 5.1457371297525345
+      },
+      {
+        "output_frame": 60,
+        "trimmed_picture_mae": 2.82586009383853,
+        "wrong_plus_1s_mae": 5.318886437709934
+      },
+      {
+        "output_frame": 75,
+        "trimmed_picture_mae": 2.812652768173882,
+        "wrong_plus_1s_mae": 4.660343455871509
+      },
+      {
+        "output_frame": 90,
+        "trimmed_picture_mae": 2.88859242422559,
+        "wrong_plus_1s_mae": 5.027830228852869
+      },
+      {
+        "output_frame": 105,
+        "trimmed_picture_mae": 2.864703188732633,
+        "wrong_plus_1s_mae": 5.382863247064297
+      },
+      {
+        "output_frame": 120,
+        "trimmed_picture_mae": 2.8417176048510737,
+        "wrong_plus_1s_mae": 5.346283555705119
+      },
+      {
+        "output_frame": 135,
+        "trimmed_picture_mae": 2.8223566628633416,
+        "wrong_plus_1s_mae": 4.5472023323590935
+      },
+      {
+        "output_frame": 150,
+        "trimmed_picture_mae": 2.8341498359047073,
+        "wrong_plus_1s_mae": 4.8479687412365156
+      },
+      {
+        "output_frame": 165,
+        "trimmed_picture_mae": 2.8455469801213535,
+        "wrong_plus_1s_mae": 4.678941776190744
+      },
+      {
+        "output_frame": 180,
+        "trimmed_picture_mae": 2.8277281326731876,
+        "wrong_plus_1s_mae": 4.949832883604313
+      },
+      {
+        "output_frame": 195,
+        "trimmed_picture_mae": 2.844114374951397,
+        "wrong_plus_1s_mae": 4.882390668070902
+      },
+      {
+        "output_frame": 210,
+        "trimmed_picture_mae": 2.8410996890917506,
+        "wrong_plus_1s_mae": 4.329492979865019
+      },
+      {
+        "output_frame": 225,
+        "trimmed_picture_mae": 2.8127108163700005,
+        "wrong_plus_1s_mae": 5.219705609252993
+      },
+      {
+        "output_frame": 240,
+        "trimmed_picture_mae": 2.8201745113031755,
+        "wrong_plus_1s_mae": 5.19217087210039
+      },
+      {
+        "output_frame": 255,
+        "trimmed_picture_mae": 2.7874239971703623,
+        "wrong_plus_1s_mae": 4.787982887447264
+      },
+      {
+        "output_frame": 270,
+        "trimmed_picture_mae": 2.7941571787496056,
+        "wrong_plus_1s_mae": 5.1068293377039105
+      },
+      {
+        "output_frame": 285,
+        "trimmed_picture_mae": 2.7878077299475095,
+        "wrong_plus_1s_mae": 5.346544772445425
+      },
+      {
+        "output_frame": 300,
+        "trimmed_picture_mae": 2.7837094137403464,
+        "wrong_plus_1s_mae": 5.365922069127401
+      },
+      {
+        "output_frame": 315,
+        "trimmed_picture_mae": 2.7754270196618176,
+        "wrong_plus_1s_mae": 5.3570386226867
+      },
+      {
+        "output_frame": 330,
+        "trimmed_picture_mae": 2.809823392195542,
+        "wrong_plus_1s_mae": 5.3864247269947505
+      },
+      {
+        "output_frame": 345,
+        "trimmed_picture_mae": 2.8003148700644673,
+        "wrong_plus_1s_mae": 5.758424369704259
+      },
+      {
+        "output_frame": 360,
+        "trimmed_picture_mae": 2.852076616626373,
+        "wrong_plus_1s_mae": 5.541214081399914
+      },
+      {
+        "output_frame": 375,
+        "trimmed_picture_mae": 2.8768263012793636,
+        "wrong_plus_1s_mae": 4.877164775312058
+      },
+      {
+        "output_frame": 390,
+        "trimmed_picture_mae": 2.8388691864269733,
+        "wrong_plus_1s_mae": 4.719741442165679
+      },
+      {
+        "output_frame": 405,
+        "trimmed_picture_mae": 2.832163537601937,
+        "wrong_plus_1s_mae": 4.076373958508603
+      },
+      {
+        "output_frame": 420,
+        "trimmed_picture_mae": 2.8282363613146204,
+        "wrong_plus_1s_mae": 4.001260903072491
+      },
+      {
+        "output_frame": 435,
+        "trimmed_picture_mae": 2.8143374941122303,
+        "wrong_plus_1s_mae": 5.0660151308368695
+      },
+      {
+        "output_frame": 450,
+        "trimmed_picture_mae": 2.828711833727632,
+        "wrong_plus_1s_mae": 5.031252012355604
+      },
+      {
+        "output_frame": 465,
+        "trimmed_picture_mae": 2.856583520232793,
+        "wrong_plus_1s_mae": 5.260705731811941
+      },
+      {
+        "output_frame": 480,
+        "trimmed_picture_mae": 2.7225198702558044,
+        "wrong_plus_1s_mae": 5.559646739412672
+      },
+      {
+        "output_frame": 495,
+        "trimmed_picture_mae": 2.775142594257266,
+        "wrong_plus_1s_mae": 4.531256166896205
+      },
+      {
+        "output_frame": 510,
+        "trimmed_picture_mae": 2.6713315648574487,
+        "wrong_plus_1s_mae": 5.055761205315319
+      },
+      {
+        "output_frame": 525,
+        "trimmed_picture_mae": 2.658178900795132,
+        "wrong_plus_1s_mae": 4.9605837960452925
+      },
+      {
+        "output_frame": 540,
+        "trimmed_picture_mae": 2.718451518310408,
+        "wrong_plus_1s_mae": 5.277659373370641
+      },
+      {
+        "output_frame": 555,
+        "trimmed_picture_mae": 2.7205781983600676,
+        "wrong_plus_1s_mae": 5.322330032550826
+      },
+      {
+        "output_frame": 570,
+        "trimmed_picture_mae": 2.7606913879789405,
+        "wrong_plus_1s_mae": 5.131878101624218
+      },
+      {
+        "output_frame": 585,
+        "trimmed_picture_mae": 2.7737706583205437,
+        "wrong_plus_1s_mae": 4.5673362747480795
+      },
+      {
+        "output_frame": 600,
+        "trimmed_picture_mae": 2.8126771625206137,
+        "wrong_plus_1s_mae": 4.756936524851423
+      },
+      {
+        "output_frame": 615,
+        "trimmed_picture_mae": 2.8047769075552678,
+        "wrong_plus_1s_mae": 4.898985980502741
+      },
+      {
+        "output_frame": 630,
+        "trimmed_picture_mae": 2.809481528074277,
+        "wrong_plus_1s_mae": 5.005539560574241
+      },
+      {
+        "output_frame": 645,
+        "trimmed_picture_mae": 2.806866421339057,
+        "wrong_plus_1s_mae": 4.870525819431202
+      },
+      {
+        "output_frame": 660,
+        "trimmed_picture_mae": 2.815781768314153,
+        "wrong_plus_1s_mae": 5.182950907870985
+      },
+      {
+        "output_frame": 675,
+        "trimmed_picture_mae": 2.815171595177059,
+        "wrong_plus_1s_mae": 5.214418437020281
+      },
+      {
+        "output_frame": 690,
+        "trimmed_picture_mae": 2.802549791259871,
+        "wrong_plus_1s_mae": 5.13351862584415
+      },
+      {
+        "output_frame": 705,
+        "trimmed_picture_mae": 2.712439755195379,
+        "wrong_plus_1s_mae": 5.519048049339324
+      },
+      {
+        "output_frame": 720,
+        "trimmed_picture_mae": 2.8172199983055872,
+        "wrong_plus_1s_mae": 5.520386850048089
+      },
+      {
+        "output_frame": 735,
+        "trimmed_picture_mae": 2.8477873990088156,
+        "wrong_plus_1s_mae": 5.460902657036441
+      },
+      {
+        "output_frame": 750,
+        "trimmed_picture_mae": 2.6750112256266227,
+        "wrong_plus_1s_mae": 5.110291108659932
+      },
+      {
+        "output_frame": 765,
+        "trimmed_picture_mae": 2.7042759043758546,
+        "wrong_plus_1s_mae": 5.158619321521974
+      },
+      {
+        "output_frame": 780,
+        "trimmed_picture_mae": 2.6914052793015326,
+        "wrong_plus_1s_mae": 4.644756658170631
+      },
+      {
+        "output_frame": 795,
+        "trimmed_picture_mae": 2.7191840084958567,
+        "wrong_plus_1s_mae": 3.587218867430687
+      }
+    ],
+    "caption_voice_checks": [
+      {
+        "beat": "space",
+        "text": "韩悦调王祉怡，抓的是回位空当。",
+        "display_span_s": [
+          0.08,
+          3.377416666666667
+        ],
+        "voice_correlation": 0.9998358640022845
+      },
+      {
+        "beat": "space",
+        "text": "前后拉开，别等她站稳了再打。",
+        "display_span_s": [
+          3.437416666666667,
+          6.37125
+        ],
+        "voice_correlation": 0.9998259593744641
+      },
+      {
+        "beat": "time",
+        "text": "王祉怡被动，先过渡拆连贯。",
+        "display_span_s": [
+          7.08,
+          9.867208333333334
+        ],
+        "voice_correlation": 0.9998483112622227
+      },
+      {
+        "beat": "time",
+        "text": "硬顶快球，",
+        "display_span_s": [
+          9.927208333333333,
+          11.038333333333334
+        ],
+        "voice_correlation": 0.9998853892449179
+      },
+      {
+        "beat": "time",
+        "text": "容易把韩悦的下一拍喂舒服。",
+        "display_span_s": [
+          11.098333333333333,
+          13.677375
+        ],
+        "voice_correlation": 0.9999601706995995
+      },
+      {
+        "beat": "options",
+        "text": "换韩悦被压，",
+        "display_span_s": [
+          14.48,
+          15.74175
+        ],
+        "voice_correlation": 0.9999499173263947
+      },
+      {
+        "beat": "options",
+        "text": "王祉怡再往前抢，",
+        "display_span_s": [
+          15.80175,
+          17.53966666666667
+        ],
+        "voice_correlation": 0.99989743126297
+      },
+      {
+        "beat": "options",
+        "text": "就打她身后，逼她掉头。",
+        "display_span_s": [
+          17.599666666666668,
+          19.981125000000002
+        ],
+        "voice_correlation": 0.9999017827207372
+      },
+      {
+        "beat": "options",
+        "text": "防守想翻身，先让对手打不顺。",
+        "display_span_s": [
+          20.041125,
+          23.22116666666667
+        ],
+        "voice_correlation": 0.9999430357816685
+      }
+    ],
+    "source_position_map_matches_plan": true,
+    "monotonic_source_no_replay": true,
+    "picture_recipe_checked_frames": 798,
+    "decoded_pixel_samples": 54,
+    "pose_max_sync_error_s": 0.01670000000001437,
+    "frozen_v3_unchanged": true,
+    "independent_media_pass": true,
+    "voice_human_listening_review": false,
+    "independent_final_acceptance": "pending",
+    "engine_acceptance": "failed_recall_gate_unchanged",
+    "limits": "Pixel binding, source audio and synthetic speech checks are not a human coaching/voice verdict.",
+    "caption_chunks_match_voice_and_display": true,
+    "phone_preview": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\phone-preview.jpg",
+    "verification_elapsed_s": 27.203,
+    "source_picture_checks_count": 54
+  },
+  "files": [
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\analysis.html",
+      "sha256": "1f976732038c0bbc60dbf5f19fc677c28eba48d4992e3017bd0ca8f902bd6377",
+      "bytes": 5979
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\analysis.json",
+      "sha256": "6f22bcb00d177aaf514c44abf39cabe02e190e3542d9a3637cfcde7d91e50253",
+      "bytes": 254793
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\attribution.json",
+      "sha256": "b0fd54c5a3e71aaa44cc99e79d3bbce4e554eee37fa4127af30b9632a0ffc645",
+      "bytes": 169
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\audio-mix.json",
+      "sha256": "a36470e82636a455a41673756584bd3a8727cd74b8b1f219b01c4edac10f91e8",
+      "bytes": 364
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\audio.wav",
+      "sha256": "952cb2d18a5e6e6db072331f02199fe58a4a25e56a08db995632fae24d08e0e0",
+      "bytes": 1276844
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\claim-review.json",
+      "sha256": "276de05c90a4882e4feec2284ca5f16feaa91afbad0af8000db1bd434c753528",
+      "bytes": 3649
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\context-evidence.json",
+      "sha256": "947aa33c92c3cd5dd46c36297e050a55d1765036e740997aa687c6e0458d7a33",
+      "bytes": 159966
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\decoded-contact-sheet.jpg",
+      "sha256": "f4e3b162f2c2ded817e42609427f117befec5aade9a3d6f73003bd0c3c99c51a",
+      "bytes": 370516
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\duplicate-frame-audit.json",
+      "sha256": "b7cd94b449dc0bed1d9116365a852f75a7aaf34e7f48b20babcc0d37681fd5ba",
+      "bytes": 21932
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\editorial.mp4",
+      "sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+      "bytes": 6541716
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\evidence.json",
+      "sha256": "c34ffb569b13953a576f2865f1b72e060879d2f6d025cbd8bac3e1ece5e8144f",
+      "bytes": 45588
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\frame-map.json",
+      "sha256": "194c117a35eed77e8ac064c4ae5444312debe5b18f0b4907f62f60d807483a8f",
+      "bytes": 654694
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\frozen-v3.json",
+      "sha256": "b4c8353a68a0d4e10542ed92a44688ac9af3f3bf0a08166771c7183dd9941ebb",
+      "bytes": 6104
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\independent-media-audit.log",
+      "sha256": "3a63352c27411ed8b1bc3c4a52703c9e179e1e4e2b80b13b0e8fa1a7b06c8890",
+      "bytes": 961
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\inputs-final.json",
+      "sha256": "7e0b17049bdb4eeaa134a2e32aa917574c60fe14f8f1172e67f406a4546539a7",
+      "bytes": 6708
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\inputs.json",
+      "sha256": "60b73add8fa0f3b6f637ed8d26d2a80104706dc5964f0f329d234018529010c4",
+      "bytes": 6201
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\media-audit.json",
+      "sha256": "3a63352c27411ed8b1bc3c4a52703c9e179e1e4e2b80b13b0e8fa1a7b06c8890",
+      "bytes": 961
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\mux.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\narration.srt",
+      "sha256": "8cdabebb3ca237c681fbb27736f37cb842c892c8523d628d22b2a1d6b1834840",
+      "bytes": 637
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\narration.txt",
+      "sha256": "4d98ef193b986683de1c381341b94898b70a797a5d5e1807f26f1eea35677f93",
+      "bytes": 538
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\narration.vtt",
+      "sha256": "b5ba0c536ce4516a53db8d823423731f70be941d95c358291bd3dc8b0b85ff04",
+      "bytes": 620
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\phone-preview.jpg",
+      "sha256": "98d3a9363a8d42966073353e3472d040680734dfd64bb1d096eef77e76067645",
+      "bytes": 58898
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\picture-encode.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\picture.mp4",
+      "sha256": "d822746fa473165c7f4580220778322e9c9965ceec3cfc37147a199e5afd8caa",
+      "bytes": 6106810
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\planned-schedule.json",
+      "sha256": "a7ca6846c49bc811d6491694084ab1c295b187ad50b4d51ad9da4f7401468365",
+      "bytes": 130094
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\run.json",
+      "sha256": "f75b9bba8a87edf5e1efd7b6aafa578c2b52c48346096dbf99bd5b1cc91b29d9",
+      "bytes": 2002
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\script.json",
+      "sha256": "0224b1b44e1249a76ad97ea5f2a29e1720566888f488afc28f92426c622631d3",
+      "bytes": 8323
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\source-script.json",
+      "sha256": "0224b1b44e1249a76ad97ea5f2a29e1720566888f488afc28f92426c622631d3",
+      "bytes": 8323
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\verification.json",
+      "sha256": "f91e4321e4648dc7041ecd19027146f300dc3d1b22dcdd4ca5fe638f90e74369",
+      "bytes": 11194
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-01.wav",
+      "sha256": "64668956e51c85fb7041ee606c327cd68bdf461aa6a3374671f86e19cb453ce1",
+      "bytes": 60608
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-02.wav",
+      "sha256": "c906e0ff560babc0ddab5ee55f6237c3226826055c92bf4380e7d84eed967726",
+      "bytes": 83464
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-03.wav",
+      "sha256": "31246db12579ff32aac3fbe1ec36e862ded4eb6266367723db2b726a808cf927",
+      "bytes": 114354
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-04.wav",
+      "sha256": "ae99c5b008032d975e278f35f0fc86884d2e7d83f85dc47ed614a5934e8c7559",
+      "bytes": 152686
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options.wav",
+      "sha256": "314f6bae6acc6b8da900498c8c3bcf5a2c96d40da40d78c7490b9fd1fd643d89",
+      "bytes": 419620
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\space-caption-01.wav",
+      "sha256": "c451e138d5940121a736eaf139783482b3a317a139e684364149ff9137055297",
+      "bytes": 158320
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\space-caption-02.wav",
+      "sha256": "982660d9e1ccdde33d80ef94c844201dbcd0d69a183fbe7379b2cbebf76764f2",
+      "bytes": 140868
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\space.wav",
+      "sha256": "22cdd36ec91f11ce7a0ebaf8aef17be3182f8f58d85ba2384558764cab68da0f",
+      "bytes": 302024
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time-caption-01.wav",
+      "sha256": "6651e0a5f7669570e515c71625dcff2b4a657783e7fd5aa85a19e312895d8e3d",
+      "bytes": 133830
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time-caption-02.wav",
+      "sha256": "21ee7ad779150b563f7494b2c36fdc100ff4f7e21ee8499cddd8bf91dc78132f",
+      "bytes": 53378
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time-caption-03.wav",
+      "sha256": "82b4c519369c8f59e564b5e32c50ce9d228f12a6ea55ee5b6dbc908b53c98c48",
+      "bytes": 123838
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time.wav",
+      "sha256": "0a4ee70790b147c9afb6f715007e6aa810c67134ecf3ba8ada277fa575b7b011",
+      "bytes": 316718
+    },
+    {
+      "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice.json",
+      "sha256": "6648b6e324da24d85ef456fde08c21740bf6d2c012fa369ddf5275a72e2770b2",
+      "bytes": 6862
+    }
+  ]
+}

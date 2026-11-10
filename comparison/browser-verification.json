@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-26",
+  "reported_by": "Coordinating General Chat session, actual browser playback check",
+  "completed_methods_checked": ["original", "crop", "rtmpose", "rtmo", "vitpose", "mediapipe", "botsort", "onnx", "movenet"],
+  "shared_seek_seconds": 22.0,
+  "all_checked_media_ready_state": 4,
+  "all_checked_media_seeking": false,
+  "media_errors": [],
+  "horizontal_overflow": false,
+  "visual_observation": "Actual decoded RTMPose revision2 and MoveNet video frames show both players' skeletons at22s. MoveNet separately passed full 780-frame/26s H264 decode and JSON indices0-779 verification. The visible source-credit footer was confirmed.",
+  "resolved_issue": "Browser cached byte ranges across replaced MP4s at unchanged URLs. Content-hashed video and image query strings fixed decoding; failed media now has an explicit alert instead of a plausible stale poster.",
+  "remaining_media": ["posewarper", "sapiens"]
+}

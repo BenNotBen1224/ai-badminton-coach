@@ -1,0 +1,30 @@
+{
+ "what": "Counts from the hit table the tactics engine (V3) wrote for the China Open 2025 women's singles final. The full table is not shipped: it is 2.2 MB and holds local paths.",
+ "source_file": "badminton-coach/outputs/tactics-engine-20261106-v3/hits.json (lab workspace)",
+ "source_sha256": "4ff91a6fb316560314950f119f7fad57ff955d81f6f5756c13995a883942f23d",
+ "same_file_scored_in": "studio/tactics/v3_eval.json (v3_hits_sha256)",
+ "hit_rows": 336,
+ "rallies_with_hits": 44,
+ "shot_family_counts": {
+  "unknown": 330,
+  "serve": 4,
+  "drive/push": 1,
+  "smash": 1
+ },
+ "named_shots": 6,
+ "why_unknown": {
+  "required contact or next-contact evidence unavailable": 297,
+  "available evidence does not distinguish a shot family": 22,
+  "serve role or service evidence unavailable": 11
+ },
+ "landing_zone_counts": {
+  "unknown": 304,
+  "mid-center": 8,
+  "mid-left": 7,
+  "rear-center": 6,
+  "rear-left": 6,
+  "rear-right": 4,
+  "mid-right": 1
+ },
+ "landing_zone_known": 32
+}

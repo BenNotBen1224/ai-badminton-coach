@@ -1,0 +1,206 @@
+{
+  "split_step": {
+    "name": "split step",
+    "aliases": ["split step", "split steps", "split-step", "splitstep", "split stepping", "ready hop"],
+    "define": "A small, low hop that starts just before the opponent hits, so you can push off in any direction just after they hit.",
+    "simple": "A tiny hop as they hit, so you can move off fast."
+  },
+  "base_position": {
+    "name": "base position",
+    "aliases": ["base position", "base", "base spot", "centre position", "center position", "home position", "home base", "central base"],
+    "define": "The spot near the middle of your half that you tend to move back towards between shots; it shifts a little with the shot you just played.",
+    "simple": "Your home spot near the middle of your half."
+  },
+  "center_of_mass": {
+    "name": "centre of mass proxy",
+    "aliases": ["center of mass", "centre of mass", "center of mass proxy", "centre of mass proxy", "com", "center of gravity", "centre of gravity", "mass proxy", "proxy"],
+    "define": "The camera cannot see your true centre of mass, so the hip height is used as a stand-in for how low your body is.",
+    "simple": "We use your hip height to judge how low you are."
+  },
+  "lunge": {
+    "name": "lunge",
+    "aliases": ["lunge", "lunges", "lunging"],
+    "define": "A long last step onto a bent front leg to reach a shot, usually at the net or in a corner.",
+    "simple": "A big step with a bent front knee to reach the shuttle."
+  },
+  "lunge_recovery": {
+    "name": "lunge recovery",
+    "aliases": ["lunge recovery", "recovery from a lunge", "recover from a lunge", "push back", "pushing back"],
+    "define": "Pushing back out of a lunge with the front leg so you are ready for the next shot.",
+    "simple": "Pushing back up and out after a lunge."
+  },
+  "first_step": {
+    "name": "first step",
+    "aliases": ["first step", "first move", "first movement", "reaction", "reaction time"],
+    "define": "Your first push towards the next shot after the opponent hits.",
+    "simple": "How quickly you start moving after they hit."
+  },
+  "projected_angle": {
+    "name": "projected angle",
+    "aliases": ["projected angle", "projected", "projection", "estimated angle", "angle from the picture", "2d angle", "projected estimate"],
+    "define": "An angle read from the flat video picture, so it can differ from the true angle when a limb points towards or away from the camera.",
+    "simple": "An angle read off the flat picture, so it is an estimate."
+  },
+  "hip_height": {
+    "name": "hip height ratio",
+    "aliases": ["hip height ratio", "hip height", "hip ratio", "height ratio", "hips height"],
+    "define": "How high your hips sit above your feet, compared with your own body height in the picture.",
+    "simple": "How high your hips sit for your size."
+  },
+  "stance_width": {
+    "name": "stance width",
+    "aliases": ["stance width", "stance", "width of stance", "foot width", "feet width"],
+    "define": "How far apart your feet are in the ready position, compared with your body size.",
+    "simple": "How far apart your feet are."
+  },
+  "trunk_lean": {
+    "name": "trunk lean",
+    "aliases": ["trunk lean", "lean", "leaning", "upper body lean", "torso lean", "trunk"],
+    "define": "How far your upper body tilts away from upright, read from the picture.",
+    "simple": "How much your upper body tilts."
+  },
+  "hand_speed": {
+    "name": "hand speed",
+    "aliases": ["hand speed", "racket hand speed", "racket-hand speed", "racket speed", "racquet speed", "swing speed"],
+    "define": "How fast your racket hand moves in a swing, compared with your body size so tall and short players compare fairly.",
+    "simple": "How fast your racket hand moves."
+  },
+  "coverage": {
+    "name": "coverage",
+    "aliases": ["coverage", "court coverage", "covering the court", "cover the court"],
+    "define": "How much of your half of the court you moved through in the clip; it describes where you went, not whether that was right.",
+    "simple": "Where you moved on your half."
+  },
+  "tempo": {
+    "name": "tempo",
+    "aliases": ["tempo", "rhythm", "pace", "speed of play", "time between swings", "time between shots"],
+    "define": "The rhythm of the rally, read here as the time between swings.",
+    "simple": "How fast the shots come one after another."
+  },
+  "initiative": {
+    "name": "initiative",
+    "aliases": ["initiative", "taking the initiative", "take the initiative", "attacking position"],
+    "define": "Here it means the share of rally time you spend nearer the net than your opponent; it is a position share, not proof of who was attacking.",
+    "simple": "How much of the rally you were closer to the net."
+  },
+  "rally": {
+    "name": "rally",
+    "aliases": ["rally", "rallies", "exchange"],
+    "define": "One run of shots from the serve until the point ends.",
+    "simple": "One back-and-forth until the point ends."
+  },
+  "shuttle_tracking": {
+    "name": "shuttle tracking",
+    "aliases": ["shuttle tracking", "track the shuttle", "tracking the shuttle", "shuttle tracked", "tracked"],
+    "define": "Following the shuttle through the video; this tool does not do it, so advice uses player positions and timing only.",
+    "simple": "We follow the players, not the shuttle."
+  },
+  "ready_position": {
+    "name": "ready position",
+    "aliases": ["ready position", "ready stance", "athletic stance", "waiting stance", "ready"],
+    "define": "The balanced, slightly crouched stance you hold while the opponent is about to hit.",
+    "simple": "How you stand while you wait for their shot."
+  },
+  "contact_point": {
+    "name": "contact point",
+    "aliases": ["contact point", "contact height", "hitting point", "point of contact", "contact"],
+    "define": "Where the racket meets the shuttle; for overhead shots, higher and a little in front is usually easier.",
+    "simple": "Where you hit the shuttle."
+  },
+  "arm_extension": {
+    "name": "arm extension",
+    "aliases": ["arm extension", "extension", "straight arm", "elbow angle"],
+    "define": "How straight your hitting arm is at the hit, read as a projected elbow angle.",
+    "simple": "How straight your arm is when you hit."
+  },
+  "step_pattern": {
+    "name": "step pattern",
+    "aliases": ["step pattern", "footwork pattern", "chasse", "chasse step", "shuffle step"],
+    "define": "The way you link steps to reach the shuttle, such as a few larger steps or many small ones.",
+    "simple": "How many steps you take to get there."
+  },
+  "footwork": {
+    "name": "footwork",
+    "aliases": ["footwork"],
+    "define": "How you move on court: the split step, the first step, the steps to the shot and the way back.",
+    "simple": "How you move your feet on court."
+  },
+  "practice_guide": {
+    "name": "practice guide",
+    "aliases": ["practice guide", "target", "target range", "good range", "normal range", "ideal range", "guide range", "the range", "norm"],
+    "define": "A rough coaching range to aim for in practice; it is a general guide, not a tested norm for you.",
+    "simple": "A rough range to aim for, not a rule."
+  },
+  "confidence": {
+    "name": "confidence",
+    "aliases": ["confidence", "fairly sure", "somewhat sure", "not very sure", "certainty"],
+    "define": "How sure a measurement is, based on how clearly the camera saw you; it is given in words such as fairly sure or not very sure.",
+    "simple": "How much to trust a number."
+  },
+  "preview": {
+    "name": "preview",
+    "aliases": ["preview", "quick estimate", "preview estimate", "refined", "full analysis", "refined analysis"],
+    "define": "The preview is a quick first pass; the full analysis comes later and can change the numbers.",
+    "simple": "A fast first look that may change."
+  },
+  "overhead": {
+    "name": "overhead",
+    "aliases": ["overhead", "overheads", "overhead shot", "overhead shots"],
+    "define": "A shot hit above your head, such as a clear, a drop or a smash.",
+    "simple": "A shot you hit above your head."
+  },
+  "near_far": {
+    "name": "near and far player",
+    "aliases": ["near player", "far player", "near side", "far side", "near and far"],
+    "define": "The near player is closer to the camera and seen from behind; the far player is across the net, seen from the front and smaller in the picture.",
+    "simple": "Near is closer to the camera, far is across the net."
+  },
+  "base_distance": {
+    "name": "distance from base",
+    "aliases": ["base distance", "distance from base", "distance to base", "away from base"],
+    "define": "How far you are from your base spot at the moment the opponent hits.",
+    "simple": "How far from your home spot you were as they hit."
+  },
+  "recovery_time": {
+    "name": "recovery time",
+    "aliases": ["recovery time", "recovery", "time to recover", "return to base"],
+    "define": "How long it takes you to get back near your base after you hit.",
+    "simple": "How long you take to get back."
+  },
+  "knee_bend": {
+    "name": "knee bend",
+    "aliases": ["knee bend", "knee angle", "bent knees"],
+    "define": "How bent your knees are in the ready position, read as a projected angle.",
+    "simple": "How much your knees bend while you wait."
+  },
+  "moment": {
+    "name": "moment",
+    "aliases": ["moment", "key moment", "slow motion", "slow-mo", "slowmo"],
+    "define": "A short part of the clip that shows a finding; you can replay it in slow motion.",
+    "simple": "A short bit of the video that shows what I mean."
+  },
+  "finding": {
+    "name": "finding",
+    "aliases": ["finding", "findings"],
+    "define": "One thing the analysis noticed about your play, either a strength or something to work on.",
+    "simple": "One thing I noticed."
+  },
+  "sets_reps": {
+    "name": "sets and reps",
+    "aliases": ["sets", "reps", "repetitions", "sets and reps", "dose", "rep", "set"],
+    "define": "Reps are how many times you do the move in a row; sets are how many rounds of reps you do, with a short rest between.",
+    "simple": "Reps are repeats, sets are rounds."
+  },
+  "flat_view": {
+    "name": "flat camera view",
+    "aliases": ["2d", "2-d", "two d", "flat picture", "broadcast view", "one camera", "single camera", "camera view"],
+    "define": "The video is a flat picture from one camera, so distance towards or away from the camera is guessed, not measured.",
+    "simple": "One flat camera view, so depth is a guess."
+  },
+  "fix_tag": {
+    "name": "fix tag",
+    "aliases": ["fix tag", "fix tags", "tag", "tags", "goal"],
+    "define": "A short label for what an exercise trains, used to match exercises to a finding.",
+    "simple": "A label that links an exercise to what it helps."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "space": {
+    "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\space.wav",
+    "sha256": "22cdd36ec91f11ce7a0ebaf8aef17be3182f8f58d85ba2384558764cab68da0f",
+    "sample_rate": 24000,
+    "samples": 150990,
+    "duration_s": 6.29125,
+    "speaker": 60,
+    "speed": 1.0,
+    "text": "韩悦调王祉怡，抓的是回位空当。前后拉开，别等她站稳了再打。",
+    "caption_chunks": [
+      {
+        "text": "韩悦调王祉怡，抓的是回位空当。",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\space-caption-01.wav",
+        "sha256": "c451e138d5940121a736eaf139783482b3a317a139e684364149ff9137055297",
+        "duration_s": 3.297416666666667,
+        "relative_span_s": [
+          0.0,
+          3.297416666666667
+        ]
+      },
+      {
+        "text": "前后拉开，别等她站稳了再打。",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\space-caption-02.wav",
+        "sha256": "982660d9e1ccdde33d80ef94c844201dbcd0d69a183fbe7379b2cbebf76764f2",
+        "duration_s": 2.9338333333333333,
+        "relative_span_s": [
+          3.357416666666667,
+          6.29125
+        ]
+      }
+    ],
+    "caption_texts": [
+      "韩悦调王祉怡，抓的是回位空当。",
+      "前后拉开，别等她站稳了再打。"
+    ],
+    "caption_gap_s": 0.06
+  },
+  "time": {
+    "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time.wav",
+    "sha256": "0a4ee70790b147c9afb6f715007e6aa810c67134ecf3ba8ada277fa575b7b011",
+    "sample_rate": 24000,
+    "samples": 158337,
+    "duration_s": 6.597375,
+    "speaker": 60,
+    "speed": 1.0,
+    "text": "王祉怡被动，先过渡拆连贯。硬顶快球，容易把韩悦的下一拍喂舒服。",
+    "caption_chunks": [
+      {
+        "text": "王祉怡被动，先过渡拆连贯。",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time-caption-01.wav",
+        "sha256": "6651e0a5f7669570e515c71625dcff2b4a657783e7fd5aa85a19e312895d8e3d",
+        "duration_s": 2.7872083333333335,
+        "relative_span_s": [
+          0.0,
+          2.7872083333333335
+        ]
+      },
+      {
+        "text": "硬顶快球，",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time-caption-02.wav",
+        "sha256": "21ee7ad779150b563f7494b2c36fdc100ff4f7e21ee8499cddd8bf91dc78132f",
+        "duration_s": 1.111125,
+        "relative_span_s": [
+          2.8472083333333336,
+          3.9583333333333335
+        ]
+      },
+      {
+        "text": "容易把韩悦的下一拍喂舒服。",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\time-caption-03.wav",
+        "sha256": "82b4c519369c8f59e564b5e32c50ce9d228f12a6ea55ee5b6dbc908b53c98c48",
+        "duration_s": 2.5790416666666665,
+        "relative_span_s": [
+          4.0183333333333335,
+          6.5973749999999995
+        ]
+      }
+    ],
+    "caption_texts": [
+      "王祉怡被动，先过渡拆连贯。",
+      "硬顶快球，",
+      "容易把韩悦的下一拍喂舒服。"
+    ],
+    "caption_gap_s": 0.06
+  },
+  "options": {
+    "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options.wav",
+    "sha256": "314f6bae6acc6b8da900498c8c3bcf5a2c96d40da40d78c7490b9fd1fd643d89",
+    "sample_rate": 24000,
+    "samples": 209788,
+    "duration_s": 8.741166666666667,
+    "speaker": 60,
+    "speed": 1.0,
+    "text": "换韩悦被压，王祉怡再往前抢，就打她身后，逼她掉头。防守想翻身，先让对手打不顺。",
+    "caption_chunks": [
+      {
+        "text": "换韩悦被压，",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-01.wav",
+        "sha256": "64668956e51c85fb7041ee606c327cd68bdf461aa6a3374671f86e19cb453ce1",
+        "duration_s": 1.26175,
+        "relative_span_s": [
+          0.0,
+          1.26175
+        ]
+      },
+      {
+        "text": "王祉怡再往前抢，",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-02.wav",
+        "sha256": "c906e0ff560babc0ddab5ee55f6237c3226826055c92bf4380e7d84eed967726",
+        "duration_s": 1.7379166666666668,
+        "relative_span_s": [
+          1.32175,
+          3.0596666666666668
+        ]
+      },
+      {
+        "text": "就打她身后，逼她掉头。",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-03.wav",
+        "sha256": "31246db12579ff32aac3fbe1ec36e862ded4eb6266367723db2b726a808cf927",
+        "duration_s": 2.3814583333333332,
+        "relative_span_s": [
+          3.119666666666667,
+          5.501125000000001
+        ]
+      },
+      {
+        "text": "防守想翻身，先让对手打不顺。",
+        "path": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\voice\\options-caption-04.wav",
+        "sha256": "ae99c5b008032d975e278f35f0fc86884d2e7d83f85dc47ed614a5934e8c7559",
+        "duration_s": 3.180041666666667,
+        "relative_span_s": [
+          5.5611250000000005,
+          8.741166666666668
+        ]
+      }
+    ],
+    "caption_texts": [
+      "换韩悦被压，",
+      "王祉怡再往前抢，",
+      "就打她身后，逼她掉头。",
+      "防守想翻身，先让对手打不顺。"
+    ],
+    "caption_gap_s": 0.06
+  }
+}

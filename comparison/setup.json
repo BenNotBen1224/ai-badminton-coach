@@ -1,0 +1,32 @@
+{
+  "isolation": "Dedicated comparison/.venv; baseline site-packages appended read-only using a .pth file. All pip additions go to comparison/.venv. The original environment and videos are never modified.",
+  "dependencies_planned": {
+    "rtmlib": "0.0.15; portable RTMPose/RTMO/ViTPose preprocessing and decoding",
+    "onnxruntime": "1.24.4; CPU ONNX inference",
+    "onnx": "1.20.1; YOLO export",
+    "mediapipe": "0.10.32; CPU Pose Landmarker",
+    "tensorflow": "2.20.0, separate comparison/.venv-movenet; MoveNet SavedModel CPU inference",
+    "openvino": "2026.0.0, comparison/.venv; unchanged Sapiens FP32 graph, full heatmap equivalence verified against TorchScript",
+    "opencv-python-movenet": "4.14.0.94, comparison/.venv-movenet"
+  },
+  "design": {
+    "grounding": "Original analyze_video emits COCO17 records after ByteTrack, confidence and court-footpoint filtering; render_videos reads these records, calls overlay.annotate_frame, and verifies H264 frame counts. Reuse overlay but not the two-video renderer to avoid unnecessary double renders.",
+    "usage": "Windows PowerShell: .\\comparison\\run_all.ps1. One method: .\\comparison\\.venv\\Scripts\\python.exe comparison\\run.py METHOD. MoveNet uses .\\comparison\\.venv-movenet\\Scripts\\python.exe. Repeat to resume. comparison\\run.py gallery rebuilds only the gallery. comparison\\verify_gallery.py validates all videos and creates the portable ZIP.",
+    "shape": "One adapter returns original-frame player records for each decoded image. One runner journals each frame, checkpoints final JSON, renders H264 once, verifies it, and updates manifest/gallery. Top-down adapters reuse existing observed detector boxes, never prior poses.",
+    "alternatives": [
+      "Independent scripts per model: rejected because duplicated frame decoding, coordinate normalization and completion validation can drift.",
+      "One incremental runner plus narrow model adapters: selected because model-specific preprocessing is hidden but shared record/validation policy has one owner."
+    ],
+    "synthesis": "Use the second shape, borrowing independent subprocess execution from the first to release heavy model memory between runs. No orchestration framework, no dependency changes to the baseline.",
+    "tradeoffs": "Top-down comparisons share full-frame detections acquired before the 0.25 display cutoff plus targeted far-court retry detections. This is not a ground-truth detector. Untracked methods use unknown IDs rather than claiming identity. Individual model confidence scores are not calibrated against one another."
+  },
+  "windows_setup": {
+    "baseline": "Never pip-install into the original .venv. Create comparison/.venv, append the absolute original .venv/Lib/site-packages path using baseline-readonly.pth, then install comparison/requirements.txt and requirements-sapiens.txt.",
+    "movenet": "Create comparison/.venv-movenet without inheriting baseline packages. Install requirements-movenet.txt. TensorFlow's optional header paths exceed MAX_PATH at this deep workspace location; installation succeeded via temporary subst Q: pointing to comparison. Runtime can use the normal interpreter path.",
+    "openvino": "The configured feed returned 404 for PEP658 metadata. pip install --use-deprecated=legacy-resolver -r comparison/requirements-sapiens.txt fetched the actual public wheel successfully. No TLS verification was disabled.",
+    "sapiens": "Run comparison/sapiens_portable.py once before Sapiens to create/verify the exact OpenVINO graph. The adapter otherwise uses original TorchScript CPU. Official COCO17 weights returned gated-repository401; used public official Goliath308 weights instead and labeled/mapped them explicitly.",
+    "prefetch": "All checkpoints were downloaded separately before full inference. Asset hashes and model URLs are recorded. Initial prefetch elapsed times were not instrumented; they are not included in model inference timings."
+  },
+  "resume_policy": "Completed JSON and verified videos are reused. Stateless and temporal fresh-pose adapters resume per-frame JSONL journals. YOLO and MediaPipe tracker state is not reconstructed from old poses; interrupted tracker runs restart. Acquisition revision and SHA invalidate stale top-down results, preserving superseded comparison attempts under comparison/attempts.",
+  "timing_policy": "Single-run elapsed processing, not a general speed benchmark. Model initialization/checkpoint loading, fresh-pose inference, common detector acquisition, rendering, graph conversion and independent downloads are separated. Retrying a partial stateless journal uses recorded progress timing; no accuracy ranking."
+}

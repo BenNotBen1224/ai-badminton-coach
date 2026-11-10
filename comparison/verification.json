@@ -1,0 +1,281 @@
+{
+  "checked_at_unix": 1793062137.5346835,
+  "methods": {
+    "original": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1467,
+      "hard_frame_decoded_image_sha256": [
+        "d29bf91010509e5b1810598797a0e3cdd2a91f4267af6ff6ba62c5711c4dda78",
+        "e304b83bccae423346d2380dc7e67832e3e4445440b7b35b1a04a63d79702f23",
+        "b36d4898e6f0037729a2ff94794c7be85fc0457e8d1816d52b8f951b606686a7"
+      ],
+      "keypoints_sha256": "9e55cf08b3b77cd5783634aafaa6eb5a2e1b7ee08a3045901f34322a50251e4f",
+      "video_sha256": "3e1a102f0e9993d98bd973b368be7a0f180b5728aad664f00ed7cf34e3fe227e"
+    },
+    "crop": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1728,
+      "hard_frame_decoded_image_sha256": [
+        "32aae96574ac24e3ba88ced5230a76d824695f0bb5c819573afae0636bcbdc7b",
+        "8d1846ff6c44509c3b03f66cf1ec30bdc4c851203d9ba734f72b918ee5b17463",
+        "626f38bcca4fa37fe6d32e71e1573d9a9dd67abc4dd6abe6edafaede18299418"
+      ],
+      "keypoints_sha256": "588454e2aba4c51555bfa008a9097b435ef8a2119990fa741117260b53564336",
+      "video_sha256": "cc93e03cd90b41c09a9b93b1d0fdd26de6e5cad00411417a65021ba08cdeb724"
+    },
+    "rtmpose": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1923,
+      "hard_frame_decoded_image_sha256": [
+        "e404ee947aebf0a7b2092a8ab466dc4e923e9d511c3108c57a261f731059cc8f",
+        "4f1fe0ed2fc9ad991b9989ee07b580b3637e0ba2c1d77d4bb3e4a57194860730",
+        "7efbaab4f12fb3ee67d296fd2ebbf68e869515149f6468386219959846d28e35"
+      ],
+      "keypoints_sha256": "08e58ab1dab973e9db507b4aa1c99ecc7d2132c6a067709e876f99a54830f585",
+      "video_sha256": "d7453395556075853bfc4c199fea6e0cfa3714c6ad7b4cd12681e252fa1ee332"
+    },
+    "rtmo": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1210,
+      "hard_frame_decoded_image_sha256": [
+        "5e10d823cd9f59d047f5a0995b196bb2859ff76351fda3acaf1ec511886fb415",
+        "443fee47083f64985a026417cf3056065e28249c0cb0c1a52af646722c448dbb",
+        "dc77229389e2285754d421c57842e9965b1b66cd729b93eec3a131017c0fc369"
+      ],
+      "keypoints_sha256": "a39ba96b409ed2e35f9ea061a2f3f02398f68cf71ee43f3318cf200acb852272",
+      "video_sha256": "a9f9785c957302971af864cb1af258b6887ab9a3b7cf6f8c8f4e3cd50fdd1a9d"
+    },
+    "vitpose": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1923,
+      "hard_frame_decoded_image_sha256": [
+        "9b532f04c2b10cbb29ed95c500dde9782e080d0a4b33de5585a80010e4cfcfd9",
+        "46d76f8e41b639c290ab5a1b66a9b6599354bac4d4ca512368305d69fb5c9c4d",
+        "4aac59f2780fe0743a8ae9619eb4fb6a86f8685be5c2a1ac70286694c81d5674"
+      ],
+      "keypoints_sha256": "7075c9cd76f9013962ffe7a9d8f6ff1928bd26ae8daf2b461234a974edb00486",
+      "video_sha256": "de48c40a9f13f54c5f7126787857c243bce4d7ab5483b999b86f97eeee19d654"
+    },
+    "mediapipe": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 18,
+      "hard_frame_decoded_image_sha256": [
+        "7185ac9153fefe279f37257834cb19dd729e96f288ec49fc7989cb8ce88b3e7e",
+        "0baad694f2c95cda91818fbe4f0d7fbe1ddc901867312e2034d41146874d98a8",
+        "169d1fa2db84cfd8bb08a198633a4c0c29ea49598c04c10172a237e76cd2e667"
+      ],
+      "keypoints_sha256": "d8e471d7abda25b4a21e2fc5241cb73fefe22b82a7f81b38b1ad2ba67c36fa32",
+      "video_sha256": "ac2b86cc44095d30287c9e0c1c7c6221ae722ae3666e7d7e186d18fb5bfc17b1"
+    },
+    "movenet": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 802,
+      "hard_frame_decoded_image_sha256": [
+        "5d957e8b80f7fa36f063cd8158628a6b8304d54757c0ae5786f78dd6d17a6f5e",
+        "6427b97a72588ed19533f2b9d3e1eaaca2942cee91bea4a9d6fb95b1843d8473",
+        "6c05e79977b9d012cecb74ae448c065feaf741ffb2d41bfeb678723fc6bfd9e7"
+      ],
+      "keypoints_sha256": "4c41a1660172e12eb42889dae1643e39808ec5c905fee0bd61a0edd0f5419cf0",
+      "video_sha256": "12dda901adb19d868ba63ef4da8acee95703e261671b6bf9073222b00fa175f3"
+    },
+    "botsort": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1474,
+      "hard_frame_decoded_image_sha256": [
+        "6be4f7c497b109176b85cf9d374c41cf66365c145c9b0bc6a3e0c1c32389b8d4",
+        "0043e3ee060f0488d3b717b4471cc7321512cbaf6e24d479ba01ae702a00379f",
+        "7f352669809fa1320c24df86984bd2a87a8a7a940eab3404bfc78f493842db3e"
+      ],
+      "keypoints_sha256": "2d4c8cfe12975c08231dd1018311a96b876d52100374f7592b1f43ba742817f9",
+      "video_sha256": "4af465ef9df4f3e3599ed196c3ca8284136c3b7ee02c5abd317c63ae214dab4e"
+    },
+    "posewarper": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1923,
+      "hard_frame_decoded_image_sha256": [
+        "621f02691a6af1634c821e92a0a777156f91bf5920aac4fb6430909cd53eeff6",
+        "648b0ee47c2209b6712a6f4595137f88c782c39dd36638a2f097c851c125bdea",
+        "9cb55c632c20650fbe784f82cdd13d95b8055dabb0efdcb445809a076cbbc7fe"
+      ],
+      "keypoints_sha256": "54881866a5b15a34d1be21b48d8fde2b1538335d1cb715dfd881a00ebb2157c8",
+      "video_sha256": "b8f4c8adf80577d93e1c443f9d896437577c6cd948b18447f2d483618c810f0a"
+    },
+    "sapiens": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1923,
+      "hard_frame_decoded_image_sha256": [
+        "2563531246cb0290ef4f6b27234741225a6539324c2dee65d0e5f5b033ecef35",
+        "f7b2b74861cae6c60178bfa11f9656528d24e4fb063a4e99ede467495c7ee480",
+        "8907cd07dcb59c4d9fcf2df6b5ae1b313061ee6599179f19ed1d243782a0ac52"
+      ],
+      "keypoints_sha256": "97db05ab96cd109978c0eab61450ee3837bba2c6f6f13d6fc5359518ce7e636e",
+      "video_sha256": "17b18c99fee5ad48a257fa8b2aad10fcfc400ff3fcd00d470f112c8a83b9dac8"
+    },
+    "onnx": {
+      "ffprobe": {
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "780"
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "unique_observed_display_poses": 1512,
+      "hard_frame_decoded_image_sha256": [
+        "6ba38429c5fe4e5c16af4ab0746e8061e17a49d5826fc46451efa32cacd959b8",
+        "389a34d14467f54be57967a1ce64a899c21f6eae055b4ed55a4e9c50d2f338fe",
+        "67cfd3b62a5081951bd74f5f42b5b1a03698264eb1d76a7878f7326d2417994e"
+      ],
+      "keypoints_sha256": "6de355b8baebd71353a7685b7773811b103231f0b886230d8c47027a1281ff6e",
+      "video_sha256": "858956249c5e42dedc750596b876b9ff9fe3206fb57197ef062544e4fff6f710"
+    }
+  },
+  "scope": "All frames decoded by FFprobe; H264/yuv420p, shape, fps and duration verified. Hard frames decoded at8/15/22s. Unique pose observations detect frozen-pose output, not pose accuracy."
+}

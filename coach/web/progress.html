@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress · Badminton Coach</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%B8%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css">
+<script type="module" src="/static/app.js"></script>
+</head>
+<body data-page="progress">
+<header class="bar">
+  <a class="brand" href="/">Badminton Coach</a>
+  <nav><a href="/">Sessions</a><a href="/progress" aria-current="page">Progress</a></nav>
+</header>
+<main>
+  <div class="hero">
+    <h1>Progress</h1>
+    <p>Each chart follows one measure across your sessions. The green band is the practice guide.</p>
+  </div>
+  <form id="pick" class="toolbar">
+    <label for="player">Player</label>
+    <select id="player"></select>
+  </form>
+  <p id="progress-empty" class="empty" hidden></p>
+  <p id="progress-error" class="error-text" role="alert" hidden></p>
+  <div id="charts" class="charts"></div>
+</main>
+</body>
+</html>

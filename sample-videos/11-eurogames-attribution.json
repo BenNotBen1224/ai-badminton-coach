@@ -1,0 +1,32 @@
+{
+  "purpose": "Edge clip 11. Recreational hall, not a broadcast baseline view, and not one of the gating clips.",
+  "source": {
+    "title": "Badmington Competition EuroGames 2 2023 in Wankdork, Bern",
+    "event": "EuroGames Bern 2023 badminton, 27 July 2023, Wankdorf stadium hall.",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Badmington_Competition_EuroGames_2_2023_in_Wankdork,_Bern.webm",
+    "license": "CC BY-SA 4.0",
+    "credit": "Hyruspex, Wikimedia Commons",
+    "file": "obj2/work/H/downloads/eurogames-2023.webm"
+  },
+  "changes": "Trimmed source 40-70 s, removed audio, re-encoded H.264 High, yuv420p, 30 fps. Stored pixels are 848x464 with sample aspect 619:848. The clip is scaled to square 618x464 so people are not stretched. No crop, zoom, overlay, or upscale.",
+  "clips": [
+    {
+      "file": "11-eurogames-2023.mp4",
+      "source_start_seconds": 40,
+      "source_end_seconds": 70,
+      "duration_seconds": 30,
+      "bytes": 5582917,
+      "codec": "h264",
+      "profile": "High",
+      "pix_fmt": "yuv420p",
+      "width": 618,
+      "height": 464,
+      "fps": "30/1",
+      "frames": 900,
+      "has_b_frames": 2,
+      "seen": "High side view of a recreational hall with several courts. The near court has two players. Other people are on nearby courts. This is not a fixed camera behind one baseline."
+    }
+  ],
+  "pipeline": "The frozen default command found no court (best fit 0.42) and wrote no pose file. No court corners were supplied.",
+  "endorsement": "No endorsement by the players, EuroGames, or the photographer is implied."
+}

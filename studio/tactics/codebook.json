@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "purpose": "Explain a rally as opponent state, a possible purpose of the shot, the available replies, and the next observed choice.",
+  "authority_limit": "These are conditional coaching interpretations supported by published sources. They are not measurements of a player's intention or proof of national-team coaching expertise.",
+  "source_count_file": "books\\audit.json",
+  "observation_contract": {
+    "measured": ["visible contact time with uncertainty", "player identity by track", "both players' court positions", "opponent movement before contact"],
+    "inferred": ["shot family without shuttle tracking", "current shot destination from the next receiver contact", "possible tactical purpose"],
+    "not_measured": ["shuttle landing", "player intention", "three-dimensional joint angles", "forces", "a universal optimal base position"],
+    "unknown_rule": "If contact, identity, court mapping or the relevant next contact is uncertain, omit that claim instead of completing the sequence from alternation.",
+    "causality_rule": "A later movement is an observed response, not proof that the preceding shot caused it or that the hitter planned it.",
+    "wording_zh": "用“像是想”“可以理解为”“接下来要看”，不用“她早就算准”“必然”“百分之百”。"
+  },
+  "prediction_contract": {
+    "cutoff": "The prediction is made at the current contact, using observations available at or before that contact.",
+    "forbidden_inputs": ["receiver_position_at_next_contact_m", "landing_zone", "time_to_next_contact_s", "shot_family inferred from the next contact", "future labels", "rally outcome"],
+    "retrospective_note": "A destination inferred using the next contact may explain an observed sequence retrospectively, but is not eligible as an input to a prospective next-reply prediction.",
+    "evaluation": "Freeze rules before the held-out rallies. Report coverage, sample size, prediction-set size and accuracy beside a development-set majority baseline of the same set size. Unknowns are not wins.",
+    "baseline_limit": "Do not learn the majority reply or tune thresholds from the held-out rallies."
+  },
+  "rules": [
+    {
+      "id": "rear_then_front",
+      "title_zh": "先把人推远，再找前面",
+      "opponent_state": "The opponent has been displaced toward the rear and has not yet recovered forward.",
+      "choice": "Consider the available front-court space rather than repeating an unpressured deep shot.",
+      "expected_reply": "The opponent must travel forward if the next shot is genuinely short. An early arrival can still produce an attacking net reply; a late arrival may constrain the reply.",
+      "check": "Show the opponent's position before the choice and where the opponent actually next contacts. Check the travel and contact state, not an untracked landing.",
+      "required_evidence": ["two verified contacts in one continuous rally", "both players' court positions at the choice", "receiver's next measured contact"],
+      "do_not_apply": ["unreliable court mapping", "intervening camera cut", "the opponent is already moving forward", "the current shot destination is unknown"],
+      "sources": ["en_pd:p18", "en_theses:p63"],
+      "source_lineage": ["Virginia Hicks, 1973, singles strategy", "Minh Huynh, 2012, shot glossary"],
+      "source_limit": "Two authored works support the tactical aim, not a probability that this opponent will lose the rally."
+    },
+    {
+      "id": "front_then_behind",
+      "title_zh": "把人拉上来，才有身后",
+      "opponent_state": "The opponent is reaching or arriving at the front court, leaving distance to cover behind.",
+      "choice": "A deep reply can make the opponent reverse the frontward movement, if the hitter has the time and control to play it.",
+      "expected_reply": "The opponent may retreat for an overhead reply. A short or loose deep shot can instead give the opponent an attack.",
+      "check": "Show the initial forward displacement, the reversal and the next contact depth. Do not equate any backward step with a successful tactical trap.",
+      "required_evidence": ["continuous pre-contact player trail", "current contact", "next receiver contact and depth"],
+      "do_not_apply": ["receiver already recovered rearward", "unknown intervening contacts", "pose jitter is larger than the apparent reversal"],
+      "sources": ["en_pd:p18", "en_theses:p62"],
+      "source_lineage": ["Virginia Hicks, 1973, singles strategy", "Minh Huynh, 2012, shot glossary"],
+      "source_limit": "The space is created by the opponent's displacement, not by the label of the shot alone."
+    },
+    {
+      "id": "buy_recovery_time",
+      "title_zh": "这拍先把时间拿回来",
+      "opponent_state": "The hitter is late or stretched while the opponent is better positioned to continue attacking.",
+      "choice": "A sufficiently high, deep defensive reply can buy recovery time instead of forcing an immediate winner attempt.",
+      "expected_reply": "The opponent receives farther back while the hitter gets time to recover. A short reply can still be attacked; deep does not mean safe.",
+      "check": "Compare the hitter's position at this contact with the position before the following opponent contact. Show whether recovery actually occurred.",
+      "required_evidence": ["visible late or reaching contact", "next contact interval", "hitter recovery trajectory", "receiver next contact depth"],
+      "do_not_apply": ["only a single still image", "unseen flight described as a measured high clear", "the next contact is missing"],
+      "sources": ["en_theses:p54", "zh:p9"],
+      "source_lineage": ["Jingyi Shannon Chia, 2018, explicitly citing Downey 2007 for the recovery tactic", "蕭博仁, 2005, observed elite women's singles patterns"],
+      "source_limit": "One source gives the strategic rationale; the other describes a specific player's defensive pattern. Neither makes this the correct choice in every situation."
+    },
+    {
+      "id": "net_reply_options",
+      "title_zh": "接得越低，下一拍越要看清",
+      "opponent_state": "The receiver is late near the net and cannot attack above the net.",
+      "choice": "A tight short shot can make an upward reply more attractive, but the hitter must still cover a net return.",
+      "expected_reply": "Possible replies include a lift, a net return and a cross-court net reply. Do not declare a lift inevitable.",
+      "check": "Pause before the receiver contacts, name the competing replies, then play the actual next contact and identify what happened only if visible.",
+      "required_evidence": ["receiver's visible contact state near the net", "continuous next exchange", "enough image detail to distinguish low from high contact"],
+      "do_not_apply": ["contact height cannot be seen", "the net shot sits up for a kill", "a family label is inferred only from elapsed time"],
+      "sources": ["en_theses:p64", "other_lang:p51"],
+      "source_lineage": ["Minh Huynh, 2012, net-shot objective", "Julie K'Bidy, 2021, recorded expert-coach dialogue with multiple reply options"],
+      "source_limit": "The coaching aim and the available alternatives are both retained. An intended weak lift is not an observed weak lift."
+    },
+    {
+      "id": "cover_faster_threat",
+      "title_zh": "回位不是回同一个点",
+      "opponent_state": "After a short defensive reply, the opponent can answer quickly at the net or play a slower lift.",
+      "choice": "Recovery can favor the urgent front-court threat while retaining the ability to retreat, instead of always returning to one geometric center.",
+      "expected_reply": "A quick straight net reply is the immediate threat in the cited drill. A lift remains possible and must be allowed for.",
+      "check": "Show where the player waits, what the opponent actually replies and whether that waiting position helps with the response. Do not call a habitual median position universally optimal.",
+      "required_evidence": ["the preceding defensive reply", "opponent's reachable contact state", "player recovery position", "actual next reply"],
+      "do_not_apply": ["the preceding shot is unknown", "the opponent has a different attacking option", "a fixed central base is used as a correctness target"],
+      "sources": ["other_lang:p52", "other_lang:p53", "en_theses:p56"],
+      "source_lineage": ["Julie K'Bidy, 2021, expert-coach and player dialogue", "Jingyi Shannon Chia, 2018, discussion of opponent-relative base position, citing Mack 2016"],
+      "source_limit": "The source records disagreement from the player, and the coach then adds the lift option. This is a contextual tradeoff, not a universal instruction to stand forward."
+    },
+    {
+      "id": "play_against_commitment",
+      "title_zh": "先看她往哪走",
+      "opponent_state": "The opponent has visibly committed movement toward an expected reply or has been displaced by the previous shot.",
+      "choice": "An available opposite-direction reply may make that movement costly. A cross-court shot is not automatically better, since it can travel farther and allow more time.",
+      "expected_reply": "The opponent may have to brake or reverse. If the opponent was not committed, the same shot may create no advantage.",
+      "check": "Show the motion before contact and the observed movement after it. Use a direction change as evidence; do not infer deception or intention from position alone.",
+      "required_evidence": ["stable opponent track before contact", "current verified contact", "observed next receiver contact"],
+      "do_not_apply": ["movement vector is dominated by noise", "the opponent is settled", "unseen shuttle direction is drawn as a tracked path"],
+      "sources": ["en_pd:p20", "other_lang:p61"],
+      "source_lineage": ["Virginia Hicks, 1973, conditional cross-court serve return", "Julie K'Bidy, 2021, coach prioritizing speed opposite a displaced opponent"],
+      "source_limit": "The two contexts differ. They support reading committed movement, not prescribing the same cross-court shot for every rally."
+    }
+  ],
+  "interpretation_guard": {
+    "text_zh": "同一个动作，不一定是同一个目的。先看双方的位置、来球和前一拍，再说这一拍可能在争什么。",
+    "sources": ["zh:p43", "other_lang:p63"],
+    "meaning": "The same stroke can attack, neutralize pressure or conserve effort. Placement and speed matter through their effect on this opponent in this rally."
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "status": "draft_pending_independent_review_and_render",
+  "title_zh": "这一拍，给下一拍留下什么？",
+  "source": "<workspace>\\obj2\\work\\H\\downloads\\china-open-2025-ws-final.webm",
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "source_scope": "Three selected passages from an edited China Open 2025 women's singles final reel, not the complete match.",
+  "analysis_mode": "Retrospective editorial analysis based on inspected continuous source sequences and real cached pose. Not an accepted automatic contact detector or a prospective prediction evaluation.",
+  "codebook": "codebook.json",
+  "limits": [
+    "The V2 automatic contact accuracy gates are not passed; selection does not change that result.",
+    "No shuttle trajectory, racket contact sensor, player's intention or precise three-dimensional biomechanics is measured.",
+    "Short/deep replies are interpretations of the visible exchange, not measured shuttle landing locations.",
+    "Book collection and independent script review are separate requirements, not implied by this script.",
+    "Keep original watermarks and attribution. Upstream broadcast rights for public redistribution have not been independently cleared."
+  ],
+  "presentation": {
+    "language": "zh-CN",
+    "framing": "Keep both players, the whole playable court and existing attribution visible; do not crop into a single-player talking-point montage.",
+    "sequence": "Show each passage once in increasing source-time order. Slow selected decisions, allow brief holds, then show the actual reply. Do not replay the same action.",
+    "overlays": "Use real player tracks for brief position/travel cues and pose only at useful instants. Label any arrows as player movement, never shuttle flight.",
+    "pose_limit": "Only sufficiently supported real joints; suppress obscured joints. Never project airborne ankles as precise floor locations.",
+    "text": "Short lesson title plus one changing observation, not the full spoken paragraph. Identify players by red/gray shirts; near/far changes after the end switch.",
+    "audio": "Local neural Chinese voice, with actual synthesized duration determining the edit. Preserve quiet court audio where available; do not invent impact sounds.",
+    "ending": "Two short takeaway lines while the final rally continues; do not imply that the last shown attack won the rally."
+  },
+  "moments": [
+    {
+      "id": "space",
+      "title_zh": "不是救这一球，是被连续调动",
+      "source_window_s": [57.8, 64.8],
+      "rules": ["front_then_behind", "rear_then_front"],
+      "evidence": "evidence\\space-sequence\\evidence.json",
+      "inspected_sheets": ["evidence\\candidate-57.8.jpg", "evidence\\candidate-61.3.jpg"],
+      "observed_sequence": [
+        "Red-shirt player moves toward the front, then reaches the near rear-right around 60.65 seconds.",
+        "The following exchange sends her to a low forward-left reach around 62.05 seconds.",
+        "She gets up and the rally continues. The low rescue itself is not presented as the point-ending shot."
+      ],
+      "overlay_anchors_s": [59.45, 60.65, 62.05],
+      "do_not_claim": [
+        "Gray-shirt player read the opponent's mind or planned the entire rally.",
+        "A measured shuttle landing or exact three-dimensional travel distance.",
+        "The dive itself caused the point loss."
+      ]
+    },
+    {
+      "id": "time",
+      "title_zh": "先争回位的时间",
+      "source_window_s": [126.6, 134.0],
+      "rules": ["buy_recovery_time"],
+      "evidence": "evidence\\r1-feedback\\evidence.json",
+      "observed_sequence": [
+        "Red-shirt player is on or very close to the floor after a low forward-left rescue around 128.05 seconds.",
+        "She rises and recovers before the gray-shirt opponent's rear-court overhead around 130.03 seconds.",
+        "The opponent can still attack, and the red-shirt player must respond again. Recovery is not a proven reversal of the rally."
+      ],
+      "overlay_anchors_s": [128.3167, 130.0167, 131.9833],
+      "do_not_claim": [
+        "Measured shuttle height or a measured high-clear flight.",
+        "The defensive reply made the rally safe or won initiative.",
+        "Airborne ankle projections show exact floor positions."
+      ]
+    },
+    {
+      "id": "options",
+      "title_zh": "等回球，不押死一种答案",
+      "source_window_s": [272.8, 285.0],
+      "rules": ["net_reply_options"],
+      "evidence": "evidence\\reply-sequence\\evidence.json",
+      "inspected_sheets": ["labels\\sheets\\R3_271.60.jpg", "labels\\sheets\\R3_275.20.jpg", "labels\\sheets\\R3_oz_274.60.jpg"],
+      "observed_sequence": [
+        "Gray-shirt player near the camera makes a low defensive reply around 274.05 seconds.",
+        "Red-shirt opponent moves forward from the rear and handles the next reply low around 275.0 seconds.",
+        "Gray-shirt player then makes a rear-court overhead around 276.3 seconds; the opponent returns it around 276.8 seconds and the exchange continues."
+      ],
+      "overlay_anchors_s": [274.0333, 275.0, 276.3],
+      "alternatives": "A lift and a short net reply remain coaching possibilities before the next reply is shown. These alternatives are not scored as a successful prediction.",
+      "do_not_claim": [
+        "A low receiver has only one legal or physically possible reply.",
+        "The actual lift was inevitable or predicted by an accepted model.",
+        "The overhead wins this rally."
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "id": "intro",
+      "moment": "space",
+      "source_support_s": [57.8, 59.4],
+      "text_zh": "别只盯着这一拍怎么打，看看它给下一拍留下了什么。",
+      "rubric": "framing",
+      "why_next_eligible": false
+    },
+    {
+      "id": "space-1",
+      "moment": "space",
+      "source_support_s": [59.4, 62.1],
+      "text_zh": "红衣退到右后，又得扑向左前。",
+      "rubric": "observed_movement",
+      "why_next_eligible": false
+    },
+    {
+      "id": "space-2",
+      "moment": "space",
+      "source_support_s": [60.2, 62.1],
+      "text_zh": "两个远点连着打，让她刚到这边，又得赶往那边。",
+      "rubric": "why",
+      "why_next_eligible": true,
+      "basis": "The continuous tracked sequence shows rear-right reach followed by forward-left rescue; it supports the travel burden, not a measured intention."
+    },
+    {
+      "id": "space-3",
+      "moment": "space",
+      "source_support_s": [62.05, 64.8],
+      "text_zh": "所以难的不只是扑救，还有起身后的下一拍。",
+      "rubric": "what_next",
+      "why_next_eligible": true,
+      "basis": "The player must get up and participate in the following exchange; the rescue is not the end of the sequence."
+    },
+    {
+      "id": "time-1",
+      "moment": "time",
+      "source_support_s": [126.6, 128.4],
+      "text_zh": "倒地之后，比起急着反攻，更需要先争回位的时间。",
+      "rubric": "why",
+      "why_next_eligible": true,
+      "basis": "Visible low/on-floor state plus the conditional buy_recovery_time rule; this is a coaching interpretation, not a universal grading norm."
+    },
+    {
+      "id": "time-2",
+      "moment": "time",
+      "source_support_s": [128.05, 130.1],
+      "text_zh": "回球把对手带到后场，她也争到了起身回位的时间。",
+      "rubric": "why",
+      "why_next_eligible": true,
+      "basis": "Show the hitter's recovery before the next opponent overhead, with both players visible throughout."
+    },
+    {
+      "id": "time-3",
+      "moment": "time",
+      "source_support_s": [130.0, 134.0],
+      "text_zh": "但对手还能进攻，救回来，不等于翻了盘。",
+      "rubric": "what_next",
+      "why_next_eligible": true,
+      "basis": "The next attack and return are visible; no claim that this rescue won the point."
+    },
+    {
+      "id": "options-1",
+      "moment": "options",
+      "source_support_s": [272.8, 275.05],
+      "text_zh": "挡短，先把对手从后场调到网前。",
+      "rubric": "why",
+      "why_next_eligible": true,
+      "basis": "The opponent moves from rear-court attack to a low forward reception during the continuous exchange."
+    },
+    {
+      "id": "options-2",
+      "moment": "options",
+      "source_support_s": [274.7, 275.05],
+      "text_zh": "接得低，也别只等挑球，还要防她回网。",
+      "rubric": "what_next_alternatives",
+      "why_next_eligible": true,
+      "basis": "The net_reply_options rule retains multiple replies. This is a retrospective teaching pause, not an independently scored forecast."
+    },
+    {
+      "id": "options-3",
+      "moment": "options",
+      "source_support_s": [275.0, 276.4],
+      "text_zh": "这次她挑高，灰衣才有机会下压。",
+      "rubric": "why",
+      "why_next_eligible": true,
+      "basis": "Show the actual low reply followed by the gray-shirt player's rear-court overhead; shot family remains a visual interpretation."
+    },
+    {
+      "id": "options-4",
+      "moment": "options",
+      "source_support_s": [276.3, 278.9],
+      "text_zh": "又被接住了，所以还得接着判断。",
+      "rubric": "what_next",
+      "why_next_eligible": true,
+      "basis": "The red-shirt player returns the overhead and the following exchange remains visible."
+    },
+    {
+      "id": "summary-1",
+      "moment": "options",
+      "source_support_s": [278.9, 282.0],
+      "text_zh": "先看对手在哪，再想这一拍给她什么选择。",
+      "rubric": "summary",
+      "why_next_eligible": false
+    },
+    {
+      "id": "summary-2",
+      "moment": "options",
+      "source_support_s": [282.0, 285.0],
+      "text_zh": "打完一拍，重新判断。",
+      "rubric": "summary",
+      "why_next_eligible": false
+    }
+  ]
+}

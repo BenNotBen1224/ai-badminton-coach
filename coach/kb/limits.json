@@ -1,0 +1,65 @@
+{
+  "can": "I can explain what the analysis found, show you the moments in the video, suggest gym exercises and show how to do them, and build a simple practice plan.",
+  "cannot": {
+    "three_d": {
+      "keys": ["3d", "three d", "depth", "real angle", "real angles", "true angle", "true angles", "2d", "flat", "one camera", "single camera", "camera angle"],
+      "text": "The video is one flat camera view, so anything towards or away from the camera is estimated, not measured. Angles are called projected for that reason, and I cannot give true 3D angles."
+    },
+    "angles": {
+      "keys": ["joint angle", "joint angles", "angle", "angles", "degrees", "elbow angle", "knee angle"],
+      "text": "Angles are read from the flat picture, so a limb pointing towards the camera looks shorter and its angle can be off. Treat them as projected estimates, not exact joint angles."
+    },
+    "force": {
+      "keys": ["force", "power", "how hard", "strength", "watts", "how strong", "impact", "load"],
+      "asks": ["how hard * hit~", "how hard * smash~", "how powerful * smash~", "how powerful * hit~", "how powerful * shot~", "how strong * smash~", "how much force", "how much power"],
+      "text": "I cannot measure force, power or how hard you hit. I only see body positions and timing in the video."
+    },
+    "muscles": {
+      "keys": ["muscle", "muscles", "which muscle", "muscle activation", "activation", "fatigue level"],
+      "text": "I cannot see which muscles are working or how tired they are. I only see how your body moves in the picture."
+    },
+    "shuttle": {
+      "keys": ["shuttle", "shuttlecock", "birdie", "shot speed", "smash speed", "shot placement", "placement", "shot type", "which shot", "in or out", "line call", "landed", "score", "points"],
+      "asks": ["how fast * smash~", "how fast * shot~", "how fast * shuttle~", "how fast * birdie~", "what * smash~ speed~", "what * shot~ speed~", "speed of * smash~", "speed of * shot~", "speed of * shuttle~"],
+      "text": "The shuttle is not tracked, so I cannot tell shot speed, shot type, placement, or whether it landed in. The advice uses player movement and timing only."
+    },
+    "racket": {
+      "keys": ["racket face", "racket angle", "grip", "string", "strings", "tension", "racket", "racquet"],
+      "asks": ["how fast * racket~", "how fast * racquet~", "what * racket~ speed~", "speed of * racket~"],
+      "text": "I cannot see the racket face, grip or strings clearly enough to measure them. I follow the hitting hand instead."
+    },
+    "body": {
+      "keys": ["heart rate", "pulse", "calories", "breathing rate", "oxygen", "sweat"],
+      "text": "I cannot measure heart rate, calories or anything inside the body. I only see movement in the video."
+    },
+    "accuracy": {
+      "keys": ["accurate", "accuracy", "how sure", "trust", "reliable", "exact", "precise", "error", "margin", "confidence", "how do you know", "calculated", "measured", "measure", "wrong", "correct"],
+      "text": "Numbers come from one flat video, so they are estimates. Each one has a confidence word: fairly sure, somewhat sure or not very sure. Use them as practice guides, not exact measurements."
+    },
+    "norms": {
+      "keys": ["norm", "norms", "normal for me", "my target", "personal target", "validated", "tested", "for my level", "for my age", "for amateurs", "for beginners"],
+      "text": "The target ranges are general practice guides from coaching, not norms tested for your body or level. They were not checked against amateur players, so use them as a direction, not a pass mark."
+    },
+    "speed": {
+      "keys": ["running speed", "top speed", "how fast i run", "kilometres", "miles", "mph", "kmh"],
+      "text": "Speeds are read from the picture and the court lines, so they are rough. Small changes between clips may be noise."
+    },
+    "doubles": {
+      "keys": ["doubles", "partner", "four players", "mixed doubles"],
+      "text": "The analysis follows two players, so it is built for singles. In a doubles game some numbers may be off."
+    },
+    "medical": {
+      "keys": ["injury prevention", "prevent injury", "prevent injuries", "medical", "diagnose", "diagnosis"],
+      "text": "I cannot give medical advice or say whether something will prevent injury. For health questions, please ask a doctor or physiotherapist."
+    }
+  },
+  "preview": {
+    "keys": ["preview", "final", "just an estimate", "estimate", "estimates", "will it change", "will they change", "change later", "refined", "full analysis", "quick estimate", "first pass", "update"],
+    "text_preview": "This is the fast preview, so the numbers are quick estimates and the full analysis can change them. Treat them as a first look.",
+    "text_refined": "This is the full analysis, but the numbers still come from one flat video, so treat them as estimates and practice guides, not exact measurements."
+  },
+  "general": {
+    "keys": ["can not you measure", "can you not measure", "can not measure", "do not you measure", "do you not measure", "not able to measure", "unable to measure", "can not you see", "can you not see", "can not you track", "can you not track", "can not you do", "your limits", "your limitations", "limitations", "limits", "blind spots", "what you miss", "what do you miss"],
+    "text": "I only see body movement in one flat video. I cannot track the shuttle, the racket, your heart rate or true 3D angles, so angles are called projected and every number is an estimate with a confidence word. Targets are practice guides, not norms tested for you."
+  }
+}

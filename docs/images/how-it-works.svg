@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="550" viewBox="0 0 1280 550" role="img" aria-label="How it works: look, understand, show">
+<title>How it works: look, understand, show</title>
+<rect width="1280" height="550" rx="20" fill="#0b0f14"/>
+<text x="64.0" y="62.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" fill="#f2f5f8" font-weight="700" text-anchor="start">How it works</text>
+<text x="64.0" y="92.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" fill="#9aa7b4" font-weight="400" text-anchor="start">Three steps. Every number it uses is saved per frame, so a run can be checked.</text>
+<text x="64.0" y="172.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#4cc9f0" font-weight="700" text-anchor="start" letter-spacing="2">LOOK</text>
+<rect x="220.0" y="130" width="181.6" height="72" rx="14" fill="#141c25" stroke="#4cc9f0" stroke-opacity="0.55"/>
+<text x="310.8" y="160.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Video</text>
+<text x="310.8" y="183.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">a match recording</text>
+<rect x="423.6" y="130" width="181.6" height="72" rx="14" fill="#141c25" stroke="#4cc9f0" stroke-opacity="0.55"/>
+<text x="514.4" y="160.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Court</text>
+<text x="514.4" y="183.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">finds the 4 corners</text>
+<line x1="403.6" y1="166" x2="414.6" y2="166" stroke="#5c6773" stroke-width="2"/><path d="M412.6,160 L421.6,166 L412.6,172 Z" fill="#5c6773"/>
+<rect x="627.2" y="130" width="181.6" height="72" rx="14" fill="#141c25" stroke="#4cc9f0" stroke-opacity="0.55"/>
+<text x="718.0" y="160.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Players</text>
+<text x="718.0" y="183.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">YOLO26 + steady IDs</text>
+<line x1="607.2" y1="166" x2="618.2" y2="166" stroke="#5c6773" stroke-width="2"/><path d="M616.2,160 L625.2,166 L616.2,172 Z" fill="#5c6773"/>
+<rect x="830.8" y="130" width="181.6" height="72" rx="14" fill="#141c25" stroke="#4cc9f0" stroke-opacity="0.55"/>
+<text x="921.6" y="160.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Body points</text>
+<text x="921.6" y="183.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">RTMPose, 17 joints</text>
+<line x1="810.8" y1="166" x2="821.8" y2="166" stroke="#5c6773" stroke-width="2"/><path d="M819.8,160 L828.8,166 L819.8,172 Z" fill="#5c6773"/>
+<rect x="1034.4" y="130" width="181.6" height="72" rx="14" fill="#141c25" stroke="#4cc9f0" stroke-opacity="0.55"/>
+<text x="1125.2" y="160.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Shuttle</text>
+<text x="1125.2" y="183.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">TrackNetV3, studio only</text>
+<line x1="1014.4000000000001" y1="166" x2="1025.4" y2="166" stroke="#5c6773" stroke-width="2"/><path d="M1023.4000000000001,160 L1032.4,166 L1023.4000000000001,172 Z" fill="#5c6773"/>
+<path d="M1125.2,204 C1125.2,228 310.8,216 310.8,238" fill="none" stroke="#5c6773" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="64.0" y="292.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#ffd166" font-weight="700" text-anchor="start" letter-spacing="2">UNDERSTAND</text>
+<rect x="220.0" y="250" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ffd166" stroke-opacity="0.55"/>
+<text x="336.2" y="280.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Swings</text>
+<text x="336.2" y="303.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">who swung, and when</text>
+<rect x="474.5" y="250" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ffd166" stroke-opacity="0.55"/>
+<text x="590.8" y="280.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Exchanges</text>
+<text x="590.8" y="303.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">back-and-forth swings</text>
+<line x1="454.5" y1="286" x2="465.5" y2="286" stroke="#5c6773" stroke-width="2"/><path d="M463.5,280 L472.5,286 L463.5,292 Z" fill="#5c6773"/>
+<rect x="729.0" y="250" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ffd166" stroke-opacity="0.55"/>
+<text x="845.2" y="280.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Findings</text>
+<text x="845.2" y="303.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">technique · footwork · position</text>
+<line x1="709.0" y1="286" x2="720.0" y2="286" stroke="#5c6773" stroke-width="2"/><path d="M718.0,280 L727.0,286 L718.0,292 Z" fill="#5c6773"/>
+<rect x="983.5" y="250" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ffd166" stroke-opacity="0.55"/>
+<text x="1099.8" y="280.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Pick</text>
+<text x="1099.8" y="303.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">3 clear, spaced-out moments</text>
+<line x1="963.5" y1="286" x2="974.5" y2="286" stroke="#5c6773" stroke-width="2"/><path d="M972.5,280 L981.5,286 L972.5,292 Z" fill="#5c6773"/>
+<path d="M1099.75,324 C1099.75,348 336.25,336 336.25,358" fill="none" stroke="#5c6773" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="64.0" y="412.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#ff5fa2" font-weight="700" text-anchor="start" letter-spacing="2">SHOW</text>
+<rect x="220.0" y="370" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ff5fa2" stroke-opacity="0.55"/>
+<text x="336.2" y="400.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Slow down</text>
+<text x="336.2" y="423.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">before the key moment</text>
+<rect x="474.5" y="370" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ff5fa2" stroke-opacity="0.55"/>
+<text x="590.8" y="400.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Freeze</text>
+<text x="590.8" y="423.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">skeleton on the player</text>
+<line x1="454.5" y1="406" x2="465.5" y2="406" stroke="#5c6773" stroke-width="2"/><path d="M463.5,400 L472.5,406 L463.5,412 Z" fill="#5c6773"/>
+<rect x="729.0" y="370" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ff5fa2" stroke-opacity="0.55"/>
+<text x="845.2" y="400.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">Explain</text>
+<text x="845.2" y="423.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">captions + local voice</text>
+<line x1="709.0" y1="406" x2="720.0" y2="406" stroke="#5c6773" stroke-width="2"/><path d="M718.0,400 L727.0,406 L718.0,412 Z" fill="#5c6773"/>
+<rect x="983.5" y="370" width="232.5" height="72" rx="14" fill="#141c25" stroke="#ff5fa2" stroke-opacity="0.55"/>
+<text x="1099.8" y="400.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#f2f5f8" font-weight="600" text-anchor="middle">MP4</text>
+<text x="1099.8" y="423.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="middle">full clip, ready to share</text>
+<line x1="963.5" y1="406" x2="974.5" y2="406" stroke="#5c6773" stroke-width="2"/><path d="M972.5,400 L981.5,406 L972.5,412 Z" fill="#5c6773"/>
+<text x="64.0" y="520.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#5c6773" font-weight="400" text-anchor="start">CPU only. Every model runs on your computer; nothing is uploaded.</text>
+</svg>

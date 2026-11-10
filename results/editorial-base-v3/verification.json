@@ -1,0 +1,405 @@
+{
+  "status": "passed",
+  "artifact_sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+  "decoded_frames": 798,
+  "expected_frames": 798,
+  "planned_duration_s": 26.6,
+  "speech_window_checks": [
+    {
+      "beat": "space",
+      "voice_correlation": 0.9998312930849415,
+      "rms": 0.07945684343576431,
+      "speech_span_s": [
+        0.08,
+        6.37125
+      ]
+    },
+    {
+      "beat": "time",
+      "voice_correlation": 0.9998930528293632,
+      "rms": 0.07714901119470596,
+      "speech_span_s": [
+        7.08,
+        13.677375000000001
+      ]
+    },
+    {
+      "beat": "options",
+      "voice_correlation": 0.9999237510652157,
+      "rms": 0.07952425628900528,
+      "speech_span_s": [
+        14.48,
+        23.22116666666667
+      ]
+    }
+  ],
+  "source_picture_checks": [
+    {
+      "output_frame": 0,
+      "trimmed_picture_mae": 2.764463726061349,
+      "wrong_plus_1s_mae": 5.276757838060162
+    },
+    {
+      "output_frame": 15,
+      "trimmed_picture_mae": 2.8258905643471715,
+      "wrong_plus_1s_mae": 5.066557298385338
+    },
+    {
+      "output_frame": 30,
+      "trimmed_picture_mae": 2.8153744856490253,
+      "wrong_plus_1s_mae": 5.0182747854699095
+    },
+    {
+      "output_frame": 45,
+      "trimmed_picture_mae": 2.837541143206432,
+      "wrong_plus_1s_mae": 5.1457371297525345
+    },
+    {
+      "output_frame": 60,
+      "trimmed_picture_mae": 2.82586009383853,
+      "wrong_plus_1s_mae": 5.318886437709934
+    },
+    {
+      "output_frame": 75,
+      "trimmed_picture_mae": 2.812652768173882,
+      "wrong_plus_1s_mae": 4.660343455871509
+    },
+    {
+      "output_frame": 90,
+      "trimmed_picture_mae": 2.88859242422559,
+      "wrong_plus_1s_mae": 5.027830228852869
+    },
+    {
+      "output_frame": 105,
+      "trimmed_picture_mae": 2.864703188732633,
+      "wrong_plus_1s_mae": 5.382863247064297
+    },
+    {
+      "output_frame": 120,
+      "trimmed_picture_mae": 2.8417176048510737,
+      "wrong_plus_1s_mae": 5.346283555705119
+    },
+    {
+      "output_frame": 135,
+      "trimmed_picture_mae": 2.8223566628633416,
+      "wrong_plus_1s_mae": 4.5472023323590935
+    },
+    {
+      "output_frame": 150,
+      "trimmed_picture_mae": 2.8341498359047073,
+      "wrong_plus_1s_mae": 4.8479687412365156
+    },
+    {
+      "output_frame": 165,
+      "trimmed_picture_mae": 2.8455469801213535,
+      "wrong_plus_1s_mae": 4.678941776190744
+    },
+    {
+      "output_frame": 180,
+      "trimmed_picture_mae": 2.8277281326731876,
+      "wrong_plus_1s_mae": 4.949832883604313
+    },
+    {
+      "output_frame": 195,
+      "trimmed_picture_mae": 2.844114374951397,
+      "wrong_plus_1s_mae": 4.882390668070902
+    },
+    {
+      "output_frame": 210,
+      "trimmed_picture_mae": 2.8410996890917506,
+      "wrong_plus_1s_mae": 4.329492979865019
+    },
+    {
+      "output_frame": 225,
+      "trimmed_picture_mae": 2.8127108163700005,
+      "wrong_plus_1s_mae": 5.219705609252993
+    },
+    {
+      "output_frame": 240,
+      "trimmed_picture_mae": 2.8201745113031755,
+      "wrong_plus_1s_mae": 5.19217087210039
+    },
+    {
+      "output_frame": 255,
+      "trimmed_picture_mae": 2.7874239971703623,
+      "wrong_plus_1s_mae": 4.787982887447264
+    },
+    {
+      "output_frame": 270,
+      "trimmed_picture_mae": 2.7941571787496056,
+      "wrong_plus_1s_mae": 5.1068293377039105
+    },
+    {
+      "output_frame": 285,
+      "trimmed_picture_mae": 2.7878077299475095,
+      "wrong_plus_1s_mae": 5.346544772445425
+    },
+    {
+      "output_frame": 300,
+      "trimmed_picture_mae": 2.7837094137403464,
+      "wrong_plus_1s_mae": 5.365922069127401
+    },
+    {
+      "output_frame": 315,
+      "trimmed_picture_mae": 2.7754270196618176,
+      "wrong_plus_1s_mae": 5.3570386226867
+    },
+    {
+      "output_frame": 330,
+      "trimmed_picture_mae": 2.809823392195542,
+      "wrong_plus_1s_mae": 5.3864247269947505
+    },
+    {
+      "output_frame": 345,
+      "trimmed_picture_mae": 2.8003148700644673,
+      "wrong_plus_1s_mae": 5.758424369704259
+    },
+    {
+      "output_frame": 360,
+      "trimmed_picture_mae": 2.852076616626373,
+      "wrong_plus_1s_mae": 5.541214081399914
+    },
+    {
+      "output_frame": 375,
+      "trimmed_picture_mae": 2.8768263012793636,
+      "wrong_plus_1s_mae": 4.877164775312058
+    },
+    {
+      "output_frame": 390,
+      "trimmed_picture_mae": 2.8388691864269733,
+      "wrong_plus_1s_mae": 4.719741442165679
+    },
+    {
+      "output_frame": 405,
+      "trimmed_picture_mae": 2.832163537601937,
+      "wrong_plus_1s_mae": 4.076373958508603
+    },
+    {
+      "output_frame": 420,
+      "trimmed_picture_mae": 2.8282363613146204,
+      "wrong_plus_1s_mae": 4.001260903072491
+    },
+    {
+      "output_frame": 435,
+      "trimmed_picture_mae": 2.8143374941122303,
+      "wrong_plus_1s_mae": 5.0660151308368695
+    },
+    {
+      "output_frame": 450,
+      "trimmed_picture_mae": 2.828711833727632,
+      "wrong_plus_1s_mae": 5.031252012355604
+    },
+    {
+      "output_frame": 465,
+      "trimmed_picture_mae": 2.856583520232793,
+      "wrong_plus_1s_mae": 5.260705731811941
+    },
+    {
+      "output_frame": 480,
+      "trimmed_picture_mae": 2.7225198702558044,
+      "wrong_plus_1s_mae": 5.559646739412672
+    },
+    {
+      "output_frame": 495,
+      "trimmed_picture_mae": 2.775142594257266,
+      "wrong_plus_1s_mae": 4.531256166896205
+    },
+    {
+      "output_frame": 510,
+      "trimmed_picture_mae": 2.6713315648574487,
+      "wrong_plus_1s_mae": 5.055761205315319
+    },
+    {
+      "output_frame": 525,
+      "trimmed_picture_mae": 2.658178900795132,
+      "wrong_plus_1s_mae": 4.9605837960452925
+    },
+    {
+      "output_frame": 540,
+      "trimmed_picture_mae": 2.718451518310408,
+      "wrong_plus_1s_mae": 5.277659373370641
+    },
+    {
+      "output_frame": 555,
+      "trimmed_picture_mae": 2.7205781983600676,
+      "wrong_plus_1s_mae": 5.322330032550826
+    },
+    {
+      "output_frame": 570,
+      "trimmed_picture_mae": 2.7606913879789405,
+      "wrong_plus_1s_mae": 5.131878101624218
+    },
+    {
+      "output_frame": 585,
+      "trimmed_picture_mae": 2.7737706583205437,
+      "wrong_plus_1s_mae": 4.5673362747480795
+    },
+    {
+      "output_frame": 600,
+      "trimmed_picture_mae": 2.8126771625206137,
+      "wrong_plus_1s_mae": 4.756936524851423
+    },
+    {
+      "output_frame": 615,
+      "trimmed_picture_mae": 2.8047769075552678,
+      "wrong_plus_1s_mae": 4.898985980502741
+    },
+    {
+      "output_frame": 630,
+      "trimmed_picture_mae": 2.809481528074277,
+      "wrong_plus_1s_mae": 5.005539560574241
+    },
+    {
+      "output_frame": 645,
+      "trimmed_picture_mae": 2.806866421339057,
+      "wrong_plus_1s_mae": 4.870525819431202
+    },
+    {
+      "output_frame": 660,
+      "trimmed_picture_mae": 2.815781768314153,
+      "wrong_plus_1s_mae": 5.182950907870985
+    },
+    {
+      "output_frame": 675,
+      "trimmed_picture_mae": 2.815171595177059,
+      "wrong_plus_1s_mae": 5.214418437020281
+    },
+    {
+      "output_frame": 690,
+      "trimmed_picture_mae": 2.802549791259871,
+      "wrong_plus_1s_mae": 5.13351862584415
+    },
+    {
+      "output_frame": 705,
+      "trimmed_picture_mae": 2.712439755195379,
+      "wrong_plus_1s_mae": 5.519048049339324
+    },
+    {
+      "output_frame": 720,
+      "trimmed_picture_mae": 2.8172199983055872,
+      "wrong_plus_1s_mae": 5.520386850048089
+    },
+    {
+      "output_frame": 735,
+      "trimmed_picture_mae": 2.8477873990088156,
+      "wrong_plus_1s_mae": 5.460902657036441
+    },
+    {
+      "output_frame": 750,
+      "trimmed_picture_mae": 2.6750112256266227,
+      "wrong_plus_1s_mae": 5.110291108659932
+    },
+    {
+      "output_frame": 765,
+      "trimmed_picture_mae": 2.7042759043758546,
+      "wrong_plus_1s_mae": 5.158619321521974
+    },
+    {
+      "output_frame": 780,
+      "trimmed_picture_mae": 2.6914052793015326,
+      "wrong_plus_1s_mae": 4.644756658170631
+    },
+    {
+      "output_frame": 795,
+      "trimmed_picture_mae": 2.7191840084958567,
+      "wrong_plus_1s_mae": 3.587218867430687
+    }
+  ],
+  "caption_voice_checks": [
+    {
+      "beat": "space",
+      "text": "韩悦调王祉怡，抓的是回位空当。",
+      "display_span_s": [
+        0.08,
+        3.377416666666667
+      ],
+      "voice_correlation": 0.9998358640022845
+    },
+    {
+      "beat": "space",
+      "text": "前后拉开，别等她站稳了再打。",
+      "display_span_s": [
+        3.437416666666667,
+        6.37125
+      ],
+      "voice_correlation": 0.9998259593744641
+    },
+    {
+      "beat": "time",
+      "text": "王祉怡被动，先过渡拆连贯。",
+      "display_span_s": [
+        7.08,
+        9.867208333333334
+      ],
+      "voice_correlation": 0.9998483112622227
+    },
+    {
+      "beat": "time",
+      "text": "硬顶快球，",
+      "display_span_s": [
+        9.927208333333333,
+        11.038333333333334
+      ],
+      "voice_correlation": 0.9998853892449179
+    },
+    {
+      "beat": "time",
+      "text": "容易把韩悦的下一拍喂舒服。",
+      "display_span_s": [
+        11.098333333333333,
+        13.677375
+      ],
+      "voice_correlation": 0.9999601706995995
+    },
+    {
+      "beat": "options",
+      "text": "换韩悦被压，",
+      "display_span_s": [
+        14.48,
+        15.74175
+      ],
+      "voice_correlation": 0.9999499173263947
+    },
+    {
+      "beat": "options",
+      "text": "王祉怡再往前抢，",
+      "display_span_s": [
+        15.80175,
+        17.53966666666667
+      ],
+      "voice_correlation": 0.99989743126297
+    },
+    {
+      "beat": "options",
+      "text": "就打她身后，逼她掉头。",
+      "display_span_s": [
+        17.599666666666668,
+        19.981125000000002
+      ],
+      "voice_correlation": 0.9999017827207372
+    },
+    {
+      "beat": "options",
+      "text": "防守想翻身，先让对手打不顺。",
+      "display_span_s": [
+        20.041125,
+        23.22116666666667
+      ],
+      "voice_correlation": 0.9999430357816685
+    }
+  ],
+  "source_position_map_matches_plan": true,
+  "monotonic_source_no_replay": true,
+  "picture_recipe_checked_frames": 798,
+  "decoded_pixel_samples": 54,
+  "pose_max_sync_error_s": 0.01670000000001437,
+  "frozen_v3_unchanged": true,
+  "independent_media_pass": true,
+  "voice_human_listening_review": false,
+  "independent_final_acceptance": "pending",
+  "engine_acceptance": "failed_recall_gate_unchanged",
+  "limits": "Pixel binding, source audio and synthetic speech checks are not a human coaching/voice verdict.",
+  "caption_chunks_match_voice_and_display": true,
+  "phone_preview": "<workspace>\\badminton-coach\\outputs\\tactics-original-editorial-20261105\\tiktok-viral-v3\\render\\phone-preview.jpg",
+  "verification_elapsed_s": 27.203
+}

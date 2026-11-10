@@ -1,0 +1,105 @@
+{
+  "purpose": "Recent singles competition footage for testing pose detection, not model-generated demonstrations or training ground truth.",
+  "selection_method": "Manually inspected and trimmed for test inputs; these are not automatically ranked highlights.",
+  "event": {
+    "name": "2026 YONEX Arise International Challenge",
+    "dates": "2026-10-07 to 2026-10-11",
+    "tier": "BWF International Challenge, a world-ranking tournament; not the World Championships or a World Tour Super 1000.",
+    "official_page": "https://www.badmintonpanam.org/arise-international-challenge-2026/",
+    "bwf_page": "https://bwfbadminton.com/tournament/5792/arise-international-challenge-2026/info"
+  },
+  "attribution": {
+    "creator": "Arise Sports Complex",
+    "channel": "https://www.youtube.com/@AriseSportsBadminton",
+    "source_title": "2026 YONEX Arise International Challenge | Day 3 - Court 1 | Quarter Finals",
+    "source_url": "https://www.youtube.com/watch?v=M4vUm6wl6pc",
+    "stream_date": "2026-10-09",
+    "license_label_on_source": "Creative Commons Attribution license (reuse allowed)",
+    "license_information": "https://www.youtube.com/t/creative_commons",
+    "cc_by_url_linked_by_youtube": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Recorded accessible 1080p playback, removed audio, trimmed continuous sections, and encoded H.264 MP4 at 30 fps. No crop, zoom, slow motion, text, skeleton, or AI frame interpolation.",
+    "endorsement": "No endorsement by the venue, players, tournament, or BWF is implied."
+  },
+  "limitations": [
+    "These are browser playback recordings, not bit-for-bit downloads of the original upload.",
+    "Capture timing is variable. The 30 fps export can repeat or drop a frame when normalizing timing; it does not add genuine detail. This is not pristine 60 fps footage for fine-grained biomechanics or high-quality slow motion.",
+    "Source timestamps are approximate links for navigation, not frame-exact ground truth.",
+    "The match on the center court is singles, but adjacent courts and spectators add other people to the image. Limit analysis to the center court.",
+    "No audio is included. These clips test visual analysis, not sound-based hit detection.",
+    "No pose or shuttle model has been run on these inputs."
+  ],
+  "recordings": [
+    {
+      "file": "sources\\arise-2026-ms-source.webm",
+      "match": "Muhammad Reza Al Fajri vs Kevin Cordon",
+      "discipline": "men's singles",
+      "round": "quarter-final",
+      "requested_source_start_seconds": 8773.356277,
+      "requested_source_end_seconds": 8893.356277,
+      "first_observed_source_frame_seconds": 8773.35,
+      "last_observed_source_frame_seconds": 8893.366666,
+      "frames_observed_by_browser": 3679,
+      "encoded_frames": 7224,
+      "browser_dropped_frame_counter_delta": 3362,
+      "largest_observed_source_frame_gap_seconds": 0.08333400000083202,
+      "largest_observed_wall_frame_gap_ms": 187.5,
+      "cadence_check": "In a moving 10-second section starting at capture time 72 seconds, FFmpeg mpdecimate retained 308 frames. Export at 30 fps rather than imply 60 distinct motion samples per second."
+    },
+    {
+      "file": "sources\\arise-2026-ws-source.webm",
+      "match": "Miranda Wilson vs Huang Ching Ping",
+      "discipline": "women's singles",
+      "round": "quarter-final",
+      "requested_source_start_seconds": 12754.107479,
+      "requested_source_end_seconds": 12864.107479,
+      "first_observed_source_frame_seconds": 12754.1,
+      "last_observed_source_frame_seconds": 12864.133333,
+      "frames_observed_by_browser": 3389,
+      "encoded_frames": 6620,
+      "browser_dropped_frame_counter_delta": 3081,
+      "largest_observed_source_frame_gap_seconds": 0.06666700000096171,
+      "largest_observed_wall_frame_gap_ms": 93.79999999999563,
+      "capture_freezes_excluded_from_selection_seconds": [
+        [14.313, 14.821],
+        [16.314, 16.846],
+        [38.063, 38.596],
+        [64.613, 65.113]
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "file": "01-singles-rally.mp4",
+      "title": "Men's singles: full-court rally",
+      "match": "Muhammad Reza Al Fajri vs Kevin Cordon",
+      "source_file": "sources\\arise-2026-ms-source.webm",
+      "capture_start_seconds": 44,
+      "duration_seconds": 26,
+      "source_start_seconds_approx": 8817.35,
+      "source_url": "https://www.youtube.com/watch?v=M4vUm6wl6pc&t=8817s",
+      "reason": "A continuous center-court singles rally with both players visible, useful as the first pose-detection input."
+    },
+    {
+      "file": "02-singles-dive.mp4",
+      "title": "Men's singles: rally with a diving attempt",
+      "match": "Muhammad Reza Al Fajri vs Kevin Cordon",
+      "source_file": "sources\\arise-2026-ms-source.webm",
+      "capture_start_seconds": 70,
+      "duration_seconds": 30,
+      "source_start_seconds_approx": 8843.35,
+      "source_url": "https://www.youtube.com/watch?v=M4vUm6wl6pc&t=8843s",
+      "reason": "A longer rally ending with a diving attempt; a harder example for pose confidence and tracking near the floor."
+    },
+    {
+      "file": "03-womens-singles-rally.mp4",
+      "title": "Women's singles: movement across the court",
+      "match": "Miranda Wilson vs Huang Ching Ping",
+      "source_file": "sources\\arise-2026-ws-source.webm",
+      "capture_start_seconds": 66,
+      "duration_seconds": 36,
+      "source_start_seconds_approx": 12820.1,
+      "source_url": "https://www.youtube.com/watch?v=M4vUm6wl6pc&t=12820s",
+      "reason": "A continuous women's singles rally with lunges and overhead strokes, providing different players for the same two-person tracking test."
+    }
+  ]
+}

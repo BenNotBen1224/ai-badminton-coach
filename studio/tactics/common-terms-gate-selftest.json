@@ -1,0 +1,6 @@
+{
+  "previous_script_still_passes_original_spec": true,
+  "new_script_matches_new_spec": true,
+  "old_wording_rejected_by_new_spec": true,
+  "new_wording_rejected_by_old_spec": true
+}

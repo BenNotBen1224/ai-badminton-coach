@@ -1,0 +1,2038 @@
+{
+  "source_video": "<workspace>\\badminton-coach\\sample-videos\\04-china-open-ws-a.mp4",
+  "source_sha256": "93bd090cf314400ed3df53ceea7c181b52337fc809054a79e4c6008b3c13c31f",
+  "chapters": [
+    {
+      "key": "hook",
+      "title": "一拍之间",
+      "source_shot": [
+        0,
+        211
+      ],
+      "source_shots": [
+        [
+          0,
+          211
+        ]
+      ],
+      "source_ranges": [
+        {
+          "start_frame": 89,
+          "end_frame": 89,
+          "source_frame": 89,
+          "speed": 1.0,
+          "phase": "hold",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 0.0,
+          "output_end_s": 0.3,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 105,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "motion",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 0.3,
+          "output_end_s": 1.8333333333333333,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 76,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "narration_extension",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 1.8333333333333333,
+          "output_end_s": 2.4,
+          "source_shot": [
+            0,
+            211
+          ]
+        }
+      ],
+      "output_start_s": 0.0,
+      "output_end_s": 2.4,
+      "speech_start_s": 0.1,
+      "speech_end_s": 2.2285714285714286,
+      "evidence": {
+        "claim": "以整场地动作开场，再回看同一回合。",
+        "source_frame": 89
+      }
+    },
+    {
+      "key": "legs",
+      "title": "腿",
+      "source_shot": [
+        0,
+        211
+      ],
+      "source_shots": [
+        [
+          0,
+          211
+        ]
+      ],
+      "source_ranges": [
+        {
+          "start_frame": 60,
+          "end_frame": 103,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "motion",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 2.4,
+          "output_end_s": 3.8666666666666667,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 72,
+          "end_frame": 107,
+          "source_frame": null,
+          "speed": 0.55,
+          "phase": "motion",
+          "focus": "near",
+          "overlay": "legs",
+          "output_start_s": 3.8666666666666667,
+          "output_end_s": 6.066666666666666,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 89,
+          "end_frame": 89,
+          "source_frame": 89,
+          "speed": 1.0,
+          "phase": "hold",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 6.066666666666666,
+          "output_end_s": 6.6,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 86,
+          "end_frame": 99,
+          "source_frame": null,
+          "speed": 0.8,
+          "phase": "replay",
+          "focus": "near",
+          "overlay": "legs",
+          "output_start_s": 6.6,
+          "output_end_s": 7.2,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 72,
+          "end_frame": 79,
+          "source_frame": null,
+          "speed": 0.75,
+          "phase": "narration_extension",
+          "focus": "near",
+          "overlay": "legs",
+          "output_start_s": 7.199999999999999,
+          "output_end_s": 7.566666666666666,
+          "source_shot": [
+            0,
+            211
+          ]
+        }
+      ],
+      "output_start_s": 2.4,
+      "output_end_s": 7.566666666666666,
+      "speech_start_s": 2.5,
+      "speech_end_s": 7.420226757369615,
+      "evidence": {
+        "claim": "右脚跨出，前膝弯下；左臂向外打开，脚步随后回收。",
+        "teaching_principle": "练习时把跨步、屈膝、上身下降和回动连成一个动作。",
+        "plant_frame": 86,
+        "bottom_frame": 89,
+        "return_frame": 99,
+        "next_move_end_frame": 140,
+        "lead_side": "right",
+        "knee_flexion_2d_deg": 113.86665479734488,
+        "stride_ratio_of_stature": 0.607519578124478,
+        "plant_confidence": 0.8662,
+        "bottom_confidence": 0.9988,
+        "n": 1,
+        "shot": [
+          0,
+          211
+        ]
+      }
+    },
+    {
+      "key": "core",
+      "title": "核心",
+      "source_shot": [
+        0,
+        211
+      ],
+      "source_shots": [
+        [
+          0,
+          211
+        ]
+      ],
+      "source_ranges": [
+        {
+          "start_frame": 74,
+          "end_frame": 110,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "motion",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 7.566666666666666,
+          "output_end_s": 8.8,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 80,
+          "end_frame": 107,
+          "source_frame": null,
+          "speed": 0.45,
+          "phase": "motion",
+          "focus": "near",
+          "overlay": "core",
+          "output_start_s": 8.8,
+          "output_end_s": 10.9,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 92,
+          "end_frame": 92,
+          "source_frame": 92,
+          "speed": 1.0,
+          "phase": "hold",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 10.9,
+          "output_end_s": 11.333333333333334,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 92,
+          "end_frame": 107,
+          "source_frame": null,
+          "speed": 0.7,
+          "phase": "replay",
+          "focus": "near",
+          "overlay": "core",
+          "output_start_s": 11.333333333333334,
+          "output_end_s": 12.1,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 80,
+          "end_frame": 107,
+          "source_frame": null,
+          "speed": 0.7,
+          "phase": "narration_extension",
+          "focus": "near",
+          "overlay": "core",
+          "output_start_s": 12.1,
+          "output_end_s": 13.866666666666667,
+          "source_shot": [
+            0,
+            211
+          ]
+        }
+      ],
+      "output_start_s": 7.566666666666666,
+      "output_end_s": 13.866666666666667,
+      "speech_start_s": 7.666666666666666,
+      "speech_end_s": 13.707981859410431,
+      "evidence": {
+        "claim": "跨到底时上身朝跨步一侧倾，肩线比髋线更斜；回位时上身逐渐回正。",
+        "teaching_principle": "观察肩线、髋线与上身在动作前后的相对变化；不据此推断肌肉、受力或三维旋转。",
+        "frames": [
+          {
+            "frame": 80,
+            "trunk_tilt_2d_deg": 0.0032714273981253334,
+            "shoulder_line_tilt_2d_deg": 19.393626365901305,
+            "hip_line_tilt_2d_deg": 7.8245517249983525,
+            "confidence": 0.8985,
+            "keypoints": {
+              "left_shoulder": [
+                896.24,
+                671.66
+              ],
+              "right_shoulder": [
+                945.98,
+                689.17
+              ],
+              "left_hip": [
+                903.24,
+                770.44
+              ],
+              "right_hip": [
+                938.97,
+                765.53
+              ]
+            }
+          },
+          {
+            "frame": 92,
+            "trunk_tilt_2d_deg": 36.87253108701115,
+            "shoulder_line_tilt_2d_deg": 30.62537197303941,
+            "hip_line_tilt_2d_deg": 6.767635518015114,
+            "confidence": 1.0296,
+            "keypoints": {
+              "left_shoulder": [
+                1015.86,
+                694.01
+              ],
+              "right_shoulder": [
+                1058.09,
+                719.01
+              ],
+              "left_hip": [
+                981.42,
+                756.78
+              ],
+              "right_hip": [
+                1014.2,
+                760.67
+              ]
+            }
+          },
+          {
+            "frame": 107,
+            "trunk_tilt_2d_deg": 0.24563956474063947,
+            "shoulder_line_tilt_2d_deg": 5.254550375189351,
+            "hip_line_tilt_2d_deg": 3.5056001840459374,
+            "confidence": 0.955,
+            "keypoints": {
+              "left_shoulder": [
+                940.74,
+                651.2
+              ],
+              "right_shoulder": [
+                993.15,
+                656.02
+              ],
+              "left_hip": [
+                949.71,
+                731.88
+              ],
+              "right_hip": [
+                983.5,
+                733.95
+              ]
+            }
+          }
+        ],
+        "shot": [
+          0,
+          211
+        ]
+      }
+    },
+    {
+      "key": "arms",
+      "title": "手臂",
+      "source_shot": [
+        367,
+        664
+      ],
+      "source_shots": [
+        [
+          367,
+          664
+        ]
+      ],
+      "source_ranges": [
+        {
+          "start_frame": 603,
+          "end_frame": 644,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "motion",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 13.866666666666667,
+          "output_end_s": 15.266666666666667,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 609,
+          "end_frame": 624,
+          "source_frame": null,
+          "speed": 0.45,
+          "phase": "motion",
+          "focus": "far",
+          "overlay": "arms-free",
+          "output_start_s": 15.266666666666667,
+          "output_end_s": 16.466666666666665,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 624,
+          "end_frame": 627,
+          "source_frame": null,
+          "speed": 0.6,
+          "phase": "motion",
+          "focus": "far",
+          "overlay": null,
+          "output_start_s": 16.466666666666665,
+          "output_end_s": 16.7,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 627,
+          "end_frame": 629,
+          "source_frame": null,
+          "speed": 0.45,
+          "phase": "motion",
+          "focus": "far",
+          "overlay": "arms-racket",
+          "output_start_s": 16.7,
+          "output_end_s": 16.933333333333334,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 624,
+          "end_frame": 624,
+          "source_frame": 624,
+          "speed": 1.0,
+          "phase": "hold",
+          "focus": "far",
+          "overlay": "arms-free",
+          "output_start_s": 16.933333333333334,
+          "output_end_s": 17.266666666666666,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 629,
+          "end_frame": 629,
+          "source_frame": 629,
+          "speed": 1.0,
+          "phase": "hold",
+          "focus": "far",
+          "overlay": "arms-racket",
+          "output_start_s": 17.266666666666666,
+          "output_end_s": 17.666666666666668,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 617,
+          "end_frame": 644,
+          "source_frame": null,
+          "speed": 0.7,
+          "phase": "replay",
+          "focus": "far",
+          "overlay": null,
+          "output_start_s": 17.666666666666668,
+          "output_end_s": 19.0,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 609,
+          "end_frame": 621,
+          "source_frame": null,
+          "speed": 0.75,
+          "phase": "narration_extension",
+          "focus": "far",
+          "overlay": "arms",
+          "output_start_s": 19.0,
+          "output_end_s": 19.6,
+          "source_shot": [
+            367,
+            664
+          ]
+        }
+      ],
+      "output_start_s": 13.866666666666667,
+      "output_end_s": 19.6,
+      "speech_start_s": 13.966666666666667,
+      "speech_end_s": 19.444195011337868,
+      "evidence": {
+        "start": 609,
+        "key": 629,
+        "end": 644,
+        "left_peak": 617,
+        "left_return": 624,
+        "right_peak": 629,
+        "left_confidence": 1.1286,
+        "left_return_confidence": 0.7213,
+        "right_confidence": 0.8412,
+        "swing_event": {
+          "frame": 629,
+          "data": {
+            "start": 625,
+            "end": 629,
+            "peak_frame": 627,
+            "peak_speed": 10.656325522353493,
+            "overhead": 1,
+            "hand": 1
+          }
+        },
+        "shot": [
+          367,
+          664
+        ],
+        "claim": "另一回合中，非持拍手先抬起并开始回收，持拍臂顺势上挥。",
+        "teaching_principle": "观察两只手臂在上举动作中的先后关系；不据此判断触球或羽毛球轨迹。"
+      }
+    },
+    {
+      "key": "tactics",
+      "title": "战术",
+      "source_shot": [
+        0,
+        211
+      ],
+      "source_shots": [
+        [
+          0,
+          211
+        ]
+      ],
+      "source_ranges": [
+        {
+          "start_frame": 120,
+          "end_frame": 165,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "motion",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 19.6,
+          "output_end_s": 21.133333333333333,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 165,
+          "end_frame": 165,
+          "source_frame": 165,
+          "speed": 1.0,
+          "phase": "hold",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 21.133333333333333,
+          "output_end_s": 21.466666666666665,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 120,
+          "end_frame": 210,
+          "source_frame": null,
+          "speed": 0.8,
+          "phase": "replay",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 21.466666666666665,
+          "output_end_s": 25.266666666666666,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 120,
+          "end_frame": 138,
+          "source_frame": null,
+          "speed": 0.7,
+          "phase": "narration_extension",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 25.26666666666667,
+          "output_end_s": 26.166666666666668,
+          "source_shot": [
+            0,
+            211
+          ]
+        }
+      ],
+      "output_start_s": 19.6,
+      "output_end_s": 26.166666666666668,
+      "speech_start_s": 19.700000000000003,
+      "speech_end_s": 26.015419501133792,
+      "evidence": {
+        "claim": "她回到半场中部、稍偏反手；对手在后场。",
+        "teaching_principle": "单打训练时，把回位和下一次向四边移动连起来。",
+        "source_start_frame": 120,
+        "source_end_frame": 210,
+        "initial_frame": 60,
+        "lunge_frame": 89,
+        "initial_position": {
+          "frame": 60,
+          "xy": [
+            0.25052323937416077,
+            0.9027592539787292
+          ],
+          "confidence": 1.0673
+        },
+        "lunge_position": {
+          "frame": 89,
+          "xy": [
+            0.5205351710319519,
+            0.7358430027961731
+          ],
+          "confidence": 0.9447
+        },
+        "near_settled": {
+          "xy": [
+            0.41117075085639954,
+            0.7517193257808685
+          ],
+          "confidence": 1.2762,
+          "n": 76,
+          "source_start_frame": 120,
+          "source_end_frame": 210
+        },
+        "far_settled": {
+          "xy": [
+            0.34140075743198395,
+            0.0469367578625679
+          ],
+          "confidence": 1.0737,
+          "n": 78,
+          "source_start_frame": 120,
+          "source_end_frame": 210
+        },
+        "court_corners_px": [
+          [
+            590.5919799804688,
+            529.3079833984375
+          ],
+          [
+            1323.8399658203125,
+            529.6319580078125
+          ],
+          [
+            1544.06396484375,
+            1006.02001953125
+          ],
+          [
+            369.4079895019531,
+            1005.5880126953125
+          ]
+        ],
+        "homography_to_normalized_court": [
+          [
+            0.02508581178501774,
+            0.011649827021289314,
+            -20.981825699110278
+          ],
+          [
+            -6.005869799601885e-05,
+            0.1359301564486623,
+            -71.91344680751104
+          ],
+          [
+            -2.153239108874322e-06,
+            0.0038118904321624465,
+            1.0
+          ]
+        ],
+        "court_position_by_frame": {
+          "near:120": {
+            "frame": 120,
+            "xy": [
+              0.4464275538921356,
+              0.7523098587989807
+            ],
+            "confidence": 1.1612
+          },
+          "near:121": {
+            "frame": 121,
+            "xy": [
+              0.44069424271583557,
+              0.7584542632102966
+            ],
+            "confidence": 1.214
+          },
+          "near:122": {
+            "frame": 122,
+            "xy": [
+              0.4408527612686157,
+              0.7642220854759216
+            ],
+            "confidence": 1.2778
+          },
+          "near:123": {
+            "frame": 123,
+            "xy": [
+              0.4395655393600464,
+              0.7658963799476624
+            ],
+            "confidence": 1.2794
+          },
+          "near:125": {
+            "frame": 125,
+            "xy": [
+              0.4367811381816864,
+              0.759230375289917
+            ],
+            "confidence": 1.023
+          },
+          "near:126": {
+            "frame": 126,
+            "xy": [
+              0.43350037932395935,
+              0.756040632724762
+            ],
+            "confidence": 1.2092
+          },
+          "near:127": {
+            "frame": 127,
+            "xy": [
+              0.4286453425884247,
+              0.7505555748939514
+            ],
+            "confidence": 1.1041
+          },
+          "near:128": {
+            "frame": 128,
+            "xy": [
+              0.4248480796813965,
+              0.7521950602531433
+            ],
+            "confidence": 1.1527
+          },
+          "near:129": {
+            "frame": 129,
+            "xy": [
+              0.4211386442184448,
+              0.7533218860626221
+            ],
+            "confidence": 1.17
+          },
+          "near:131": {
+            "frame": 131,
+            "xy": [
+              0.4182067811489105,
+              0.7561633586883545
+            ],
+            "confidence": 1.1845
+          },
+          "near:132": {
+            "frame": 132,
+            "xy": [
+              0.41516241431236267,
+              0.7538100481033325
+            ],
+            "confidence": 1.192
+          },
+          "near:133": {
+            "frame": 133,
+            "xy": [
+              0.4111269414424896,
+              0.7512435913085938
+            ],
+            "confidence": 1.1452
+          },
+          "near:134": {
+            "frame": 134,
+            "xy": [
+              0.4076922535896301,
+              0.7502580285072327
+            ],
+            "confidence": 1.2616
+          },
+          "near:135": {
+            "frame": 135,
+            "xy": [
+              0.40192911028862,
+              0.7409565448760986
+            ],
+            "confidence": 1.2105
+          },
+          "near:137": {
+            "frame": 137,
+            "xy": [
+              0.4002036452293396,
+              0.7454736232757568
+            ],
+            "confidence": 1.2526
+          },
+          "near:138": {
+            "frame": 138,
+            "xy": [
+              0.3966829776763916,
+              0.7435570955276489
+            ],
+            "confidence": 1.247
+          },
+          "near:139": {
+            "frame": 139,
+            "xy": [
+              0.39415594935417175,
+              0.7465230822563171
+            ],
+            "confidence": 1.3269
+          },
+          "near:140": {
+            "frame": 140,
+            "xy": [
+              0.39074090123176575,
+              0.7448091506958008
+            ],
+            "confidence": 1.3164
+          },
+          "near:141": {
+            "frame": 141,
+            "xy": [
+              0.38884928822517395,
+              0.7457953095436096
+            ],
+            "confidence": 1.3686
+          },
+          "near:143": {
+            "frame": 143,
+            "xy": [
+              0.3875589072704315,
+              0.7448897361755371
+            ],
+            "confidence": 1.3316
+          },
+          "near:144": {
+            "frame": 144,
+            "xy": [
+              0.38924312591552734,
+              0.7485873103141785
+            ],
+            "confidence": 1.2337
+          },
+          "near:145": {
+            "frame": 145,
+            "xy": [
+              0.39061132073402405,
+              0.7512319684028625
+            ],
+            "confidence": 1.3121
+          },
+          "near:146": {
+            "frame": 146,
+            "xy": [
+              0.3930523693561554,
+              0.7540671825408936
+            ],
+            "confidence": 1.2613
+          },
+          "near:147": {
+            "frame": 147,
+            "xy": [
+              0.39739683270454407,
+              0.7529926300048828
+            ],
+            "confidence": 1.2802
+          },
+          "near:149": {
+            "frame": 149,
+            "xy": [
+              0.39955610036849976,
+              0.7527749538421631
+            ],
+            "confidence": 1.2925
+          },
+          "near:150": {
+            "frame": 150,
+            "xy": [
+              0.4019488990306854,
+              0.7526176571846008
+            ],
+            "confidence": 1.2389
+          },
+          "near:151": {
+            "frame": 151,
+            "xy": [
+              0.40448981523513794,
+              0.7544132471084595
+            ],
+            "confidence": 1.1679
+          },
+          "near:152": {
+            "frame": 152,
+            "xy": [
+              0.40557408332824707,
+              0.7622793316841125
+            ],
+            "confidence": 1.3046
+          },
+          "near:153": {
+            "frame": 153,
+            "xy": [
+              0.40699782967567444,
+              0.765577495098114
+            ],
+            "confidence": 1.3083
+          },
+          "near:155": {
+            "frame": 155,
+            "xy": [
+              0.40824249386787415,
+              0.7640140056610107
+            ],
+            "confidence": 1.2524
+          },
+          "near:156": {
+            "frame": 156,
+            "xy": [
+              0.4081937074661255,
+              0.7636121511459351
+            ],
+            "confidence": 1.2299
+          },
+          "near:157": {
+            "frame": 157,
+            "xy": [
+              0.409238338470459,
+              0.7637996077537537
+            ],
+            "confidence": 1.1935
+          },
+          "near:158": {
+            "frame": 158,
+            "xy": [
+              0.41121456027030945,
+              0.7645671963691711
+            ],
+            "confidence": 1.215
+          },
+          "near:159": {
+            "frame": 159,
+            "xy": [
+              0.41596803069114685,
+              0.7653408646583557
+            ],
+            "confidence": 1.2474
+          },
+          "near:161": {
+            "frame": 161,
+            "xy": [
+              0.4205792248249054,
+              0.7662845849990845
+            ],
+            "confidence": 1.2315
+          },
+          "near:162": {
+            "frame": 162,
+            "xy": [
+              0.42166027426719666,
+              0.7680981159210205
+            ],
+            "confidence": 1.2934
+          },
+          "near:163": {
+            "frame": 163,
+            "xy": [
+              0.4215073585510254,
+              0.7682684659957886
+            ],
+            "confidence": 1.2679
+          },
+          "near:164": {
+            "frame": 164,
+            "xy": [
+              0.42196130752563477,
+              0.7690335512161255
+            ],
+            "confidence": 1.2865
+          },
+          "near:165": {
+            "frame": 165,
+            "xy": [
+              0.4216071367263794,
+              0.7685661315917969
+            ],
+            "confidence": 1.2768
+          },
+          "near:167": {
+            "frame": 167,
+            "xy": [
+              0.4218311309814453,
+              0.769399106502533
+            ],
+            "confidence": 1.2603
+          },
+          "near:168": {
+            "frame": 168,
+            "xy": [
+              0.4219210147857666,
+              0.7708510756492615
+            ],
+            "confidence": 1.2774
+          },
+          "near:169": {
+            "frame": 169,
+            "xy": [
+              0.4215388298034668,
+              0.7704014778137207
+            ],
+            "confidence": 1.2791
+          },
+          "near:170": {
+            "frame": 170,
+            "xy": [
+              0.42191997170448303,
+              0.7705965638160706
+            ],
+            "confidence": 1.2756
+          },
+          "near:171": {
+            "frame": 171,
+            "xy": [
+              0.42209914326667786,
+              0.7708254456520081
+            ],
+            "confidence": 1.2741
+          },
+          "near:173": {
+            "frame": 173,
+            "xy": [
+              0.4223421514034271,
+              0.7709611058235168
+            ],
+            "confidence": 1.3191
+          },
+          "near:174": {
+            "frame": 174,
+            "xy": [
+              0.4223615825176239,
+              0.7697980403900146
+            ],
+            "confidence": 1.2944
+          },
+          "near:175": {
+            "frame": 175,
+            "xy": [
+              0.42235296964645386,
+              0.7686591744422913
+            ],
+            "confidence": 1.308
+          },
+          "near:176": {
+            "frame": 176,
+            "xy": [
+              0.4222566783428192,
+              0.7655242681503296
+            ],
+            "confidence": 1.2941
+          },
+          "near:177": {
+            "frame": 177,
+            "xy": [
+              0.42231518030166626,
+              0.7621306777000427
+            ],
+            "confidence": 1.368
+          },
+          "near:179": {
+            "frame": 179,
+            "xy": [
+              0.4214209020137787,
+              0.7534081339836121
+            ],
+            "confidence": 1.2475
+          },
+          "near:180": {
+            "frame": 180,
+            "xy": [
+              0.4214315414428711,
+              0.7466084361076355
+            ],
+            "confidence": 1.3223
+          },
+          "near:181": {
+            "frame": 181,
+            "xy": [
+              0.4215278923511505,
+              0.7449097037315369
+            ],
+            "confidence": 1.2905
+          },
+          "near:182": {
+            "frame": 182,
+            "xy": [
+              0.42123571038246155,
+              0.7463822364807129
+            ],
+            "confidence": 1.2514
+          },
+          "near:183": {
+            "frame": 183,
+            "xy": [
+              0.4202648401260376,
+              0.7446489334106445
+            ],
+            "confidence": 1.3096
+          },
+          "near:185": {
+            "frame": 185,
+            "xy": [
+              0.4195622503757477,
+              0.7423264980316162
+            ],
+            "confidence": 1.2659
+          },
+          "near:186": {
+            "frame": 186,
+            "xy": [
+              0.41900378465652466,
+              0.7413384914398193
+            ],
+            "confidence": 1.333
+          },
+          "near:187": {
+            "frame": 187,
+            "xy": [
+              0.4167807400226593,
+              0.7377538681030273
+            ],
+            "confidence": 1.4219
+          },
+          "near:188": {
+            "frame": 188,
+            "xy": [
+              0.4139516055583954,
+              0.7354602813720703
+            ],
+            "confidence": 1.3785
+          },
+          "near:189": {
+            "frame": 189,
+            "xy": [
+              0.41133204102516174,
+              0.7318626642227173
+            ],
+            "confidence": 1.2509
+          },
+          "near:191": {
+            "frame": 191,
+            "xy": [
+              0.4075869917869568,
+              0.728225827217102
+            ],
+            "confidence": 1.3063
+          },
+          "near:192": {
+            "frame": 192,
+            "xy": [
+              0.40348881483078003,
+              0.7257236838340759
+            ],
+            "confidence": 1.269
+          },
+          "near:193": {
+            "frame": 193,
+            "xy": [
+              0.40054813027381897,
+              0.7268725037574768
+            ],
+            "confidence": 1.3073
+          },
+          "near:194": {
+            "frame": 194,
+            "xy": [
+              0.39795950055122375,
+              0.7276824116706848
+            ],
+            "confidence": 1.3492
+          },
+          "near:195": {
+            "frame": 195,
+            "xy": [
+              0.39631640911102295,
+              0.7278966307640076
+            ],
+            "confidence": 1.3558
+          },
+          "near:197": {
+            "frame": 197,
+            "xy": [
+              0.39433613419532776,
+              0.7300699949264526
+            ],
+            "confidence": 1.3476
+          },
+          "near:198": {
+            "frame": 198,
+            "xy": [
+              0.39154499769210815,
+              0.7282282710075378
+            ],
+            "confidence": 1.2889
+          },
+          "near:199": {
+            "frame": 199,
+            "xy": [
+              0.38945794105529785,
+              0.7284515500068665
+            ],
+            "confidence": 1.2855
+          },
+          "near:200": {
+            "frame": 200,
+            "xy": [
+              0.38738125562667847,
+              0.7280007004737854
+            ],
+            "confidence": 1.3023
+          },
+          "near:201": {
+            "frame": 201,
+            "xy": [
+              0.38672876358032227,
+              0.7288615107536316
+            ],
+            "confidence": 1.2895
+          },
+          "near:203": {
+            "frame": 203,
+            "xy": [
+              0.3862254321575165,
+              0.7290568351745605
+            ],
+            "confidence": 1.2882
+          },
+          "near:204": {
+            "frame": 204,
+            "xy": [
+              0.385861873626709,
+              0.7292698621749878
+            ],
+            "confidence": 1.2782
+          },
+          "near:205": {
+            "frame": 205,
+            "xy": [
+              0.3860774636268616,
+              0.7294823527336121
+            ],
+            "confidence": 1.2613
+          },
+          "near:206": {
+            "frame": 206,
+            "xy": [
+              0.3867095410823822,
+              0.7303764224052429
+            ],
+            "confidence": 1.2422
+          },
+          "near:207": {
+            "frame": 207,
+            "xy": [
+              0.3863125741481781,
+              0.7291898131370544
+            ],
+            "confidence": 1.2347
+          },
+          "near:209": {
+            "frame": 209,
+            "xy": [
+              0.38578343391418457,
+              0.7280371785163879
+            ],
+            "confidence": 1.2435
+          },
+          "near:210": {
+            "frame": 210,
+            "xy": [
+              0.3855483829975128,
+              0.7280818223953247
+            ],
+            "confidence": 1.2613
+          },
+          "far:120": {
+            "frame": 120,
+            "xy": [
+              0.36041969060897827,
+              0.0368659533560276
+            ],
+            "confidence": 1.0309
+          },
+          "far:121": {
+            "frame": 121,
+            "xy": [
+              0.3405136466026306,
+              0.05202476680278778
+            ],
+            "confidence": 1.164
+          },
+          "far:122": {
+            "frame": 122,
+            "xy": [
+              0.32387790083885193,
+              0.0852384865283966
+            ],
+            "confidence": 1.1114
+          },
+          "far:123": {
+            "frame": 123,
+            "xy": [
+              0.3140600919723511,
+              0.09136352688074112
+            ],
+            "confidence": 1.0874
+          },
+          "far:125": {
+            "frame": 125,
+            "xy": [
+              0.3087233603000641,
+              0.09017669409513474
+            ],
+            "confidence": 1.0285
+          },
+          "far:126": {
+            "frame": 126,
+            "xy": [
+              0.3057633340358734,
+              0.09049378335475922
+            ],
+            "confidence": 1.1328
+          },
+          "far:127": {
+            "frame": 127,
+            "xy": [
+              0.30537348985671997,
+              0.09333129227161407
+            ],
+            "confidence": 1.1765
+          },
+          "far:128": {
+            "frame": 128,
+            "xy": [
+              0.30813130736351013,
+              0.09097759425640106
+            ],
+            "confidence": 1.2726
+          },
+          "far:129": {
+            "frame": 129,
+            "xy": [
+              0.31242451071739197,
+              0.0886337012052536
+            ],
+            "confidence": 1.2189
+          },
+          "far:131": {
+            "frame": 131,
+            "xy": [
+              0.3159387707710266,
+              0.08111194521188736
+            ],
+            "confidence": 1.216
+          },
+          "far:132": {
+            "frame": 132,
+            "xy": [
+              0.3234614431858063,
+              0.07484512776136398
+            ],
+            "confidence": 1.2578
+          },
+          "far:133": {
+            "frame": 133,
+            "xy": [
+              0.3332272469997406,
+              0.07777006179094315
+            ],
+            "confidence": 1.2377
+          },
+          "far:134": {
+            "frame": 134,
+            "xy": [
+              0.3422878682613373,
+              0.08526656776666641
+            ],
+            "confidence": 1.1748
+          },
+          "far:135": {
+            "frame": 135,
+            "xy": [
+              0.3496240973472595,
+              0.09405224770307541
+            ],
+            "confidence": 1.3106
+          },
+          "far:137": {
+            "frame": 137,
+            "xy": [
+              0.3528003990650177,
+              0.11000493168830872
+            ],
+            "confidence": 1.3255
+          },
+          "far:138": {
+            "frame": 138,
+            "xy": [
+              0.3586656451225281,
+              0.11541209369897842
+            ],
+            "confidence": 1.1669
+          },
+          "far:139": {
+            "frame": 139,
+            "xy": [
+              0.3558375835418701,
+              0.1072014719247818
+            ],
+            "confidence": 1.2275
+          },
+          "far:140": {
+            "frame": 140,
+            "xy": [
+              0.3528438210487366,
+              0.10782401263713837
+            ],
+            "confidence": 1.2561
+          },
+          "far:141": {
+            "frame": 141,
+            "xy": [
+              0.3523207902908325,
+              0.12590178847312927
+            ],
+            "confidence": 1.2923
+          },
+          "far:143": {
+            "frame": 143,
+            "xy": [
+              0.3515048027038574,
+              0.14919151365756989
+            ],
+            "confidence": 1.2368
+          },
+          "far:144": {
+            "frame": 144,
+            "xy": [
+              0.3538718521595001,
+              0.15267561376094818
+            ],
+            "confidence": 1.1858
+          },
+          "far:145": {
+            "frame": 145,
+            "xy": [
+              0.3540419340133667,
+              0.15097084641456604
+            ],
+            "confidence": 1.1609
+          },
+          "far:146": {
+            "frame": 146,
+            "xy": [
+              0.3561520278453827,
+              0.15131278336048126
+            ],
+            "confidence": 1.1811
+          },
+          "far:147": {
+            "frame": 147,
+            "xy": [
+              0.35892751812934875,
+              0.14955854415893555
+            ],
+            "confidence": 1.175
+          },
+          "far:149": {
+            "frame": 149,
+            "xy": [
+              0.3629494607448578,
+              0.14826560020446777
+            ],
+            "confidence": 1.273
+          },
+          "far:150": {
+            "frame": 150,
+            "xy": [
+              0.36659589409828186,
+              0.14468805491924286
+            ],
+            "confidence": 1.2199
+          },
+          "far:151": {
+            "frame": 151,
+            "xy": [
+              0.36578765511512756,
+              0.1395958811044693
+            ],
+            "confidence": 1.1331
+          },
+          "far:152": {
+            "frame": 152,
+            "xy": [
+              0.36515939235687256,
+              0.13548310101032257
+            ],
+            "confidence": 1.1264
+          },
+          "far:153": {
+            "frame": 153,
+            "xy": [
+              0.365966260433197,
+              0.12937812507152557
+            ],
+            "confidence": 1.0821
+          },
+          "far:154": {
+            "frame": 154,
+            "xy": [
+              0.3660164475440979,
+              0.12788556516170502
+            ],
+            "confidence": 1.1142
+          },
+          "far:155": {
+            "frame": 155,
+            "xy": [
+              0.36663100123405457,
+              0.1217133030295372
+            ],
+            "confidence": 1.0655
+          },
+          "far:156": {
+            "frame": 156,
+            "xy": [
+              0.365458607673645,
+              0.11361879855394363
+            ],
+            "confidence": 0.9885
+          },
+          "far:157": {
+            "frame": 157,
+            "xy": [
+              0.36074167490005493,
+              0.09491681307554245
+            ],
+            "confidence": 0.9377
+          },
+          "far:158": {
+            "frame": 158,
+            "xy": [
+              0.3560088276863098,
+              0.08290240168571472
+            ],
+            "confidence": 0.7964
+          },
+          "far:159": {
+            "frame": 159,
+            "xy": [
+              0.35265493392944336,
+              0.07614800333976746
+            ],
+            "confidence": 0.8155
+          },
+          "far:161": {
+            "frame": 161,
+            "xy": [
+              0.3713796138763428,
+              0.07336436212062836
+            ],
+            "confidence": 1.0063
+          },
+          "far:162": {
+            "frame": 162,
+            "xy": [
+              0.35120636224746704,
+              0.0727493017911911
+            ],
+            "confidence": 1.0131
+          },
+          "far:163": {
+            "frame": 163,
+            "xy": [
+              0.35043027997016907,
+              0.07217726856470108
+            ],
+            "confidence": 0.8694
+          },
+          "far:164": {
+            "frame": 164,
+            "xy": [
+              0.3461039662361145,
+              0.05777711048722267
+            ],
+            "confidence": 0.9815
+          },
+          "far:165": {
+            "frame": 165,
+            "xy": [
+              0.3434690535068512,
+              0.051811449229717255
+            ],
+            "confidence": 1.1019
+          },
+          "far:167": {
+            "frame": 167,
+            "xy": [
+              0.33971959352493286,
+              0.04206206649541855
+            ],
+            "confidence": 1.1311
+          },
+          "far:168": {
+            "frame": 168,
+            "xy": [
+              0.33652403950691223,
+              0.036368198692798615
+            ],
+            "confidence": 1.1052
+          },
+          "far:169": {
+            "frame": 169,
+            "xy": [
+              0.33567115664482117,
+              0.03958805277943611
+            ],
+            "confidence": 1.0638
+          },
+          "far:170": {
+            "frame": 170,
+            "xy": [
+              0.3341643214225769,
+              0.0405033640563488
+            ],
+            "confidence": 0.9982
+          },
+          "far:171": {
+            "frame": 171,
+            "xy": [
+              0.32999497652053833,
+              0.03608058765530586
+            ],
+            "confidence": 0.9555
+          },
+          "far:173": {
+            "frame": 173,
+            "xy": [
+              0.3280181586742401,
+              0.03026081807911396
+            ],
+            "confidence": 0.9403
+          },
+          "far:174": {
+            "frame": 174,
+            "xy": [
+              0.3259147107601166,
+              0.026098042726516724
+            ],
+            "confidence": 0.9774
+          },
+          "far:175": {
+            "frame": 175,
+            "xy": [
+              0.32226407527923584,
+              0.01884359121322632
+            ],
+            "confidence": 0.9969
+          },
+          "far:176": {
+            "frame": 176,
+            "xy": [
+              0.3197703957557678,
+              0.010096642188727856
+            ],
+            "confidence": 0.9262
+          },
+          "far:177": {
+            "frame": 177,
+            "xy": [
+              0.31772661209106445,
+              0.0019293577643111348
+            ],
+            "confidence": 0.8016
+          },
+          "far:179": {
+            "frame": 179,
+            "xy": [
+              0.3157821595668793,
+              -0.014049477875232697
+            ],
+            "confidence": 0.7999
+          },
+          "far:180": {
+            "frame": 180,
+            "xy": [
+              0.31530502438545227,
+              -0.020642131567001343
+            ],
+            "confidence": 0.7574
+          },
+          "far:181": {
+            "frame": 181,
+            "xy": [
+              0.3136419951915741,
+              -0.06931094825267792
+            ],
+            "confidence": 0.7621
+          },
+          "far:182": {
+            "frame": 182,
+            "xy": [
+              0.31496119499206543,
+              -0.03568659722805023
+            ],
+            "confidence": 0.698
+          },
+          "far:183": {
+            "frame": 183,
+            "xy": [
+              0.3163487911224365,
+              -0.03187674656510353
+            ],
+            "confidence": 0.8789
+          },
+          "far:185": {
+            "frame": 185,
+            "xy": [
+              0.31790101528167725,
+              -0.03208513557910919
+            ],
+            "confidence": 0.7778
+          },
+          "far:186": {
+            "frame": 186,
+            "xy": [
+              0.31943732500076294,
+              -0.019997838884592056
+            ],
+            "confidence": 0.8354
+          },
+          "far:187": {
+            "frame": 187,
+            "xy": [
+              0.3214527666568756,
+              -0.01341004204005003
+            ],
+            "confidence": 0.8301
+          },
+          "far:188": {
+            "frame": 188,
+            "xy": [
+              0.3241086006164551,
+              0.0006623823428526521
+            ],
+            "confidence": 0.921
+          },
+          "far:189": {
+            "frame": 189,
+            "xy": [
+              0.32457461953163147,
+              0.011142455972731113
+            ],
+            "confidence": 1.0301
+          },
+          "far:190": {
+            "frame": 190,
+            "xy": [
+              0.3246625065803528,
+              0.009707458317279816
+            ],
+            "confidence": 1.0168
+          },
+          "far:191": {
+            "frame": 191,
+            "xy": [
+              0.32565778493881226,
+              0.017031589522957802
+            ],
+            "confidence": 0.953
+          },
+          "far:192": {
+            "frame": 192,
+            "xy": [
+              0.3261761963367462,
+              0.018723394721746445
+            ],
+            "confidence": 0.9468
+          },
+          "far:193": {
+            "frame": 193,
+            "xy": [
+              0.327688068151474,
+              0.01648128032684326
+            ],
+            "confidence": 1.0406
+          },
+          "far:194": {
+            "frame": 194,
+            "xy": [
+              0.327406644821167,
+              0.012289649806916714
+            ],
+            "confidence": 1.0115
+          },
+          "far:195": {
+            "frame": 195,
+            "xy": [
+              0.3306055963039398,
+              0.007462147157639265
+            ],
+            "confidence": 1.073
+          },
+          "far:197": {
+            "frame": 197,
+            "xy": [
+              0.33201393485069275,
+              0.005016746465116739
+            ],
+            "confidence": 1.1384
+          },
+          "far:198": {
+            "frame": 198,
+            "xy": [
+              0.3398110866546631,
+              -0.0012048986973240972
+            ],
+            "confidence": 1.0017
+          },
+          "far:199": {
+            "frame": 199,
+            "xy": [
+              0.34515470266342163,
+              -0.00035255838884040713
+            ],
+            "confidence": 1.0481
+          },
+          "far:200": {
+            "frame": 200,
+            "xy": [
+              0.3478637635707855,
+              -0.031618788838386536
+            ],
+            "confidence": 0.653
+          },
+          "far:201": {
+            "frame": 201,
+            "xy": [
+              0.3540116548538208,
+              -0.0002613949473015964
+            ],
+            "confidence": 0.8952
+          },
+          "far:203": {
+            "frame": 203,
+            "xy": [
+              0.358610600233078,
+              -0.011346084997057915
+            ],
+            "confidence": 1.2481
+          },
+          "far:204": {
+            "frame": 204,
+            "xy": [
+              0.36219459772109985,
+              -0.014066371135413647
+            ],
+            "confidence": 1.1641
+          },
+          "far:205": {
+            "frame": 205,
+            "xy": [
+              0.36407819390296936,
+              -0.013694653287529945
+            ],
+            "confidence": 1.0744
+          },
+          "far:206": {
+            "frame": 206,
+            "xy": [
+              0.36305689811706543,
+              -0.01529144961386919
+            ],
+            "confidence": 1.0876
+          },
+          "far:207": {
+            "frame": 207,
+            "xy": [
+              0.36323851346969604,
+              -0.020165644586086273
+            ],
+            "confidence": 1.1557
+          },
+          "far:209": {
+            "frame": 209,
+            "xy": [
+              0.36288902163505554,
+              -0.022950949147343636
+            ],
+            "confidence": 1.137
+          },
+          "far:210": {
+            "frame": 210,
+            "xy": [
+              0.36305710673332214,
+              -0.0301384087651968
+            ],
+            "confidence": 1.1901
+          }
+        },
+        "shot": [
+          0,
+          211
+        ]
+      }
+    },
+    {
+      "key": "recap",
+      "title": "一拍连起来",
+      "source_shot": [
+        0,
+        211
+      ],
+      "source_shots": [
+        [
+          0,
+          211
+        ],
+        [
+          367,
+          664
+        ]
+      ],
+      "source_ranges": [
+        {
+          "start_frame": 86,
+          "end_frame": 99,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "recap",
+          "focus": "near",
+          "overlay": "legs",
+          "output_start_s": 26.166666666666668,
+          "output_end_s": 26.633333333333333,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 92,
+          "end_frame": 107,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "recap",
+          "focus": "near",
+          "overlay": "core",
+          "output_start_s": 26.633333333333333,
+          "output_end_s": 27.166666666666668,
+          "source_shot": [
+            0,
+            211
+          ]
+        },
+        {
+          "start_frame": 611,
+          "end_frame": 644,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "recap",
+          "focus": "far",
+          "overlay": null,
+          "output_start_s": 27.166666666666668,
+          "output_end_s": 28.3,
+          "source_shot": [
+            367,
+            664
+          ]
+        },
+        {
+          "start_frame": 120,
+          "end_frame": 210,
+          "source_frame": null,
+          "speed": 1.0,
+          "phase": "recap",
+          "focus": null,
+          "overlay": null,
+          "output_start_s": 28.3,
+          "output_end_s": 31.333333333333332,
+          "source_shot": [
+            0,
+            211
+          ]
+        }
+      ],
+      "output_start_s": 26.166666666666668,
+      "output_end_s": 31.333333333333332,
+      "speech_start_s": 26.26666666666667,
+      "speech_end_s": 29.685714285714287,
+      "evidence": {
+        "claim": "四个视角都回到同一个连续动作链。",
+        "lines": [
+          "腿｜右脚跨出，前膝屈曲",
+          "手臂｜非持拍手先抬再收，持拍臂顺势上挥",
+          "核心｜肩线更倾，上身回正",
+          "战术｜回到半场中部，再准备下一步"
+        ]
+      }
+    }
+  ],
+  "recap_lines": [
+    "腿｜右脚跨出，前膝屈曲",
+    "手臂｜非持拍手先抬再收，持拍臂顺势上挥",
+    "核心｜肩线更倾，上身回正",
+    "战术｜回到半场中部，再准备下一步"
+  ],
+  "priority_corpus_note": "An open-dataset sample of 100 coaching videos is background only; concept frequency is not proof of coaching quality.",
+  "limits": [
+    "Single-camera 2D pose and court-plane estimates only.",
+    "No shuttle/contact tracking, force, medical, or 3D conclusions.",
+    "A cut separates the arm chapter from the lunge rally."
+  ]
+}

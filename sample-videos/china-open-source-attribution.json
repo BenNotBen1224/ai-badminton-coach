@@ -1,0 +1,22 @@
+{
+  "purpose": "Generalization test inputs from a different venue and camera than clips 01-03. Not used for training.",
+  "source": {
+    "title": "Wang Zhiyi triumph in all-Chinese China Open finals I China Open 2025",
+    "event": "China Open 2025 (BWF World Tour), women's singles final, Changzhou",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Wang_Zhiyi_triumph_in_all-Chinese_China_Open_finals_I_China_Open_2025.webm",
+    "license": "CC BY 3.0 (as listed on Wikimedia Commons)",
+    "file": "sources\\china-open-2025-ws-final.webm"
+  },
+  "changes": "Edited 30 s clips containing multiple points and camera cuts, removed audio, re-encoded H.264 30 fps. No crop or overlay.",
+  "clips": [
+    {"file": "04-china-open-ws-a.mp4", "source_start_seconds": 20, "duration_seconds": 30, "players": {
+    "near": {"hand": "right", "evidence": "CORPUS/checks/near_swings.jpg: racket in right hand at frames 330, 482, 486; right-arm overhead at 314 (clip 04)."},
+    "far": {"hand": "right", "evidence": "CORPUS/checks/far_swings.jpg: racket in right hand at frames 497, 641, 645; right-arm overhead at 113-117 (clip 04)."}
+    }},
+    {"file": "05-china-open-ws-b.mp4", "source_start_seconds": 110, "duration_seconds": 30}
+  ],
+  "not_used": [
+    {"file": "sources\\slovenia-2016-ws-final-point.webm", "reason": "handheld side camera that pans and zooms; fixed-camera methods do not apply"},
+    {"file": "sources\\ukraine-2020-corporate-men.webm", "reason": "handheld side camera, low court visibility"}
+  ]
+}

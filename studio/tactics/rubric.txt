@@ -1,0 +1,29 @@
+WHY / WHAT-NEXT RUBRIC for narration scripts
+
+Unit: one spoken sentence (split at 。！？ and at line ends). Count every sentence, including the
+opening and the closing summary. The denominator is all sentences.
+
+Give each sentence exactly one class:
+  WHY    gives a reason for a hitter's choice that names the OTHER player's state: where she is,
+         which way she is moving, how far she is from her base, whether she is balanced, or how
+         much time she has. Both parts must be there: the opponent's state and the choice.
+         Example: "她还在后场没回中，所以这拍吊网前。"
+  NEXT   says what should come next because of this shot: the likely reply, where the receiver
+         will have to go, or where the hitter must move now. Example: "她在网前低点接球，要准备
+         她挑高，也要防她回网。" Possible replies are not inevitable replies.
+  CHECK  says whether that expected next thing happened. Example: "果然，她挑了后场。"
+  SEE    describes body or footwork only (what a joint, foot or arm does).
+  TIP    general advice that would fit any rally ("每一步都要回中").
+  OTHER  hook, score, link words, anything else.
+
+Evidence tie (needed for WHY, NEXT and CHECK to count):
+  the line carries evidence ids that point to measured entries in analysis.json (positions,
+  distance from base, movement direction or speed, time to next hit, next contact spot), AND the
+  screen shows that evidence while the sentence plays (mini-court dot, arrow, open-space patch,
+  next-receiver-contact patch, base marker). A WHY/NEXT/CHECK without both does not count.
+  A receiver's next contact position is not the shuttle's landing position.
+
+Score = (tied WHY + tied NEXT + tied CHECK) / all sentences.
+Target for the new video: score >= 0.60, and no sentence claims more than the data shows
+(no tracked shuttle flight, no 3D, no speed of the shuttle, no player intent stated as fact:
+intent is said as a reading, e.g. "像是想…", "这一拍的意思是…").

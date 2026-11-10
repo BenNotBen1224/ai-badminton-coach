@@ -1,0 +1,586 @@
+{
+  "premise_under_test": "The far player was at the net, so net-reply coaching applies. This was inferred from image appearance without checking feet against court lines.",
+  "reference": {
+    "far_baseline_m": 0,
+    "net_m": 6.7,
+    "near_baseline_m": 13.4,
+    "far_short_service_m": 4.72,
+    "near_short_service_m": 8.68
+  },
+  "limits": [
+    "Diagnostic projection using saved calibration, not newly validated exact floor coordinates.",
+    "Airborne feet, low-confidence joints and calibration error can bias projections.",
+    "A hip pixel coordinate or proximity to raised net tape cannot establish court depth.",
+    "No shuttle location, shot family or intention is inferred."
+  ],
+  "videos": {
+    "mens": {
+      "pose_sha256": "0f69bddcf1bffa7ea6a286b332147f13ff20fedb990e2da6a543e9448230d7dd",
+      "index_sha256": "abc71010daa17f4fa915cc7eca3d1cce0297c632f707b181a7059d686df74b3e",
+      "corners_normalized": [
+        [
+          0.3828,
+          0.3944
+        ],
+        [
+          0.608,
+          0.3944
+        ],
+        [
+          0.8452,
+          0.8913
+        ],
+        [
+          0.1516,
+          0.8885
+        ]
+      ],
+      "rows": [
+        {
+          "normalized_frame": 2330,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              681.78,
+              764.25,
+              1.2825
+            ],
+            [
+              736.42,
+              787.21,
+              1.1716
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              1.3928743583921777,
+              11.27634716389952
+            ],
+            [
+              1.7743099653508407,
+              11.593360505933234
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2330,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              922.93,
+              452.48,
+              1.5721
+            ],
+            [
+              861.94,
+              452.48,
+              1.3062
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              2.6887702615227393,
+              1.8548396510463452
+            ],
+            [
+              1.9084026307776385,
+              1.8552749753236941
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2370,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              904.79,
+              705.07,
+              1.1805
+            ],
+            [
+              945.74,
+              646.38,
+              0.9192
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              2.723082768484393,
+              10.326031360035593
+            ],
+            [
+              2.9975023932830496,
+              9.15587098634351
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2370,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              920.83,
+              456.26,
+              1.6185
+            ],
+            [
+              878.53,
+              449.27,
+              1.2479
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              2.666644619946697,
+              2.0912993529124013
+            ],
+            [
+              2.1103912274508896,
+              1.6493335748307292
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2421,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              1054.92,
+              677.64,
+              1.1609
+            ],
+            [
+              1132.87,
+              629.0,
+              0.9418
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.777500648900582,
+              9.809940679378158
+            ],
+            [
+              4.4715065813549595,
+              8.748500971146536
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2421,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              1022.86,
+              459.68,
+              1.454
+            ],
+            [
+              976.84,
+              453.71,
+              1.2908
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.9432299799890993,
+              2.2990522359080647
+            ],
+            [
+              3.376708837306615,
+              1.9320668062860018
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2472,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              1021.83,
+              736.77,
+              1.4774
+            ],
+            [
+              931.49,
+              734.72,
+              1.1312
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.487564262033832,
+              10.854665736685924
+            ],
+            [
+              2.909996132600266,
+              10.824005057305891
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2472,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              999.97,
+              474.6,
+              1.5203
+            ],
+            [
+              939.35,
+              463.67,
+              1.2325
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.626869557481921,
+              3.1546512860363545
+            ],
+            [
+              2.903487986207816,
+              2.5370492527844997
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2547,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              1111.35,
+              711.31,
+              1.1073
+            ],
+            [
+              1256.73,
+              730.89,
+              1.4555
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              4.107925703061234,
+              10.431140919966795
+            ],
+            [
+              5.007890407875884,
+              10.755771457799383
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 2547,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              1029.87,
+              450.2,
+              1.252
+            ],
+            [
+              987.33,
+              452.92,
+              1.208
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              4.064554589485304,
+              1.708444616825617
+            ],
+            [
+              3.511613092737243,
+              1.8822199151140404
+            ]
+          ]
+        }
+      ]
+    },
+    "womens": {
+      "pose_sha256": "f1768ca7c70e91794ec95498cc025a28142f87668cc1733eb93fe114aab84277",
+      "index_sha256": "768351e18bdeda73a089ba0dbea2771b3579510f2ec57aef59fa8ce7ca8c3480",
+      "corners_normalized": [
+        [
+          0.3827,
+          0.3944
+        ],
+        [
+          0.6077,
+          0.3944
+        ],
+        [
+          0.845,
+          0.8914
+        ],
+        [
+          0.1514,
+          0.8885
+        ]
+      ],
+      "rows": [
+        {
+          "normalized_frame": 650,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              478.95,
+              838.79,
+              1.1751
+            ],
+            [
+              673.32,
+              846.07,
+              1.3921
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              0.4761458557324104,
+              12.234484348161905
+            ],
+            [
+              1.546522226208672,
+              12.312266729536875
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 650,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              942.26,
+              435.04,
+              1.1193
+            ],
+            [
+              918.7,
+              447.16,
+              1.2761
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              2.9356109180775216,
+              0.6774909111067072
+            ],
+            [
+              2.632043050658429,
+              1.5122735181974276
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 669,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              610.93,
+              833.18,
+              1.208
+            ],
+            [
+              646.71,
+              830.74,
+              1.0992
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              1.1766516909202809,
+              12.16751015189345
+            ],
+            [
+              1.3662515530180956,
+              12.138483589141948
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 669,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              960.68,
+              453.6,
+              1.0771
+            ],
+            [
+              843.11,
+              454.58,
+              1.1427
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.1761254468662297,
+              1.9265562223162065
+            ],
+            [
+              1.6812902821166025,
+              1.9889242654107613
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 692,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              939.26,
+              452.07,
+              1.2199
+            ],
+            [
+              854.74,
+              454.48,
+              1.2986
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              2.902397753587916,
+              1.8299350612153398
+            ],
+            [
+              1.8287507464642891,
+              1.9825800220398442
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 692,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              830.0,
+              689.1,
+              1.2549
+            ],
+            [
+              817.05,
+              647.76,
+              0.9449
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              2.1947741132002614,
+              10.037370911500902
+            ],
+            [
+              2.0250571785651004,
+              9.191508937741133
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 723,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              953.26,
+              460.91,
+              1.0848
+            ],
+            [
+              1045.13,
+              493.76,
+              1.1436
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.080062641052745,
+              2.37500554434802
+            ],
+            [
+              4.100333512550215,
+              4.139540473899437
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 723,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              813.28,
+              643.37,
+              1.2621
+            ],
+            [
+              831.59,
+              655.76,
+              1.7684
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              1.9869661272552068,
+              9.09307211398746
+            ],
+            [
+              2.149908926895357,
+              9.366154465871213
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 762,
+          "role": "far",
+          "ankles_image_xy_and_score": [
+            [
+              1019.81,
+              448.45,
+              1.1657
+            ],
+            [
+              988.2,
+              455.86,
+              1.2824
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.946432616524901,
+              1.596201313355998
+            ],
+            [
+              3.522935260769005,
+              2.06739628244541
+            ]
+          ]
+        },
+        {
+          "normalized_frame": 762,
+          "role": "near",
+          "ankles_image_xy_and_score": [
+            [
+              1054.72,
+              802.85,
+              1.1809
+            ],
+            [
+              1256.56,
+              879.0,
+              1.3701
+            ]
+          ],
+          "diagnostic_projected_feet_m": [
+            [
+              3.6298649402350085,
+              11.791111451323694
+            ],
+            [
+              4.595630754452511,
+              12.649546630523181
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

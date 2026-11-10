@@ -1,0 +1,37 @@
+{
+  "interpreter": "<workspace>\\badminton-coach\\comparison\\.venv\\Scripts\\python.exe",
+  "source": "<workspace>\\obj2\\work\\H\\downloads\\china-open-2025-ws-final.webm",
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "helper": "<workspace>\\obj2\\work\\TACTICS\\original-render\\render.py",
+  "helper_sha256_at_encode": "7b558c9e33c1b35d9ce40f3101eb0b3671621dfa29aca7d2db1741568fc1cbd1",
+  "script_sha256_at_encode": "0224b1b44e1249a76ad97ea5f2a29e1720566888f488afc28f92426c622631d3",
+  "planned_schedule_sha256_before_encode": "a7ca6846c49bc811d6491694084ab1c295b187ad50b4d51ad9da4f7401468365",
+  "frozen_v3_snapshot_sha256": "b4c8353a68a0d4e10542ed92a44688ac9af3f3bf0a08166771c7183dd9941ebb",
+  "source_fps": 60,
+  "output_fps": 30,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "vertical_layout": true,
+  "picture_box": [
+    6,
+    350,
+    1068,
+    601
+  ],
+  "pose_inference_run": false,
+  "tts": "local Kokoro sid60 speed1.0",
+  "cpu_lock_owner_at_encode": "nat-audit 110056 tiktok-v3-frame-and-audio-encode",
+  "independent_acceptance": "pending",
+  "engine_accuracy_gate": "failed_recall_unchanged",
+  "encode_and_mix_elapsed_s": 72.89,
+  "video_sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+  "local_tts_startup_warnings": [
+    "sherpa-onnx: dict_dir is ignored from v1.12.15",
+    "bundled lexicon reports unknown token U+2753; none of the spoken input lines contain that token"
+  ],
+  "helper_sha256_final": "7b558c9e33c1b35d9ce40f3101eb0b3671621dfa29aca7d2db1741568fc1cbd1",
+  "source_script_sha256_final": "0224b1b44e1249a76ad97ea5f2a29e1720566888f488afc28f92426c622631d3",
+  "planned_schedule_sha256_final": "a7ca6846c49bc811d6491694084ab1c295b187ad50b4d51ad9da4f7401468365"
+}

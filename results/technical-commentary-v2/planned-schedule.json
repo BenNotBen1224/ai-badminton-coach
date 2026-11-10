@@ -1,0 +1,291 @@
+{
+  "fps": 30,
+  "frames": 798,
+  "duration_s": 26.6,
+  "beats": [
+    {
+      "id": "space",
+      "replaces": "韩悦调王祉怡，抓的是回位空当。前后拉开，别等她站稳了再打。",
+      "source_span_s": [
+        57.8,
+        64.8
+      ],
+      "display_span_s": [
+        0.0,
+        7.0
+      ],
+      "lines": [
+        {
+          "id": "space-1",
+          "say": "韩悦先压正手底角，",
+          "show": "韩悦先压正手底角",
+          "tag": "压底角 · 飞行 1.1 秒",
+          "card_span_frames": [
+            0,
+            67
+          ],
+          "card_span_s": [
+            0.0,
+            2.2333333333333334
+          ],
+          "speech_span_s": [
+            0.08,
+            2.203291666666667
+          ],
+          "voice_sha256": "8d874c826bfd122a5db42a6bb07600cc67359a6b26ca95fd440927ba834700cb",
+          "gain_only": 1.4476301387272783,
+          "voice_speed": 1.0,
+          "card_sha256": "b93949f9847c7bc39e5f44b57abe3b91a3e1b35fec78968f5248120abba10b45"
+        },
+        {
+          "id": "space-2",
+          "say": "反手斜线拦截，对角调动！",
+          "show": "反手斜线拦截，对角调动！",
+          "tag": "反手拦截 · 飞行 0.8 秒",
+          "card_span_frames": [
+            67,
+            156
+          ],
+          "card_span_s": [
+            2.2333333333333334,
+            5.2
+          ],
+          "speech_span_s": [
+            2.3133333333333335,
+            5.132125
+          ],
+          "voice_sha256": "2501f541b30fc646e9f2e3cf8a17b1425e84d2fa7488bf53b6e494caf6faf2a9",
+          "gain_only": 1.3301974112643689,
+          "voice_speed": 1.0,
+          "card_sha256": "51ed844eb71f354b6629c65b9d676fe4489ac552a4a03119b4fe6b9c31fb26ba"
+        },
+        {
+          "id": "space-3",
+          "say": "神仙防守！",
+          "show": "神仙防守！",
+          "tag": "王祉怡 0.8 秒跨 2.8 米",
+          "card_span_frames": [
+            156,
+            210
+          ],
+          "card_span_s": [
+            5.2,
+            7.0
+          ],
+          "speech_span_s": [
+            5.28,
+            6.5575833333333335
+          ],
+          "voice_sha256": "f4ce4265f5981eaac7678cbec84237213d6f69722c6101e73ec61defd2e80814",
+          "gain_only": 1.3477083875314613,
+          "voice_speed": 1.0,
+          "card_sha256": "46a71040a4074a57e12db67968be359c220b7f5770a47cdce6b827f979835886"
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "replaces": "王祉怡被动，先过渡拆连贯。硬顶快球，容易把韩悦的下一拍喂舒服。",
+      "source_span_s": [
+        126.6,
+        134.0
+      ],
+      "display_span_s": [
+        7.0,
+        14.4
+      ],
+      "lines": [
+        {
+          "id": "time-1",
+          "say": "王祉怡挑后场，",
+          "show": "王祉怡挑后场",
+          "tag": "挑后场 · 韩悦后撤 3 米",
+          "card_span_frames": [
+            210,
+            270
+          ],
+          "card_span_s": [
+            7.0,
+            9.0
+          ],
+          "speech_span_s": [
+            7.08,
+            8.702541666666667
+          ],
+          "voice_sha256": "3d109dc7f76e6fd0d3240f11f915ef24526780885be6a38222429075d8f46907",
+          "gain_only": 1.391236931667018,
+          "voice_speed": 1.0,
+          "card_sha256": "5f951c0e1578189e384874c909715ba51ffd42b7bdecea07f49be126a849e396"
+        },
+        {
+          "id": "time-2",
+          "say": "韩悦底线暴力跳杀！",
+          "show": "韩悦底线暴力跳杀！",
+          "tag": "跳杀 · 约 0.5 秒到接杀",
+          "card_span_frames": [
+            270,
+            353
+          ],
+          "card_span_s": [
+            9.0,
+            11.766666666666667
+          ],
+          "speech_span_s": [
+            9.08,
+            11.028833333333333
+          ],
+          "voice_sha256": "3c9fec416427a76921c298e90db7d6c99c15f408e7e028f3263750248a816fa2",
+          "gain_only": 1.3879652113484777,
+          "voice_speed": 1.0,
+          "card_sha256": "3fea6b304312b89166c3856d83c6d8dc625114a861dd3788f12f460fb6ab03f5"
+        },
+        {
+          "id": "time-3",
+          "say": "再吊直线，杀吊结合！",
+          "show": "再吊直线，杀吊结合！",
+          "tag": "直线吊 · 飞行 1.0 秒",
+          "card_span_frames": [
+            353,
+            432
+          ],
+          "card_span_s": [
+            11.766666666666667,
+            14.4
+          ],
+          "speech_span_s": [
+            11.846666666666668,
+            14.296375000000001
+          ],
+          "voice_sha256": "eef05f259ec88420fb8ee001a42d22343e5f8affa4daa8b72a1f7a6fc35a7c5b",
+          "gain_only": 1.3602802293624123,
+          "voice_speed": 1.0,
+          "card_sha256": "d49f3cfe2d68e0c18d9fc856ef43430c4b461012a15448ecc1514f78d054b16d"
+        }
+      ]
+    },
+    {
+      "id": "options",
+      "replaces": "换韩悦被压，王祉怡再往前抢，就打她身后，逼她掉头。防守想翻身，先让对手打不顺。",
+      "source_span_s": [
+        272.8,
+        285.0
+      ],
+      "display_span_s": [
+        14.4,
+        26.6
+      ],
+      "lines": [
+        {
+          "id": "options-1",
+          "say": "王祉怡后场跳杀！",
+          "show": "王祉怡后场跳杀！",
+          "tag": "跳杀 · 0.47 秒到接杀",
+          "card_span_frames": [
+            432,
+            493
+          ],
+          "card_span_s": [
+            14.4,
+            16.433333333333334
+          ],
+          "speech_span_s": [
+            14.48,
+            16.38075
+          ],
+          "voice_sha256": "578d50155ef2c10a6e876dd2e34759dfbdc54e7211fba83ee9b471de131d3d71",
+          "gain_only": 1.4071350917635983,
+          "voice_speed": 1.0,
+          "card_sha256": "5b9b68744879e8487352cbc2a9ad996f4dfc1ba2707adf9591d80c525acc0271"
+        },
+        {
+          "id": "options-2",
+          "say": "韩悦接杀走对角，把王祉怡拉开！",
+          "show": "韩悦接杀走对角，把王祉怡拉开！",
+          "tag": "接杀走对角 · 王祉怡 1 秒跑 3.8 米",
+          "card_span_frames": [
+            493,
+            630
+          ],
+          "card_span_s": [
+            16.433333333333334,
+            21.0
+          ],
+          "speech_span_s": [
+            16.513333333333332,
+            19.848875
+          ],
+          "voice_sha256": "126f1e74b32b45a77dba1a9de5819c4910f0bbef433fc3be65e7c653732f9712",
+          "gain_only": 1.4197093841025714,
+          "voice_speed": 1.0,
+          "card_sha256": "5ebe5f6c608533683c65594514a2cf2b66fc12635c48afdf1dc5e9b00eb62d18"
+        },
+        {
+          "id": "options-3",
+          "say": "两人头顶对角互拉，",
+          "show": "两人头顶对角互拉",
+          "tag": "头顶对角 · 飞行 1.05 / 1.4 秒",
+          "card_span_frames": [
+            630,
+            693
+          ],
+          "card_span_s": [
+            21.0,
+            23.1
+          ],
+          "speech_span_s": [
+            21.08,
+            23.006124999999997
+          ],
+          "voice_sha256": "0b2a9f48a58c65ec5490f090df40b580dbf4f9a1df0909b0316eb88aa2f7430c",
+          "gain_only": 1.4472053110379577,
+          "voice_speed": 1.0,
+          "card_sha256": "0142695f0e260e97e72aa373b2cc708d9abbaedd61188dccca13d10fd2a23801"
+        },
+        {
+          "id": "options-4",
+          "say": "韩悦下压抢网，连贯拉满！",
+          "show": "韩悦下压抢网，连贯拉满！",
+          "tag": "下压 0.74 秒 · 韩悦 1.4 秒冲 4.7 米",
+          "card_span_frames": [
+            693,
+            798
+          ],
+          "card_span_s": [
+            23.1,
+            26.6
+          ],
+          "speech_span_s": [
+            23.18,
+            25.906166666666667
+          ],
+          "voice_sha256": "b18c95bf7c961c644ba77aab0c42c512180f075754c9f37fead3434a3128f4d1",
+          "gain_only": 1.3871368115518146,
+          "voice_speed": 1.0,
+          "card_sha256": "e0a1d0389f22e265099309c2253847a4cb76ff3d57599df6d33e4aa8abd67c11"
+        }
+      ]
+    }
+  ],
+  "hook": {
+    "lines": [
+      "韩悦对上王祉怡",
+      "这几拍，攻防节奏拉满！"
+    ],
+    "replaces": "救得回来，为什么还在挨打？",
+    "display_span_s": [
+      0,
+      2.4
+    ],
+    "png_sha256": "300fff6c9db112d13abc5078fc814145d1e5207e7d2c4eb2a5a272c414322452",
+    "y": 130
+  },
+  "card_font_px": 64,
+  "base_video_sha256": "415dec061188a08339b89cd69799c93deb8654709dc8e74c6361336e5e9bc012",
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "facts_sha256": "4e3da4441141376b1fc4d3bba5e661944bdd2c09fe9d024b641e28ad8de4d742",
+  "court_audio_gain": 0.08,
+  "mix_sha256": "b10b36b5c8ee2cbcdf6c2a226250ee8d33d0873c7a25e003081922ddbe7584d2",
+  "renderer_sha256": "b4d534c1f49bcf3fc3af86f33dec7112b98ce85add9ec4566deb9b9afa419c6a",
+  "script_sha256": "02aed44f66f8141953d444d36fd74577301fa90da8a6fe8352d98c09aa0584a9",
+  "voice": "Kokoro v1.1 Chinese (sid 60), local sherpa-onnx, speed 1.0"
+}

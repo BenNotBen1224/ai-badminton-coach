@@ -1,0 +1,143 @@
+{
+  "title_zh": "别只把球打过去",
+  "status": "editorial_vertical_short_source_checked_not_user_or_independent_acceptance",
+  "mode": "retrospective_editorial_not_detector_training_or_prediction_evaluation",
+  "display_label": "一拍目的 × 对手回应 × 下一拍准备",
+  "format": "vertical_tiktok",
+  "hook": "对手还在后场，这一拍怎么调？",
+  "takeaway": "调动对手之后，自己也要连贯跟上。",
+  "source_time_mapping": {
+    "original_reel": "<workspace>\\obj2\\work\\H\\downloads\\china-open-2025-ws-final.webm",
+    "unchanged_ranges_s": [[57.8, 64.8], [126.6, 134.0], [272.8, 285.0]],
+    "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52"
+  },
+  "moments": [
+    {
+      "id": "space",
+      "title": "01  放网，把人调上来",
+      "title": "01  放网，把人调上来",
+      "range": [57.8, 64.8],
+      "evidence": "space-sequence",
+      "anchors": [59.45, 60.65, 62.05]
+    },
+    {
+      "id": "time",
+      "title": "02  被动球，先抓过渡",
+      "title": "02  被动球，先抓过渡",
+      "range": [126.6, 134.0],
+      "evidence": "r1-feedback",
+      "anchors": [128.3167, 130.0167, 131.9833]
+    },
+    {
+      "id": "options",
+      "title": "03  跨步后，连贯蹬回",
+      "title": "03  跨步后，连贯蹬回",
+      "range": [272.8, 285.0],
+      "evidence": "reply-sequence",
+      "anchors": [274.0333, 275.0, 276.3]
+    }
+  ],
+  "beats": [
+    {
+      "id": "space",
+      "moment": "space",
+      "range": [57.8, 64.8],
+      "title": "01  放网，把人调上来",
+      "target_speed": 1.0,
+      "hook": true,
+      "hook_text": "对手还在后场，这一拍怎么调？",
+      "text": "对手在后场，放网调她上来。动作小、手上轻；她赶到，准备接下一拍。",
+      "type": "coach_read",
+      "evidence": [3567, 3639, 3723],
+      "hold": 0.0,
+      "cue": "调动：放网上前｜技术：动作小，手上轻",
+      "intent_cue": "放网，调她上来",
+      "technique_cue": "动作小｜手上轻"
+    },
+    {
+      "id": "time",
+      "moment": "time",
+      "range": [126.6, 134.0],
+      "title": "02  被动球，先抓过渡",
+      "target_speed": 1.0,
+      "text": "被动球先抓过渡，争取回位；对手出拍时做启动小跳，接下一拍。",
+      "type": "coach_read",
+      "evidence": [7699, 7801, 7919],
+      "hold": 0.0,
+      "cue": "过渡：争取回位｜技术：启动小跳",
+      "intent_cue": "先抓过渡，争取回位",
+      "technique_cue": "卡出拍时机｜启动小跳"
+    },
+    {
+      "id": "options",
+      "moment": "options",
+      "range": [272.8, 285.0],
+      "title": "03  跨步后，连贯蹬回",
+      "target_speed": 1.0,
+      "text": "跨步接完，蹬地回位、收回重心。红衣若继续前压，再考虑打身后，让她转身回追。",
+      "type": "coach_read",
+      "evidence": [16442, 16500, 16578, 16608, 16644],
+      "hold": 0.0,
+      "cue": "技术：蹬地回位｜前压时：打身后",
+      "intent_cue": "她若前压，再打身后",
+      "technique_cue": "蹬地回位｜收回重心",
+      "closing_takeaway": true,
+      "closing_text": "调动对手之后，自己也要连贯跟上。"
+    }
+  ],
+  "coach_analysis": {
+    "beats": [
+      {
+        "id": "space",
+        "observed": "红衣处在后场，随后在连续画面中向前移动。画面没有显示可验证的球路或落点。",
+        "tactical_read": "若选择放网，可以把仍在后场的对手调向前场；这是建议的战术目的，不是对原片实际球种或球员意图的认定。",
+        "technique_cue": "放网动作小、手上轻；这是教练建议，不是姿势模型测得的动作。",
+        "prepare_for": "若对手赶到，准备处理她的回球；不预判她只能挑球。",
+        "evidence_ids": ["E003567", "E003639", "E003723"],
+        "limitations": ["未验证实际球种、球路或落点。"]
+      },
+      {
+        "id": "time",
+        "observed": "红衣低位伸展后站起；在灰衣下一次后场挥拍前，她已站起来。",
+        "tactical_read": "被动时先过渡，为下一次响应留出机会；画面只支持先低位、后起身的顺序，不量化实际争取的时间。",
+        "technique_cue": "别盲目冲向几何中点；对手出拍时做启动小跳（分腿垫步）是建议，画面没有检测到该步法。",
+        "prepare_for": "对手下一次后场出拍是可见的后续压力。",
+        "evidence_ids": ["E007699", "E007801", "E007919"],
+        "limitations": ["不量化回位时间；启动小跳是建议而非检测结果。"]
+      },
+      {
+        "id": "options",
+        "observed": "灰衣在近端中后场低位，红衣随后前移；第16442帧不是网前状态。",
+        "tactical_read": "如果对手继续前压，可以考虑打身后、要求她转身回追；这是条件性选择，不是测得的实际球路或确定效果。",
+        "technique_cue": "跨步处理后蹬地回位、收回重心是教练提示，不是画面测得的重心或蹬地力。",
+        "prepare_for": "若对手没有继续前压，打身后未必创造优势。",
+        "evidence_ids": ["E016442", "E016500", "E016578", "C016608", "C016644"],
+        "limitations": ["未验证实际球路；第16442帧位于近端中后场而非网前。"]
+      }
+    ],
+    "global_limitations": [
+      "单机位二维画面不能证明球拍触球、羽毛球轨迹、落点或三维生物力学。",
+      "战术目的为条件性回看解读，不是已知球员意图或前瞻预测。",
+      "放网、启动小跳和打身后均是教练建议，不代表原片这些技术动作都已被检测。",
+      "保留原始水印和完整场地宽景；画面由横版缩放置入竖屏，人物不会被横向裁掉。"
+    ]
+  },
+  "style_notes": {
+    "basis": [
+      "GUANGYING study QMSyLpqRQBM: connect speed/continuity to a visible tactical purpose and show the opponent's answer.",
+      "GUANGYING study N2d0UsMuNX8: explain why the first approach changes; distinguish intended adjustment from what actually happens.",
+      "GUANGYING study pVYjSTiM7XI: open with a question, use common terms, and don't treat a feint or tactical attempt as automatically successful."
+    ],
+    "limits": "These are source-bound notes from sampled study material, not exhaustive viewing of the cited videos and not text to copy."
+  },
+  "claim_checks": [
+    "Only the established original China Open ranges are used, in the same order and with monotonic continuous source mapping.",
+    "The hook asks about the visible rear-court state; it makes no sensational result claim.",
+    "The observed stroke is not classified as放网; 放网 is explicitly proposed advice and not overhead吊球.",
+    "In the third passage, gray is in the near mid/rear court; no net-pressure rule is applied.",
+    "Possible replies and tactical purposes remain conditional; no shuttle tracking, exact contact, landing, measured force or mind-reading is claimed.",
+    "One continuous explanation with three scene beats; no replay, freeze, filler summary, trending soundtrack or study footage.",
+    "V3 remains frozen and its recall gate remains failed; no model acceptance is claimed.",
+    "No human voice-quality or independent editorial acceptance is claimed."
+  ]
+}

@@ -1,0 +1,285 @@
+{
+ "span": [
+  125.6,
+  135.0
+ ],
+ "detected_frames": 233,
+ "frames": 282,
+ "shots": [
+  {
+   "frame": 0,
+   "role": "far",
+   "closeness": 0.6028581689174498,
+   "time_s": 125.6,
+   "xy_px": [
+    1000.5,
+    400.5
+   ],
+   "hitter_m": [
+    4.42,
+    2.23
+   ],
+   "zone": "rear",
+   "contact_height": "overhead",
+   "height_ratio": 1.2526523562792997,
+   "flight_s": 0.433,
+   "apex_y_px": 400.5,
+   "visible_frac": 1.0,
+   "exit_speed_px_s": 625.0,
+   "dy_out_px_s": 315.0,
+   "receiver_m": [
+    2.69,
+    9.42
+   ],
+   "receiver_zone": "mid",
+   "audio_click_offset_s": 2.68
+  },
+  {
+   "frame": 13,
+   "role": "near",
+   "closeness": 0.4744412514767066,
+   "time_s": 126.033,
+   "xy_px": [
+    787.5,
+    607.5
+   ],
+   "hitter_m": [
+    2.69,
+    9.42
+   ],
+   "zone": "mid",
+   "contact_height": "overhead",
+   "height_ratio": 1.2985204947853501,
+   "flight_s": 0.833,
+   "apex_y_px": 460.5,
+   "visible_frac": 1.0,
+   "exit_speed_px_s": 391.0,
+   "dy_out_px_s": -360.0,
+   "receiver_m": [
+    3.71,
+    2.91
+   ],
+   "receiver_zone": "mid",
+   "audio_click_offset_s": 2.247
+  },
+  {
+   "frame": 38,
+   "role": "far",
+   "closeness": 0.4906989858494558,
+   "time_s": 126.867,
+   "xy_px": [
+    970.5,
+    543.0
+   ],
+   "hitter_m": [
+    3.71,
+    2.91
+   ],
+   "zone": "mid",
+   "contact_height": "low",
+   "height_ratio": -0.07756868402071943,
+   "flight_s": 2.6,
+   "apex_y_px": 22.5,
+   "visible_frac": 0.58,
+   "exit_speed_px_s": 136.0,
+   "dy_out_px_s": 135.0,
+   "receiver_m": [
+    2.6,
+    9.39
+   ],
+   "receiver_zone": "mid",
+   "audio_click_offset_s": 1.413
+  },
+  {
+   "frame": 116,
+   "role": "near",
+   "closeness": 0.24134009143818302,
+   "time_s": 129.467,
+   "xy_px": [
+    805.5,
+    660.0
+   ],
+   "hitter_m": [
+    2.6,
+    9.39
+   ],
+   "zone": "mid",
+   "contact_height": "mid",
+   "height_ratio": 0.4095029559886141,
+   "flight_s": 0.7,
+   "apex_y_px": 3.0,
+   "visible_frac": 0.9,
+   "exit_speed_px_s": 227.0,
+   "dy_out_px_s": 225.0,
+   "receiver_m": [
+    3.71,
+    -1.57
+   ],
+   "receiver_zone": "rear",
+   "audio_click_offset_s": 0.783
+  },
+  {
+   "frame": 137,
+   "role": "far",
+   "closeness": 0.202123013864843,
+   "time_s": 130.167,
+   "xy_px": [
+    1050.0,
+    337.5
+   ],
+   "hitter_m": [
+    3.71,
+    -1.57
+   ],
+   "zone": "rear",
+   "contact_height": "overhead",
+   "height_ratio": 1.325548226065252,
+   "flight_s": 0.533,
+   "apex_y_px": 337.5,
+   "visible_frac": 0.62,
+   "exit_speed_px_s": 1286.0,
+   "dy_out_px_s": 1053.0,
+   "receiver_m": [
+    3.37,
+    10.27
+   ],
+   "receiver_zone": "mid",
+   "audio_click_offset_s": 0.083
+  },
+  {
+   "frame": 153,
+   "role": "near",
+   "closeness": 0.634708710566051,
+   "time_s": 130.7,
+   "xy_px": [
+    1188.0,
+    648.0
+   ],
+   "hitter_m": [
+    3.37,
+    10.27
+   ],
+   "zone": "mid",
+   "contact_height": "overhead",
+   "height_ratio": 2.298526751098476,
+   "flight_s": 2.0,
+   "apex_y_px": 220.5,
+   "visible_frac": 1.0,
+   "exit_speed_px_s": 1961.0,
+   "dy_out_px_s": -1593.0,
+   "receiver_m": [
+    2.25,
+    0.84
+   ],
+   "receiver_zone": "rear",
+   "audio_click_offset_s": 0.017
+  },
+  {
+   "frame": 213,
+   "role": "far",
+   "closeness": 0.35792027732513176,
+   "time_s": 132.7,
+   "xy_px": [
+    775.5,
+    397.5
+   ],
+   "hitter_m": [
+    2.25,
+    0.84
+   ],
+   "zone": "rear",
+   "contact_height": "mid",
+   "height_ratio": 1.060714285714286,
+   "flight_s": 0.267,
+   "apex_y_px": 397.5,
+   "visible_frac": 1.0,
+   "exit_speed_px_s": 541.0,
+   "dy_out_px_s": 540.0,
+   "receiver_m": [
+    2.26,
+    8.72
+   ],
+   "receiver_zone": "front",
+   "audio_click_offset_s": 1.28
+  },
+  {
+   "frame": 221,
+   "role": "near",
+   "closeness": 0.20826821410429716,
+   "time_s": 132.967,
+   "xy_px": [
+    787.5,
+    540.0
+   ],
+   "hitter_m": [
+    2.26,
+    8.72
+   ],
+   "zone": "front",
+   "contact_height": "overhead",
+   "height_ratio": 1.2400253038723954,
+   "flight_s": 0.9,
+   "apex_y_px": 450.0,
+   "visible_frac": 1.0,
+   "exit_speed_px_s": 427.0,
+   "dy_out_px_s": -405.0,
+   "receiver_m": [
+    2.35,
+    3.38
+   ],
+   "receiver_zone": "mid",
+   "audio_click_offset_s": 1.013
+  },
+  {
+   "frame": 248,
+   "role": "far",
+   "closeness": 0.33935194504918753,
+   "time_s": 133.867,
+   "xy_px": [
+    775.5,
+    498.0
+   ],
+   "hitter_m": [
+    2.35,
+    3.38
+   ],
+   "zone": "mid",
+   "contact_height": "overhead",
+   "height_ratio": 1.5636689216076411,
+   "flight_s": 1.067,
+   "apex_y_px": 7.5,
+   "visible_frac": 0.75,
+   "exit_speed_px_s": 2250.0,
+   "dy_out_px_s": -2160.0,
+   "receiver_m": [
+    3.01,
+    11.23
+   ],
+   "receiver_zone": "rear",
+   "audio_click_offset_s": 0.113
+  },
+  {
+   "frame": 280,
+   "role": "near",
+   "closeness": 0.26533488605498,
+   "time_s": 134.933,
+   "xy_px": [
+    910.5,
+    595.5
+   ],
+   "hitter_m": [
+    3.01,
+    11.23
+   ],
+   "zone": "rear",
+   "contact_height": "overhead",
+   "height_ratio": 1.3379002522802248,
+   "flight_s": null,
+   "apex_y_px": 585.0,
+   "visible_frac": 1.0,
+   "exit_speed_px_s": 387.0,
+   "dy_out_px_s": -315.0,
+   "audio_click_offset_s": -0.953
+  }
+ ]
+}

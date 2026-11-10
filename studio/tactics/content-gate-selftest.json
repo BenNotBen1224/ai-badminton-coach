@@ -1,0 +1,14 @@
+{
+  "previous_motion_script_rejected": "The reviewed revision has three coaching beats, no filler summary",
+  "approved_spec_passes": {
+    "script_sha256": "b0375d707ff190d241a7cdc1f56e9487200a7425d1a8ee6831c70e8c8899cbf5",
+    "reviewed_spec_sha256": "b0375d707ff190d241a7cdc1f56e9487200a7425d1a8ee6831c70e8c8899cbf5",
+    "beats": [
+      "space",
+      "time",
+      "options"
+    ],
+    "meaning": "Exact text matches parent-reviewed intent and technique; this is not automated semantic scoring."
+  },
+  "unreviewed_motion_substitution_rejected": "Unreviewed narration: space"
+}

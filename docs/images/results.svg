@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="616" viewBox="0 0 1280 616" role="img" aria-label="Where it stands: measured results with goals">
+<title>Where it stands: measured results with goals</title>
+<rect width="1280" height="616" rx="20" fill="#0b0f14"/>
+<text x="64.0" y="62.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" fill="#f2f5f8" font-weight="700" text-anchor="start">Where it stands</text>
+<text x="64.0" y="92.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" fill="#9aa7b4" font-weight="400" text-anchor="start">Measured, not hoped. Green works, yellow works with a catch, red is not there yet.</text>
+<text x="64.0" y="144.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#f2f5f8" font-weight="600" text-anchor="start">Finds both players</text>
+<text x="64.0" y="166.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">share of frames, 30 runs</text>
+<rect x="470" y="128" width="470" height="22" rx="11" fill="#18212b"/>
+<rect x="470" y="128" width="470.0" height="22" rx="11" fill="#3ddc84" opacity="0.35"/>
+<rect x="470" y="128" width="467.6" height="22" rx="11" fill="#3ddc84"/>
+<text x="958.0" y="145.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#3ddc84" font-weight="700" text-anchor="start">99.5–100%</text>
+<text x="958.0" y="166.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">passes its gate in every run</text>
+<text x="64.0" y="214.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#f2f5f8" font-weight="600" text-anchor="start">Body points line up</text>
+<text x="64.0" y="236.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">vs a bigger, slower model</text>
+<rect x="470" y="198" width="470" height="22" rx="11" fill="#18212b"/>
+<rect x="470" y="198" width="461.1" height="22" rx="11" fill="#ffd166" opacity="0.35"/>
+<rect x="470" y="198" width="441.6" height="22" rx="11" fill="#ffd166"/>
+<text x="958.0" y="215.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#ffd166" font-weight="700" text-anchor="start">94–98.1%</text>
+<text x="958.0" y="236.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">checked against a model, not people</text>
+<text x="64.0" y="284.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#f2f5f8" font-weight="600" text-anchor="start">Where each hit lands</text>
+<text x="64.0" y="306.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">3×3 court zone vs the labels</text>
+<rect x="470" y="268" width="470" height="22" rx="11" fill="#18212b"/>
+<rect x="470" y="268" width="329.0" height="22" rx="11" fill="#ffd166"/>
+<line x1="799.0" y1="260" x2="799.0" y2="298" stroke="#f2f5f8" stroke-width="2"/>
+<text x="799.0" y="313.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f5f8" font-weight="500" text-anchor="middle">goal 70%</text>
+<text x="958.0" y="285.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#ffd166" font-weight="700" text-anchor="start">70%</text>
+<text x="958.0" y="306.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">meets 70%, but on only 10 hits</text>
+<text x="64.0" y="354.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#f2f5f8" font-weight="600" text-anchor="start">Hits it marks that match</text>
+<text x="64.0" y="376.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">right player, right moment</text>
+<rect x="470" y="338" width="470" height="22" rx="11" fill="#18212b"/>
+<rect x="470" y="338" width="165.3" height="22" rx="11" fill="#ff6b6b"/>
+<line x1="846.0" y1="330" x2="846.0" y2="368" stroke="#f2f5f8" stroke-width="2"/>
+<text x="846.0" y="383.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f5f8" font-weight="500" text-anchor="middle">goal 80%</text>
+<text x="958.0" y="355.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#ff6b6b" font-weight="700" text-anchor="start">35%</text>
+<text x="958.0" y="376.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">goal 80%; labels are AI-made</text>
+<text x="64.0" y="424.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#f2f5f8" font-weight="600" text-anchor="start">Labelled hits it finds</text>
+<text x="64.0" y="446.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">out of 96 labelled hits</text>
+<rect x="470" y="408" width="470" height="22" rx="11" fill="#18212b"/>
+<rect x="470" y="408" width="156.7" height="22" rx="11" fill="#ff6b6b"/>
+<line x1="846.0" y1="400" x2="846.0" y2="438" stroke="#f2f5f8" stroke-width="2"/>
+<text x="846.0" y="453.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f5f8" font-weight="500" text-anchor="middle">goal 80%</text>
+<text x="958.0" y="425.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#ff6b6b" font-weight="700" text-anchor="start">33%</text>
+<text x="958.0" y="446.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">goal 80%</text>
+<text x="64.0" y="516.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#f2f5f8" font-weight="600" text-anchor="start">Time per clip</text>
+<text x="64.0" y="538.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">26–36 s of 1080p, 16-thread server CPU</text>
+<rect x="470" y="500" width="470" height="22" rx="11" fill="#18212b"/>
+<rect x="811.1" y="500" width="122.6" height="22" rx="4" fill="#3ddc84"/>
+<circle cx="638.7" cy="511" r="9" fill="#ff6b6b"/>
+<text x="638.7" y="490.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#ff6b6b" font-weight="600" text-anchor="middle">preview 3.59 s</text>
+<text x="872.4" y="490.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#3ddc84" font-weight="600" text-anchor="middle">full analysis</text>
+<line x1="517.0" y1="492" x2="517.0" y2="530" stroke="#f2f5f8" stroke-width="2"/>
+<text x="517.0" y="545.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f5f8" font-weight="500" text-anchor="middle">preview goal 1 s</text>
+<line x1="940.0" y1="492" x2="940.0" y2="530" stroke="#f2f5f8" stroke-width="2"/>
+<text x="940.0" y="545.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f5f8" font-weight="500" text-anchor="end">limit 10 s</text>
+<text x="958.0" y="517.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#3ddc84" font-weight="700" text-anchor="start">7.3–9.9 s</text>
+<text x="958.0" y="538.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9aa7b4" font-weight="400" text-anchor="start">full; preview 3.59 s misses 1 s</text>
+<text x="64.0" y="586.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#5c6773" font-weight="400" text-anchor="start">Sources: fast/runs/step4-rebalanced-*/acceptance.json, studio/tactics/v3_eval.json, turbo/SPEED.md. Details in docs/results.md.</text>
+</svg>
