@@ -38,7 +38,7 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe scripts\with_lock.py "render reels" -- .\.venv\Scripts\python.exe scripts\render_reels.py --edition coaching --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\coaching
 ```
 
-The narration bundle is `reel-inputs-v1.zip` in release **v0.1.1**, separate from the historical MP4s in **v0.1.0**. Its URL, byte count, archive hash, individual WAV hashes, spoken text, and slots are in [`inputs-manifest.json`](../studio/reels/inputs-manifest.json). Before v0.1.1 is published, a release coordinator can use the staged archive with `get_reel_inputs.py --archive PATH_TO_ARCHIVE --out work\reel-inputs`. The script verifies the same hashes and exact member list in either case. No lab folder is needed.
+The narration bundle is `reel-inputs-v1.zip` in release **v0.1.1**, separate from the historical MP4s in **v0.1.0**. Its URL, byte count, archive hash, individual WAV hashes, spoken text, and slots are in [`inputs-manifest.json`](../studio/reels/inputs-manifest.json). To use an already-downloaded bundle offline, run `get_reel_inputs.py --archive PATH_TO_ARCHIVE --out work\reel-inputs`. The script verifies the same hashes and exact member list in either case. No lab folder is needed.
 
 Each output folder contains `reel.mp4`, `mix.wav`, a frame map, preview pictures, `expected-frames.npz`, `render-inputs.json`, and `verification.json`. The renderer decodes every new output frame, checks geometry and duration, checks visible captions against a no-caption control, and checks every voice slot against the encoded mix. The technical edition also compares every card frame with wrong-card controls. Failures raise an error; an existing output folder is never overwritten.
 
