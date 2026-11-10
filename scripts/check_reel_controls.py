@@ -35,7 +35,7 @@ def main():
     for name, (filters, expected_error) in cases.items():
         target = args.out / name
         target.mkdir()
-        for file in ("expected-frames.npz", "render-inputs.json", "mix.wav"):
+        for file in ("expected-frames.npz", "render-inputs.json", "mix.wav", "frame-map.json"):
             shutil.copyfile(args.render / file, target / file)
         command = [ffmpeg, "-v", "error", "-i", str(args.render / "reel.mp4"), *filters,
                    "-c:v", "libx264", "-threads", "2", "-preset", "fast", "-crf", "18",

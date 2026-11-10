@@ -326,6 +326,20 @@ def caption_strip(image):
     return cv2.resize(image[1115:1590, 44:1036], (496, 238), interpolation=cv2.INTER_AREA)
 
 
+def generation_bindings(args):
+    paths = [
+        "scripts/render_reels.py", "studio/editorial/render.py", "studio/reels/inputs-manifest.json",
+        "studio/reels/base-plan.json", "studio/reels/base-frame-map.json",
+        "studio/reels/coaching-plan.json", "studio/reels/coaching-frame-map.json",
+        "studio/reels/technical-script.json", "results/editorial-base-v3/script.json",
+        "results/tiktok-coaching-editorial-20261103-v4/pose.json",
+        "coach/editorial_short.py", "coach/tracks.py",
+        *[f"studio/shuttle/engine/pose_cache/{name}.json" for name in ("segment-02", "segment-05", "segment-10")],
+    ]
+    return {"source_sha256": sha(args.source), "font_sha256": sha(Path(args.font)),
+            "input_sha256": {name: sha(ROOT / name) for name in paths}}
+
+
 def verify(args, expected_frames, references, voice_checks):
     movie = args.out / "reel.mp4"
     info = json.loads(run([args.ffprobe, "-v", "error", "-count_frames", "-show_streams", "-of", "json", movie]))
@@ -388,8 +402,9 @@ def verify(args, expected_frames, references, voice_checks):
             "caption_frames_checked": len(caption_errors),
             "caption_mask_mae_max": max(caption_errors) if caption_errors else None,
             "missing_caption_control_mae_min": min(missing_caption_controls) if missing_caption_controls else None,
-            "voice_coverage": correlations, "source_sha256": sha(args.source), "video_sha256": sha(movie),
-            "renderer_sha256": sha(Path(__file__)), "voice_mode": args.voice_mode,
+            "voice_coverage": correlations, "source_sha256": args.generation["source_sha256"], "video_sha256": sha(movie),
+            "renderer_sha256": args.generation["input_sha256"]["scripts/render_reels.py"],
+            "verifier_sha256": sha(Path(__file__)), "voice_mode": args.voice_mode,
             "fresh_pose_inference": False, "byte_identical_reference_claimed": False,
             "human_listening": False, "naturalness_verified": False}
 
@@ -414,14 +429,20 @@ def main():
     if not Path(args.font).is_file():
         raise FileNotFoundError("Font is missing; supply --font with a Chinese TrueType/OpenType font")
     args.ffmpeg, args.ffprobe = tool(args.ffmpeg, "ffmpeg"), tool(args.ffprobe, "ffprobe")
+    args.generation = generation_bindings(args)
     manifest = read(REELS / "inputs-manifest.json")
     if args.voice_mode == "frozen":
         rows = checked_voices(args.inputs, args.edition, manifest)
     if args.verify_only:
-        expected = np.load(args.out / "expected-frames.npz", allow_pickle=False)
         binding = read(args.out / "render-inputs.json")
         if binding["edition"] != args.edition or binding["voice_mode"] != args.voice_mode:
             raise ValueError("Verification edition/voice mode differs from the render")
+        if binding["generation"] != args.generation:
+            raise ValueError("Code, source, font or input hashes differ from the original generation bindings")
+        for name, digest in binding["output_inputs_sha256"].items():
+            if sha(args.out / name) != digest:
+                raise ValueError(f"Recheck input differs from generation: {name}")
+        expected = np.load(args.out / "expected-frames.npz", allow_pickle=False)
         references = {"picture": expected["picture"], "card_ids": binding["card_ids"],
                       "cards": {key: expected[f"card-{key}"] for key in set(binding["card_ids"])},
                       "caption": expected["caption"], "caption_control": expected["caption_control"],
@@ -490,13 +511,16 @@ def main():
     save(args.out / "render-inputs.json", {"edition": args.edition, "voice_mode": args.voice_mode,
                                          "frames": count, "card_ids": references["card_ids"],
                                          "has_caption": references["has_caption"],
+                                         "generation": args.generation,
+                                         "output_inputs_sha256": {name: sha(args.out / name) for name in
+                                                                 ("expected-frames.npz", "mix.wav", "frame-map.json")},
                                          "voices": voice_checks})
+    if generation_bindings(args) != args.generation:
+        raise ValueError("Generation code or inputs changed during rendering")
     verified = verify(args, count, references, voice_checks)
-    verified["font_sha256"] = sha(Path(args.font))
+    verified["font_sha256"] = args.generation["font_sha256"]
     verified["ffmpeg_version"] = run([args.ffmpeg, "-version"]).decode().splitlines()[0]
-    verified["input_sha256"] = {name: sha(REELS / name) for name in
-                               ("inputs-manifest.json", "base-plan.json", "base-frame-map.json",
-                                "coaching-plan.json", "coaching-frame-map.json", "technical-script.json")}
+    verified["input_sha256"] = args.generation["input_sha256"]
     save(args.out / "verification.json", verified)
     print(json.dumps({key: value for key, value in verified.items() if key != "voice_coverage"}, indent=2))
 

@@ -42,12 +42,20 @@ The narration bundle is `reel-inputs-v1.zip` in release **v0.1.1**, separate fro
 
 Each output folder contains `reel.mp4`, `mix.wav`, a frame map, preview pictures, `expected-frames.npz`, `render-inputs.json`, and `verification.json`. The renderer decodes every new output frame, checks geometry and duration, checks visible captions against a no-caption control, and checks every voice slot against the encoded mix. The technical edition also compares every card frame with wrong-card controls. Failures raise an error; an existing output folder is never overwritten.
 
-To recheck an output independently without encoding it again:
+To recheck an encoded output without encoding it again, keep its original code, font, and inputs. The command enforces the saved generation hashes and checks that its expected frames, mix, and frame map have not changed. It reports original renderer and current verifier hashes separately.
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\render_reels.py --edition technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\technical --verify-only
 .\.venv\Scripts\python.exe -m pytest tests\test_reproduction.py studio\tactics\test_eval_strict.py -q
 ```
+
+Prove that the checks reject a short missing white subtitle and a muted voice line:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\with_lock.py "negative controls" -- .\.venv\Scripts\python.exe scripts\check_reel_controls.py --render outputs\technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\negative-controls
+```
+
+This makes deliberately altered MP4s and requires `--verify-only` to reject them for the intended caption and audio failures. It does not change the original render.
 
 The base and technical editions retain 798 frames at 30 fps, 1080 by 1920, lasting 26.6 seconds. Their source spans are 57.8–64.8, 126.6–134.0, and 272.8–285.0 seconds. Game 1 has Wang/red near and Han/white far. In the last span, game 2 has Han/white near and Wang/red far. Skeletons use the shipped frame-bound pose cache. The older coaching edition retains its 940-frame schedule, about 31.333333 seconds, and recuts source clip 04 at 20 seconds from the full match.
 
