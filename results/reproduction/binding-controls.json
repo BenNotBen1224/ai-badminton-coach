@@ -1,0 +1,20 @@
+[
+  {
+    "case": "wrong-original-renderer",
+    "rejected": true,
+    "expected_error": "Code, source, font or input hashes differ from the original generation bindings",
+    "returncode": 1
+  },
+  {
+    "case": "wrong-original-source",
+    "rejected": true,
+    "expected_error": "Code, source, font or input hashes differ from the original generation bindings",
+    "returncode": 1
+  },
+  {
+    "case": "wrong-saved-mix-hash",
+    "rejected": true,
+    "expected_error": "Recheck input differs from generation: mix.wav",
+    "returncode": 1
+  }
+]

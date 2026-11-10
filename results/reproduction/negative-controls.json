@@ -1,0 +1,14 @@
+[
+  {
+    "case": "missing-white-caption",
+    "rejected": true,
+    "expected_error": "Encoded caption is missing or changed",
+    "returncode": 1
+  },
+  {
+    "case": "muted-voice",
+    "rejected": true,
+    "expected_error": "Encoded voice does not match planned sound",
+    "returncode": 1
+  }
+]

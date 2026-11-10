@@ -42,10 +42,10 @@ The narration bundle is `reel-inputs-v1.zip` in release **v0.1.1**, separate fro
 
 Each output folder contains `reel.mp4`, `mix.wav`, a frame map, preview pictures, `expected-frames.npz`, `render-inputs.json`, and `verification.json`. The renderer decodes every new output frame, checks geometry and duration, checks visible captions against a no-caption control, and checks every voice slot against the encoded mix. The technical edition also compares every card frame with wrong-card controls. Failures raise an error; an existing output folder is never overwritten.
 
-To recheck an encoded output without encoding it again, keep its original code, font, and inputs. The command enforces the saved generation hashes and checks that its expected frames, mix, and frame map have not changed. It reports original renderer and current verifier hashes separately.
+To recheck an encoded output without encoding it again, keep its original code, font, and inputs. The command enforces the saved generation hashes and checks that its expected frames, mix, and frame map have not changed. It reports original renderer and current verifier hashes separately. `-X utf8` also supports Chinese JSON output when you redirect it through a Windows pipe.
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\render_reels.py --edition technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\technical --verify-only
+.\.venv\Scripts\python.exe -X utf8 scripts\render_reels.py --edition technical --source footage\china-open-2025-ws-final.webm --inputs work\reel-inputs --out outputs\technical --verify-only
 .\.venv\Scripts\python.exe -m pytest tests\test_reproduction.py studio\tactics\test_eval_strict.py -q
 ```
 
@@ -82,6 +82,8 @@ That is new inference, not a way to recreate the frozen V3 table byte for byte. 
 
 Footage attribution and the distinction between code rights and media rights are in [models and licences](models-and-licences.md#reproduction-inputs-and-result-videos).
 
+The [clean-checkout record](reproduction-check.md) contains the executed commands, regenerated media hashes, negative controls, and machine-readable receipts.
+
 ## Set up
 
 Follow [Use it](../README.md#use-it) in the README: make the `.venv`, install `requirements.txt`, then run `scripts\get_models.py`, `fast\prepare_cache.py` and `scripts\get_footage.py`. Every download is checked against the hash recorded when the project was built.
@@ -98,7 +100,7 @@ Then check that nothing in the repo has changed:
 .\.venv\Scripts\python.exe scripts\run_tests.py
 ```
 
-Runs the five suites in the order below, each from the folder it expects, with `PYTHONPATH` set to the repo root. On a clean clone with the models and clips 04–10: **729 ran, 0 failures, 8 skipped** ([fresh-clone-check](fresh-clone-check.md)).
+Runs the five suites in the order below, each from the folder it expects, with `PYTHONPATH` set to the repo root. The initial `e27fb934` revision's clean-clone run with the models and clips 04–10 had **729 tests, 0 failures, and 8 skips** ([fresh-clone-check](fresh-clone-check.md)). This historical table does not include the new reproduction tests.
 
 | Suite | Ran | Skipped |
 |---|---|---|

@@ -1,0 +1,125 @@
+{
+  "status": "verified_clean_checkout_reproduction",
+  "timestamp_utc": "2026-11-10T18:49:17.143581+00:00",
+  "tested_source_revision": "565e333bcae597e72e32afe274e56dbd4852e351",
+  "final_commit_note": "Later changes add docs and receipts only; generation code/input hashes stay unchanged.",
+  "tracked_checkout_clean": true,
+  "environment": {
+    "python": "Python 3.12.10",
+    "requirements": "requirements-reels.txt",
+    "fresh_venv": true,
+    "installed": [
+      "av==19.0.2",
+      "colorama==0.4.6",
+      "iniconfig==2.3.1",
+      "numpy==2.4.6",
+      "opencv-python==5.0.0.93",
+      "packaging==26.3",
+      "pillow==13.0.0",
+      "pluggy==1.7.0",
+      "psutil==7.2.2",
+      "Pygments==2.21.0",
+      "pytest==9.2.0",
+      "sherpa-onnx-core==1.13.8",
+      "sherpa_onnx==1.13.8"
+    ]
+  },
+  "source": {
+    "file": "footage/china-open-2025-ws-final.webm",
+    "acquisition": "scripts/get_footage.py --no-cut; anonymous public download in this clean checkout",
+    "sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+    "bytes": 205677737
+  },
+  "narration_bundle": {
+    "file": "reel-inputs-v1.zip",
+    "sha256": "67cbd7094c399126c4e8643d859badde8c275dd15dfd87454eaab7fba3b190df",
+    "bytes": 4381345,
+    "acquisition": "staged archive; get_reel_inputs.py --archive; exact 19 members and hashes verified",
+    "publication": "v0.1.1 release coordination pending"
+  },
+  "renderer_sha256": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+  "focused_tests_passed": 12,
+  "test_command": "python -m pytest tests/test_reproduction.py studio/tactics/test_eval_strict.py -q",
+  "media": {
+    "technical": {
+      "video": "outputs/technical/reel.mp4",
+      "sha256": "755844efe3897305c0c2b7d2ca6d2306ec02e71b6a17c9bdb9aad4ef6718b067",
+      "frames": 798,
+      "duration_s": 26.6,
+      "voice_mode": "frozen",
+      "voice_slots": 10,
+      "caption_frames_checked": 798,
+      "receipt": "results/reproduction/technical.json",
+      "generation_bindings": "results/reproduction/technical-inputs.json"
+    },
+    "base": {
+      "video": "outputs/base/reel.mp4",
+      "sha256": "be7d0fec48bfd0ca7e09511b085e7ab22772066b1680df4826689fa1ac89805b",
+      "frames": 798,
+      "duration_s": 26.6,
+      "voice_mode": "frozen",
+      "voice_slots": 3,
+      "caption_frames_checked": 649,
+      "receipt": "results/reproduction/base.json",
+      "generation_bindings": "results/reproduction/base-inputs.json"
+    },
+    "coaching": {
+      "video": "outputs/coaching/reel.mp4",
+      "sha256": "54c15ddf36551f90ca7ee72efebf42cca32c2824ba49694afd946d2c0eb0cb67",
+      "frames": 940,
+      "duration_s": 31.333333333333332,
+      "voice_mode": "frozen",
+      "voice_slots": 6,
+      "caption_frames_checked": 850,
+      "receipt": "results/reproduction/coaching.json",
+      "generation_bindings": "results/reproduction/coaching-inputs.json"
+    },
+    "technical-new-speech": {
+      "video": "outputs/technical-new-speech/reel.mp4",
+      "sha256": "cb4a91e02882727cee140e3e2f00b822b7e462a7bb2a255107e5338d502d4895",
+      "frames": 798,
+      "duration_s": 26.6,
+      "voice_mode": "synthesize",
+      "voice_slots": 10,
+      "caption_frames_checked": 798,
+      "receipt": "results/reproduction/technical-new-speech.json",
+      "generation_bindings": "results/reproduction/technical-new-speech-inputs.json"
+    }
+  },
+  "negative_controls": [
+    {
+      "case": "missing-white-caption",
+      "rejected": true,
+      "expected_error": "Encoded caption is missing or changed",
+      "returncode": 1
+    },
+    {
+      "case": "muted-voice",
+      "rejected": true,
+      "expected_error": "Encoded voice does not match planned sound",
+      "returncode": 1
+    }
+  ],
+  "binding_controls": [
+    {
+      "case": "wrong-original-renderer",
+      "rejected": true,
+      "expected_error": "Code, source, font or input hashes differ from the original generation bindings",
+      "returncode": 1
+    },
+    {
+      "case": "wrong-original-source",
+      "rejected": true,
+      "expected_error": "Code, source, font or input hashes differ from the original generation bindings",
+      "returncode": 1
+    },
+    {
+      "case": "wrong-saved-mix-hash",
+      "rejected": true,
+      "expected_error": "Recheck input differs from generation: mix.wav",
+      "returncode": 1
+    }
+  ],
+  "inference_rerun": false,
+  "human_listening_or_naturalness_approval": false
+}

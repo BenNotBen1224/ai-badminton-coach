@@ -13,8 +13,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 10575,
-   "sha256": "8a752f1afe531bb53d2073b0ce2af9cb406a5d72f1b89ae3aa1e44549f9e170b",
+   "bytes": 10877,
+   "sha256": "a5882bae370c73b802158e38521b240b09f99d501b5321c8ddcc5926fec60dc7",
    "sha256_before_reproduction_package": "97b9cb5323342b85eebccd1cc558863663049b3fe1386e1cb28cc71c199bec67"
   },
   {
@@ -956,20 +956,25 @@
   },
   {
    "path": "docs/reproducibility.md",
-   "bytes": 13419,
-   "sha256": "4b2521c23090b6e28b7662a0b8eb5a40bc0e54c35f7dee19c0759286bb7baff5",
+   "bytes": 13785,
+   "sha256": "717551bbcb359867ec2f7accf2d882c462db236c270e6c02379772612d78220c",
    "sha256_before_reproduction_package": "26aba5b748fc43a4edc5164426d1ff97fcc59016d4cba2976e383297525c9e50"
   },
   {
+   "path": "docs/reproduction-check.md",
+   "bytes": 6785,
+   "sha256": "ca9cd21cdb958dae0179d46bca18f967d246920f80c257b0aeed99e44e312e00"
+  },
+  {
    "path": "docs/reproduction-decisions.tsv",
-   "bytes": 1472,
-   "sha256": "6cf48cff1a944131cf1e74d84c8a6bf68bdcdd6f95043f92ba855288946cf8df",
+   "bytes": 2031,
+   "sha256": "a7fd27ac728af6749c9a3a1059a8e1f8e314b672ae516055f7892b49eb96f9dc",
    "sha256_before_reproduction_package": "b5586db32f755b1ecb4b06b27618132efccf49d26f759dcae60f418958454fd7"
   },
   {
    "path": "docs/results.md",
-   "bytes": 7519,
-   "sha256": "29faf71b94b4a23ece176c817fce5b16b18b54a36a25da50a2473a16546af1a6",
+   "bytes": 7625,
+   "sha256": "c0ab717c1965c21109d63d1fa14d8f0a3977e9f66973e0ce8cc4aec53f38daf5",
    "sha256_before_reproduction_package": "25ce602ffacee5d5c2d5999df25f5fc5aa885736f2c79e9fb610521b7a151a1b"
   },
   {
@@ -1321,8 +1326,8 @@
   },
   {
    "path": "results/README.md",
-   "bytes": 3546,
-   "sha256": "3e9ba27b0c7fa19702769ee9212b6893796e082f8e01a7ebadc60862c4bd3a37",
+   "bytes": 3807,
+   "sha256": "474619ba0b879b4003c85025aaf2ea836b93691caaf935b05d21573671f90ad2",
    "sha256_before_reproduction_package": "fa0fa92e8135de84a90739bc6241d58dc7c61a7541498bdf46e13f243597e8fb"
   },
   {
@@ -1401,6 +1406,66 @@
    "path": "results/reference-videos.json",
    "bytes": 814,
    "sha256": "d3904de1a7f9eaf35035a91f45c1ab3d605fc40e5c03c36dbec93d337d8b04c5"
+  },
+  {
+   "path": "results/reproduction/base-inputs.json",
+   "bytes": 12277,
+   "sha256": "1e48eaa3a16248d8ebf6cabda2831edf953e8fd0a57a907b7c1863ff4612f08d"
+  },
+  {
+   "path": "results/reproduction/base.json",
+   "bytes": 4079,
+   "sha256": "4271de547584d100d1c0b234d534cbc47682bd082bbc37ad994ffc81e2eb8ad9"
+  },
+  {
+   "path": "results/reproduction/binding-controls.json",
+   "bytes": 570,
+   "sha256": "856b3b015f150b48bebc50d9f080064bf404a0f41a06f5a568560c12f5ee9feb"
+  },
+  {
+   "path": "results/reproduction/check.json",
+   "bytes": 4559,
+   "sha256": "f84831c1e70c9cd3f61e3e9d763f5b3a34248ff42ee96d5bf55cd5e98bd6b78b"
+  },
+  {
+   "path": "results/reproduction/coaching-inputs.json",
+   "bytes": 14659,
+   "sha256": "ba199c1a5c0f72489baf34fef18df7e409851d8a5ae6c856d13e4872415c6a2d"
+  },
+  {
+   "path": "results/reproduction/coaching.json",
+   "bytes": 5134,
+   "sha256": "0042be4834e3dfdfa3f1cb10aa823bde1db153ea5c71223b640469402fe98d5b"
+  },
+  {
+   "path": "results/reproduction/negative-controls.json",
+   "bytes": 314,
+   "sha256": "16fd1f8f7c7aab884871462c84c453de18d6be03fb265ad1cacd5197c1b4e981"
+  },
+  {
+   "path": "results/reproduction/tactics-summary.json",
+   "bytes": 4122,
+   "sha256": "e534376ab200f8e3f2b08d12e028ba407d6c312cf1ac316d2c8d9cc90c002b0d"
+  },
+  {
+   "path": "results/reproduction/technical-inputs.json",
+   "bytes": 27163,
+   "sha256": "3667efe38bab658d695e0be52bd598a9b3913466959aeb9ea47ac80001a22f27"
+  },
+  {
+   "path": "results/reproduction/technical-new-speech-inputs.json",
+   "bytes": 27165,
+   "sha256": "3ec135e0d6b1ac2c6224dee9143b68e8f0a4d15eee8c69900f575f87db491850"
+  },
+  {
+   "path": "results/reproduction/technical-new-speech.json",
+   "bytes": 6240,
+   "sha256": "03ee395b82d9ab65719ea32034c388ca3c02c15168b53571d6ea84b2861475a2"
+  },
+  {
+   "path": "results/reproduction/technical.json",
+   "bytes": 6236,
+   "sha256": "9710c4202db454205e200110d8ae69307a307b246e393b932f17b90075167449"
   },
   {
    "path": "results/source-download-proof.json",

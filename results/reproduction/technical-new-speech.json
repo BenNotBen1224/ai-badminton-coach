@@ -1,0 +1,139 @@
+{
+  "status": "verified_regenerated_media",
+  "edition": "technical",
+  "frames": 798,
+  "duration_s": 26.6,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "picture_mae_max": 1.8214872685185186,
+  "technical_card_mae_max": 2.1163564419119973,
+  "technical_wrong_card_mae_min": 6.91994301994302,
+  "picture_frames_checked": 798,
+  "card_frames_checked": 798,
+  "caption_frames_checked": 798,
+  "caption_mask_mae_max": 2.730938123752495,
+  "missing_caption_control_mae_min": 162.6022050324531,
+  "voice_coverage": [
+    {
+      "id": "space-1",
+      "text": "韩悦先压正手底角，",
+      "start_sample": 3840,
+      "end_sample": 105584,
+      "voice_sha256": "13da4b1622d4489ba43d159d7e9fb8d17a02cb58cfdfcaaef06b5254c8da7ffa",
+      "gain": 1.44666780499762,
+      "encoded_mix_correlation": 0.9999907742429617
+    },
+    {
+      "id": "space-2",
+      "text": "反手斜线拦截，对角调动！",
+      "start_sample": 111040,
+      "end_sample": 246348,
+      "voice_sha256": "9e11655a717cb57452273a03faef723695facf0c3a0d1aa819493e74de5e1ddf",
+      "gain": 1.3297498808634107,
+      "encoded_mix_correlation": 0.9999914509126075
+    },
+    {
+      "id": "space-3",
+      "text": "神仙防守！",
+      "start_sample": 253440,
+      "end_sample": 314770,
+      "voice_sha256": "677cec02b83ffe252f7ed519e819ef7e200c8ee7b4ac882fb3aa49969e18b735",
+      "gain": 1.3497066183705801,
+      "encoded_mix_correlation": 0.9999918413025488
+    },
+    {
+      "id": "time-1",
+      "text": "王祉怡挑后场，",
+      "start_sample": 339840,
+      "end_sample": 417704,
+      "voice_sha256": "a647c27dec9aba22123a08732ecac7170a9f6cfe2c2edf84b86812b9850dfa4c",
+      "gain": 1.3911474076847632,
+      "encoded_mix_correlation": 0.9999917946721253
+    },
+    {
+      "id": "time-2",
+      "text": "韩悦底线暴力跳杀！",
+      "start_sample": 435840,
+      "end_sample": 529406,
+      "voice_sha256": "d527a81aee75ba864eb5c96fa4d1e402ebc48b45c301afa691078b4d462e3e81",
+      "gain": 1.3891150132597077,
+      "encoded_mix_correlation": 0.9999909169776746
+    },
+    {
+      "id": "time-3",
+      "text": "再吊直线，杀吊结合！",
+      "start_sample": 568640,
+      "end_sample": 686230,
+      "voice_sha256": "d5747d16a79d1d437db632ef503cfa2689ee4b70f7e00d713e3fc55d7314079e",
+      "gain": 1.3600447546268473,
+      "encoded_mix_correlation": 0.9999901717139826
+    },
+    {
+      "id": "options-1",
+      "text": "王祉怡后场跳杀！",
+      "start_sample": 695040,
+      "end_sample": 786280,
+      "voice_sha256": "d9a8a3b369a47f059c28bd424d3e8a900bfccb00d72ac5276bb9a40daaa6e815",
+      "gain": 1.404471440343572,
+      "encoded_mix_correlation": 0.9999921849913813
+    },
+    {
+      "id": "options-2",
+      "text": "韩悦接杀走对角，把王祉怡拉开！",
+      "start_sample": 792640,
+      "end_sample": 952752,
+      "voice_sha256": "632ed9e5ea02ae22ce8384130ba2260ccccfb2ced1e92f6a2ffa29b81dd95a05",
+      "gain": 1.4192061108737855,
+      "encoded_mix_correlation": 0.9999907234390565
+    },
+    {
+      "id": "options-3",
+      "text": "两人头顶对角互拉，",
+      "start_sample": 1011840,
+      "end_sample": 1104286,
+      "voice_sha256": "d78c3d9ff436ce5bea7d62ac8168d8e587b4513d703a5cbcfebac6d3918e0edf",
+      "gain": 1.4455542879606456,
+      "encoded_mix_correlation": 0.9999903183050272
+    },
+    {
+      "id": "options-4",
+      "text": "韩悦下压抢网，连贯拉满！",
+      "start_sample": 1112640,
+      "end_sample": 1243508,
+      "voice_sha256": "3f2bea77720094cf9a0ef1ff65b92b0bc686d170f4ffa931963cf7ed78c0191f",
+      "gain": 1.3857423639152995,
+      "encoded_mix_correlation": 0.9999908016093572
+    }
+  ],
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "video_sha256": "cb4a91e02882727cee140e3e2f00b822b7e462a7bb2a255107e5338d502d4895",
+  "renderer_sha256": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+  "verifier_sha256": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+  "voice_mode": "synthesize",
+  "fresh_pose_inference": false,
+  "byte_identical_reference_claimed": false,
+  "human_listening": false,
+  "naturalness_verified": false,
+  "font_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f",
+  "ffmpeg_version": "ffmpeg version N-128094-g31855b2a70-20261025 Copyright (c) 2000-2026 the FFmpeg developers",
+  "input_sha256": {
+    "scripts/render_reels.py": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+    "studio/editorial/render.py": "7b558c9e33c1b35d9ce40f3101eb0b3671621dfa29aca7d2db1741568fc1cbd1",
+    "studio/reels/inputs-manifest.json": "3b16bd00dbc4eab6b5f155eb02a3a8f72d3e7a3215192989d4b1b7e78436f6c9",
+    "studio/reels/base-plan.json": "2b7e2583b454c93ad7d67bee523de960358ec35f5908a69f5b722a2697b2a883",
+    "studio/reels/base-frame-map.json": "edb5ad0873d3eaf30fddd48baa56323040be028cb1ae9e4d821f2f92ce55eee2",
+    "studio/reels/coaching-plan.json": "d1897a487f5cde518980f9d28ffbcdd4c4ff14cb69bc7b8d814119558afc4595",
+    "studio/reels/coaching-frame-map.json": "1f8774ad4c888fde45875c9f68b754958fe42c7d1e80d41163fb124518553ab2",
+    "studio/reels/technical-script.json": "cdbb9af2e95b57db022076d1c1c1f582e2bb86ed24d0493f8a1ca5adafa6c911",
+    "results/editorial-base-v3/script.json": "e2eda1899de5e29d13a40e4f3936bf59d26e244362896f8e4cf9e8fb1421d5ec",
+    "results/tiktok-coaching-editorial-20261103-v4/pose.json": "213103f7027d23c7bb6af1dcc0661191aa9377c5d62ec33d84b73838e687e936",
+    "coach/editorial_short.py": "eab756d1f81c7f7f54e14f4bd344d20070e455b387326b6b40bb7ac14ddb7449",
+    "coach/tracks.py": "74acb2461771889d4a246ee70d88ebda610862a46051807ed3bf9bb8bffec486",
+    "studio/shuttle/engine/pose_cache/segment-02.json": "8c1f5e94691a60f2bb92358ec4f746f84fedf31ed2b2320a046735da77a33d62",
+    "studio/shuttle/engine/pose_cache/segment-05.json": "427396db25780b05e508cbf12292d4087d8b4396abe35b8809de11e134f0fbd7",
+    "studio/shuttle/engine/pose_cache/segment-10.json": "819e919116a17af6a2765df9891cbf65a49cff582eeb052c1e3c5f355329bc1d"
+  }
+}

@@ -88,14 +88,14 @@ Source: [`results/technical-commentary-v2/verification.json`](../results/technic
 
 - Each of the 10 voice lines in the final file matches the planned mix (correlation 0.99999).
 - A speech-to-text pass found 0 dropped sounds. It is a rough check: it still garbles player names.
-- `human_listening: false` and `naturalness_verified: false`. **Nobody has listened to it.**
+- `human_listening: false` and `naturalness_verified: false`. No recorded human listening or naturalness review is claimed.
 - Numbers on screen are model estimates. Shot names in the reels came from frame review, not from the engine.
 
 [Watch the exact historical MP4s](../results/) or [regenerate all three editions](reproducibility.md#rebuild-the-short-reels). New renders decode source frames and replay shipped pose estimates. The default voice takes are frozen inputs, not fresh speech synthesis.
 
 ## Fresh clone
 
-Source: [fresh-clone-check.md](fresh-clone-check.md). 729 tests, 0 failures, 8 skipped, and a narrated review of clip 04 made from a clean clone.
+Source: [fresh-clone-check.md](fresh-clone-check.md). The initial `e27fb934` revision's run had 729 tests, 0 failures, and 8 skips, and made a narrated review of clip 04. This is separate from the new reproduction tests.
 
 ## Not measured
 

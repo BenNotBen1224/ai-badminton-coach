@@ -12,6 +12,8 @@ Check exact downloaded bytes against [SHA256SUMS.txt](https://github.com/BenNotB
 
 [Rebuild all three reels and re-score tactics](../docs/reproducibility.md) from a clean checkout. New encodes are equivalents, not exact-byte copies. The separate v0.1.1 narration bundle contains original base/technical voice takes and regenerated coaching takes, not a base MP4.
 
+The [clean-checkout record](../docs/reproduction-check.md) links the executed commands and [new verification receipts](reproduction/). It covers all three editions, a fresh technical voice synthesis, and deliberately altered videos that the checks rejected.
+
 | Folder or file | What it is |
 |---|---|
 | [`technical-commentary-v2/`](technical-commentary-v2/) | Latest vertical reel: Han Yue vs Wang Zhiyi (China Open 2025 women's final), 26.6 s, Chinese technical commentary with a Kokoro voice. `planned-schedule.json` is the script and timing; `verification.json` is the check of the finished file. |

@@ -9,7 +9,7 @@ It finds both players, tracks 17 body points on each, slows down the moments wor
 
 > **Status: research MVP for Windows, CPU only.** You can run it today on your own singles clip ([Use it](#use-it)).
 > Finding players and body points works well. Telling **which shot** was played is **not there yet**, and picking the most *exciting* moment is **not automatic yet**.
-> Shuttle tracking is a **separate studio tool** that the app does not use. **Nobody has listened** to the narration, there is **no test against a real coach**, and it has **not been run on a Mac**.
+> Shuttle tracking is a **separate studio tool** that the app does not use. There is **no recorded human listening review** of the narration, **no test against a real coach**, and it has **not been run on a Mac**.
 > See [where it stands](#where-it-stands).
 
 ## Why
@@ -52,7 +52,7 @@ It writes `review.mp4`, a readable `analysis.html`, and the evidence behind ever
 
 <img src="docs/images/use-it.svg" alt="Four steps: get the code, get the models, get a match, make the review" width="100%">
 
-**Proved from a fresh clone.** The steps above were run on a clean clone of this repo: **729 tests ran with 0 failures** (8 skipped), and the review command turned sample clip 04 into a **74-second narrated review** with every source frame kept. The record is in [docs/fresh-clone-check.md](docs/fresh-clone-check.md).
+**Initial release checked from a fresh clone.** At revision `e27fb934`, **729 tests ran with 0 failures** (8 skipped), and the review command turned sample clip 04 into a **74-second narrated review** with every source frame kept. The record is in [docs/fresh-clone-check.md](docs/fresh-clone-check.md).
 
 **Want to check the numbers yourself?** Start with [docs/reproducibility.md](docs/reproducibility.md). It says what re-runs from a clean clone, what needs downloads first, and what is a record only.
 
@@ -68,7 +68,8 @@ Each step saves its numbers per frame, so any sentence in the narration can be t
 
 | Feature | State | Latest | Compared with |
 |---|---|---|---|
-| Runs from a fresh clone | 🟢 Works | 729 tests, 0 failures; 74 s review made | Clean clone, models downloaded |
+| Initial app run from a fresh clone | 🟢 Works | At `e27fb934`, 729 tests, 0 failures; 74 s review made | Clean clone, models downloaded |
+| Rebuild the three short reels | 🟢 Works from frozen inputs | 798 / 798 / 940 output frames; source footage, captions and voice slots checked | Clean checkout, minimal reel requirements; [proof](docs/reproduction-check.md) |
 | Finds both players | 🟢 Works | 99.5–100% of frames, 30 runs | Must beat the old setup on every clip; it did |
 | Body points line up | 🟡 Works, judged by a model | 94–98% of joints within 5% of player height | A bigger, slower model, not people |
 | Full analysis speed | 🟡 Within limit only on a quiet computer | 7.3–9.9 s per 26–36 s clip; 9.6–12.5 s in the fresh-clone re-run, with other apps busy | 10 s limit, on a 16-thread server CPU |
@@ -77,7 +78,7 @@ Each step saves its numbers per frame, so any sentence in the narration can be t
 | Which shot was played | 🔴 Almost never says | Names a shot on 6 of 336 hits | Never scored |
 | Picking the most exciting moment | 🔴 Not automatic | The app picks 3 clear, spaced-out moments by a fixed rule | One prototype uses hand-set scores |
 | Shuttle tracking | 🟡 Studio only | Found in 233 of 282 frames of one 9-second stretch | Not checked against labels |
-| Narration | 🟡 Machine-checked | Reels: audio matches the plan; speech-to-text found no dropped sounds | Nobody has listened to it |
+| Narration | 🟡 Machine-checked | Reels: audio matches the plan; speech-to-text found no dropped sounds | No recorded human listening review |
 
 <img src="docs/images/results.svg" alt="Players found 99.5 to 100 percent; body points 94 to 98 percent; landing zone 70 percent on 10 hits; hit match 35 percent and 33 percent against an 80 percent goal; full analysis 7.3 to 9.9 seconds against a 10 second limit; preview 3.59 seconds against a 1 second goal" width="100%">
 
@@ -92,7 +93,7 @@ Every number, where it comes from, and its caveats: [docs/results.md](docs/resul
 .\.venv\Scripts\python.exe scripts\verify_manifest.py  # every file matches its recorded hash
 ```
 
-On a fresh clone with the models downloaded, 729 tests run and 8 are skipped. Each skipped test prints why. Seven need something this repo does not ship, such as the original bytes of sample clips 01, 03 or 04, hand labels that were never finished, or an opt-in flag for a slow export; one always skips by design. [docs/reproducibility.md](docs/reproducibility.md) lists all 8, the run order, and the known gaps.
+The initial `e27fb934` revision's run with the models downloaded ran 729 tests and skipped 8. Each skipped test prints why. Seven need something this repo does not ship, such as the original bytes of sample clips 01, 03 or 04, hand labels that were never finished, or an opt-in flag for a slow export; one always skips by design. [docs/reproducibility.md](docs/reproducibility.md) lists all 8, the run order, and the separate new reproduction tests.
 
 ## What's next
 

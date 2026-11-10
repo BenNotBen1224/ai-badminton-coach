@@ -1,0 +1,103 @@
+{
+  "status": "verified_regenerated_media",
+  "edition": "coaching",
+  "frames": 940,
+  "duration_s": 31.333333333333332,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "picture_mae_max": 2.4322743055555556,
+  "technical_card_mae_max": null,
+  "technical_wrong_card_mae_min": null,
+  "picture_frames_checked": 940,
+  "card_frames_checked": 0,
+  "caption_frames_checked": 850,
+  "caption_mask_mae_max": 3.0705404468222124,
+  "missing_caption_control_mae_min": 140.66161390994205,
+  "voice_coverage": [
+    {
+      "id": "hook",
+      "text": "一拍之间，动作连起来看。",
+      "start_sample": 4800,
+      "end_sample": 104403,
+      "voice_sha256": "bf57b06cdf287dd4c26220ea6be02a44a409a58b7bb8a4ee8c6b63a5822ce177",
+      "gain": 0.9,
+      "encoded_mix_correlation": 0.9999810128112868
+    },
+    {
+      "id": "legs",
+      "text": "右脚先跨，前膝弯下，左臂跟着打开。脚步回收，再接下一步。",
+      "start_sample": 120000,
+      "end_sample": 355055,
+      "voice_sha256": "70f4096dc1d72066c3d1f8d316a4f29a274a9c94129337ab03c27024ec54c975",
+      "gain": 0.9,
+      "encoded_mix_correlation": 0.9999802108604254
+    },
+    {
+      "id": "core",
+      "text": "跨到底时，上身朝跨步一侧倾，肩线比髋线更斜。回位时，上身逐渐回正。",
+      "start_sample": 368000,
+      "end_sample": 654727,
+      "voice_sha256": "349ae8aed3e46da5bad27a6585c138402bbbb6ab8744125ca057ab3d96a4f42c",
+      "gain": 0.9,
+      "encoded_mix_correlation": 0.999977068710228
+    },
+    {
+      "id": "arms",
+      "text": "换到另一分，看远端球员：非持拍手先抬，接着往回收，持拍臂顺势上挥。",
+      "start_sample": 670400,
+      "end_sample": 933804,
+      "voice_sha256": "d95100078718f8f7044ca2754fa1f284d1100f9474f374632c8d1b88f87cbdd9",
+      "gain": 0.9,
+      "encoded_mix_correlation": 0.9999722457278866
+    },
+    {
+      "id": "tactics",
+      "text": "她回到半场中部、稍偏反手；对手在后场。练单打时，把回位和下一次向四边移动连起来。",
+      "start_sample": 945600,
+      "end_sample": 1248728,
+      "voice_sha256": "6d6c5baf84d62816db392c8a7fb721180805dd72f1c8566a4312db1aa18f9f40",
+      "gain": 0.9,
+      "encoded_mix_correlation": 0.9999815647655542
+    },
+    {
+      "id": "recap",
+      "text": "腿先跨，手臂接，上身随动，回位再准备。",
+      "start_sample": 1260800,
+      "end_sample": 1424655,
+      "voice_sha256": "4dba1be26cd821cdc634d2ab753824e4528b26fd68e1e208674c2aab1f025057",
+      "gain": 0.9,
+      "encoded_mix_correlation": 0.9999817756354283
+    }
+  ],
+  "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+  "video_sha256": "54c15ddf36551f90ca7ee72efebf42cca32c2824ba49694afd946d2c0eb0cb67",
+  "renderer_sha256": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+  "verifier_sha256": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+  "voice_mode": "frozen",
+  "fresh_pose_inference": false,
+  "byte_identical_reference_claimed": false,
+  "human_listening": false,
+  "naturalness_verified": false,
+  "font_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f",
+  "ffmpeg_version": "ffmpeg version N-128094-g31855b2a70-20261025 Copyright (c) 2000-2026 the FFmpeg developers",
+  "input_sha256": {
+    "scripts/render_reels.py": "7a7c8773b7c4615df18eda6a41d8f4254a1738f9096079638b9000e98e65bc29",
+    "studio/editorial/render.py": "7b558c9e33c1b35d9ce40f3101eb0b3671621dfa29aca7d2db1741568fc1cbd1",
+    "studio/reels/inputs-manifest.json": "3b16bd00dbc4eab6b5f155eb02a3a8f72d3e7a3215192989d4b1b7e78436f6c9",
+    "studio/reels/base-plan.json": "2b7e2583b454c93ad7d67bee523de960358ec35f5908a69f5b722a2697b2a883",
+    "studio/reels/base-frame-map.json": "edb5ad0873d3eaf30fddd48baa56323040be028cb1ae9e4d821f2f92ce55eee2",
+    "studio/reels/coaching-plan.json": "d1897a487f5cde518980f9d28ffbcdd4c4ff14cb69bc7b8d814119558afc4595",
+    "studio/reels/coaching-frame-map.json": "1f8774ad4c888fde45875c9f68b754958fe42c7d1e80d41163fb124518553ab2",
+    "studio/reels/technical-script.json": "cdbb9af2e95b57db022076d1c1c1f582e2bb86ed24d0493f8a1ca5adafa6c911",
+    "results/editorial-base-v3/script.json": "e2eda1899de5e29d13a40e4f3936bf59d26e244362896f8e4cf9e8fb1421d5ec",
+    "results/tiktok-coaching-editorial-20261103-v4/pose.json": "213103f7027d23c7bb6af1dcc0661191aa9377c5d62ec33d84b73838e687e936",
+    "coach/editorial_short.py": "eab756d1f81c7f7f54e14f4bd344d20070e455b387326b6b40bb7ac14ddb7449",
+    "coach/tracks.py": "74acb2461771889d4a246ee70d88ebda610862a46051807ed3bf9bb8bffec486",
+    "studio/shuttle/engine/pose_cache/segment-02.json": "8c1f5e94691a60f2bb92358ec4f746f84fedf31ed2b2320a046735da77a33d62",
+    "studio/shuttle/engine/pose_cache/segment-05.json": "427396db25780b05e508cbf12292d4087d8b4396abe35b8809de11e134f0fbd7",
+    "studio/shuttle/engine/pose_cache/segment-10.json": "819e919116a17af6a2765df9891cbf65a49cff582eeb052c1e3c5f355329bc1d"
+  }
+}
