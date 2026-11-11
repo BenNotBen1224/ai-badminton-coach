@@ -26,7 +26,7 @@ To score changed inputs, pass `--hits`, `--labels`, or `--partition` and omit `-
 
 ## Rebuild the short reels
 
-This rebuilds fixed editorial choices for one match. It does not choose highlights, name shots, or write the approved commentary style for a new video. The separate `coach.short_review` and `coach.editorial_short` commands make teaching shorts with fresh pose analysis and need the full app setup. Their any-clip runs have not yet been rechecked in the new reproduction environment. See the [TikTok-style workflow status](tiktok-style-workflow.md).
+This rebuilds fixed editorial choices for one match. It does not choose highlights, name shots, or write the approved commentary style for a new video. The separate teaching CLIs need the full app setup. `coach.short_review` passed a fresh clip-04 export and encoded-output recheck. `coach.editorial_short` rejected narration that did not fit its selected footage. See the [TikTok-style workflow status and command record](tiktok-style-workflow.md).
 
 Use Python 3.12 and ffmpeg/ffprobe on `PATH` or in `tools\`. This path needs no detector weights and does not import an old base MP4. The default Chinese font is Microsoft YaHei on Windows. You can supply `--font` with another Chinese TrueType or OpenType font; the layout may differ. Only Windows has been exercised.
 

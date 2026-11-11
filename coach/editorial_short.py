@@ -399,7 +399,6 @@ def build_story(doc, report):
     if tactics_end - tactics_start < round(1.0 * tracks.fps):
         raise RuntimeError("The same-shot court-position sequence is too short to show a recovery")
     position_scan_start = max(lunge_shot[0], int(cycle.frame) - round(0.8 * tracks.fps))
-    corners, homography, positions = court_samples(doc, tracks, position_scan_start, tactics_end)
     before_swing = sorted(
         (event for event in report.events
          if event.kind == "swing" and event.player == Role.NEAR and event.frame < cycle.frame
@@ -409,6 +408,9 @@ def build_story(doc, report):
     if not before_swing:
         raise RuntimeError("No earlier near-player action supports the court-path starting point")
     initial_frame = min(tactics_start, int(before_swing[-1].frame) + round(0.3 * tracks.fps))
+    corners, homography, positions = court_samples(
+        doc, tracks, min(position_scan_start, initial_frame), tactics_end,
+    )
     initial = positions.get(("near", initial_frame))
     lunge_point = positions.get(("near", bottom))
     near_settled = _median_position(positions, "near", tactics_start, tactics_end)

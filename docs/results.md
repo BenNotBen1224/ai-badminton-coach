@@ -93,7 +93,7 @@ Source: [`results/technical-commentary-v2/verification.json`](../results/technic
 
 [Watch the exact historical MP4s](../results/) or [regenerate all three editions](reproducibility.md#rebuild-the-short-reels). New renders decode source frames and replay shipped pose estimates. The default voice takes are frozen inputs, not fresh speech synthesis.
 
-The [TikTok-style workflow](tiktok-style-workflow.md) is not automatic for a new video. Moment choices, shot names, title, and player-named lines were edited for this match. The separate teaching-short CLIs do not generate that commentary format, and their any-clip runs have not yet been rechecked in the new reproduction environment.
+The [TikTok-style workflow](tiktok-style-workflow.md) is not automatic for a new video. Moment choices, shot names, title, and player-named lines were edited for this match. The separate teaching-short CLI `coach.short_review` passed fresh inference, export, and encoded-output verification on public recut clip 04. `coach.editorial_short` stopped because its narration exceeded the selected footage. Neither command generates the approved commentary format.
 
 ## Fresh clone
 

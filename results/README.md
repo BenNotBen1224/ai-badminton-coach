@@ -14,7 +14,7 @@ Check exact downloaded bytes against [SHA256SUMS.txt](https://github.com/BenNotB
 
 The [clean-checkout record](../docs/reproduction-check.md) links the executed commands and [new verification receipts](reproduction/). It covers all three editions, a fresh technical voice synthesis, and deliberately altered videos that the checks rejected.
 
-This is a match-specific rebuild, not an automatic new-video commentary workflow. The moments, player names, shot terms, title, and lines were edited for this match. Separate CLI teaching exporters exist but have not yet been rechecked in the new reproduction environment. See the [TikTok-style workflow status](../docs/tiktok-style-workflow.md).
+This is a match-specific rebuild, not an automatic new-video commentary workflow. The moments, player names, shot terms, title, and lines were edited for this match. A separate fresh clip-04 technique-short export and recheck passed. The chapter-based editorial exporter rejected its narration length. See the [TikTok-style workflow status](../docs/tiktok-style-workflow.md) and [command receipt](reproduction/any-clip-commands.json).
 
 | Folder or file | What it is |
 |---|---|

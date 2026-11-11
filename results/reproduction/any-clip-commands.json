@@ -1,0 +1,326 @@
+{
+  "timestamp_utc": "2026-11-11T00:03:03.628893+00:00",
+  "source": "sample-videos/04-china-open-ws-a.mp4",
+  "source_sha256": "4b4dcd55deaf42d7e13697615eed36cb58426bd9efbcac00678a958e26c2834c",
+  "setup": "Full requirements.txt, public get_models.py yolo melo, prepare_cache.py, public get_footage.py recuts",
+  "timing_scope": "One functional run per command, subprocess wall time including startup and validation. Not a performance benchmark.",
+  "host": {
+    "logical_cpus": 16,
+    "load_percent_before": 33
+  },
+  "runs": [
+    {
+      "module": "coach.short_review",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.short_review",
+        "sample-videos\\04-china-open-ws-a.mp4",
+        "outputs\\any-clip-short-fresh"
+      ],
+      "elapsed_wall_s": 88.14383199997246,
+      "returncode": 0
+    },
+    {
+      "module": "coach.editorial_short",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.editorial_short",
+        "sample-videos\\04-china-open-ws-a.mp4",
+        "outputs\\any-clip-editorial-fresh"
+      ],
+      "elapsed_wall_s": 13.602694000001065,
+      "returncode": 1
+    },
+    {
+      "returncode": 0,
+      "module": "coach.verify_short",
+      "elapsed_wall_s": 6.3365734,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.verify_short",
+        "outputs\\any-clip-short-fresh",
+        "sample-videos\\04-china-open-ws-a.mp4"
+      ]
+    },
+    {
+      "returncode": 1,
+      "module": "coach.editorial_short",
+      "elapsed_wall_s": 27.1176481,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.editorial_short",
+        "sample-videos\\04-china-open-ws-a.mp4",
+        "outputs\\any-clip-editorial-anchor-fixed"
+      ]
+    }
+  ],
+  "status": "technique_verified_editorial_rejected",
+  "error_tail": [
+    "RuntimeError: Court path anchors need measured two-ankle positions"
+  ],
+  "baseline_revision": "10873df3c48687c60a9ee0a17322066f509a6986",
+  "source_changes_for_editorial_retry": {
+    "coach/editorial_short.py": "8b134db17e60b638aa3905a5c7b1cfcc9e19d82151c276cb1d108cd592923ad4",
+    "coach/tests/test_editorial_short.py": "ac10e360c5e12fe2e44e32595412eb36beff91780db40e29780e93f25d22dbdf"
+  },
+  "technique": {
+    "video": "outputs/any-clip-short-fresh/tiktok.mp4",
+    "sha256": "2cfe0f59128e2711f06bab595e879bbdc8054a70d4e434db3005f5784557087a",
+    "bytes": 3545889,
+    "generation": {
+      "full_decode": true,
+      "non_silent_audio": true,
+      "output_shape": [
+        1080,
+        1920
+      ],
+      "video_frames": 938,
+      "video_duration_s": 31.266667,
+      "audio_duration_s": 31.266667,
+      "captions_within_measured_speech": true,
+      "text_safe_rect": [
+        64,
+        210,
+        900,
+        1510
+      ],
+      "all_text_inside_safe_rect": true,
+      "freeze_cap_s": 3.5,
+      "render_s": 51.744464899995364,
+      "sha256": "2cfe0f59128e2711f06bab595e879bbdc8054a70d4e434db3005f5784557087a",
+      "voice": {
+        "engine": "sherpa-onnx",
+        "model": "MeloTTS-Chinese",
+        "speed": 1.12,
+        "sample_rate": 44100,
+        "local": true,
+        "model_sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d"
+      },
+      "speech_naturalness": "Not independently rated by a human",
+      "crop_contains_focus_box_at_freezes": true,
+      "no_point_spans_cut": true,
+      "encoded_alignment_verified": true,
+      "faststart": true,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "actual_held_source_time_s": 8.9,
+      "actual_moving_source_time_s": 22.366666666666667,
+      "phase_totals": {
+        "moving_s": 22.766666666666666,
+        "paused_s": 8.5
+      },
+      "measured_source_holds": {
+        "held_s": 8.9,
+        "moving_s": 22.366666666666667,
+        "share": 0.2846481876332623,
+        "definition": "Consecutive equal source-frame runs lasting at least 0.5s, including slow-motion boundary repeats."
+      }
+    },
+    "encoded_recheck": {
+      "video": "<checkout>\\outputs\\any-clip-short-fresh\\tiktok.mp4",
+      "sha256": "2cfe0f59128e2711f06bab595e879bbdc8054a70d4e434db3005f5784557087a",
+      "source_sha256": "4b4dcd55deaf42d7e13697615eed36cb58426bd9efbcac00678a958e26c2834c",
+      "evidence_reproduced": true,
+      "encoded_alignment": [
+        {
+          "output_frame": 0,
+          "source_frame": 513,
+          "phase": "hook",
+          "pixel_mae": 2.3769044876098633
+        },
+        {
+          "output_frame": 115,
+          "source_frame": 511,
+          "phase": "motion",
+          "pixel_mae": 2.440925121307373
+        },
+        {
+          "output_frame": 145,
+          "source_frame": 513,
+          "phase": "freeze",
+          "pixel_mae": 2.386500835418701
+        },
+        {
+          "output_frame": 187,
+          "source_frame": 514,
+          "phase": "motion",
+          "pixel_mae": 2.428969383239746
+        },
+        {
+          "output_frame": 397,
+          "source_frame": 511,
+          "phase": "motion",
+          "pixel_mae": 2.4381206035614014
+        },
+        {
+          "output_frame": 427,
+          "source_frame": 513,
+          "phase": "freeze",
+          "pixel_mae": 2.392120838165283
+        },
+        {
+          "output_frame": 469,
+          "source_frame": 514,
+          "phase": "motion",
+          "pixel_mae": 2.443787097930908
+        },
+        {
+          "output_frame": 691,
+          "source_frame": 97,
+          "phase": "motion",
+          "pixel_mae": 2.4620227813720703
+        },
+        {
+          "output_frame": 721,
+          "source_frame": 99,
+          "phase": "freeze",
+          "pixel_mae": 2.4234414100646973
+        },
+        {
+          "output_frame": 763,
+          "source_frame": 101,
+          "phase": "motion",
+          "pixel_mae": 2.4787042140960693
+        }
+      ],
+      "speech_windows": [
+        {
+          "text": "关键是让持拍脚先跨出去，",
+          "start_s": 1.3,
+          "end_s": 3.3289795918367346,
+          "decoded_rms": 0.027417829260230064
+        },
+        {
+          "text": "看右脚越过另一只脚，落地后接住身体，",
+          "start_s": 3.4089795918367347,
+          "end_s": 6.114580498866213,
+          "decoded_rms": 0.036031585186719894
+        },
+        {
+          "text": "后脚留在身后，把这一进一退的步法练顺。",
+          "start_s": 6.194580498866213,
+          "end_s": 9.102902494331065,
+          "decoded_rms": 0.025842081755399704
+        },
+        {
+          "text": "关键是前腿屈膝，身体跟着下降，",
+          "start_s": 10.7,
+          "end_s": 13.079886621315191,
+          "decoded_rms": 0.03037276118993759
+        },
+        {
+          "text": "同时把非持拍手展开，",
+          "start_s": 13.159886621315191,
+          "end_s": 14.752131519274375,
+          "decoded_rms": 0.029440728947520256
+        },
+        {
+          "text": "看她右膝弯下去，另一只手保持伸展，让跨步和上身衔接起来。",
+          "start_s": 14.832131519274375,
+          "end_s": 19.103877551020407,
+          "decoded_rms": 0.025014806538820267
+        },
+        {
+          "text": "关键是跨出去后马上起身回位，衔接下一步，",
+          "start_s": 20.1,
+          "end_s": 23.353990929705216,
+          "decoded_rms": 0.029649971053004265
+        },
+        {
+          "text": "看前膝从深屈到伸展，用时约0.40秒，",
+          "start_s": 23.433990929705217,
+          "end_s": 26.42170068027211,
+          "decoded_rms": 0.034748103469610214
+        },
+        {
+          "text": "接着又向另一侧移动，把起身和下一步连起来练。",
+          "start_s": 26.501700680272112,
+          "end_s": 29.708775510204084,
+          "decoded_rms": 0.03105294518172741
+        }
+      ],
+      "max_actual_source_hold_s": 2.1333333333333333,
+      "actual_held_source_time_s": 8.9,
+      "actual_held_source_share": 0.2846481876332623,
+      "hold_definition": "Consecutive equal source-frame runs lasting at least 0.5s, including slow-motion boundary repeats.",
+      "cover_shape": [
+        1080,
+        1920
+      ],
+      "no_cut_crossing": true,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "fps": 30,
+      "faststart": true,
+      "limits": [
+        "Speech content/naturalness still needs listening; RMS is not semantic verification.",
+        "Model confidence is not advice correctness. Single-camera geometry is a projection."
+      ]
+    },
+    "run": {
+      "fresh_inference": true,
+      "backend": "fast",
+      "timings": {
+        "probe": 0.0006915999692864716,
+        "pose_stages": {
+          "backend": "fast",
+          "process_s": 13.305906800029334,
+          "read_s": 0.043085799959953874,
+          "total_s": 12.46,
+          "load_s": 1.17,
+          "court_s": 1.17,
+          "decode_done_s": 5.12,
+          "follow_s": 0.05,
+          "cpu_s": 97.9,
+          "frames": 900,
+          "crops": 1802
+        },
+        "pose": 13.393962200032547,
+        "load_tracks": 0.04410270001972094,
+        "events": 0.19197139999596402,
+        "body": 0.16685159999178723,
+        "move": 0.04087920003803447,
+        "assemble": 0.06762769998749718,
+        "bundle": 0.04489320004358888,
+        "write": 0.0476695999968797,
+        "total": 14.000368500011973
+      }
+    }
+  },
+  "editorial": {
+    "video_produced": false,
+    "first_error": "Court path anchors need measured two-ankle positions",
+    "first_root_cause": "initial_frame 53 has two visible measured ankles, but court_samples only scanned frames 60..210",
+    "bounded_fix": "Include the explicitly requested initial_frame in the court-sampling range; retain all evidence guards",
+    "regression": {
+      "published_implementation": "fails with the intended anchor error",
+      "corrected_implementation": "passes"
+    },
+    "retry_error": "legs narration does not fit its selected footage; shorten the line or choose a longer forward window",
+    "retry_root_cause": "Fixed chapter footage and newly synthesized narration have incompatible durations; scheduler rejects before encoding",
+    "action": "Stopped; no changed speech, playback speed, padding, or evidence guard",
+    "existing_editorial_suite": "Class setup also fails on stored pose at the legs speech-fit guard; not claimed passed"
+  },
+  "environment_notes": [
+    "First pre-setup attempt lacked the recut clip and OpenVINO; no successful run claimed until documented setup completed.",
+    "Ultralytics exporter installed its missing optional onnxruntime dependency automatically while exporting YOLO.",
+    "Both newly exported detector ONNX files matched the repository's recorded hashes.",
+    "MeloTTS reported ignored semicolon punctuation. Human listening and naturalness not approved."
+  ]
+}

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import tempfile
 import unittest
+from dataclasses import replace
 from pathlib import Path
 
 import numpy as np
@@ -267,6 +268,23 @@ class EditorialShortTests(unittest.TestCase):
                 self.assertLessEqual(source_range["end_frame"], source_range["source_shot"][1])
         self.assertEqual(schedule["chapters"][3]["source_shots"], [[367, 664]])
         self.assertEqual(schedule["chapters"][1]["source_shots"], [[0, 211]])
+
+
+class EditorialAnchorTests(unittest.TestCase):
+    def test_tactics_samples_the_initial_anchor_before_the_lunge_scan(self):
+        doc = json.loads(POSE.read_text("utf-8"))
+        doc["source"]["players"] = player_inputs(VIDEO)
+        report = analyze(doc)
+        events = [
+            replace(event, frame=44)
+            if event.kind == "swing" and event.player == Role.NEAR and event.frame < 80
+            else event
+            for event in report.events
+        ]
+        _, story = build_story(doc, replace(report, events=events))
+        tactics = story["evidence"]["tactics"]
+        self.assertEqual(tactics["initial_frame"], 53)
+        self.assertEqual(tactics["initial_position"]["frame"], 53)
 
 
 if __name__ == "__main__":

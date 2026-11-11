@@ -13,8 +13,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 12317,
-   "sha256": "0c39b7e9c8845fe0223ad5b95ddd7b39775468b7537ce206b54c23091fdc97eb",
+   "bytes": 12330,
+   "sha256": "07a579e0628e1f622e72e6c22e0789eaf244221b120cdadca7ed0daa64b4dd02",
    "sha256_before_reproduction_package": "97b9cb5323342b85eebccd1cc558863663049b3fe1386e1cb28cc71c199bec67"
   },
   {
@@ -39,8 +39,8 @@
   },
   {
    "path": "coach/README.md",
-   "bytes": 29580,
-   "sha256": "0ed5dd2886fdeab54c36e1fdcad2b71f434b449f9ed800cd8fd95ae5197d914d",
+   "bytes": 29874,
+   "sha256": "7d0a1e319c59f26a9e07cbc10be0317ef6c8a3d041557452ca39fee0404d6f7f",
    "sha256_before_reproduction_package": "b8a605e571c69034948e41860ef798f9be4e3bfbdd43335d0a9dc3c89fc7dcff"
   },
   {
@@ -190,8 +190,9 @@
   },
   {
    "path": "coach/editorial_short.py",
-   "bytes": 67253,
-   "sha256": "eab756d1f81c7f7f54e14f4bd344d20070e455b387326b6b40bb7ac14ddb7449"
+   "bytes": 67290,
+   "sha256": "8b134db17e60b638aa3905a5c7b1cfcc9e19d82151c276cb1d108cd592923ad4",
+   "sha256_before_reproduction_package": "eab756d1f81c7f7f54e14f4bd344d20070e455b387326b6b40bb7ac14ddb7449"
   },
   {
    "path": "coach/events.py",
@@ -630,8 +631,9 @@
   },
   {
    "path": "coach/tests/test_editorial_short.py",
-   "bytes": 13404,
-   "sha256": "8d7f3eead1763e69b6d697413a1c6aa34a9392f912baf1e9882e2352843a6905"
+   "bytes": 14169,
+   "sha256": "ac10e360c5e12fe2e44e32595412eb36beff91780db40e29780e93f25d22dbdf",
+   "sha256_before_reproduction_package": "8d7f3eead1763e69b6d697413a1c6aa34a9392f912baf1e9882e2352843a6905"
   },
   {
    "path": "coach/tests/test_events.py",
@@ -916,8 +918,8 @@
   },
   {
    "path": "docs/how-it-works.md",
-   "bytes": 5534,
-   "sha256": "fbc948d818e3ae086af277efaf5583c0bbe91c2676d45e2f992bf85f83788224",
+   "bytes": 5718,
+   "sha256": "9a40fb06dbbdbd52ab7e6d3839bfc2657cc04c60ad521c3e9ea85537bb757fab",
    "sha256_before_reproduction_package": "1fbfc1925c2379cd4f758b85802b5aec0f76d3ada215fe213feb70e6f353aca6"
   },
   {
@@ -937,8 +939,9 @@
   },
   {
    "path": "docs/images/tiktok-workflow.svg",
-   "bytes": 2890,
-   "sha256": "b153722aa53d3325741aa62e25da0291ca23012fefca1f7edfea4271d33bc69a"
+   "bytes": 3039,
+   "sha256": "92e2fe22563f53d6630783b0048b8e2202a6debf1b8f48a5520ea6236846113c",
+   "sha256_before_reproduction_package": "b153722aa53d3325741aa62e25da0291ca23012fefca1f7edfea4271d33bc69a"
   },
   {
    "path": "docs/images/use-it.svg",
@@ -963,8 +966,8 @@
   },
   {
    "path": "docs/reproducibility.md",
-   "bytes": 14204,
-   "sha256": "3efa819449588defa3e9112978745f1eb261167f4dc86f79af09ff12ce83f5b1",
+   "bytes": 14205,
+   "sha256": "5066eb4df2415b6103dbd798a47192b380902886fad4cec2e170f7f80c9cc92a",
    "sha256_before_reproduction_package": "26aba5b748fc43a4edc5164426d1ff97fcc59016d4cba2976e383297525c9e50"
   },
   {
@@ -980,8 +983,8 @@
   },
   {
    "path": "docs/results.md",
-   "bytes": 7964,
-   "sha256": "6b059a60ab9348c3702b6cbe747a24bc5bc8bbe21b457c99cf6b6f88115d567f",
+   "bytes": 8087,
+   "sha256": "b47f7643eea7f5429ae95a61da9b0e7329a5ce753ce1271d47c2d167b64519ad",
    "sha256_before_reproduction_package": "25ce602ffacee5d5c2d5999df25f5fc5aa885736f2c79e9fb610521b7a151a1b"
   },
   {
@@ -991,8 +994,9 @@
   },
   {
    "path": "docs/tiktok-style-workflow.md",
-   "bytes": 5394,
-   "sha256": "784481ae62cc7ea6702f8c1f1eecabe0553b5d4d7ac7d276cf327d1df40d0263"
+   "bytes": 7742,
+   "sha256": "2ed030c3485b3031d088217f4920b6a082d7c6177022f6caa60224d64569b696",
+   "sha256_before_reproduction_package": "784481ae62cc7ea6702f8c1f1eecabe0553b5d4d7ac7d276cf327d1df40d0263"
   },
   {
    "path": "fast/acceptance.py",
@@ -1338,8 +1342,8 @@
   },
   {
    "path": "results/README.md",
-   "bytes": 4157,
-   "sha256": "df14951a372a962b3663e5e98d099f4a2e90a45a28af5c5262f8e9adfde997c2",
+   "bytes": 4245,
+   "sha256": "10ce1e50c1d980a77de27904a5b6a247168e3c20a2dc37fff0f232a30835293b",
    "sha256_before_reproduction_package": "fa0fa92e8135de84a90739bc6241d58dc7c61a7541498bdf46e13f243597e8fb"
   },
   {
@@ -1418,6 +1422,11 @@
    "path": "results/reference-videos.json",
    "bytes": 814,
    "sha256": "d3904de1a7f9eaf35035a91f45c1ab3d605fc40e5c03c36dbec93d337d8b04c5"
+  },
+  {
+   "path": "results/reproduction/any-clip-commands.json",
+   "bytes": 11309,
+   "sha256": "0e925a04c6e72dd77abcd08b343b05a920e1fbf463da68d14ec6e0efdb49abe7"
   },
   {
    "path": "results/reproduction/base-inputs.json",

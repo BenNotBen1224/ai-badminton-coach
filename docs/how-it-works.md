@@ -40,7 +40,7 @@ The vertical TikTok-style reels in [`results/`](../results/) use selected source
 
 That command does not learn a style, choose new-match highlights, identify players by name, classify shots, or write new commentary. The title, names, shot terms, and timings are fixed inputs for this match. The [workflow status](tiktok-style-workflow.md) separates those missing steps from the working renderer and checks.
 
-The separate `coach.short_review` and `coach.editorial_short` CLIs run fresh Fast analysis for teaching shorts. Their selection rules and fixed teaching language differ from the approved commentary reel. Their commands are in the [coach guide](../coach/README.md#vertical-technique-short-experimental), not an app export route. They have not yet been rechecked in the new reproduction environment.
+The separate `coach.short_review` and `coach.editorial_short` CLIs run fresh Fast analysis for teaching shorts. Their selection rules and fixed teaching language differ from the approved commentary reel. Their commands are in the [coach guide](../coach/README.md#vertical-technique-short-experimental), not an app export route. A fresh clip-04 technique short and its encoded-output recheck passed. The editorial command rejected its narration because it exceeded the selected footage. The [workflow record](tiktok-style-workflow.md#fresh-clip-command-check) reports both outcomes.
 
 ## Limits
 

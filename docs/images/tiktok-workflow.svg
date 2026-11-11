@@ -44,6 +44,7 @@
 <path d="M434 406h18m-6-5 6 5-6 5"/>
 <path d="M826 406h18m-6-5 6 5-6 5"/>
 </g>
-<text x="64" y="533" font-size="15" fill="#9aa7b4">Separate technique-teaching CLIs exist. They do not generate this match-commentary style for a new clip.</text>
+<text x="64" y="525" font-size="15" fill="#9aa7b4">Separate technique short: fresh export and recheck passed on clip 04. Chapter-based editorial export failed speech-fit.</text>
+<text x="64" y="548" font-size="15" fill="#9aa7b4">Neither teaching CLI generates this match-commentary style for a new clip.</text>
 </g>
 </svg>

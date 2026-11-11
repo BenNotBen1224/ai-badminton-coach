@@ -61,7 +61,7 @@ Clip 04 is a 30-second collage of four points, not a whole match. The complete e
 
 ### Vertical technique short (experimental)
 
-This is a three-point technique lesson, not the approved player-named commentary reel. Its hook is fixed to `这一跨，学三个关键`. The following any-clip CLI has not yet been rechecked in the new reproduction environment. For the proved, match-specific commentary rebuild and its missing new-video steps, see [TikTok-style workflow status](../docs/tiktok-style-workflow.md).
+This is a three-point technique lesson, not the approved player-named commentary reel. Its hook is fixed to `这一跨，学三个关键`. A clean-checkout run on public recut clip 04 produced 938 frames at 30 fps and passed `coach.verify_short`. This does not establish support for arbitrary footage. See the [command receipt and workflow limits](../docs/tiktok-style-workflow.md#fresh-clip-command-check).
 
 With the same local voice installed, run:
 
@@ -108,7 +108,7 @@ this sample's authorship automatically.
 
 ### Editorial short (experimental)
 
-This teaching format is separate from the match-specific commentary renderer. It does not generate a new title, professional shot calls, or the approved commentary style. The following any-clip CLI has not yet been rechecked in the new reproduction environment.
+This teaching format is separate from the match-specific commentary renderer. It does not generate a new title, professional shot calls, or the approved commentary style. **The following command currently fails on public recut clip 04.** After a court-anchor sampling correction, it reaches synthesis but rejects the legs narration because it exceeds the fixed selected footage. No successful fresh editorial export is claimed. The [command record](../docs/tiktok-style-workflow.md#fresh-clip-command-check) preserves the failure.
 
 For a coach-led breakdown with separate legs, core, tactics and arms beats,
 run:
