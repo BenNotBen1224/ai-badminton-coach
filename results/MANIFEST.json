@@ -13,8 +13,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 12573,
-   "sha256": "f4e332197d122f65219433779390319039f00ea886922cabeda49a074f049557",
+   "bytes": 13442,
+   "sha256": "2605ec49cb930ff079f23addf995b63ddfc689123f3a3506dd21709cd9662aa7",
    "sha256_before_reproduction_package": "97b9cb5323342b85eebccd1cc558863663049b3fe1386e1cb28cc71c199bec67"
   },
   {
@@ -39,8 +39,8 @@
   },
   {
    "path": "coach/README.md",
-   "bytes": 30227,
-   "sha256": "60c244ccb3a8c015eb04cf4f347dd0b2bdca207f35fc0f4a0e108226d7846e05",
+   "bytes": 31098,
+   "sha256": "59efbb65b257ec9c99dee2f7ce3b3d12f3edd1b1503e6ddb19763a178847af0e",
    "sha256_before_reproduction_package": "b8a605e571c69034948e41860ef798f9be4e3bfbdd43335d0a9dc3c89fc7dcff"
   },
   {
@@ -460,6 +460,21 @@
    "sha256": "fe72e1e42504da002805e000f78540c249449ac52f4d50794fa4a55e7e65e0bf"
   },
   {
+   "path": "coach/reel_analysis.py",
+   "bytes": 17224,
+   "sha256": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4"
+  },
+  {
+   "path": "coach/reel_media.py",
+   "bytes": 20226,
+   "sha256": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a"
+  },
+  {
+   "path": "coach/reel_plan.py",
+   "bytes": 19801,
+   "sha256": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4"
+  },
+  {
    "path": "coach/requirements-narration.txt",
    "bytes": 22,
    "sha256": "a54a2c3871075b4c1625ad18ff9102184b73418ad762a2d56afbfd1957e10c8e"
@@ -711,6 +726,11 @@
    "sha256": "d604f8ad98de324ec670c906602ecda965ff310cb63744e3974cb5922e1b053a"
   },
   {
+   "path": "coach/tests/test_tiktok_reel.py",
+   "bytes": 21395,
+   "sha256": "fba1843403dbb213b54288d41427aa152de53a7a33eb2ab5d7724a9ae281eba6"
+  },
+  {
    "path": "coach/tests/test_timeline.py",
    "bytes": 8631,
    "sha256": "08e0ebc17d9dc37bb3437931e08add99a27f0a9a8f37ef23654974f44c271e88"
@@ -729,6 +749,11 @@
    "path": "coach/tests/test_whole_clip_review.py",
    "bytes": 12652,
    "sha256": "393fb594c8fd58d8e3185edaeed896fcc615fbcfe4c7b5fb92234d394e615618"
+  },
+  {
+   "path": "coach/tiktok_reel.py",
+   "bytes": 10777,
+   "sha256": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb"
   },
   {
    "path": "coach/timeline.py",
@@ -918,8 +943,8 @@
   },
   {
    "path": "docs/how-it-works.md",
-   "bytes": 5944,
-   "sha256": "d059a62ba8c0711049fde93e7106f89dabdae48cd70541706c7ee759c06b4dfc",
+   "bytes": 6853,
+   "sha256": "c808bda552cebd0f24075ffa2e716d0638cc4a2569feb6a03176b3c54a7f960f",
    "sha256_before_reproduction_package": "1fbfc1925c2379cd4f758b85802b5aec0f76d3ada215fe213feb70e6f353aca6"
   },
   {
@@ -939,8 +964,8 @@
   },
   {
    "path": "docs/images/tiktok-workflow.svg",
-   "bytes": 3066,
-   "sha256": "f7a7b18e82077f1fbb4f0fcd7f5648ee882cd94ae71d119085a38441a2d87766",
+   "bytes": 3140,
+   "sha256": "c7130ddc0940c48bc9b9a0a9b8727ada89faffde30be401b1e1cae37ad037b9d",
    "sha256_before_reproduction_package": "b153722aa53d3325741aa62e25da0291ca23012fefca1f7edfea4271d33bc69a"
   },
   {
@@ -965,9 +990,14 @@
    "sha256": "f6ed7624b537726d05c19cd7825ea504329b03ba56e49d84bb7dbfac44c6f64c"
   },
   {
+   "path": "docs/new-match-commentary.md",
+   "bytes": 7804,
+   "sha256": "ab58bf93413cf99440d8e1d4e90f27dcbbb6fd3977604d9143c16432cbc95d33"
+  },
+  {
    "path": "docs/reproducibility.md",
-   "bytes": 14571,
-   "sha256": "21d66f41190a509b42e27a19c084a639e702dfb12efba39add1b5d9e389b18c7",
+   "bytes": 14919,
+   "sha256": "45754bb990266e9921db9b9aa24088a5eed80389b37468b3d2c25be7b510e120",
    "sha256_before_reproduction_package": "26aba5b748fc43a4edc5164426d1ff97fcc59016d4cba2976e383297525c9e50"
   },
   {
@@ -983,8 +1013,8 @@
   },
   {
    "path": "docs/results.md",
-   "bytes": 8569,
-   "sha256": "6f3eab231e79809bbd729f1a97cb1f0fc9a72af79896732f503d0a88da666db1",
+   "bytes": 8821,
+   "sha256": "57dfafd7fac051bc5f493af25c49fe1d37d1fc8381a00c628ed08dca2289df91",
    "sha256_before_reproduction_package": "25ce602ffacee5d5c2d5999df25f5fc5aa885736f2c79e9fb610521b7a151a1b"
   },
   {
@@ -994,8 +1024,8 @@
   },
   {
    "path": "docs/tiktok-style-workflow.md",
-   "bytes": 9386,
-   "sha256": "8f6df57536fe12a5e51dd3b495fed3229710a9286276afd8f34ae25318c08e26",
+   "bytes": 10537,
+   "sha256": "ac0c26954afbdbf2a51a5c70355bf2a4a4377aa5f9012522a2998fc3c6757c32",
    "sha256_before_reproduction_package": "784481ae62cc7ea6702f8c1f1eecabe0553b5d4d7ac7d276cf327d1df40d0263"
   },
   {
@@ -1342,8 +1372,8 @@
   },
   {
    "path": "results/README.md",
-   "bytes": 4583,
-   "sha256": "60944029e01f5b1bb27945b24106ec7904bfaa25c0ee055ea212c4bfa53bd6ad",
+   "bytes": 4834,
+   "sha256": "144d4745a1a58535e0086bd36c1acc1f6dca46d6e84d53f01ea42a94c1f2a035",
    "sha256_before_reproduction_package": "fa0fa92e8135de84a90739bc6241d58dc7c61a7541498bdf46e13f243597e8fb"
   },
   {
@@ -1583,6 +1613,11 @@
    "bytes": 2950,
    "sha256": "beb3c09ecacc45b315ce1d304dcda90d44e00cdd8813639b6b17f93bab7bd22d",
    "sha256_before_reproduction_package": "bfe3d8249b1cf3ca279dbd734cf7a22e0203e18150caeb9ddcc1e6c7effc1e24"
+  },
+  {
+   "path": "scripts/evaluate_reel_analysis.py",
+   "bytes": 3566,
+   "sha256": "19416fc3ebf2e6ce885adc91a270c7e59f49bab09cffc63f271ba9750c508f10"
   },
   {
    "path": "scripts/get_footage.py",

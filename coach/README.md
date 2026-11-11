@@ -59,6 +59,13 @@ Clip 04 is a 30-second collage of four points, not a whole match. The complete e
 
 ## Run it
 
+### Player-named commentary from a new video
+
+Use `python -m coach.tiktok_reel MATCH_VIDEO OUTDIR --near NAME --far NAME --attribution-json CREDIT`.
+This separate experimental CLI runs fresh pose and shuttle inference, selects supported rally excerpts, writes short Chinese commentary, and renders with Kokoro v1.1 speaker 60. It uses the approved commentary layout, not teaching chapter cards. It does not learn a style or validate shot accuracy.
+
+Use `--analyze-only` for a source-bound `plan.draft.json`. Complete its review notes and reviewer provenance, or edit a successful `plan.json`, then use `--plan FILE` with a new output directory to skip inference and render fresh speech. Agent review is not human review. See the [new-video commentary guide](../docs/new-match-commentary.md) for setup, the plan fields, attribution, side changes, and limitations.
+
 ### Vertical technique short (experimental)
 
 This is a three-point technique lesson, not the approved player-named commentary reel. Its hook is fixed to `这一跨，学三个关键`. A clean-checkout run on public recut clip 04 produced 938 frames at 30 fps and passed `coach.verify_short`. This does not establish support for arbitrary footage. See the [command receipt and workflow limits](../docs/tiktok-style-workflow.md#fresh-clip-command-check).

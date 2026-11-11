@@ -8,8 +8,8 @@
 It finds both players, tracks 17 body points on each, slows down the moments worth watching, freezes on the key frame with the skeleton drawn on, and explains it in a local Chinese voice.
 
 > **Status: research MVP for Windows, CPU only.** You can run it today on your own singles clip ([Use it](#use-it)).
-> Finding players and body points works well. Telling **which shot** was played is **not there yet**, and picking the most *exciting* moment is **not automatic yet**.
-> Shuttle tracking is a **separate studio tool** that the app does not use. There is **no recorded human listening review** of the narration, **no test against a real coach**, and it has **not been run on a Mac**.
+> Finding players and body points works well. The app does not reliably name shots or rank the most exciting moments.
+> An experimental **separate commentary CLI** now combines shuttle evidence, moment selection, short Chinese lines, and rendering. It abstains on uncertain shot families. The app does not use shuttle tracking. There is **no recorded human listening review** of the narration, **no test against a real coach**, and it has **not been run on a Mac**.
 > See [where it stands](#where-it-stands).
 
 ## Why
@@ -26,6 +26,7 @@ Match video is the best way to see what you actually do on court. But nobody scr
 | 🎬 **Narrated review** | One command | The full clip as an MP4, with three moments slowed, frozen and zoomed, and a local Chinese voice. Experimental |
 | 💬 **Ask the coach** | Buttons or your own question | "How do I fix it?", exercise cards with drawn GIFs, a 1–4 week plan. Not reliable on pain questions yet |
 | 🏸 **Shuttle and commentary reels** | Studio tools, not the app | TrackNetV3 shuttle path and match-specific TikTok-style reels. [Watch the results](results/) or [rebuild all three reels](docs/reproducibility.md#rebuild-the-short-reels) |
+| 📹 **New-video commentary** | Separate experimental CLI | `coach.tiktok_reel` analyzes a supplied singles video, selects supported moments, writes Chinese lines, and renders. It also accepts a reviewed plan. [Command and limits](docs/new-match-commentary.md) |
 | 📱 **Vertical teaching shorts** | Separate CLI commands | `coach.short_review` and `coach.editorial_short` analyze a supplied clip for technique lessons. They do not generate the approved commentary style. [Commands and limits](coach/README.md#vertical-technique-short-experimental) |
 
 ## Use it
@@ -61,9 +62,16 @@ It writes `review.mp4`, a readable `analysis.html`, and the evidence behind ever
 
 ## TikTok-style commentary workflow
 
-**The approved example can be rebuilt. Making the same style from a new video is not automated.** The repo ships the chosen spans, title, player-named shot calls, on-screen number tags, voice inputs, captions, skeletons, 9:16 renderer, and media checks for Han Yue versus Wang Zhiyi. Picking those moments, reviewing shot names, and writing those lines were editorial work. A style learner and a new-match commentary generator are not shipped.
+**The approved example can be rebuilt, and an experimental new-video command is now shipped.** `coach.tiktok_reel` runs fresh inference, picks supported rally excerpts, writes player-named Chinese commentary, and renders with Kokoro speaker 60. It uses conservative shot and placement rules, not a learned style model or a validated excitement ranking. The approved Han Yue versus Wang Zhiyi reel remains a separate, hand-edited reference.
 
-<img src="docs/images/tiktok-workflow.svg" alt="Style learning is missing. Moments, shot names, and writing are manual. Rendering and verification are proved for the reference match." width="100%">
+<img src="docs/images/tiktok-workflow.svg" alt="No style learner. Experimental rules select moments, abstain on uncertain shots, and write evidence-based lines. Rendering accepts automatic or reviewed plans." width="100%">
+
+```powershell
+python -X utf8 -B -m coach.tiktok_reel MATCH_VIDEO outputs\my-commentary `
+  --near "近端选手名" --far "远端选手名" --attribution-json credit.json
+```
+
+The [new-video guide](docs/new-match-commentary.md) covers models, attribution, editable plans, and the reviewed-plan route when automatic selection fails. Output checks cover media, not tactical truth or human voice approval.
 
 The separate teaching CLI `coach.short_review` passed a fresh clip-04 export and encoded-output recheck. `coach.editorial_short` also exported public recut clip 04, but passes or is rejected depending on the run: its local voice length varies against a 63-frame legs budget. Seven of ten fresh voice processes fit; three exceeded it. Re-run after a speech-fit rejection. The guard is unchanged; a longer-window fix is not implemented. Neither generates this commentary format. See [what exists, what passed, and what is missing](docs/tiktok-style-workflow.md).
 
@@ -123,6 +131,7 @@ coach/                 the app
   complete_review.py   narrated review video (python -m coach.complete_review)
   short_review.py      vertical three-point teaching short (CLI-only)
   editorial_short.py   vertical chapter-based teaching short (CLI-only)
+  tiktok_reel.py       experimental new-video commentary and reviewed-plan rendering
   tactics.py           hit table: who, when, where it landed (experimental)
   README.md            full app guide and its limits
 fast/                  player detection + body points, the speed and accuracy checks

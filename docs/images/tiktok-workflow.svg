@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="570" viewBox="0 0 1280 570" role="img" aria-labelledby="title description">
 <title id="title">TikTok-style workflow status</title>
-<desc id="description">Learn style is not shipped. Pick moments, name shots, and write title and lines are manual for this match. Render with voice and verify are proved for this match only.</desc>
+<desc id="description">No style learner. Experimental rules select supported moments, abstain on uncertain shots, and write sequence commentary. Rendering accepts automatic or reviewed plans. Media checks do not certify tactical truth.</desc>
 <rect width="1280" height="570" rx="20" fill="#0b0f14"/>
 <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
 <text x="64" y="62" font-size="30" fill="#f2f5f8" font-weight="700">TikTok-style reels: what exists today</text>
-<text x="64" y="94" font-size="16" fill="#9aa7b4">The approved match can be rebuilt. A new-video commentary workflow is not shipped.</text>
+<text x="64" y="94" font-size="16" fill="#9aa7b4">Reference rebuilds remain separate. A new experimental CLI accepts video or a reviewed plan.</text>
 <g fill="#141c25" stroke-width="1.5">
 <rect x="64" y="132" width="368" height="156" rx="14" stroke="#ff5fa2"/>
 <rect x="456" y="132" width="368" height="156" rx="14" stroke="#ffd166"/>
@@ -23,18 +23,18 @@
 </g>
 <g font-size="16" font-weight="600">
 <text x="88" y="212" fill="#ff5fa2">NOT SHIPPED</text>
-<text x="480" y="212" fill="#ffd166">HAND-SELECTED</text>
-<text x="872" y="212" fill="#ffd166">FRAME REVIEW</text>
-<text x="88" y="410" fill="#ffd166">HAND-WRITTEN</text>
-<text x="480" y="410" fill="#4cc9f0">REBUILD PROVED</text>
-<text x="872" y="410" fill="#4cc9f0">MEDIA CHECKS PROVED</text>
+<text x="480" y="212" fill="#ffd166">RULE-BASED SELECTION</text>
+<text x="872" y="212" fill="#ffd166">LIMITED / ABSTAIN</text>
+<text x="88" y="410" fill="#ffd166">EVIDENCE-BASED RULES</text>
+<text x="480" y="410" fill="#4cc9f0">FRESH VOICE + PLAN INPUT</text>
+<text x="872" y="410" fill="#4cc9f0">ENCODED MEDIA CHECKS</text>
 </g>
 <g font-size="15" fill="#9aa7b4">
 <text x="88" y="245">One approved example, no learner</text>
-<text x="480" y="245">Three spans from this match</text>
-<text x="872" y="245">Not a reliable shot classifier</text>
-<text x="88" y="443">Names, captions, tags in fixed JSON</text>
-<text x="480" y="443">This match only; voice, text, skeleton</text>
+<text x="480" y="245">Observed returns and identity evidence</text>
+<text x="872" y="245">No whole-match accuracy claim</text>
+<text x="88" y="443">Names and supported sequence context</text>
+<text x="480" y="443">Voice at action cue; text and skeleton</text>
 <text x="872" y="443">Frames, captions, voice; not truth</text>
 </g>
 <g stroke="#5c6773" fill="none" stroke-width="2">
@@ -44,7 +44,7 @@
 <path d="M434 406h18m-6-5 6 5-6 5"/>
 <path d="M826 406h18m-6-5 6 5-6 5"/>
 </g>
-<text x="64" y="525" font-size="15" fill="#9aa7b4">Clip 04 teaching exports passed. Editorial voice fit varies: 7/10 fit 63 frames; re-run after speech-fit rejection.</text>
-<text x="64" y="548" font-size="15" fill="#9aa7b4">Guard unchanged; longer-window fix not implemented. Neither teaching CLI generates this commentary style.</text>
+<text x="64" y="525" font-size="15" fill="#9aa7b4">Experimental. Shipped rules, not a learned style. Historical reference wording remains unchanged.</text>
+<text x="64" y="548" font-size="15" fill="#9aa7b4">Agent and human plan reviews are distinct. Media checks do not approve tactics or voice naturalness.</text>
 </g>
 </svg>
