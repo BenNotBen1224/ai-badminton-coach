@@ -107,3 +107,19 @@ For comparison with the incomplete AI-made China Open annotations, use:
 This reports agreement only on confidently annotated, matched hits, plus abstentions and candidate coverage. Unmatched predictions are not false positives. Do not call this whole-match accuracy or human-certified precision.
 
 The [workflow status](tiktok-style-workflow.md) separates this experimental CLI from the approved fixed-match rebuild and the teaching exporters. The Arise test recordings are 120-second and 110-second browser-captured excerpts, not complete matches. Uneven capture timing, repeated frames, and missed shuttle pictures limit their evidence. They are not bit-for-bit downloads of the original upload.
+
+## Recorded local checks
+
+All three fresh-input commands produced 798-frame, 26.6-second reels with AAC audio. Each encoded narration starts two frames after its source action cue. These are single functional runs with prepared models on one Windows PC, not benchmarks.
+
+| Input | CLI wall seconds | Named families / contact candidates |
+|---|---:|---:|
+| Arise women's excerpt | 464.9 | 4 / 41 |
+| Arise men's excerpt | 504.5 | 0 / 21 |
+| China Open source | 1617.0 | 8 / 318 |
+
+These denominators are detector candidates, not a count of all real hits. An agent's frame review found all four Arise family names visually consistent with high/deep overhead returns; this is not human-certified precision. The men's reel uses supported placements and a deep–short–deep sequence without inventing shot families.
+
+On China Open, five of nine eligible AI annotations matched a candidate. All five matched candidates abstained on family, so named-family agreement is undefined, not 0% or 100%. The automatic selection overlaps 6.37 seconds of the manual reference's source spans and does not reproduce that edit. Its selected cues include the change of ends with Han Yue correctly assigned to the near side.
+
+A separate 24 fps transcode with a three-second black lead-in also exported; its selected windows exclude the lead-in. It is a variation of the men's excerpt, not another independent match. An all-black file and the EuroGames hall-view clip both failed clearly without an MP4. See the [run evidence](../results/reproduction/new-match-commentary.json) for source and output hashes, commands, review limits, and independent agent checks. No human listening or naturalness approval is claimed.

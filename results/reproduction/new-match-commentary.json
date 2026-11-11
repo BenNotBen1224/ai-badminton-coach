@@ -1,0 +1,1346 @@
+{
+  "implementation_commit": "c86840c2f3f72a9d9e3fb4eaecf417f6948097cc",
+  "scope": "Local functional runs on two browser-recorded Arise excerpts and the China Open source. The 24fps case is a transcode variation, not another independent match.",
+  "hash_scope": "Hashes identify recorded runs; fresh speech and MP4 bytes can differ.",
+  "timing_scope": "Single functional runs with prepared models on this Windows PC, not benchmarks. Wrapper wall includes lease wait; CLI wall does not.",
+  "cases": [
+    {
+      "case": "black",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.tiktok_reel",
+        "work\\new-match\\sources\\no-match.mp4",
+        "work\\new-match\\final-e2e\\black",
+        "--near",
+        "甲",
+        "--far",
+        "乙",
+        "--attribution-json",
+        "work\\new-match\\arise-credit.json",
+        "--lock",
+        "work/new-match/final-e2e/command-owner.lock"
+      ],
+      "source_sha256": "6aa7366e2e39c01fd8f97aa312f7d8f45a98da737bfb7905ac21afbaa411a35a",
+      "exit": 1,
+      "wrapper_wall_s_including_lease_wait": 3.3833552000578493,
+      "local_output_directory": "work/new-match/final-e2e/black",
+      "failure": {
+        "error": "No court found; input must show a singles court from behind a baseline",
+        "video_produced": false
+      }
+    },
+    {
+      "case": "transcode",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.tiktok_reel",
+        "work\\new-match\\sources\\unseen-name-24fps.mp4",
+        "work\\new-match\\final-e2e\\transcode",
+        "--near",
+        "法杰里",
+        "--far",
+        "科登",
+        "--attribution-json",
+        "work\\new-match\\arise-credit.json",
+        "--lock",
+        "work/new-match/final-e2e/command-owner.lock"
+      ],
+      "source_sha256": "0a5307ad9958b70a619f056071d9ad3cc081767f6fd6103474eba5d4c2898651",
+      "exit": 0,
+      "wrapper_wall_s_including_lease_wait": 147.51140980003402,
+      "local_output_directory": "work/new-match/final-e2e/transcode",
+      "wall_s": 146.044357100036,
+      "plan_entry": "automatic_selection",
+      "review_status": "automatic_unreviewed",
+      "timings_s": {
+        "normalize": 2.9268133000005037,
+        "analysis": 83.5645746999653,
+        "voice_render": 53.2250301000895,
+        "verify": 4.384718299959786
+      },
+      "verification": {
+        "full_decode": true,
+        "picture_frames_checked": 798,
+        "caption_frames_checked": 798,
+        "voice_slots_checked": 4,
+        "white_caption_controls_distinguished": true,
+        "title_frames_checked": 798,
+        "green_tag_frames_checked": 798,
+        "voice_start_after_action_frames": 2,
+        "voice_fits_measured_slots": true,
+        "non_silent_audio": true,
+        "geometry": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "frames": 798,
+        "duration_s": 26.6,
+        "audio_codec": "aac",
+        "picture_mae_max": 2.0828028549382718,
+        "caption_mae_max": 2.0955935422602088,
+        "voice_correlation_min": 0.9997030418486866,
+        "human_listening": false,
+        "naturalness_verified": false,
+        "output_sha256": "219e0d8dabd176e5204a0e56e93f9ac58dbc1c0d4fd2bcb0135de5a8d33fbe42",
+        "hash_scope": "This generated run only; fresh speech and MP4 bytes can differ"
+      },
+      "voice_check": {
+        "lines_checked": 4,
+        "dropped_phonemes": 0,
+        "method": "Native stderr captured in child process around each generated line",
+        "human_listening": false,
+        "texts": [
+          "科登压底角！",
+          "法杰里压住后场！",
+          "法杰里压住后场！",
+          "法杰里连续压住底线！"
+        ],
+        "supplied_name_lexicon": {
+          "法杰里": {
+            "法": "ㄈ ㄚ 3",
+            "杰": "ㄐ ㄝ 2",
+            "里": "ㄌ ㄧ 3"
+          },
+          "科登": {
+            "科": "ㄎ ㄜ 1",
+            "登": "ㄉ ㄥ 1"
+          }
+        },
+        "pronunciation_scope": "Intended dictionary phonemes, not a human listening check"
+      },
+      "render_inputs": {
+        "source_sha256": "0a5307ad9958b70a619f056071d9ad3cc081767f6fd6103474eba5d4c2898651",
+        "plan_sha256": "1f490ea1cf29472d0b5c43f2dbf4728f008325e750d8e23a17884363748eca45",
+        "voice_model_sha256": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+        "voice": {
+          "engine": "sherpa-onnx",
+          "model": "Kokoro v1.1 multi-lang",
+          "sid": 60,
+          "speed": 1.0
+        },
+        "voice_inputs_sha256": {
+          "model.onnx": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+          "voices.bin": "e64a5a581d8c2a350d848f51c3121657cd83aa07ed6109172177345874a7244c",
+          "tokens.txt": "931ab2df2400cd65d580a22402024c2347ced8ae9ea300e545144b1aacc48e14",
+          "lexicon-us-en.txt": "7daaab53a181be9885b853a8582bf1838186317e5dadacbcef9c426d6fa0da14",
+          "lexicon-zh.txt": "fea060803db3e59193987f1a3436f56917bda09f3b3595b6588e46ae60cebf93"
+        },
+        "code_sha256": {
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb",
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a"
+        },
+        "environment": {
+          "python": "3.12.10",
+          "packages": {
+            "sherpa-onnx": "1.13.8",
+            "onnxruntime": "1.31.1",
+            "numpy": "2.4.6",
+            "torch": "2.14.1",
+            "openvino": "2026.0.0",
+            "av": "19.0.2",
+            "opencv-python": "5.0.0.93"
+          }
+        }
+      },
+      "plan_sha256": "1f490ea1cf29472d0b5c43f2dbf4728f008325e750d8e23a17884363748eca45",
+      "analysis_sha256": "63d03eeeef537f5ba64e7374b506d3fdc31ca6b27050a50254a47eb4add0b6f5",
+      "contact_candidates": 10,
+      "named_family_candidates": 0,
+      "candidate_counts_by_side": {
+        "near": 6,
+        "far": 4
+      },
+      "family_abstentions": 10,
+      "candidate_family_coverage": 0.0,
+      "source_windows_s": [
+        [
+          8.633333333333333,
+          13.7
+        ],
+        [
+          18.233333333333334,
+          23.833333333333332
+        ]
+      ],
+      "narrated_lines": [
+        {
+          "cue_frame": 274,
+          "player": "科登",
+          "say": "科登压底角！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 323,
+          "player": "法杰里",
+          "say": "法杰里压住后场！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 606,
+          "player": "法杰里",
+          "say": "法杰里压住后场！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 646,
+          "player": "法杰里",
+          "say": "法杰里连续压住底线！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        }
+      ]
+    },
+    {
+      "case": "no-court",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.tiktok_reel",
+        "work\\new-match\\sources\\11-eurogames-2023.mp4",
+        "work\\new-match\\final-e2e\\no-court",
+        "--near",
+        "甲",
+        "--far",
+        "乙",
+        "--attribution-json",
+        "work\\new-match\\eurogames-credit.json",
+        "--lock",
+        "work/new-match/final-e2e/command-owner.lock"
+      ],
+      "source_sha256": "ad081819b505a3235fa97b8475a40e07b02ea25d8ec132924a1ac9a1d89f26ab",
+      "exit": 1,
+      "wrapper_wall_s_including_lease_wait": 13.256766999955289,
+      "local_output_directory": "work/new-match/final-e2e/no-court",
+      "failure": {
+        "error": "No court found; input must show a singles court from behind a baseline",
+        "video_produced": false
+      }
+    },
+    {
+      "case": "women",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.tiktok_reel",
+        "work\\new-match\\sources\\arise-2026-ws-source.webm",
+        "work\\new-match\\final-e2e\\women",
+        "--near",
+        "黄瀞平",
+        "--far",
+        "威尔逊",
+        "--attribution-json",
+        "work\\new-match\\arise-credit.json",
+        "--lock",
+        "work/new-match/final-e2e/command-owner.lock"
+      ],
+      "source_sha256": "8cbab142aec89375850f95778f3388baef1b1d442d95bbd8ff46cf9a65534d0f",
+      "exit": 0,
+      "wrapper_wall_s_including_lease_wait": 466.3728277999908,
+      "local_output_directory": "work/new-match/final-e2e/women",
+      "wall_s": 464.89804260001983,
+      "plan_entry": "automatic_selection",
+      "review_status": "automatic_unreviewed",
+      "timings_s": {
+        "normalize": 63.20537440001499,
+        "analysis": 298.57154000003356,
+        "voice_render": 86.05448629998136,
+        "verify": 4.228909799945541
+      },
+      "verification": {
+        "full_decode": true,
+        "picture_frames_checked": 798,
+        "caption_frames_checked": 798,
+        "voice_slots_checked": 6,
+        "white_caption_controls_distinguished": true,
+        "title_frames_checked": 798,
+        "green_tag_frames_checked": 798,
+        "voice_start_after_action_frames": 2,
+        "voice_fits_measured_slots": true,
+        "non_silent_audio": true,
+        "geometry": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "frames": 798,
+        "duration_s": 26.6,
+        "audio_codec": "aac",
+        "picture_mae_max": 2.0584812242798356,
+        "caption_mae_max": 2.1233428300094968,
+        "voice_correlation_min": 0.999775232323052,
+        "human_listening": false,
+        "naturalness_verified": false,
+        "output_sha256": "a350709fccfc5d957b5b91e3925f523e86049c4a071279d37f575f137ee4ce1d",
+        "hash_scope": "This generated run only; fresh speech and MP4 bytes can differ"
+      },
+      "voice_check": {
+        "lines_checked": 6,
+        "dropped_phonemes": 0,
+        "method": "Native stderr captured in child process around each generated line",
+        "human_listening": false,
+        "texts": [
+          "威尔逊先压后场！",
+          "威尔逊再收网前，前后调动！",
+          "威尔逊高远球压后场！",
+          "黄瀞平压底角！",
+          "黄瀞平高远球压后场！",
+          "黄瀞平连续压住底线！"
+        ],
+        "supplied_name_lexicon": {
+          "黄瀞平": {
+            "黄": "ㄏ 王 2",
+            "瀞": "ㄐ 应 4",
+            "平": "ㄆ 应 2"
+          },
+          "威尔逊": {
+            "威": "为 1",
+            "尔": "ㄦ 3",
+            "逊": "ㄒ 云 4"
+          }
+        },
+        "pronunciation_scope": "Intended dictionary phonemes, not a human listening check"
+      },
+      "render_inputs": {
+        "source_sha256": "8cbab142aec89375850f95778f3388baef1b1d442d95bbd8ff46cf9a65534d0f",
+        "plan_sha256": "453927e1cde70a0b760e7927d2134f5813fa17939b7c85ebbe7120791535fecb",
+        "voice_model_sha256": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+        "voice": {
+          "engine": "sherpa-onnx",
+          "model": "Kokoro v1.1 multi-lang",
+          "sid": 60,
+          "speed": 1.0
+        },
+        "voice_inputs_sha256": {
+          "model.onnx": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+          "voices.bin": "e64a5a581d8c2a350d848f51c3121657cd83aa07ed6109172177345874a7244c",
+          "tokens.txt": "931ab2df2400cd65d580a22402024c2347ced8ae9ea300e545144b1aacc48e14",
+          "lexicon-us-en.txt": "7daaab53a181be9885b853a8582bf1838186317e5dadacbcef9c426d6fa0da14",
+          "lexicon-zh.txt": "fea060803db3e59193987f1a3436f56917bda09f3b3595b6588e46ae60cebf93"
+        },
+        "code_sha256": {
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb",
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a"
+        },
+        "environment": {
+          "python": "3.12.10",
+          "packages": {
+            "sherpa-onnx": "1.13.8",
+            "onnxruntime": "1.31.1",
+            "numpy": "2.4.6",
+            "torch": "2.14.1",
+            "openvino": "2026.0.0",
+            "av": "19.0.2",
+            "opencv-python": "5.0.0.93"
+          }
+        }
+      },
+      "plan_sha256": "453927e1cde70a0b760e7927d2134f5813fa17939b7c85ebbe7120791535fecb",
+      "analysis_sha256": "2238c5b2e3426dfdc2bdfe68e6107be0e5a4e93404867f238fc6e72495a3765c",
+      "contact_candidates": 41,
+      "named_family_candidates": 4,
+      "candidate_counts_by_side": {
+        "near": 23,
+        "far": 18
+      },
+      "family_abstentions": 37,
+      "candidate_family_coverage": 0.0975609756097561,
+      "source_windows_s": [
+        [
+          22.8,
+          28.266666666666666
+        ],
+        [
+          71.76666666666667,
+          79.7
+        ],
+        [
+          85.73333333333333,
+          92.26666666666667
+        ]
+      ],
+      "narrated_lines": [
+        {
+          "cue_frame": 708,
+          "player": "威尔逊",
+          "say": "威尔逊先压后场！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 793,
+          "player": "威尔逊",
+          "say": "威尔逊再收网前，前后调动！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2212,
+          "player": "威尔逊",
+          "say": "威尔逊高远球压后场！",
+          "shot_family": "clear",
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2304,
+          "player": "黄瀞平",
+          "say": "黄瀞平压底角！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2631,
+          "player": "黄瀞平",
+          "say": "黄瀞平高远球压后场！",
+          "shot_family": "clear",
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2681,
+          "player": "黄瀞平",
+          "say": "黄瀞平连续压住底线！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        }
+      ]
+    },
+    {
+      "case": "men",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.tiktok_reel",
+        "work\\new-match\\sources\\arise-2026-ms-source.webm",
+        "work\\new-match\\final-e2e\\men",
+        "--near",
+        "法杰里",
+        "--far",
+        "科登",
+        "--attribution-json",
+        "work\\new-match\\arise-credit.json",
+        "--lock",
+        "work/new-match/final-e2e/command-owner.lock"
+      ],
+      "source_sha256": "52be33508b5b3e42bfbdb8bcc0ce6ba5b35ea6f18d2083e3804d73f35b3a9f23",
+      "exit": 0,
+      "wrapper_wall_s_including_lease_wait": 506.03961680002976,
+      "local_output_directory": "work/new-match/final-e2e/men",
+      "wall_s": 504.535317700007,
+      "plan_entry": "automatic_selection",
+      "review_status": "automatic_unreviewed",
+      "timings_s": {
+        "normalize": 71.37714570004027,
+        "analysis": 339.97437770001125,
+        "voice_render": 82.56239999993704,
+        "verify": 4.151305099949241
+      },
+      "verification": {
+        "full_decode": true,
+        "picture_frames_checked": 798,
+        "caption_frames_checked": 798,
+        "voice_slots_checked": 4,
+        "white_caption_controls_distinguished": true,
+        "title_frames_checked": 798,
+        "green_tag_frames_checked": 798,
+        "voice_start_after_action_frames": 2,
+        "voice_fits_measured_slots": true,
+        "non_silent_audio": true,
+        "geometry": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "frames": 798,
+        "duration_s": 26.6,
+        "audio_codec": "aac",
+        "picture_mae_max": 2.0818222736625516,
+        "caption_mae_max": 2.121804368471035,
+        "voice_correlation_min": 0.9998323267250839,
+        "human_listening": false,
+        "naturalness_verified": false,
+        "output_sha256": "9f8e24554a077144c416a1d8f75b9e9bd1d96e61866064bf08485911aa82f596",
+        "hash_scope": "This generated run only; fresh speech and MP4 bytes can differ"
+      },
+      "voice_check": {
+        "lines_checked": 4,
+        "dropped_phonemes": 0,
+        "method": "Native stderr captured in child process around each generated line",
+        "human_listening": false,
+        "texts": [
+          "科登压底角！",
+          "法杰里先压后场！",
+          "法杰里再收网前，前后调动！",
+          "法杰里再顶后场，前后拉开！"
+        ],
+        "supplied_name_lexicon": {
+          "法杰里": {
+            "法": "ㄈ ㄚ 3",
+            "杰": "ㄐ ㄝ 2",
+            "里": "ㄌ ㄧ 3"
+          },
+          "科登": {
+            "科": "ㄎ ㄜ 1",
+            "登": "ㄉ ㄥ 1"
+          }
+        },
+        "pronunciation_scope": "Intended dictionary phonemes, not a human listening check"
+      },
+      "render_inputs": {
+        "source_sha256": "52be33508b5b3e42bfbdb8bcc0ce6ba5b35ea6f18d2083e3804d73f35b3a9f23",
+        "plan_sha256": "69d350d22635f8c3b371c712cad5e44df124611b0071226834441d9dbf99d478",
+        "voice_model_sha256": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+        "voice": {
+          "engine": "sherpa-onnx",
+          "model": "Kokoro v1.1 multi-lang",
+          "sid": 60,
+          "speed": 1.0
+        },
+        "voice_inputs_sha256": {
+          "model.onnx": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+          "voices.bin": "e64a5a581d8c2a350d848f51c3121657cd83aa07ed6109172177345874a7244c",
+          "tokens.txt": "931ab2df2400cd65d580a22402024c2347ced8ae9ea300e545144b1aacc48e14",
+          "lexicon-us-en.txt": "7daaab53a181be9885b853a8582bf1838186317e5dadacbcef9c426d6fa0da14",
+          "lexicon-zh.txt": "fea060803db3e59193987f1a3436f56917bda09f3b3595b6588e46ae60cebf93"
+        },
+        "code_sha256": {
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb",
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a"
+        },
+        "environment": {
+          "python": "3.12.10",
+          "packages": {
+            "sherpa-onnx": "1.13.8",
+            "onnxruntime": "1.31.1",
+            "numpy": "2.4.6",
+            "torch": "2.14.1",
+            "openvino": "2026.0.0",
+            "av": "19.0.2",
+            "opencv-python": "5.0.0.93"
+          }
+        }
+      },
+      "plan_sha256": "69d350d22635f8c3b371c712cad5e44df124611b0071226834441d9dbf99d478",
+      "analysis_sha256": "fb7052e093e49471e193a35c025453fc596386e51c693e67d41d86495f1ea257",
+      "contact_candidates": 21,
+      "named_family_candidates": 0,
+      "candidate_counts_by_side": {
+        "far": 8,
+        "near": 13
+      },
+      "family_abstentions": 21,
+      "candidate_family_coverage": 0.0,
+      "source_windows_s": [
+        [
+          75.3,
+          79.5
+        ],
+        [
+          79.53333333333333,
+          85.03333333333333
+        ],
+        [
+          85.1,
+          89.2
+        ]
+      ],
+      "narrated_lines": [
+        {
+          "cue_frame": 2284,
+          "player": "科登",
+          "say": "科登压底角！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2332,
+          "player": "法杰里",
+          "say": "法杰里先压后场！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2421,
+          "player": "法杰里",
+          "say": "法杰里再收网前，前后调动！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 2617,
+          "player": "法杰里",
+          "say": "法杰里再顶后场，前后拉开！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        }
+      ]
+    },
+    {
+      "case": "china",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "coach.tiktok_reel",
+        "work\\new-match\\sources\\china-open-2025-ws-final.webm",
+        "work\\new-match\\final-e2e\\china",
+        "--near",
+        "王祉怡",
+        "--far",
+        "韩悦",
+        "--attribution-json",
+        "work\\new-match\\china-credit.json",
+        "--lock",
+        "work/new-match/final-e2e/command-owner.lock"
+      ],
+      "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+      "exit": 0,
+      "wrapper_wall_s_including_lease_wait": 1618.516662799986,
+      "local_output_directory": "work/new-match/final-e2e/china",
+      "wall_s": 1616.9656709999545,
+      "plan_entry": "automatic_selection",
+      "review_status": "automatic_unreviewed",
+      "timings_s": {
+        "normalize": 190.67600680002943,
+        "analysis": 1283.945993200061,
+        "voice_render": 88.29846499999985,
+        "verify": 7.269096799893305
+      },
+      "verification": {
+        "full_decode": true,
+        "picture_frames_checked": 798,
+        "caption_frames_checked": 798,
+        "voice_slots_checked": 6,
+        "white_caption_controls_distinguished": true,
+        "title_frames_checked": 798,
+        "green_tag_frames_checked": 798,
+        "voice_start_after_action_frames": 2,
+        "voice_fits_measured_slots": true,
+        "non_silent_audio": true,
+        "geometry": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "frames": 798,
+        "duration_s": 26.6,
+        "audio_codec": "aac",
+        "picture_mae_max": 2.009403935185185,
+        "caption_mae_max": 2.1773029439696105,
+        "voice_correlation_min": 0.9997678106749466,
+        "human_listening": false,
+        "naturalness_verified": false,
+        "output_sha256": "325612d0b5d3311ca4753cc166fdac03f6ff2f97de0cd009c5f8a4f8f5d00500",
+        "hash_scope": "This generated run only; fresh speech and MP4 bytes can differ"
+      },
+      "voice_check": {
+        "lines_checked": 6,
+        "dropped_phonemes": 0,
+        "method": "Native stderr captured in child process around each generated line",
+        "human_listening": false,
+        "texts": [
+          "韩悦挑后场，拆连贯！",
+          "王祉怡压住后场！",
+          "韩悦压住后场！",
+          "王祉怡压底角！",
+          "韩悦压底角！",
+          "韩悦高远球压后场！"
+        ],
+        "supplied_name_lexicon": {
+          "王祉怡": {
+            "王": "王 2",
+            "祉": "ㄓ 十 3",
+            "怡": "ㄧ 2"
+          },
+          "韩悦": {
+            "韩": "ㄏ ㄢ 2",
+            "悦": "月 4"
+          }
+        },
+        "pronunciation_scope": "Intended dictionary phonemes, not a human listening check"
+      },
+      "render_inputs": {
+        "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+        "plan_sha256": "c5e8481b7f5cf033634e78556d56c412af8b35d864cccc96a40911d583e9e551",
+        "voice_model_sha256": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+        "voice": {
+          "engine": "sherpa-onnx",
+          "model": "Kokoro v1.1 multi-lang",
+          "sid": 60,
+          "speed": 1.0
+        },
+        "voice_inputs_sha256": {
+          "model.onnx": "99db0bc8fd0c5033d249fe922db16768b71b4a6b26cfd93d206fbf66c76efb5f",
+          "voices.bin": "e64a5a581d8c2a350d848f51c3121657cd83aa07ed6109172177345874a7244c",
+          "tokens.txt": "931ab2df2400cd65d580a22402024c2347ced8ae9ea300e545144b1aacc48e14",
+          "lexicon-us-en.txt": "7daaab53a181be9885b853a8582bf1838186317e5dadacbcef9c426d6fa0da14",
+          "lexicon-zh.txt": "fea060803db3e59193987f1a3436f56917bda09f3b3595b6588e46ae60cebf93"
+        },
+        "code_sha256": {
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb",
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a"
+        },
+        "environment": {
+          "python": "3.12.10",
+          "packages": {
+            "sherpa-onnx": "1.13.8",
+            "onnxruntime": "1.31.1",
+            "numpy": "2.4.6",
+            "torch": "2.14.1",
+            "openvino": "2026.0.0",
+            "av": "19.0.2",
+            "opencv-python": "5.0.0.93"
+          }
+        }
+      },
+      "plan_sha256": "c5e8481b7f5cf033634e78556d56c412af8b35d864cccc96a40911d583e9e551",
+      "analysis_sha256": "3296a922e5c64d73b92c81f8f3cb1e512286f6eb61ebad807501d4c5d00a5b0a",
+      "contact_candidates": 318,
+      "named_family_candidates": 8,
+      "candidate_counts_by_side": {
+        "far": 162,
+        "near": 156
+      },
+      "family_abstentions": 310,
+      "candidate_family_coverage": 0.025157232704402517,
+      "source_windows_s": [
+        [
+          18.2,
+          24.366666666666667
+        ],
+        [
+          156.73333333333332,
+          164.8
+        ],
+        [
+          270.6333333333333,
+          279.1666666666667
+        ]
+      ],
+      "narrated_lines": [
+        {
+          "cue_frame": 605,
+          "player": "韩悦",
+          "say": "韩悦挑后场，拆连贯！",
+          "shot_family": "lift",
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 644,
+          "player": "王祉怡",
+          "say": "王祉怡压住后场！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 4761,
+          "player": "韩悦",
+          "say": "韩悦压住后场！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 4857,
+          "player": "王祉怡",
+          "say": "王祉怡压底角！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 8178,
+          "player": "韩悦",
+          "say": "韩悦压底角！",
+          "shot_family": null,
+          "claim_source": "model_estimate"
+        },
+        {
+          "cue_frame": 8288,
+          "player": "韩悦",
+          "say": "韩悦高远球压后场！",
+          "shot_family": "clear",
+          "claim_source": "model_estimate"
+        }
+      ]
+    }
+  ],
+  "china_scoped_ai_label_agreement": {
+    "scope": "Agreement only on matched, confidently family-annotated AI contacts. Not human ground truth or whole-video accuracy.",
+    "label_author": "claude-opus-5.5",
+    "eligibility": "family high, hitter high, timing med/high, shuttle_seen true; same hitter within 0.25 seconds, one-to-one matching",
+    "unmatched_predictions": "Not scored as false positives: these AI labels are incomplete.",
+    "detected_contact_candidates": 318,
+    "named_family_candidates": 8,
+    "candidate_family_coverage": 0.025157232704402517,
+    "eligible_annotations": 9,
+    "matched_eligible_annotations": 5,
+    "matched_eligible_abstentions": 5,
+    "matched_eligible_named": 0,
+    "matched_eligible_family_agreement": null,
+    "rows": [
+      {
+        "rally_id": "R2",
+        "label_time_s": 146.42,
+        "prediction_time_s": 146.4,
+        "hitter": "near",
+        "ai_label_family": "lift",
+        "predicted_family": null,
+        "abstained": true,
+        "same": null
+      },
+      {
+        "rally_id": "R2",
+        "label_time_s": 148.35,
+        "prediction_time_s": 148.5,
+        "hitter": "far",
+        "ai_label_family": "clear",
+        "predicted_family": null,
+        "abstained": true,
+        "same": null
+      },
+      {
+        "rally_id": "R2",
+        "label_time_s": 154.9,
+        "prediction_time_s": 154.86666666666667,
+        "hitter": "near",
+        "ai_label_family": "lift",
+        "predicted_family": null,
+        "abstained": true,
+        "same": null
+      },
+      {
+        "rally_id": "R4",
+        "label_time_s": 394.2,
+        "prediction_time_s": 394.3,
+        "hitter": "near",
+        "ai_label_family": "serve",
+        "predicted_family": null,
+        "abstained": true,
+        "same": null
+      },
+      {
+        "rally_id": "R5",
+        "label_time_s": 495.92,
+        "prediction_time_s": 495.93333333333334,
+        "hitter": "far",
+        "ai_label_family": "lift",
+        "predicted_family": null,
+        "abstained": true,
+        "same": null
+      }
+    ],
+    "visual_review": "Not performed by this scorer; separately inspect every selected narrated claim.",
+    "labels_sha256": "d2f09e716d95ce8895075e494e1bfe4bc8f74ce37976fb0caad92fb0846e071e"
+  },
+  "approved_reference_comparison": {
+    "manual_reference_windows_s": [
+      [
+        57.8,
+        64.8
+      ],
+      [
+        126.6,
+        134.0
+      ],
+      [
+        272.8,
+        285.0
+      ]
+    ],
+    "automatic_windows_s": [
+      [
+        18.2,
+        24.366666666666667
+      ],
+      [
+        156.73333333333332,
+        164.8
+      ],
+      [
+        270.6333333333333,
+        279.1666666666667
+      ]
+    ],
+    "overlap_s": 6.366666666666674,
+    "scope": "New automatic choices, not a reconstruction of the hand-edited reference. Same layout and Kokoro sid 60, not a learned editorial style."
+  },
+  "arise_agent_visual_review": {
+    "reviewer_kind": "agent",
+    "reviewer": "Copilot; coordinating agent separately reviewed selected source frames",
+    "women_named_frames": [
+      1390,
+      2212,
+      2447,
+      2631
+    ],
+    "women_findings": "All four named candidates appear consistent with overhead high/deep returns in before/contact/after pictures and tracked flight evidence. Two are narrated. This is limited AI visual consistency, not human precision.",
+    "men_findings": "No family names among 21 candidates. Four selected placement/sequence claims visually consistent; no smash/drop labels added.",
+    "limits": "Candidate counts are not true-hit coverage. No human-certified contacts, whole-match accuracy, human listening or naturalness approval."
+  },
+  "china_selected_agent_visual_review": {
+    "reviewer_kind": "agent",
+    "reviewer": "Copilot",
+    "cue_frames": [
+      605,
+      644,
+      4761,
+      4857,
+      8178,
+      8288
+    ],
+    "finding": "Six cue pictures show the supplied players, including Han near after the change of ends. The selected lift, clear and broad placements appear consistent. This is limited AI visual review, not human-certified accuracy."
+  },
+  "independent_agent_checks": {
+    "women": {
+      "media": {
+        "status": "media_format_verified",
+        "checks": {
+          "portrait_1080x1920": true,
+          "h264_yuv420p": true,
+          "thirty_fps": true,
+          "twentyfive_to_thirty_seconds": true,
+          "presentation_timestamps_at_thirty_fps": true,
+          "audio_is_aac": true,
+          "decoded_audio_is_not_silent": true,
+          "audio_and_video_end_together": true
+        },
+        "observed": {
+          "file": "tiktok.mp4",
+          "bytes": 4069256,
+          "sha256": "a350709fccfc5d957b5b91e3925f523e86049c4a071279d37f575f137ee4ce1d",
+          "container_duration_s": 26.6,
+          "video": {
+            "codec": "h264",
+            "width": 1080,
+            "height": 1920,
+            "fps": 30.0,
+            "decoded_frames": 798,
+            "duration_s": 26.6
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 24000,
+            "channels": 1,
+            "decoded_duration_s": 26.6,
+            "peak_level_0_to_1": 0.5902
+          }
+        },
+        "scope": "Actual video/audio decoding and delivery format only.",
+        "not_proven": [
+          "Shot or tactical descriptions are correct.",
+          "Captions and narration correspond to the displayed source action.",
+          "Voice naturalness or human listening approval.",
+          "All possible new matches are supported."
+        ]
+      },
+      "plan": {
+        "status": "plan_relationships_verified",
+        "source_sha256": "8cbab142aec89375850f95778f3388baef1b1d442d95bbd8ff46cf9a65534d0f",
+        "output_sha256": "a350709fccfc5d957b5b91e3925f523e86049c4a071279d37f575f137ee4ce1d",
+        "plan_sha256": "453927e1cde70a0b760e7927d2134f5813fa17939b7c85ebbe7120791535fecb",
+        "frame_map_sha256": "c81e24a40163bd9af2a2366fb77b82d689c4316cb1599647e52697df858ad380",
+        "asset_hashes": {
+          "normalized": "accd03411616e926895e3cfeb855f7786418b56960204c331ee769669276e159",
+          "pose": "b16729607670909913797f62bea9b7f242f2ac9f414a0d432ffb58bd1cd805f6"
+        },
+        "code_hashes_verified": {
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb"
+        },
+        "voice_start_after_cue_frames": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "frames": 798,
+        "lines": 6,
+        "failures": [],
+        "scope": "Source/render/code bindings, frame bounds, ordering, identity consistency and cue-relative speech schedule.",
+        "not_proven": "Semantic shot accuracy and what actually appears or is spoken still need direct review."
+      }
+    },
+    "men": {
+      "media": {
+        "status": "media_format_verified",
+        "checks": {
+          "portrait_1080x1920": true,
+          "h264_yuv420p": true,
+          "thirty_fps": true,
+          "twentyfive_to_thirty_seconds": true,
+          "presentation_timestamps_at_thirty_fps": true,
+          "audio_is_aac": true,
+          "decoded_audio_is_not_silent": true,
+          "audio_and_video_end_together": true
+        },
+        "observed": {
+          "file": "tiktok.mp4",
+          "bytes": 3171941,
+          "sha256": "9f8e24554a077144c416a1d8f75b9e9bd1d96e61866064bf08485911aa82f596",
+          "container_duration_s": 26.6,
+          "video": {
+            "codec": "h264",
+            "width": 1080,
+            "height": 1920,
+            "fps": 30.0,
+            "decoded_frames": 798,
+            "duration_s": 26.6
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 24000,
+            "channels": 1,
+            "decoded_duration_s": 26.6,
+            "peak_level_0_to_1": 0.4604
+          }
+        },
+        "scope": "Actual video/audio decoding and delivery format only.",
+        "not_proven": [
+          "Shot or tactical descriptions are correct.",
+          "Captions and narration correspond to the displayed source action.",
+          "Voice naturalness or human listening approval.",
+          "All possible new matches are supported."
+        ]
+      },
+      "plan": {
+        "status": "plan_relationships_verified",
+        "source_sha256": "52be33508b5b3e42bfbdb8bcc0ce6ba5b35ea6f18d2083e3804d73f35b3a9f23",
+        "output_sha256": "9f8e24554a077144c416a1d8f75b9e9bd1d96e61866064bf08485911aa82f596",
+        "plan_sha256": "69d350d22635f8c3b371c712cad5e44df124611b0071226834441d9dbf99d478",
+        "frame_map_sha256": "da0fe1d42bb137a3448a20b3abf41e163ce418c055331af8abaa162aba8b18bb",
+        "asset_hashes": {
+          "normalized": "93287b7a864768a35e973f7df014d2217d014a50940efc30956bcea092256a9c",
+          "pose": "41f5b9847b4261cde0e8ada584cc0d4acbadbe0a3279f0740f49ac2857fd2e77"
+        },
+        "code_hashes_verified": {
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb"
+        },
+        "voice_start_after_cue_frames": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "frames": 798,
+        "lines": 4,
+        "failures": [],
+        "scope": "Source/render/code bindings, frame bounds, ordering, identity consistency and cue-relative speech schedule.",
+        "not_proven": "Semantic shot accuracy and what actually appears or is spoken still need direct review."
+      }
+    },
+    "china": {
+      "media": {
+        "status": "media_format_verified",
+        "checks": {
+          "portrait_1080x1920": true,
+          "h264_yuv420p": true,
+          "thirty_fps": true,
+          "twentyfive_to_thirty_seconds": true,
+          "presentation_timestamps_at_thirty_fps": true,
+          "audio_is_aac": true,
+          "decoded_audio_is_not_silent": true,
+          "audio_and_video_end_together": true
+        },
+        "observed": {
+          "file": "tiktok.mp4",
+          "bytes": 3066860,
+          "sha256": "325612d0b5d3311ca4753cc166fdac03f6ff2f97de0cd009c5f8a4f8f5d00500",
+          "container_duration_s": 26.6,
+          "video": {
+            "codec": "h264",
+            "width": 1080,
+            "height": 1920,
+            "fps": 30.0,
+            "decoded_frames": 798,
+            "duration_s": 26.6
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 24000,
+            "channels": 1,
+            "decoded_duration_s": 26.6,
+            "peak_level_0_to_1": 0.5737
+          }
+        },
+        "scope": "Actual video/audio decoding and delivery format only.",
+        "not_proven": [
+          "Shot or tactical descriptions are correct.",
+          "Captions and narration correspond to the displayed source action.",
+          "Voice naturalness or human listening approval.",
+          "All possible new matches are supported."
+        ]
+      },
+      "plan": {
+        "status": "plan_relationships_verified",
+        "source_sha256": "2500471d4852a4a73e0f4eb25ad28171b3c54967f58e1cc7620af16b46ccbb52",
+        "output_sha256": "325612d0b5d3311ca4753cc166fdac03f6ff2f97de0cd009c5f8a4f8f5d00500",
+        "plan_sha256": "c5e8481b7f5cf033634e78556d56c412af8b35d864cccc96a40911d583e9e551",
+        "frame_map_sha256": "fd7c93b348762d4ac845faf66428878df5b871d90ee4035e63da98cfc142f093",
+        "asset_hashes": {
+          "normalized": "4aad7cf5cd5d4c666cf9506329b203ee4c3cc010156c047dc275d1c353a10083",
+          "pose": "03ccec1fca6148f076bed1ec9dc504dd420851df0d451ff2cb75a06937f91b73"
+        },
+        "code_hashes_verified": {
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb"
+        },
+        "voice_start_after_cue_frames": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "frames": 798,
+        "lines": 6,
+        "failures": [],
+        "scope": "Source/render/code bindings, frame bounds, ordering, identity consistency and cue-relative speech schedule.",
+        "not_proven": "Semantic shot accuracy and what actually appears or is spoken still need direct review."
+      }
+    },
+    "transcode": {
+      "media": {
+        "status": "media_format_verified",
+        "checks": {
+          "portrait_1080x1920": true,
+          "h264_yuv420p": true,
+          "thirty_fps": true,
+          "twentyfive_to_thirty_seconds": true,
+          "presentation_timestamps_at_thirty_fps": true,
+          "audio_is_aac": true,
+          "decoded_audio_is_not_silent": true,
+          "audio_and_video_end_together": true
+        },
+        "observed": {
+          "file": "tiktok.mp4",
+          "bytes": 2499350,
+          "sha256": "219e0d8dabd176e5204a0e56e93f9ac58dbc1c0d4fd2bcb0135de5a8d33fbe42",
+          "container_duration_s": 26.6,
+          "video": {
+            "codec": "h264",
+            "width": 1080,
+            "height": 1920,
+            "fps": 30.0,
+            "decoded_frames": 798,
+            "duration_s": 26.6
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 24000,
+            "channels": 1,
+            "decoded_duration_s": 26.6,
+            "peak_level_0_to_1": 0.4595
+          }
+        },
+        "scope": "Actual video/audio decoding and delivery format only.",
+        "not_proven": [
+          "Shot or tactical descriptions are correct.",
+          "Captions and narration correspond to the displayed source action.",
+          "Voice naturalness or human listening approval.",
+          "All possible new matches are supported."
+        ]
+      },
+      "plan": {
+        "status": "plan_relationships_verified",
+        "source_sha256": "0a5307ad9958b70a619f056071d9ad3cc081767f6fd6103474eba5d4c2898651",
+        "output_sha256": "219e0d8dabd176e5204a0e56e93f9ac58dbc1c0d4fd2bcb0135de5a8d33fbe42",
+        "plan_sha256": "1f490ea1cf29472d0b5c43f2dbf4728f008325e750d8e23a17884363748eca45",
+        "frame_map_sha256": "8f013a33008ae6d88e808522ee9e8bcb2370503fc00cd5afbd0712e80d7e4461",
+        "asset_hashes": {
+          "normalized": "5b94d8f41668d7059178b3be632552079a0556464ca193b1bbff6705b40631f7",
+          "pose": "fc1970aa19f478ee7ac14610081f1036135b61043a4bd7817396ced6ce8073c6"
+        },
+        "code_hashes_verified": {
+          "reel_analysis.py": "c8a44a881290bf0876c8e8e2f48870ec72f0da311eff4b514a768749e69b74a4",
+          "reel_media.py": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a",
+          "reel_plan.py": "c8318b43c1a86e1e233b64a48c9d671d7f70977d48d9d656a18e0514be3cd7b4",
+          "tiktok_reel.py": "94edbf3a4da06fc0dd64826f1ba970f5c713adf1ab448a9ed59fba380070c9fb"
+        },
+        "voice_start_after_cue_frames": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "frames": 798,
+        "lines": 4,
+        "failures": [],
+        "scope": "Source/render/code bindings, frame bounds, ordering, identity consistency and cue-relative speech schedule.",
+        "not_proven": "Semantic shot accuracy and what actually appears or is spoken still need direct review."
+      }
+    }
+  },
+  "reviewed_plan_route": {
+    "run": {
+      "source_sha256": "8cbab142aec89375850f95778f3388baef1b1d442d95bbd8ff46cf9a65534d0f",
+      "wall_s": 104.98857960000169,
+      "status": "encoded_and_verified",
+      "timings": {
+        "analysis_reused_from_plan": true,
+        "voice_render_s": 98.56930460000876,
+        "verify_s": 4.757519599981606
+      },
+      "plan_entry": "supplied_plan",
+      "review_status": "reviewed_plan",
+      "reviewer_kind": "agent",
+      "reviewer": "Copilot"
+    },
+    "verification": {
+      "full_decode": true,
+      "picture_frames_checked": 798,
+      "caption_frames_checked": 798,
+      "voice_slots_checked": 6,
+      "white_caption_controls_distinguished": true,
+      "title_frames_checked": 798,
+      "green_tag_frames_checked": 798,
+      "voice_start_after_action_frames": 2,
+      "voice_fits_measured_slots": true,
+      "non_silent_audio": true,
+      "geometry": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 798,
+      "duration_s": 26.6,
+      "audio_codec": "aac",
+      "picture_mae_max": 2.0588831018518516,
+      "caption_mae_max": 2.20980056980057,
+      "voice_correlation_min": 0.9998425094635784,
+      "human_listening": false,
+      "naturalness_verified": false,
+      "output_sha256": "027bb3bb03566064b9796de6e4b1de0e8999e97a959da5aa17d31decc75b15c1",
+      "hash_scope": "This generated run only; fresh speech and MP4 bytes can differ"
+    },
+    "plan_sha256": "949718d2a31d84b8d79f396012b76fe5852d397e1336d401ed2f4b960ace5c6f",
+    "edit": "First line changed to 这一拍，威尔逊先压后场！; provenance explicitly agent-reviewed; no inference repeated."
+  },
+  "cached_verifier_equivalence": [
+    {
+      "output": "work/new-match/women-aligned-preview",
+      "checker_sha256": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a",
+      "wall_s": 4.859802599996328,
+      "verification": {
+        "full_decode": true,
+        "picture_frames_checked": 798,
+        "caption_frames_checked": 798,
+        "voice_slots_checked": 6,
+        "white_caption_controls_distinguished": true,
+        "title_frames_checked": 798,
+        "green_tag_frames_checked": 798,
+        "voice_start_after_action_frames": 2,
+        "voice_fits_measured_slots": true,
+        "non_silent_audio": true,
+        "geometry": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "frames": 798,
+        "duration_s": 26.6,
+        "audio_codec": "aac",
+        "picture_mae_max": 2.0584812242798356,
+        "caption_mae_max": 2.1088129154795823,
+        "voice_correlation_min": 0.999813359750912,
+        "human_listening": false,
+        "naturalness_verified": false
+      },
+      "output_sha256": "d642024407aa1a814a609c7afa91b038a1c18c2e7e8c8331d5a8b7e6652d2816",
+      "identical_checks": true
+    },
+    {
+      "output": "work/new-match/current-e2e/transcode",
+      "checker_sha256": "8cc11d2023f40df25d3c62eb91586a3f7043c2bc6ab7eda04113a344c0d5ec8a",
+      "wall_s": 4.149020600016229,
+      "verification": {
+        "full_decode": true,
+        "picture_frames_checked": 798,
+        "caption_frames_checked": 798,
+        "voice_slots_checked": 4,
+        "white_caption_controls_distinguished": true,
+        "title_frames_checked": 798,
+        "green_tag_frames_checked": 798,
+        "voice_start_after_action_frames": 2,
+        "voice_fits_measured_slots": true,
+        "non_silent_audio": true,
+        "geometry": [
+          1080,
+          1920
+        ],
+        "fps": 30,
+        "frames": 798,
+        "duration_s": 26.6,
+        "audio_codec": "aac",
+        "picture_mae_max": 2.0828028549382718,
+        "caption_mae_max": 2.0955935422602088,
+        "voice_correlation_min": 0.9997268246817449,
+        "human_listening": false,
+        "naturalness_verified": false
+      },
+      "output_sha256": "030b39a992d7ab0b071bf9e2288bff7d0655724b56e0127647414679912b347b"
+    }
+  ],
+  "tests": {
+    "unittest": {
+      "command": "python -X utf8 -B -m unittest coach.tests.test_tiktok_reel coach.tests.test_short_review coach.tests.test_editorial_short",
+      "ran": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest": {
+      "command": "python -X utf8 -B -m pytest -q tests/test_reproduction.py studio/tactics/test_eval_strict.py",
+      "passed": 12
+    },
+    "controls": [
+      "existing output immutable",
+      "missing/empty title",
+      "missing encoded title/tag/caption",
+      "muted voice",
+      "NPZ members each loaded once",
+      "non-16:9 aspect",
+      "voice variability and cue alignment",
+      "explicit local/private rights",
+      "malformed external URLs",
+      "wrong predictions alter scoped agreement"
+    ]
+  }
+}

@@ -991,8 +991,9 @@
   },
   {
    "path": "docs/new-match-commentary.md",
-   "bytes": 7804,
-   "sha256": "ab58bf93413cf99440d8e1d4e90f27dcbbb6fd3977604d9143c16432cbc95d33"
+   "bytes": 9519,
+   "sha256": "721e55a2ad21dc493f5184822b17f22c5e195cb5b66775e6ee7f64f27607e627",
+   "sha256_before_reproduction_package": "ab58bf93413cf99440d8e1d4e90f27dcbbb6fd3977604d9143c16432cbc95d33"
   },
   {
    "path": "docs/reproducibility.md",
@@ -1013,8 +1014,8 @@
   },
   {
    "path": "docs/results.md",
-   "bytes": 8821,
-   "sha256": "57dfafd7fac051bc5f493af25c49fe1d37d1fc8381a00c628ed08dca2289df91",
+   "bytes": 9519,
+   "sha256": "e851ab2f0acb493a23bcfe82fb67801ce7db1d625ec268910b938a0b42bee895",
    "sha256_before_reproduction_package": "25ce602ffacee5d5c2d5999df25f5fc5aa885736f2c79e9fb610521b7a151a1b"
   },
   {
@@ -1372,8 +1373,8 @@
   },
   {
    "path": "results/README.md",
-   "bytes": 4834,
-   "sha256": "144d4745a1a58535e0086bd36c1acc1f6dca46d6e84d53f01ea42a94c1f2a035",
+   "bytes": 5218,
+   "sha256": "61b1339f64f4d5952c675d9e6e041957abbfabeca4a334ebff9c3ad4cc01beef",
    "sha256_before_reproduction_package": "fa0fa92e8135de84a90739bc6241d58dc7c61a7541498bdf46e13f243597e8fb"
   },
   {
@@ -1493,6 +1494,11 @@
    "path": "results/reproduction/negative-controls.json",
    "bytes": 314,
    "sha256": "16fd1f8f7c7aab884871462c84c453de18d6be03fb265ad1cacd5197c1b4e981"
+  },
+  {
+   "path": "results/reproduction/new-match-commentary.json",
+   "bytes": 49468,
+   "sha256": "9a982069a50b794b3b58c6aeb79240e8ae11d4e1df6effcde2fca737aa3a29a4"
   },
   {
    "path": "results/reproduction/tactics-summary.json",
