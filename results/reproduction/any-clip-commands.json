@@ -3,7 +3,7 @@
   "source": "sample-videos/04-china-open-ws-a.mp4",
   "source_sha256": "4b4dcd55deaf42d7e13697615eed36cb58426bd9efbcac00678a958e26c2834c",
   "setup": "Full requirements.txt, public get_models.py yolo melo, prepare_cache.py, public get_footage.py recuts",
-  "timing_scope": "One functional run per command, subprocess wall time including startup and validation. Not a performance benchmark.",
+  "timing_scope": "Individual functional subprocess wall times, including startup and validation on a shared host. Not benchmarks. Earlier failed attempts are retained.",
   "host": {
     "logical_cpus": 16,
     "load_percent_before": 33
@@ -70,7 +70,7 @@
       ]
     }
   ],
-  "status": "technique_verified_editorial_rejected",
+  "status": "technique_verified_editorial_export_verified_with_intermittent_speech_fit_rejections",
   "error_tail": [
     "RuntimeError: Court path anchors need measured two-ankle positions"
   ],
@@ -304,7 +304,7 @@
     }
   },
   "editorial": {
-    "video_produced": false,
+    "video_produced": true,
     "first_error": "Court path anchors need measured two-ankle positions",
     "first_root_cause": "initial_frame 53 has two visible measured ankles, but court_samples only scanned frames 60..210",
     "bounded_fix": "Include the explicitly requested initial_frame in the court-sampling range; retain all evidence guards",
@@ -312,15 +312,227 @@
       "published_implementation": "fails with the intended anchor error",
       "corrected_implementation": "passes"
     },
-    "retry_error": "legs narration does not fit its selected footage; shorten the line or choose a longer forward window",
-    "retry_root_cause": "Fixed chapter footage and newly synthesized narration have incompatible durations; scheduler rejects before encoding",
-    "action": "Stopped; no changed speech, playback speed, padding, or evidence guard",
-    "existing_editorial_suite": "Class setup also fails on stored pose at the legs speech-fit guard; not claimed passed"
+    "retry_error": null,
+    "retry_root_cause": "Fresh pose bottom frame 87 rather than stored fixture 89 shortens the legs window to source frames 68..89, giving 63 output frames at 0.35x rather than 69 from 68..91. Local voice duration varies between fresh processes. ceil((duration_s + 0.24) * 30) must be <= 63, so speech must be <= 1.860 s. Some unchanged runs pass and others are rejected; this is not a fixed failure.",
+    "action": "Repeated the unchanged CLI, stopping at first success. Re-run after a speech-fit rejection. No changes to guard, thresholds, narration, speed, window selection, requirements, or code. Longer-window fix not implemented; no human listening or naturalness review claimed.",
+    "existing_editorial_suite": {
+      "revision": "0f3a9e6863bae7c35cf37d02e1261e6a252c9637",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "coach.tests.test_editorial_short"
+      ],
+      "returncode": 0,
+      "tests_run": 12,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "elapsed_wall_s": 12.882880499993917,
+      "correction": "The earlier claim that the stored-pose class also failed was incorrect.",
+      "original_revision_check": {
+        "revision": "e27fb934f0a710bf3b13b9f98f66b63dcbe14bd3",
+        "tests_run": 11,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "same_current_venv_and_models": true,
+        "historical_log_limit": "Saved initial log records aggregate coach success (573 tests, 7 skips), not named passes. Reproduced original discovery includes all 11 editorial tests; the class has no skip path."
+      }
+    },
+    "earlier_retry": {
+      "returncode": 1,
+      "elapsed_wall_s": 27.1176481,
+      "error": "legs narration does not fit its selected footage; shorten the line or choose a longer forward window",
+      "scope": "Earlier recorded attempt, not a fixed outcome of the unchanged command"
+    },
+    "correction_check": {
+      "revision": "0f3a9e6863bae7c35cf37d02e1261e6a252c9637",
+      "timestamp_utc": "2026-11-11T00:38:16.753433+00:00",
+      "clean_checkout_status_before": "clean",
+      "source_sha256": "4b4dcd55deaf42d7e13697615eed36cb58426bd9efbcac00678a958e26c2834c",
+      "voice_model_sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d",
+      "fresh_pose_sha256": "54fdefdafbb01616919f02d640ee88f01b1b8706217d48cbacfec63d1da63d4e",
+      "stored_pose_sha256": "31f554fcb9fea80ba2749bf1f6f2cfccba617fbc1129505e9ab3cb13abe27bab",
+      "code_sha256": {
+        "coach/editorial_short.py": "8b134db17e60b638aa3905a5c7b1cfcc9e19d82151c276cb1d108cd592923ad4",
+        "coach/complete_review.py": "39e379f9b7ead66bebf5d4d72ec9e0cb2bbab06e64c44a48c56f3340cff7e4f7",
+        "coach/tests/test_editorial_short.py": "ac10e360c5e12fe2e44e32595412eb36beff91780db40e29780e93f25d22dbdf"
+      },
+      "voice_measurement_command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-c",
+        "import math; from coach.editorial_short import _synthesize,VOICE_TEXT,VOICE; s=_synthesize([('legs',VOICE_TEXT['legs'])],VOICE)[0]; d=len(s['samples'])/s['rate']; print(d, math.ceil((d+0.24)*30))"
+      ],
+      "voice_measurement_scope": "Ten separate fresh processes with the same venv and default model, legs line only. Observed counts are not a guaranteed success rate.",
+      "voice_processes": [
+        {
+          "samples": 81879,
+          "sample_rate": 44100,
+          "duration_s": 1.8566666666666667,
+          "required_frames": 63,
+          "process": 1,
+          "returncode": 0,
+          "elapsed_wall_s": 6.658189000037964
+        },
+        {
+          "samples": 81886,
+          "sample_rate": 44100,
+          "duration_s": 1.856825396825397,
+          "required_frames": 63,
+          "process": 2,
+          "returncode": 0,
+          "elapsed_wall_s": 10.165448800020386
+        },
+        {
+          "samples": 90506,
+          "sample_rate": 44100,
+          "duration_s": 2.052290249433107,
+          "required_frames": 69,
+          "process": 3,
+          "returncode": 0,
+          "elapsed_wall_s": 6.905815700010862
+        },
+        {
+          "samples": 81279,
+          "sample_rate": 44100,
+          "duration_s": 1.843061224489796,
+          "required_frames": 63,
+          "process": 4,
+          "returncode": 0,
+          "elapsed_wall_s": 6.788136499992106
+        },
+        {
+          "samples": 81145,
+          "sample_rate": 44100,
+          "duration_s": 1.8400226757369615,
+          "required_frames": 63,
+          "process": 5,
+          "returncode": 0,
+          "elapsed_wall_s": 6.264634400024079
+        },
+        {
+          "samples": 81101,
+          "sample_rate": 44100,
+          "duration_s": 1.8390249433106576,
+          "required_frames": 63,
+          "process": 6,
+          "returncode": 0,
+          "elapsed_wall_s": 6.220990500005428
+        },
+        {
+          "samples": 90770,
+          "sample_rate": 44100,
+          "duration_s": 2.0582766439909297,
+          "required_frames": 69,
+          "process": 7,
+          "returncode": 0,
+          "elapsed_wall_s": 6.297118699993007
+        },
+        {
+          "samples": 82038,
+          "sample_rate": 44100,
+          "duration_s": 1.8602721088435374,
+          "required_frames": 64,
+          "process": 8,
+          "returncode": 0,
+          "elapsed_wall_s": 6.976488500018604
+        },
+        {
+          "samples": 81696,
+          "sample_rate": 44100,
+          "duration_s": 1.852517006802721,
+          "required_frames": 63,
+          "process": 9,
+          "returncode": 0,
+          "elapsed_wall_s": 6.68668639997486
+        },
+        {
+          "samples": 80907,
+          "sample_rate": 44100,
+          "duration_s": 1.834625850340136,
+          "required_frames": 63,
+          "process": 10,
+          "returncode": 0,
+          "elapsed_wall_s": 7.120814999972936
+        }
+      ],
+      "voice_summary": {
+        "separate_processes": 10,
+        "text": "右脚跨出，前膝弯下。",
+        "speech_speed": 1.08,
+        "min_duration_s": 1.834625850340136,
+        "max_duration_s": 2.0582766439909297,
+        "fit_63_frames": 7,
+        "rejected_63_frames": 3,
+        "fit_duration_limit_s": 1.86
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "python",
+            "-X",
+            "utf8",
+            "-B",
+            "-m",
+            "coach.editorial_short",
+            "sample-videos\\04-china-open-ws-a.mp4",
+            "outputs\\editorial-correction-1"
+          ],
+          "returncode": 0,
+          "elapsed_wall_s": 71.10348560003331,
+          "legs_speech": {
+            "key": "legs",
+            "text": "右脚跨出，前膝弯下。",
+            "samples": 81512,
+            "sample_rate": 44100,
+            "duration_s": 1.8483446712018141
+          },
+          "available_legs_frames": 63,
+          "duration_observation": "Read-only sys.setprofile return observation; no speech or source modification",
+          "legs_required_frames": 63,
+          "output": "outputs\\editorial-correction-1\\tiktok.mp4",
+          "sha256": "f1c06e00c2340c5de1d307b2e3b363e3dfb7e9414b521fcb1f1e24395961311d",
+          "bytes": 2210737,
+          "hash_scope": "This run only; not an expected regeneration hash",
+          "independent_decode": {
+            "duration_s": 16.366667,
+            "width": 1080,
+            "height": 1920,
+            "audio_present": true,
+            "audio_codecs": [
+              "aac"
+            ],
+            "decoded_frames": 491,
+            "decoded_audio_samples": 721770
+          },
+          "verification_booleans": {
+            "full_decode": true,
+            "non_silent_audio": true,
+            "caption_windows_match_measured_speech": true,
+            "all_text_inside_safe_rect": true,
+            "all_focus_crops_contain_player": true,
+            "no_clip_spans_camera_cut": true,
+            "court_homography_recomputed": true,
+            "free_arm_returns_before_racket_raise": true
+          }
+        }
+      ]
+    }
   },
   "environment_notes": [
     "First pre-setup attempt lacked the recut clip and OpenVINO; no successful run claimed until documented setup completed.",
     "Ultralytics exporter installed its missing optional onnxruntime dependency automatically while exporting YOLO.",
     "Both newly exported detector ONNX files matched the repository's recorded hashes.",
-    "MeloTTS reported ignored semicolon punctuation. Human listening and naturalness not approved."
-  ]
+    "MeloTTS reported ignored semicolon punctuation. Human listening and naturalness not approved.",
+    "Correction checks: sherpa-onnx/core 1.13.8, onnxruntime 1.31.1, numpy 2.4.6, scipy 1.18.1, torch 2.14.1. Requirements leave scipy and onnxruntime unlisted/unpinned. No dated full historical environment freeze was found; environment drift is not established."
+  ],
+  "output_hash_scope": "SHA256 values identify the outputs of the recorded individual runs, not expected regenerated bytes. Fresh voice samples and duration, and consequently MP4 bytes, vary between processes."
 }

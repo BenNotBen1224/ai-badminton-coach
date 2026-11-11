@@ -93,7 +93,7 @@ Source: [`results/technical-commentary-v2/verification.json`](../results/technic
 
 [Watch the exact historical MP4s](../results/) or [regenerate all three editions](reproducibility.md#rebuild-the-short-reels). New renders decode source frames and replay shipped pose estimates. The default voice takes are frozen inputs, not fresh speech synthesis.
 
-The [TikTok-style workflow](tiktok-style-workflow.md) is not automatic for a new video. Moment choices, shot names, title, and player-named lines were edited for this match. The separate teaching-short CLI `coach.short_review` passed fresh inference, export, and encoded-output verification on public recut clip 04. `coach.editorial_short` stopped because its narration exceeded the selected footage. Neither command generates the approved commentary format.
+The [TikTok-style workflow](tiktok-style-workflow.md) is not automatic for a new video. Moment choices, shot names, title, and player-named lines were edited for this match. The separate teaching-short CLI `coach.short_review` passed fresh inference, export, and encoded-output verification on public recut clip 04. `coach.editorial_short` also exported that clip: 491 decoded frames, 16.366667 seconds, 1080 by 1920 pixels, AAC audio, and all eight verification flags true. It can still reject a run because local voice length varies against the 63-frame legs budget; seven of ten fresh voice processes fit and three exceeded it. Re-run after a speech-fit rejection. The guard is unchanged; a longer-window fix is not implemented. Output bytes vary with the voice, so hashes are individual-run records. The 12-test editorial module passed. Neither command generates the approved commentary format, and no human listening review is claimed.
 
 ## Fresh clone
 

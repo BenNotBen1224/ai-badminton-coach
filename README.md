@@ -65,7 +65,7 @@ It writes `review.mp4`, a readable `analysis.html`, and the evidence behind ever
 
 <img src="docs/images/tiktok-workflow.svg" alt="Style learning is missing. Moments, shot names, and writing are manual. Rendering and verification are proved for the reference match." width="100%">
 
-The separate teaching CLI `coach.short_review` passed a fresh clip-04 export and encoded-output recheck. `coach.editorial_short` failed because its narration did not fit its selected footage. Neither generates this commentary format. See [what exists, what passed, and what is missing](docs/tiktok-style-workflow.md).
+The separate teaching CLI `coach.short_review` passed a fresh clip-04 export and encoded-output recheck. `coach.editorial_short` also exported public recut clip 04, but passes or is rejected depending on the run: its local voice length varies against a 63-frame legs budget. Seven of ten fresh voice processes fit; three exceeded it. Re-run after a speech-fit rejection. The guard is unchanged; a longer-window fix is not implemented. Neither generates this commentary format. See [what exists, what passed, and what is missing](docs/tiktok-style-workflow.md).
 
 ## How it works
 

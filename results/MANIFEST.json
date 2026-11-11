@@ -13,8 +13,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 12330,
-   "sha256": "07a579e0628e1f622e72e6c22e0789eaf244221b120cdadca7ed0daa64b4dd02",
+   "bytes": 12573,
+   "sha256": "f4e332197d122f65219433779390319039f00ea886922cabeda49a074f049557",
    "sha256_before_reproduction_package": "97b9cb5323342b85eebccd1cc558863663049b3fe1386e1cb28cc71c199bec67"
   },
   {
@@ -39,8 +39,8 @@
   },
   {
    "path": "coach/README.md",
-   "bytes": 29874,
-   "sha256": "7d0a1e319c59f26a9e07cbc10be0317ef6c8a3d041557452ca39fee0404d6f7f",
+   "bytes": 30227,
+   "sha256": "60c244ccb3a8c015eb04cf4f347dd0b2bdca207f35fc0f4a0e108226d7846e05",
    "sha256_before_reproduction_package": "b8a605e571c69034948e41860ef798f9be4e3bfbdd43335d0a9dc3c89fc7dcff"
   },
   {
@@ -918,8 +918,8 @@
   },
   {
    "path": "docs/how-it-works.md",
-   "bytes": 5718,
-   "sha256": "9a40fb06dbbdbd52ab7e6d3839bfc2657cc04c60ad521c3e9ea85537bb757fab",
+   "bytes": 5944,
+   "sha256": "d059a62ba8c0711049fde93e7106f89dabdae48cd70541706c7ee759c06b4dfc",
    "sha256_before_reproduction_package": "1fbfc1925c2379cd4f758b85802b5aec0f76d3ada215fe213feb70e6f353aca6"
   },
   {
@@ -939,8 +939,8 @@
   },
   {
    "path": "docs/images/tiktok-workflow.svg",
-   "bytes": 3039,
-   "sha256": "92e2fe22563f53d6630783b0048b8e2202a6debf1b8f48a5520ea6236846113c",
+   "bytes": 3066,
+   "sha256": "f7a7b18e82077f1fbb4f0fcd7f5648ee882cd94ae71d119085a38441a2d87766",
    "sha256_before_reproduction_package": "b153722aa53d3325741aa62e25da0291ca23012fefca1f7edfea4271d33bc69a"
   },
   {
@@ -966,8 +966,8 @@
   },
   {
    "path": "docs/reproducibility.md",
-   "bytes": 14205,
-   "sha256": "5066eb4df2415b6103dbd798a47192b380902886fad4cec2e170f7f80c9cc92a",
+   "bytes": 14571,
+   "sha256": "21d66f41190a509b42e27a19c084a639e702dfb12efba39add1b5d9e389b18c7",
    "sha256_before_reproduction_package": "26aba5b748fc43a4edc5164426d1ff97fcc59016d4cba2976e383297525c9e50"
   },
   {
@@ -983,8 +983,8 @@
   },
   {
    "path": "docs/results.md",
-   "bytes": 8087,
-   "sha256": "b47f7643eea7f5429ae95a61da9b0e7329a5ce753ce1271d47c2d167b64519ad",
+   "bytes": 8569,
+   "sha256": "6f3eab231e79809bbd729f1a97cb1f0fc9a72af79896732f503d0a88da666db1",
    "sha256_before_reproduction_package": "25ce602ffacee5d5c2d5999df25f5fc5aa885736f2c79e9fb610521b7a151a1b"
   },
   {
@@ -994,8 +994,8 @@
   },
   {
    "path": "docs/tiktok-style-workflow.md",
-   "bytes": 7742,
-   "sha256": "2ed030c3485b3031d088217f4920b6a082d7c6177022f6caa60224d64569b696",
+   "bytes": 9386,
+   "sha256": "8f6df57536fe12a5e51dd3b495fed3229710a9286276afd8f34ae25318c08e26",
    "sha256_before_reproduction_package": "784481ae62cc7ea6702f8c1f1eecabe0553b5d4d7ac7d276cf327d1df40d0263"
   },
   {
@@ -1342,8 +1342,8 @@
   },
   {
    "path": "results/README.md",
-   "bytes": 4245,
-   "sha256": "10ce1e50c1d980a77de27904a5b6a247168e3c20a2dc37fff0f232a30835293b",
+   "bytes": 4583,
+   "sha256": "60944029e01f5b1bb27945b24106ec7904bfaa25c0ee055ea212c4bfa53bd6ad",
    "sha256_before_reproduction_package": "fa0fa92e8135de84a90739bc6241d58dc7c61a7541498bdf46e13f243597e8fb"
   },
   {
@@ -1425,8 +1425,9 @@
   },
   {
    "path": "results/reproduction/any-clip-commands.json",
-   "bytes": 11309,
-   "sha256": "0e925a04c6e72dd77abcd08b343b05a920e1fbf463da68d14ec6e0efdb49abe7"
+   "bytes": 19773,
+   "sha256": "08f3efe2663a759ad69354d34676800b0308e7bb63892afd9996aafbd694a347",
+   "sha256_before_reproduction_package": "0e925a04c6e72dd77abcd08b343b05a920e1fbf463da68d14ec6e0efdb49abe7"
   },
   {
    "path": "results/reproduction/base-inputs.json",
